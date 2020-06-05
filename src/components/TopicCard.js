@@ -1,6 +1,5 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import "../utils/font-awesome"
 
 export default ({tagline, mainText, icon, bgColor="blue-900", size}) => {
     return (
