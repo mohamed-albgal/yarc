@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 import { Link } from 'gatsby'
-import logo from "../assets/img/yarc_logo_english.svg"
+import logo from "../assets/img/yarc_logo_english_horizontal.svg"
 
 
 
@@ -39,7 +39,7 @@ const Navbar = ({transparent}) => {
        <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <Link to="/">
-              <img heigth="100" width="100" src={logo} alt="logo"></img>
+              <img heigth="150" width="150" src={logo} alt="logo"></img>
           </Link>
           
            <button
@@ -192,7 +192,7 @@ const Navbar = ({transparent}) => {
          </div>
        </div>
      </nav>
-       </> 
+    </> 
     )
 }
 export default Navbar;

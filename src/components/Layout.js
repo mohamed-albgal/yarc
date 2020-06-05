@@ -4,13 +4,11 @@ import Footer from './Footer'
 
 const Layout = ({children}) => {
     return (
-        <div className="container mx-auto">
-            <Navbar />
-            <main>
+        <>
+            <Navbar transparent/>
                 {children}
-            </main>
             <Footer />
-    </div>
+        </>
     )
 }
 export default Layout;
