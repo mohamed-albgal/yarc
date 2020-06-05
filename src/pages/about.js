@@ -1,10 +1,18 @@
 import React from 'react'
-import Layout from '../components/Layout';
+import Navbar2 from '../components/Navbar2'
+import Footer from '../components/Footer'
+import Hero from '../components/Hero';
+import jamb from '../assets/img/jambiyyahs.jpg'
 
+const mt = `About The YAR Center`;
+const cp = `Who We Are, What We Do, The Basics`;
 export default () => {
 return (
-    <Layout>
-        <h1>About Us</h1>
+    <>
+    <Navbar2 />
+    <Hero bgImage={jamb} mainText={mt} caption={cp}/>
+        <div className="container m-auto">
+        <div className="text-xl text-gray-800">
         <p> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
         laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto 
         beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut 
@@ -15,6 +23,10 @@ return (
         laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit 
         qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum 
         fugiat quo voluptas nulla pariatur?" </p>
-    </Layout>
+        </div>
+        </div>
+        <Footer />
+    </>
+    
 )
 }

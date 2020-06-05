@@ -15,7 +15,7 @@ const IndepthTextTopIcon = () => {
     return (
         <>
             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
+                <div className="text-pink-400 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                     <FontAwesomeIcon icon={["fa", "brain"]} size={"2x"} />
                 </div>
                 <h3 className="text-3xl mb-2 font-semibold leading-normal">

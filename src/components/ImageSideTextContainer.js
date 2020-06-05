@@ -27,14 +27,16 @@ const LongImage = () => {
 const SideTextIcon = () => {
     return (
         <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
-            <div className="md:pr-12">
-                <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300">
-                <FontAwesomeIcon icon={"coffee"} />
-                </div>
-                <h3 className="text-3xl font-semibold">
+            <div className="md:pr-12 relative">
+                <h3 className="text-3xl font-semibold text-center">
                 Students, Get Your Studying Done Here 
                 </h3>
-                <p className="mt-4 text-lg leading-relaxed text-gray-600">
+                <div className="w-full mt-2 inline-flex justify-center">
+                    <div className="text-white p-3 mt-4 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-orange-900">
+                        <FontAwesomeIcon icon={"coffee"}/>
+                    </div>
+                </div>
+                <p className="mt-4 text-lg leading-relaxed text-center text-gray-600">
                 The extension comes with three pre-built pages to help you
                 get started faster. You can change the text and images and
                 you're good to go.
