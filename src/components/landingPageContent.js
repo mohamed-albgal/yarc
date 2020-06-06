@@ -1,20 +1,12 @@
 import React from      "react"
-import Hero from "./Hero"
 import InDepthCardContainer from "./IndepthCardContainer"
 import TopicCardContainer from "./TopicCardContainer.js"
 import ImageSideTextContainer from "./ImageSideTextContainer"
 import ActionForm from "./ActionForm"
 import StaffDisplayContainer from './StaffDisplayContainer'
 import ClosingSection from "./ClosingSection"
-import lights from  "../assets/img/headshot3.jpg"
-import kids from    "../assets/img/headshot4.jpg"
-import head1 from    "../assets/img/headshot1.jpg"
-import hands from "../assets/img/hands.jpg"
 
-const caption = `The Yemeni American Resource Center is committed to providing a source of learning and growth for the entire
-Yemeni Community in the Bay Area`;
-
-const mainText = `Yemeni American Resource Center`
+//svg section seperator "component"
 const SectionSVGSep = () => {
     return (
         <div className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -39,11 +31,10 @@ const SectionSVGSep = () => {
 }
 
 export default () => {
+    //this will be wrapped by the layout, which whill be called by each page, which knows what caption, text and hero image it wants
     return (
       <>
         <main>
-            <Hero mainText={mainText} caption={caption} bgImage={hands} />
-            
             <section className="pb-20 bg-gray-300 -mt-24">
                 <TopicCardContainer />
                 <InDepthCardContainer />
