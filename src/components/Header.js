@@ -5,7 +5,7 @@ import logo from "../assets/img/duo_logo.svg"
 export default ({caption, mainText, heroImage}) => {
 
     const [open, setOpen] = useState("false");
-    const buc = (e) => {
+    const hamburgerClick = (e) => {
         e.preventDefault();
         setOpen(!open);
     }
@@ -24,7 +24,7 @@ export default ({caption, mainText, heroImage}) => {
                     </div>
                     {/*right*/}
                     <>
-                        <button onClick={e=> buc(e)} type="button" className="sm:hidden block text-gray-400">
+                        <button onClick={e=> hamburgerClick(e)} type="button" className="sm:hidden block text-gray-400">
                             <svg viewBox="0 0 100 80" className=" fill-current h-4 lg:h-6">
                                 <rect rx="10" x={70/!open} width="180" height="9"></rect>
                                 <rect rx="10" x={40/!open} y="30" width="100" height="9"></rect>
@@ -33,16 +33,13 @@ export default ({caption, mainText, heroImage}) => {
                         </button>
                     </>
                 </div>
-                <div className={`${(!open ? "visible bg-indigo-900 opacity-75 h-64":"hidden")} sm:block pt-2 pb-4 sm:flex sm:p-8 sm:items-center sm:justify-between`} >
-                    <Link className="block  py-1 hover:underline hover:bg-indigo-200 hover:text-gray-900 hover:font-semibold font-hairline px-4 text-white sm:ml-4" to="/about">
-                        About
-                    </Link>
-                    <Link className="block  py-1 hover:underline hover:bg-indigo-200 hover:text-gray-900 hover:font-semibold font-hairline px-4 text-white sm:ml-4" to="/mission">
-                        Mission
-                    </Link>
-                    <Link className=" block  py-1 hover:underline hover:bg-indigo-200 hover:text-gray-900 hover:font-semibold font-hairline px-4 text-white sm:ml-4" to="/blog">
-                        Blog
-                    </Link>
+                <div className={`${(!open ? "visible bg-indigo-900 opacity-75 h-64":"hidden")} sm:px-20 sm:block pt-2 pb-4 sm:flex sm:p-8 sm:items-center sm:justify-between`} >
+                    <NavElement  text="About" linkTo="/about"/>
+                    <NavElement  text="Mission" linkTo="/"/>
+                    <NavElement  text="Blog" linkTo="/"/>
+                    <NavElement  text="About" linkTo="/"/>
+                    <NavElement  text="About" linkTo="/"/>
+                    <NavElement  text="About" linkTo="/"/>
                 </div>
             </nav>
             <Hero mainText={open? mainText:""} caption={open?caption:""} heroImage={heroImage}/>
@@ -99,3 +96,12 @@ const Hero = ({mainText, caption, heroImage}) => {
   </div>
     )
 };
+
+const NavElement = ({linkTo, text}) => {
+    return (
+        <Link className=" block  py-1 hover:underline hover:bg-indigo-200 hover:text-gray-900 hover:font-semibold font-hairline px-4 text-white sm:ml-4" to={linkTo}>
+            {text}
+        </Link>
+    )
+
+}
