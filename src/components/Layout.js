@@ -3,11 +3,11 @@ import NavBar from './homogenous/NavBar'
 import Hero from './homogenous/Hero'
 import Footer from './Footer'
 
-const Layout = ({children, heroImage, mainText, caption, slantedImage}) => {
+const Layout = ({children, heroImage, mainText, caption, slantedImage, omitHero}) => {
     return (
         <>
             <NavBar />
-            <Hero heroImage={heroImage} mainText={mainText} caption={caption} slanted={slantedImage}/>
+            { !omitHero && <Hero heroImage={heroImage} mainText={mainText} caption={caption} slanted={slantedImage}/>}
             <div className="bg-red-900">
                 {children}
             </div>
