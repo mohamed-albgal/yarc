@@ -10,7 +10,6 @@ export default ({ data }) => {
             <Layout mainText={frontmatter.title} caption={frontmatter.title} heroImage={pageTurn}>
                 <div className="container m-10 markdown" dangerouslySetInnerHTML={{__html:html}} />
             </Layout>
-
         </div>
     )
 }
