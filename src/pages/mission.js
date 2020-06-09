@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { useStaticQuery } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import pageTurn from '../assets/img/Page-Turner.svg'
 
 export default () => {
