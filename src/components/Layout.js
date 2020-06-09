@@ -8,7 +8,7 @@ const Layout = ({children, heroImage, mainText, caption, slantedImage}) => {
         <>
             <NavBar />
             <Hero heroImage={heroImage} mainText={mainText} caption={caption} slanted={slantedImage}/>
-            <div className="bg-gray-300">
+            <div className="bg-red-900">
                 {children}
             </div>
             <Footer />
