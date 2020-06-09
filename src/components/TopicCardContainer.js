@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicCard from './TopicCard'
+import TopicCard from './homogenous/TopicCard'
 
 export default () => {
     return (

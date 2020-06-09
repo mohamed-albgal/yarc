@@ -1,6 +1,6 @@
 import React from      "react"
 import Layout from "../components/Layout"
-import LandingPageContent from "../components/landingPageContent"
+import LandingPageContent from "../components/LandingPageContent"
 import hands from "../assets/img/hands.jpg"
 import "../utils/font-awesome"
 
@@ -12,7 +12,7 @@ const mainText = `Yemeni American Resource Center`
 export default () => {
   return (
     <>
-      <Layout caption={caption} mainText={mainText} heroImage={hands}>
+      <Layout caption={caption} mainText={mainText} heroImage={hands} slantedImage={true}>
         <LandingPageContent />
       </Layout>
     </>

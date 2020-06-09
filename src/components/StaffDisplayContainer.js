@@ -1,5 +1,5 @@
 import React from 'react'
-import StaffCard from './StaffDisplayCard'
+import StaffCard from './homogenous/StaffDisplayCard'
 import lights from  "../assets/img/headshot3.jpg"
 import kids from    "../assets/img/headshot4.jpg"
 import head1 from    "../assets/img/headshot1.jpg"

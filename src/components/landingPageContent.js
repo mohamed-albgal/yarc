@@ -1,10 +1,10 @@
 import React from      "react"
-import InDepthCardContainer from "./IndepthCardContainer"
+import InDepthCardContainer from "./homogenous/IndepthCardContainer"
 import TopicCardContainer from "./TopicCardContainer.js"
-import ImageSideTextContainer from "./ImageSideTextContainer"
-import ActionForm from "./ActionForm"
+import ImageSideTextContainer from "./homogenous/ImageSideTextContainer"
+import ActionForm from "./homogenous/ActionForm"
 import StaffDisplayContainer from './StaffDisplayContainer'
-import ClosingSection from "./ClosingSection"
+import ClosingSection from "./homogenous/ClosingSection"
 
 //svg section seperator "component"
 const SectionSVGSep = () => {
