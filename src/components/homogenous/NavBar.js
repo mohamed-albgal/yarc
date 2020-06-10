@@ -4,7 +4,7 @@ import logo from "../../assets/img/duo_logo.svg"
 import squares from '../../assets/img/Protruding-Squares.svg'
 
 export default () => {
-    const [closed, setClosed] = useState("false");
+    const [closed, setClosed] = useState("true");
     const hamburgerClick = (e) => {
         e.preventDefault();
         setClosed(!closed);
@@ -30,14 +30,14 @@ export default () => {
                     </button>
                 </div>
             </div>
-            <div style={openMenuBg} className={`${(!closed ? "visible w-screen h-64 pt-10 pb-8 -mt-2 transition-opacity duration-700 text-center":" opacity-0 transition-opacity duration-1000 ")} 
+            <div style={openMenuBg} className={`${(!closed ? " h-64 pt-10 pb-8 -mt-2 transition-opacity opacity-100 duration-1000 ":" transition-opacity duration-1000 opacity-0 ")} 
                             sm:px-20 sm:block pt-2 pb-4 sm:flex sm:p-8 sm:items-center sm:justify-between
                             ` }>
-                
-                <NavElement  text="About" linkTo="/about"/>
-                <NavElement  text="Mission" linkTo="/mission"/>
-                <NavElement  text="Blog" linkTo="/blog/first-blog"/>
-                
+                <div class={closed ? "hidden": "visible"}>
+                    <NavElement  text="About" linkTo="/about" />
+                    <NavElement  text="Mission" linkTo="/mission"/>
+                    <NavElement  text="Blog" linkTo="/blog/first-blog"/>
+                </div>
             </div>
         </nav>
     )
@@ -45,7 +45,7 @@ export default () => {
 
 const NavElement = ({linkTo, text}) => {
     return (
-        <Link className=" block py-2 hover:underline hover:bg-indigo-200 hover:text-gray-900 font-semibold font-hairline px-4 text-white sm:ml-4" to={linkTo}>
+        <Link className="text-center block py-2 hover:underline hover:bg-indigo-200 hover:text-gray-900 font-semibold font-hairline px-4 text-xl text-gray-400 sm:ml-4" to={linkTo}>
             {text}
         </Link>
     )
