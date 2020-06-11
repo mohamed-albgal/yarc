@@ -27,7 +27,7 @@ export default ({mainText, caption, heroImage, slanted}) => {
               </div>
           </div>
       </div>
-      {slanted && <SvgSep />}
+      
         
       
   </div>

@@ -12,13 +12,14 @@ export default () => {
     return (
       <>
         <main>
-            <section className="pb-20 bg-gray-300 -mt-24">    
+        <SvgSep textColor="text-gray-300" />    
+        <section className="pb-20 bg-gray-300 -mt-24">    
                 <TopicCardContainer />
                 <InDepthCardContainer />
             </section>
 
             
-            <SvgSep textColor="text-gray-100" />
+            <SvgSep textColor="text-gray-200" />
             <section className="relative py-20">
                 <ImageSideTextContainer />
             </section>

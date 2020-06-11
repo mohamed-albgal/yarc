@@ -3,7 +3,7 @@ import React from 'react'
 export default ({textColor="text-bg-gray-100"}) => {
     return (
             <div
-                className="bottom-auto top-0 left-0 right-0 w-full  pointer-events-none overflow-hidden -mt-20"
+                className="bottom-auto top-0 left-0 right-0 w-full  pointer-events-none overflow-hidden -mt-16"
                 style={{ height: "80px", transform: "translateZ(0)" }}
             >
                 <svg
@@ -17,7 +17,7 @@ export default ({textColor="text-bg-gray-100"}) => {
                 >
                     <polygon
                         className={`${textColor} fill-current`}
-                        points="2560 0 2560 100 0 100"
+                        points="2560 0 2560 100 -900 100"
                     ></polygon>
                 </svg>
             </div>
