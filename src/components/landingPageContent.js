@@ -5,6 +5,7 @@ import ImageSideTextContainer from "./homogenous/ImageSideTextContainer"
 import ActionForm from "./homogenous/ActionForm"
 import StaffDisplayContainer from './StaffDisplayContainer'
 import ClosingSection from "./homogenous/ClosingSection"
+import SvgSep from './homogenous/SvgSep'
 
 //svg section seperator "component"
 const SectionSVGSep = () => {
@@ -50,7 +51,7 @@ export default () => {
                 <ImageSideTextContainer />
             </section>
             
-            <section className="my-40"> 
+            <section className="bg-gray-300 pb-32">
                 <StaffDisplayContainer />
             </section>
             

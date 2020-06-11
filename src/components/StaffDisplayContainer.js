@@ -7,8 +7,8 @@ import head2 from "../assets/img/headshot2.jpg"
 
 export default () => {
     return (
-        <>
-            <div className="w-full px-4 mb-16">
+        <div class=" relative pt-10 bottom-0">
+            <div className="w-full px-4">
                     <p className="lg:text-6xl text-4xl font-bold text-center">
                         Our Contributors
                     </p>
@@ -23,6 +23,6 @@ export default () => {
                 <StaffCard name={"FirstN LastN"} title={"Executive Director"} image={head1}/>
                 <StaffCard name={"FirstN LastN"} title={"General Coordinator"} image={head2}/>
             </div>
-        </>
+        </div>
     );
 }
