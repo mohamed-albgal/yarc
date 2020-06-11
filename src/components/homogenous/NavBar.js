@@ -30,7 +30,7 @@ export default () => {
                     </button>
                 </div>
             </div>
-            <div class={!closed ? `opacity-100 transition-opacity duration-500 ease-out` : `opacity-0 sm:opacity-100`}>
+            <div class={!closed ? `opacity-100 transition-opacity duration-200 ease-in` : `opacity-0 sm:opacity-100`}>
                 <div style={openMenuBg} className=" h-64 pt-10 pb-8 -mt-2
                 sm:px-10 sm:block pt-2 pb-4 sm:flex sm:p-8 sm:items-center sm:justify-between
                 ">
