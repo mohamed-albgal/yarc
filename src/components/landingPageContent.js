@@ -41,7 +41,10 @@ export default () => {
             </section>
 
             {/*svg separator between pages*/}
-            <SectionSVGSep />
+            <div className="inline-block">
+                <SectionSVGSep />
+            </div>
+            
             
             <section className="relative py-20">
                 <ImageSideTextContainer />
@@ -51,7 +54,7 @@ export default () => {
                 <StaffDisplayContainer />
             </section>
             
-            <section >
+            <section>
                 <ClosingSection />
                 <ActionForm />
             </section>
