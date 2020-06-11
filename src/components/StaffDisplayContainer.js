@@ -12,7 +12,7 @@ export default () => {
                     <p className="lg:text-6xl text-4xl font-bold text-center">
                         Our Contributors
                     </p>
-                    <p className="text-center text-lg text-gray-600">
+                    <p className="text-center text-lg text-gray-600 mb-10">
                         Without the hard work and contributions of these people, none of this would be possible!
                     </p>
             </div>
