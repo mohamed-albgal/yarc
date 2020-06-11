@@ -1,7 +1,12 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      transitionProperty: {
+        'height': 'height',
+        'width' : 'width',
+      },
+    },
   },
   variants: {},
   plugins: [],

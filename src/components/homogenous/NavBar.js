@@ -14,9 +14,9 @@ export default () => {
         <nav className=" z-50 w-full absolute top-0 sm:flex sm:items-center sm:justify-between bg-transparent">
             <div className="py-3 pl-2 pr-6 flex justify-between  items-center">
                 {/*left*/}
-                <div className="sm:px-6 flex-shrink-0">
+                <div className="sm:px-4 flex-shrink-0">
                     <Link to="/">
-                        <img className="sm:h-48 h-24"  src={logo} alt="YARC LOGO"/>
+                        <img className="sm:h-48 md:h-40 h-32"  src={logo} alt="YARC LOGO"/>
                     </Link>
                 </div>
                 {/*right*/}
@@ -30,12 +30,14 @@ export default () => {
                     </button>
                 </div>
             </div>
-            <div style={openMenuBg} className={`${(!closed ? " h-64 pt-10 pb-8 -mt-2 transition-opacity duration-300 ":" sm:opacity-100  transition-opacity duration-300 opacity-0 ")} 
-            sm:px-20 sm:block pt-2 pb-4 sm:flex sm:p-8 sm:items-center sm:justify-between
-            ` }>
-                <NavElement  text="About" linkTo="/about" />
-                <NavElement  text="Mission" linkTo="/mission"/>
-                <NavElement  text="Blog" linkTo="/blog/first-blog"/>
+            <div class={!closed ? `opacity-100 transition-opacity duration-500 ease-out` : `opacity-0 sm:opacity-100`}>
+                <div style={openMenuBg} className=" h-64 pt-10 pb-8 -mt-2
+                sm:px-10 sm:block pt-2 pb-4 sm:flex sm:p-8 sm:items-center sm:justify-between
+                ">
+                    <NavElement  text="About" linkTo="/about" />
+                    <NavElement  text="Mission" linkTo="/mission"/>
+                    <NavElement  text="Blog" linkTo="/blog/first-blog"/>
+                </div>
             </div>
         </nav>
     )
