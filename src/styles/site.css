@@ -91,9 +91,24 @@
     @apply border py-1 px-3;
   }
   
+  .markdown iframe {
+    @apply w-full
+  }
+
+  .markdown img {
+    @apply w-full
+  }
+
   /* Override pygments style background color. */
   .markdown .highlight pre {
     @apply bg-gray-100 !important;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
   }
 
 @tailwind components;
