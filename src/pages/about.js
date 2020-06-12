@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import SvgSep from '../components/homogenous/SvgSep'
 import jamb from '../assets/img/jambiyyahs.jpg'
 import Layout from '../components/Layout';
 
@@ -24,8 +25,9 @@ export default () => {
     return (
         <>
             <Layout caption={frontmatter.caption} mainText={frontmatter.title} heroImage={jamb} slantedImage={false}>
-                <div className=" markdown container m-10">
-                    <div className="text-xl text-gray-800" dangerouslySetInnerHTML={{__html: html}}>
+                
+                <div className=" markdown px-4  mt-0 sm:text-base">
+                    <div dangerouslySetInnerHTML={{__html: html}}>
                     </div>
                 </div>
             </Layout>
