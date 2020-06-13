@@ -24,7 +24,7 @@ import "../utils/font-awesome"
 export default () => {
   return (
     <>
-      <Layout >
+      <Layout transparentNavBar>
         <LandingPageContent />
       </Layout>
     </>
