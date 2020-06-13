@@ -10,8 +10,14 @@ export default ({transparent}) => {
         setClosed(!closed);
     }
     const openMenuBg = !closed ? svgBG : {};
+    //const overlayed = "z-50 absolute top-0 bg-transparent "
+    const overlayed = "absolute z-10 top-0 bg-transparent "
+    const singlePly = "relative"
+    const pos = transparent ?  overlayed:singlePly 
     return (
-        <nav className={`z-50 w-full absolute top-0 sm:flex sm:items-center sm:justify-between ${transparent ? "bg-transparent":"bg-indigo-900"}`}>
+        <div className={`${transparent ? "bg-transparent absolute z-10 top-0" : "relative bg-indigo-800"}`}>
+        <nav className={` w-full sm:flex sm:items-center sm:justify-between`}>
+    
             <div className="py-3 pl-2 pr-6 flex justify-between  items-center">
                 {/*left*/}
                 <div className="sm:px-4 flex-shrink-0">
@@ -39,7 +45,9 @@ export default ({transparent}) => {
                     <NavElement  text="Blog" linkTo="/blog/first-blog"/>
                 </div>
             </div>
+    
         </nav>
+        </div>
     )
 }
 
