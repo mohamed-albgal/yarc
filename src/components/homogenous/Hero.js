@@ -11,7 +11,7 @@ export default ({mainText, caption, heroImage, slanted}) => {
           style={{
           backgroundImage: `url(${heroImage})`,
           }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-50 bg-black"></span> 
+            <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span> 
       </div>
       <div className="container relative mx-auto">
           <div className="items-center flex flex-wrap">
