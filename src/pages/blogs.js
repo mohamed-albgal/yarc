@@ -10,6 +10,7 @@ export default () => {
     return (
         <div>
             <Navbar  />
+            <Hero caption="changeNav, merge ui-ref to master" mainText="Bismillah" heroImage={image} />
             
             
         </div>

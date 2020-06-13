@@ -15,14 +15,14 @@ export default ({transparent}) => {
     const singlePly = "relative"
     const pos = transparent ?  overlayed:singlePly 
     return (
-        <div className={`${transparent ? "bg-transparent absolute z-10 top-0" : "relative bg-indigo-800"}`}>
+        <div className={`${transparent ? "bg-transparent absolute z-10 top-0" : "relative bg-indigo-800"} w-screen`}>
         <nav className={` w-full sm:flex sm:items-center sm:justify-between`}>
     
             <div className="py-3 pl-2 pr-6 flex justify-between  items-center">
                 {/*left*/}
-                <div className="sm:px-4 flex-shrink-0">
+                <div className="sm:px-4 flex-shrink">
                     <Link to="/">
-                        <img className="sm:h-48 md:h-40 h-32"  src={logo} alt="YARC LOGO"/>
+                        <img className="sm:h-48 md:h-40 h-24"  src={logo} alt="YARC LOGO"/>
                     </Link>
                 </div>
                 {/*right*/}
@@ -36,8 +36,8 @@ export default ({transparent}) => {
                     </button>
                 </div>
             </div>
-            <div class={!closed ? `opacity-100 transition-opacity duration-200 ease-in ` : `opacity-0 sm:opacity-100`}>
-                <div style={openMenuBg} className=" h-64 pt-10 pb-8 -mt-2
+            <div className={!closed ? `h-auto transition-height duration-700 ease-in ` : `h-0 sm:h-auto sm:visible sm:z-0 sm:opacity-100`}>
+                <div style={openMenuBg} className=" h-auto pt-10 pb-8 -mt-2
                 sm:px-10 sm:block pt-2 pb-4 sm:flex sm:p-8 sm:items-center sm:justify-between
                 ">
                     <NavElement  text="About" linkTo="/about" />
@@ -53,7 +53,7 @@ export default ({transparent}) => {
 
 const NavElement = ({linkTo, text}) => {
     return (
-        <Link className="text-center block py-2 hover:underline hover:bg-indigo-200 hover:text-gray-900 font-semibold font-hairline px-4 text-xl text-gray-400 sm:ml-4" to={linkTo}>
+        <Link className="sm:visible text-center block py-2 hover:underline hover:bg-indigo-200 hover:text-gray-900 font-semibold font-hairline px-4 text-xl text-gray-400 sm:ml-4" to={linkTo}>
             {text}
         </Link>
     )
