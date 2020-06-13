@@ -16,8 +16,8 @@ export default ({transparent}) => {
     const pos = transparent ?  overlayed:singlePly 
     return (
         <div className={`${transparent ? "bg-transparent absolute z-10 top-0" : "relative bg-indigo-800"} w-screen `}>
-            <nav className={` w-screen lg:w-10/12 lg:ml-20 sm:flex sm:items-center sm:justify-between`}>
-                <div className="py-3 pl-2 pr-6 flex justify-between  items-center">
+            <nav className={` w-screen lg:w-11/12 sm:pb-1 sm:flex sm:items-center sm:justify-between`}>
+                <div className=" pl-2 pr-6 flex justify-between  items-center">
                     {/*left*/}
                     <div className="sm:px-4 flex-shrink">
                         <Link to="/">
@@ -38,6 +38,8 @@ export default ({transparent}) => {
                 <div style={openMenuBg} className={`${!closed ? 'h-64 transition-height duration-150 ease-in' : ' h-0 transition-height duration-150 ease-in sm:h-auto '} flex`}>
                     <div  className={ `w-full pt-10 pb-8 -mt-2
                     sm:px-10 sm:block sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "hidden sm:visible"}`}>
+                        
+                        
                         <NavElement  text="About" linkTo="/about" />
                         <NavElement  text="Mission" linkTo="/mission"/>
                         <NavElement  text="Blog" linkTo="/blog/first-blog"/>
@@ -49,9 +51,9 @@ export default ({transparent}) => {
     )
 }
 
-const NavElement = ({linkTo, text}) => {
+const NavElement = ({linkTo, text, mobileOnly}) => {
     return (
-        <Link className=" text-center block py-2 sm:hover:underline sm:hover:bg-indigo-200 hover:text-gray-900 font-semibold px-4 text-xl text-gray-400 sm:ml-4" to={linkTo}>
+        <Link className={`${mobileOnly && "sm:hidden relative top-0 left-0"} text-center block py-2 sm:hover:underline sm:hover:bg-indigo-200 hover:text-gray-900 font-semibold px-4 text-xl text-gray-400 sm:ml-4`} to={linkTo}>
             {text}
         </Link>
     )
