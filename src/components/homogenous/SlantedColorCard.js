@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SlantedColorCard = ({tailwindColor}) => {
+const SlantedColorCard = ({tailwindColor, title, caption}) => {
     return (
         <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
             <div className={`relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-${tailwindColor}`} >
@@ -26,12 +26,11 @@ const SlantedColorCard = ({tailwindColor}) => {
                         ></polygon>
                     </svg>
                     
-                    <h4 className="text-xl font-bold text-white">
-                        Large Scale Events And Meetups
+                    <h4 className="sm:text-2xl font-bold text-white">
+                        {title}
                     </h4>
                     <p className="text-md font-light mt-2 text-white">
-                    FILLER INFORMATION. SOURCE TEXT FROM GOOGLE DOC/MOKHTAR, UPDATE VIA CMS
-                    It is a long established fact that a reader will be distracted by the readable 
+                    {caption}
                     </p>
                 </blockquote>
             </div>

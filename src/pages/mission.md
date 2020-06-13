@@ -1,6 +1,8 @@
 ---
 title: "Yarc's Mission"
 caption: "Our Vision Is To Lead The Future By Sourcing and Harnessing All Potential Resources"
+type: "site_page"
+
 ---
 #Mission Page
 

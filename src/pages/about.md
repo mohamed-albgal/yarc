@@ -1,6 +1,7 @@
 ---
 title: "About Page"
 caption: "The Who, What, Why of The Yarc Center"
+type: "site_page"
 ---
 # About Page!!
 

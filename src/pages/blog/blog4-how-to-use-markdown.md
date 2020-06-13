@@ -1,4 +1,12 @@
-﻿# 4th Blog
+﻿---
+caption: "The Reason For Our Existence"
+title: "Blog 4"
+date: "2020-06-19"
+type: "blog"
+img: "village_kids.jpg"
+---
+
+# 4th Blog
 
 ## Can create checkable lists
 	

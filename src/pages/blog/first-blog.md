@@ -2,7 +2,9 @@
 
 title: "First Blog"
 caption: "Test Blog"
-
+date: "2020-07-10"
+type: "blog"
+img: "oakland_dock.jpg"
 ---
 
 #Blog Post 1

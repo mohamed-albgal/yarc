@@ -2,6 +2,9 @@
 
 title: "Second Blog"
 caption: "Testing another Blog"
+date: "2020-06-20"
+type: "blog"
+img: "lock_arms.jpg"
 
 ---
 

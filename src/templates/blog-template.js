@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import pageTurn from '../assets/img/Page-Turner.svg'
 import Hero from '../components/homogenous/Hero'
-import { Helmet } from 'react-helmet'
+
 
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
@@ -30,4 +30,3 @@ export const query = graphql`
   }
 `
 
-//<meta name="viewport" content="width=device-width, initial-scale=1">

@@ -1,4 +1,11 @@
-﻿## Why The Community Needs Me!
+﻿---
+caption: "The Reason For Our Existence"
+title: "Blog 3"
+date: "2020-06-30"
+type: "blog"
+img: "graffiti_create.jpg"
+---
+## Why The Community Needs Me!
 
 ***
 

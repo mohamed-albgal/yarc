@@ -1,29 +1,39 @@
 
 import React, {useState} from 'react'
-import { Link } from 'gatsby'
-import logo from "../assets/img/duo_logo.svg"
+import SlantedColorCard from '../components/homogenous/SlantedColorCard'
 import Navbar from '../components/homogenous/NavBar'
 import Hero from '../components/homogenous/Hero'
 import image from '../assets/img/youth_sunset.jpg'
 
+
 export default () => {
+    // const data = useStaticQuery(graphql`
+    // {
+    //     allMarkdownRemark(limit: 4, filter: {frontmatter: {type: {eq: "blog"}}}){
+    //     edges{
+    //         node{
+    //         html
+    //         frontmatter{
+    //             caption
+    //             title
+    //             date
+    //         }
+    //         }
+    //     }
+    //     }
+    // }`);
+
+    // const blogCards = data.allMarkdownRemark.edges.map((node, i) => {
+    //     <div></div>
+    // });
+
+
     return (
         <div>
-            <Navbar  />
+            <Navbar transparentNavbar />
             <Hero caption="changeNav, merge ui-ref to master" mainText="Bismillah" heroImage={image} />
-            
-            
+            <SlantedColorCard tailwindColor="white" title="test" caption="test test test test test test test test test test test test test test test" /> 
         </div>
 
     )
 }
-
-/**
- * flex box 1/2 width on mobile go columns
- *  img
- *  hamburger
- *  flexbox on mobile go columns
- *      links 1-4
- * 
- * 
- */
