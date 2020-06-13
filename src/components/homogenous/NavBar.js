@@ -35,7 +35,7 @@ export default ({transparent}) => {
                         </button>
                     </div>
                 </div>
-                <div style={openMenuBg} className={`${!closed ? 'h-64 transition-height duration-150 ease-in' : ' h-0 transition-height duration-150 ease-in sm:h-auto '} flex`}>
+                <div style={openMenuBg} className={`${!closed ? 'w-screen relative z-0 top-0 transition-width duration-300 ease-out' : ' w-0 transition-width duration-500 ease-linear sm:h-auto sm:w-auto '} flex`}>
                     <div  className={ `w-full pt-10 pb-8 -mt-2
                     sm:px-10 sm:block sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "hidden sm:visible"}`}>
                         

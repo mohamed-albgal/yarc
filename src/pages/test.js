@@ -6,7 +6,9 @@ export default () => {
     return (
         <>
             <NavBar />
-            <p>Bismillah</p>
+            <div className="text-6xl font-extrabold">
+                Bismillah
+            </div>
         </>
     )
 }
