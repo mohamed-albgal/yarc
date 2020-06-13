@@ -25,7 +25,7 @@ export default () => {
         <div>
             <Layout transparentNavBar >
             <Hero mainText={frontmatter.title} caption={frontmatter.title} heroImage={pageTurn} />
-                <div className="container m-10 markdown" dangerouslySetInnerHTML={{__html:html}}>
+                <div className=" markdown px-4  mt-0 sm:text-base" dangerouslySetInnerHTML={{__html:html}}>
                 </div>
             </Layout>
 
