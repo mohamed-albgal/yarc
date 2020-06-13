@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { useStaticQuery, graphql } from 'gatsby'
 import pageTurn from '../assets/img/Page-Turner.svg'
+import Hero from '../components/homogenous/Hero'
 
 export default () => {
     const data = useStaticQuery(graphql`
@@ -22,7 +23,8 @@ export default () => {
     const {frontmatter, html} = data.allMarkdownRemark.edges[0].node;
     return (
         <div>
-            <Layout mainText={frontmatter.title} caption={frontmatter.title} heroImage={pageTurn}>
+            <Layout transparentNavBar >
+            <Hero mainText={frontmatter.title} caption={frontmatter.title} heroImage={pageTurn} />
                 <div className="container m-10 markdown" dangerouslySetInnerHTML={{__html:html}}>
                 </div>
             </Layout>

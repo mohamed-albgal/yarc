@@ -27,9 +27,6 @@ export default ({mainText, caption, heroImage, slanted}) => {
               </div>
           </div>
       </div>
-      
-        
-      
   </div>
     )
 };

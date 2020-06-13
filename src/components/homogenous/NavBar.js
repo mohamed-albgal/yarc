@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import logo from "../../assets/img/duo_logo.svg"
 
 
-export default () => {
+export default ({transparent}) => {
     const [closed, setClosed] = useState("true");
     const hamburgerClick = (e) => {
         e.preventDefault();
@@ -11,7 +11,7 @@ export default () => {
     }
     const openMenuBg = !closed ? svgBG : {};
     return (
-        <nav className=" z-50 w-full absolute top-0 sm:flex sm:items-center sm:justify-between bg-transparent">
+        <nav className={`z-50 w-full absolute top-0 sm:flex sm:items-center sm:justify-between ${transparent ? "bg-transparent":"bg-indigo-900"}`}>
             <div className="py-3 pl-2 pr-6 flex justify-between  items-center">
                 {/*left*/}
                 <div className="sm:px-4 flex-shrink-0">
