@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SlantedColorCard = ({tailwindColor, title, caption}) => {
+const SlantedColorCard = ({tailwindColor, title, caption, textColor="white"}) => {
     return (
         <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
             <div className={`relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-${tailwindColor}`} >
@@ -26,10 +26,10 @@ const SlantedColorCard = ({tailwindColor, title, caption}) => {
                         ></polygon>
                     </svg>
                     
-                    <h4 className="sm:text-2xl font-bold text-white">
+                    <h4 className="sm:text-2xl font-bold text-{textColor}}">
                         {title}
                     </h4>
-                    <p className="text-md font-light mt-2 text-white">
+                    <p className="text-md font-light mt-2 text-{textColor}">
                     {caption}
                     </p>
                 </blockquote>

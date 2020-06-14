@@ -16,7 +16,7 @@ export default ({transparent}) => {
     const pos = transparent ?  overlayed:singlePly 
     return (
         <div className={`${transparent && "sm:bg-transparent sm:absolute sm:z-10 sm:top-0"} fixed z-10 sm:mt-2 bg-gray-900 opacity-75 w-screen `}>
-            <nav className={` w-screen lg:w-11/12 border-b-0 shadow-xl sm:pb-1 sm:flex sm:items-center sm:justify-between`}>
+            <nav className={`sm:flex w-full  sm:px-10 sm:pb-1  sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between  items-center">
                     {/*left*/}
                     <div className="sm:px-4 flex-shrink">
