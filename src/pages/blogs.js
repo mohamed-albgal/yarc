@@ -36,15 +36,18 @@ export default () => {
          * 
          */
         return (
-            <div className="flex max-w-full">
-                <img src={image} alt="big image">
-                </img>
-                <h1 className="text-3xl">
-                    Newest Blog
-                </h1>
-                <p className="text-gray-700 text-sm">
-                    {text}
-                </p>
+            <div className="flex max-w-full flex-wrap rounded-lg border-black --  m-4">
+                <div className=" sm:w-6/12 object-cover h-full rounded-lg overflow-hidden ">
+                    <img src={image} alt="big image"></img>
+                </div>
+                <div className=" h-full p-10">
+                    <h1 className=" sm:text-6xl text-3xl text-gray-700">
+                        Newest Blog
+                    </h1>
+                    <p className="text-gray-700 text-sm">
+                        {text}
+                    </p>
+                </div>
             </div>
         )
     }
@@ -68,10 +71,10 @@ export default () => {
     const bigText = "Some large test to see if this will work"
     return (
         <div>
-            <Navbar transparent  />
-            <Hero caption="changeNav, merge ui-ref to master" mainText="Bismillah" heroImage={image} />
+            <Navbar  />
             
-            <div className="container mx-auto my-8">
+            
+            <div className="container mx-auto sm:mt-64 mt-32">
                 <BigCard text={bigText} />
             
                 <div className=" sm:flex flex-wrap justify-around items-start">

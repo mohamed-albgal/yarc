@@ -3,19 +3,15 @@ import { Link } from 'gatsby'
 import logo from "../../assets/img/duo_logo.svg"
 
 
-export default ({transparent}) => {
+export default ({transparentNavbar}) => {
     const [closed, setClosed] = useState("true");
     const hamburgerClick = (e) => {
         e.preventDefault();
         setClosed(!closed);
     }
     const openMenuBg = !closed ? svgBG : {};
-    //const overlayed = "z-50 absolute top-0 bg-transparent "
-    const overlayed = "absolute z-10 top-0 bg-transparent "
-    const singlePly = "relative"
-    const pos = transparent ?  overlayed:singlePly 
     return (
-        <div className={`${transparent && "sm:bg-transparent sm:absolute sm:z-10 sm:top-0"} fixed z-10 sm:mt-2 bg-gray-900 opacity-75 w-screen `}>
+        <div className={`${!!transparentNavbar && "sm:bg-transparent sm:absolute sm:z-10 sm:mt-2 "} top-0 fixed z-10 bg-gray-900 opacity-75 w-screen `}>
             <nav className={`sm:flex w-full  sm:px-10 sm:pb-1  sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between  items-center">
                     {/*left*/}
