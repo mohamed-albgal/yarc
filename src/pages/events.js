@@ -3,12 +3,12 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 
 import kids from '../assets/img/village_kids.jpg'
-import squares from '../assets/img/oakland_dock.jpg'
+//import squares from '../assets/img/oakland_dock.jpg'
 
 export default  ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
-    const newestEvent = nodes[0].node.frontmatter;
-    const events = nodes.slice(1);
+    //const newestEvent = nodes[0].node.frontmatter;
+    //const events = nodes.slice(1);
     const BlogDisplay = ({title, date, description}) => {
         return (
             <div className="w-full sm:m-0 ">
@@ -28,7 +28,7 @@ export default  ({data}) => {
         <div className="sm:mt-0 sm:pt-10 mb-20 pt-56 " >
             <PageHeadText title="Upcoming Events" />
         </div>
-        {events.map(({node})=>(
+        {nodes.map(({node})=>(
             <Link to={node.fields.slug}>
                 <BlogDisplay title={node.frontmatter.title}
                 date={node.frontmatter.date}

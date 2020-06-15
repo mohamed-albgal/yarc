@@ -10,7 +10,7 @@ import img2 from '../assets/img/covid_19_thanks.jpg'
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
     const featureData = nodes[0].node;
-    const blogNodes = nodes.slice(1);
+    //const blogNodes = nodes.slice(1);
     
     // const allBlogs = blogNodes.map(({node, i}) => (
     //     <Link to={node.fields.slug}>
@@ -115,7 +115,7 @@ const BigCard = ({title, caption, blogImg, date}) => {
     return (
         <div className="flex max-w-full flex-wrap shadow-xl m-4">
             <div className="order-first sm:w-2/3 object-cover sm:rounded-l-lg sm:rounded-r-none rounded-lg h-full overflow-hidden ">
-                <img src={blogImg} alt="big image"></img>
+                <img src={blogImg} alt="big"></img>
             </div>
             <div className=" order-last sm:w-1/3 rounded-lg border-blue-100 w-full  bg-gray-200">
                 <div className=" sm:h-full flex-grow p-10 ">
@@ -136,7 +136,7 @@ const BasicCard = ({title, caption, blogImg, date}) => {
     return (
         <div className="w-11/12 sm:max-w-md rounded-md bg-gray-300 overflow-hidden shadow-2xl sm:mx-4 sm:my-8 my-8 mx-auto">
             <div className=" ">
-                <img className="object-cover" src={blogImg} alt="some image" />
+                <img className="object-cover" src={blogImg} alt="something" />
             </div>
             <div className="px-6 py-4">
                 <div className=" font-hairline bold sm:text-5xl mb-2"> {title}

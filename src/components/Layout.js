@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from './homogenous/NavBar'
-import Hero from './homogenous/Hero'
+//import Hero from './homogenous/Hero'
 import Footer from './Footer'
 
 const Layout = ({children, transparentNavBar}) => {

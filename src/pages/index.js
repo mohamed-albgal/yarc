@@ -1,5 +1,5 @@
 import React from      "react"
-import { graphql } from 'gatsby'
+//import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import LandingPageContent from "../components/landingPageContent"
 import "../utils/font-awesome"
@@ -10,7 +10,8 @@ import "../utils/font-awesome"
     data as a prop works
 */
 
-
+// ideally pull all site data from graphql query sourced from a .md, injected into
+//components as props.
 // export const query = graphql`
 // {
 //   site{

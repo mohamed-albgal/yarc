@@ -34,8 +34,6 @@ export default ({transparentNavbar}) => {
                 <div className={`${!closed ? 'h-64 relative z-0 top-0 transition-height duration-150 ease-linear' : ' h-0 transition-height duration-100 ease-linear sm:h-auto sm:w-auto '} flex`}>
                     <div  className={ `w-full pt-10 pb-8 -mt-2 
                     sm:px-10 sm:block sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "hidden sm:visible"}`}>
-                        
-                        
                         <NavElement  text="About" linkTo="/about" />
                         <NavElement  text="Mission" linkTo="/mission"/>
                         <NavElement  text="Events" linkTo="/events"/>
@@ -61,21 +59,26 @@ const NavElement = ({linkTo, text, mobileOnly}) => {
  * 
  * 
  * 
- * link form to something
+ 
  * test events page with different images by manually adding
  * navbar
+ * fix spacing on blog content, events page
  *  fix links, transparent vs not issue
  * add fb images
- * fix spacing on blog content, events page
+ 
  * icons
+    use react-icons instead of fontaweseom, create a new branch!
  * make markdowns link to their images in the assets dir
  * fix image loading
  * 
- * add site text to a markdown file
+ * add site text to a markdown file so that all content is not embedded in components
  *  
+ * * link form to something
+ *      done on netlify, wrap action form in form tag and thats it
  * fix homepage content/ aestheticl logic, tie in somehow
  *  fix overall ui look
  * add fluff
+ * add a 404 page?
  
  
  */
