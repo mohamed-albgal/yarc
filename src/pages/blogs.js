@@ -28,16 +28,9 @@ export default () => {
     // });
 
     const BigCard = ({text}) => {
-        /**
-         * side by side image and text area, must be flex on small, full width on mobile, big on small and above
-         *  
-         * 
-         * 
-         * 
-         */
         return (
             <div className="flex max-w-full flex-wrap shadow-xl m-4">
-                <div className="order-first sm:w-2/3 object-cover rounded-l-lg h-full overflow-hidden ">
+                <div className="order-first sm:w-2/3 object-cover sm:rounded-l-lg sm:rounded-r-none rounded-lg h-full overflow-hidden ">
                     <img src={image} alt="big image"></img>
                 </div>
                 <div className=" order-last sm:w-1/3 rounded-lg border-blue-100 w-full  bg-gray-200">
@@ -54,9 +47,9 @@ export default () => {
         )
     }
 
-    const Card = ({title, caption, blogImg}) => {
+    const BasicCard = ({title, caption, blogImg}) => {
         return (
-            <div className="w-11/12 sm:max-w-md rounded-md bg-gray-300 overflow-hidden shadow-2xl">
+            <div className="w-11/12 sm:max-w-md rounded-md bg-gray-300 overflow-hidden shadow-2xl sm:mx-4 sm:my-8 my-8 mx-auto">
                 <img className="w-full rounded-lg" src={blogImg} alt="some image" />
                 
                 <div className="px-6 py-4">
@@ -79,13 +72,13 @@ export default () => {
             <div className="container mx-auto sm:mt-64 mt-32">
                 <BigCard text={bigText} />
             
-                <div className=" sm:flex flex-wrap justify-around items-start">
+                <div className=" sm:flex flex-wrap justify-start">
                 
-                    <Card caption={"test content test content test content test content"} blogImg={image} title={"One"} />
-                    <Card caption={"test content test content test content test content"} blogImg={image} title={"Two"} />
-                    <Card caption={"test content test content test content test content"} blogImg={image} title={"Three"} />
-                    <Card caption={"test content test content test content test content"} blogImg={image} title={"Four"} />
-                    <Card caption={"test content test content test content test content"} blogImg={image} title={"Five"} />
+                    <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"One"} />
+                    <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"Two"} />
+                    <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"Three"} />
+                    <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"Four"} />
+                    <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"Five"} />
                 </div>
             </div>
         </div>
