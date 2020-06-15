@@ -1,54 +1,59 @@
 
 import React from 'react'
 import Layout from '../components/Layout'
-import {useStaticQuery, graphql} from 'gatsby'
+import { graphql} from 'gatsby'
 import imgfeat from '../assets/img/hangingLights.jpg'
 import img0 from '../assets/img/graffiti_create.jpg'
-import img1 from '../assets/img/giftIsYou_mural.jpg'
+import img1 from '../assets/img/youth_sunset.jpg'
 import img2 from '../assets/img/covid_19_thanks.jpg'
 
-const cp = "test test test test test test test test test test test test test test test";
-export default () => {
-    const data = useStaticQuery(graphql`
-    {
-        allMarkdownRemark(limit: 4, filter: {frontmatter: {type: {eq: "blog"}}}){
-        edges{
-            node{
-            frontmatter{
-                caption
-                title
-                date
-                img
-            }
-            }
-        }
-        }
-    }`);
-
-    
+export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
-    
     const featureData = nodes[0].node;
     const blogNodes = nodes.slice(1);
     
-    
+    // const allBlogs = blogNodes.map(({node, i}) => (
+    //     <BasicCard 
+    //     blogImg={img2}
+    //     caption={node.frontmatter.caption} 
+    //     title={node.frontmatter.title} 
+    //     date={node.frontmatter.date}
+    //     />
+    // ))
+
+
 
     return (
         <Layout>
-            <div className="container mx-auto sm:mt-56 bg-gray-200">
+            <div className="mt-0 pb-40 pt-56" >
+                <BlogIntro title="Our Voices" />
+            </div>
+            <div className="container mx-auto bg-gray-200">
                 <BigCard blogImg={imgfeat}
                 title={featureData.frontmatter.title} 
                 caption={featureData.frontmatter.caption}
                 date={featureData.frontmatter.date}
                 />
                 <div className=" sm:flex flex-wrap justify-start">
-                    {blogNodes.map(({node, i}) => (<BasicCard 
-                        blogImg={img1}
-                        caption={node.frontmatter.caption} 
-                        title={node.frontmatter.title} 
-                        date={node.frontmatter.date}
-                        />
-                    ))}
+                    {/**allBlogs.length && allBlogs*/}
+                    <BasicCard 
+                    blogImg={img0}
+                    caption={nodes[1].node.frontmatter.caption} 
+                    title={nodes[1].node.frontmatter.title} 
+                    date={nodes[1].node.frontmatter.date}
+                    />
+                    <BasicCard 
+                    blogImg={img1}
+                    caption={nodes[2].node.frontmatter.caption} 
+                    title={nodes[2].node.frontmatter.title} 
+                    date={nodes[2].node.frontmatter.date}
+                    />
+                    <BasicCard 
+                    blogImg={img2}
+                    caption={nodes[3].node.frontmatter.caption} 
+                    title={nodes[3].node.frontmatter.title} 
+                    date={nodes[3].node.frontmatter.date}
+                    />
                 </div>
             </div>
         </Layout>
@@ -56,6 +61,43 @@ export default () => {
     )
 }
 
+export const query = graphql`
+{
+    allMarkdownRemark(limit: 4, filter: {frontmatter: {type: {eq: "blog"}}}){
+    edges{
+        node{
+        frontmatter{
+            caption
+            title
+            date
+            img
+        }
+        }
+    }
+    }
+}`;
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
 const BigCard = ({title, caption, blogImg, date}) => {
     return (
         <div className="flex max-w-full flex-wrap shadow-xl m-4">
@@ -67,8 +109,8 @@ const BigCard = ({title, caption, blogImg, date}) => {
                     <h1 className=" sm:text-6xl text-3xl text-gray-700">
                         {title}
                     </h1>
-                    <p className="text-gray-700 text-sm max-h-full">
-                        {caption}
+                    <p className="text-gray-700 sm:text-3xl text-lg max-h-full">
+                    Notice that you’re able to query with the $slug value from your context as an argument, which ensures that you’re returning only the data that matches that specific page. As a result, you can provide the title and html from the matching markdownRemark record to your component. The context values are also available as the pageContext prop in the template component itself.
                     </p>
                     <p className="text-xs text-gray-500 leading-tight">{date}</p>
                 </div>
@@ -84,12 +126,22 @@ const BasicCard = ({title, caption, blogImg, date}) => {
                 <img className="object-cover" src={blogImg} alt="some image" />
             </div>
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2"> {title}
+                <div className=" font-hairline bold sm:text-5xl mb-2"> {title}
                 </div>
-                <p className="text-gray-700 text-base">
-                    {caption}
+                <p className="text-gray-700 text-2xl">
+                Notice that you’re able to query with the $slug value from your context as an argument, which ensures that you’re returning only the data that matches that specific page. As a result, you can provide the title and html from the matching markdownRemark record to your component. The context values are also available as the pageContext prop in the template component itself.
                 </p>
                 <p className="text-xs text-gray-500 leading-tight">{date}</p>
+            </div>
+        </div>
+    )
+}
+
+const BlogIntro = (props) => {
+    return (
+        <div className=" transform container mx-auto flex flex-col flex-no-wrap">
+            <div className="text-gray-900 font-extrabold tracking-wide " style={{fontSize:"8rem"}}> {props.title}
+                <span className="block h-1 -mt-4 bg-blue-900 self-stretch"></span>
             </div>
         </div>
     )
