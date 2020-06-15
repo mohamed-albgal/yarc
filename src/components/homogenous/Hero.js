@@ -10,6 +10,7 @@ export default ({mainText, caption, heroImage, slanted}) => {
       <div className=" absolute top-0 w-full h-full bg-center bg-cover"
           style={{
           backgroundImage: `url(${heroImage})`,
+          
           }}>
             <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span> 
       </div>

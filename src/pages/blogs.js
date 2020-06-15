@@ -4,6 +4,7 @@ import SlantedColorCard from '../components/homogenous/SlantedColorCard'
 import Navbar from '../components/homogenous/NavBar'
 import Hero from '../components/homogenous/Hero'
 import image from '../assets/img/youth_sunset.jpg'
+import Layout from '../components/Layout'
 
 const cp = "test test test test test test test test test test test test test test test";
 export default () => {
@@ -51,7 +52,6 @@ export default () => {
         return (
             <div className="w-11/12 sm:max-w-md rounded-md bg-gray-300 overflow-hidden shadow-2xl sm:mx-4 sm:my-8 my-8 mx-auto">
                 <img className="w-full rounded-lg" src={blogImg} alt="some image" />
-                
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2"> {title}
                     </div>
@@ -65,15 +65,10 @@ export default () => {
 
     const bigText = "Some large test to see if this will work"
     return (
-        <div>
-            <Navbar  />
-            
-            
-            <div className="container mx-auto sm:mt-64 mt-32">
+        <Layout>
+            <div className="container mx-auto sm:mt-56 bg-gray-200">
                 <BigCard text={bigText} />
-            
                 <div className=" sm:flex flex-wrap justify-start">
-                
                     <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"One"} />
                     <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"Two"} />
                     <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"Three"} />
@@ -81,7 +76,7 @@ export default () => {
                     <BasicCard caption={"test content test content test content test content"} blogImg={image} title={"Five"} />
                 </div>
             </div>
-        </div>
+        </Layout>
 
     )
 }
