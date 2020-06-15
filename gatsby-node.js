@@ -43,7 +43,7 @@ exports.createPages = async ({graphql, actions}) => {
     result.data.allMarkdownRemark.edges.forEach(  ({ node }) => {
         console.log(node);
         const path = node.fileAbsolutePath.split(path.sep);
-        if (path.includes('blog'){
+        if (path.includes('blog')){
             (createPage({
                 path: node.fields.slug ,
                 component: path.resolve(`./src/templates/blog-template.js`),
