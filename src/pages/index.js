@@ -1,7 +1,7 @@
 import React from      "react"
 import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
-import LandingPageContent from "../components/LandingPageContent"
+import LandingPageContent from "../components/landingPageContent"
 import "../utils/font-awesome"
 
 

@@ -41,7 +41,7 @@ exports.createPages = async ({graphql, actions}) => {
         }
     }`)
     result.data.allMarkdownRemark.edges.forEach(  ({ node }) => {
-        console.log(node);
+        
         const fullPath = node.fileAbsolutePath.split(path.sep);
         if (fullPath.includes('blog')){
             (createPage({
