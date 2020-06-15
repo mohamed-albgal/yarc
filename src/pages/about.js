@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import SvgSep from '../components/homogenous/SvgSep'
-import jamb from '../assets/img/jambiyyahs.jpg'
+import jamb from '../assets/img/jamb.jpg'
 import Layout from '../components/Layout';
 import Hero from '../components/homogenous/Hero'
 
