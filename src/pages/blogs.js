@@ -12,14 +12,14 @@ export default ({data}) => {
     const featureData = nodes[0].node;
     const blogNodes = nodes.slice(1);
     
-    // const allBlogs = blogNodes.map(({node, i}) => (
-    //     <BasicCard 
-    //     blogImg={img2}
-    //     caption={node.frontmatter.caption} 
-    //     title={node.frontmatter.title} 
-    //     date={node.frontmatter.date}
-    //     />
-    // ))
+    const allBlogs = blogNodes.map(({node, i}) => (
+        <BasicCard 
+        blogImg={img2}
+        caption={node.frontmatter.caption} 
+        title={node.frontmatter.title} 
+        date={node.frontmatter.date}
+        />
+    ))
 
 
 
@@ -63,19 +63,22 @@ export default ({data}) => {
 
 export const query = graphql`
 {
-    allMarkdownRemark(limit: 4, filter: {frontmatter: {type: {eq: "blog"}}}){
-    edges{
-        node{
-        frontmatter{
+    allMarkdownRemark(limit: 4, filter: {frontmatter: {type: {eq: "blog"}}}) {
+      edges {
+        node {
+          frontmatter {
             caption
             title
             date(formatString: "MMMM DD, YYYY")
             img
+          }
+          fields {
+            slug
+          }
         }
-        }
+      }
     }
-    }
-}`;
+  }`;
 /**
  * 
  * 

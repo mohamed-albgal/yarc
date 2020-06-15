@@ -77,6 +77,9 @@ export const query = graphql`
                     type
                     img
                 }
+                fields {
+                    slug
+                }
             }
         }
     }

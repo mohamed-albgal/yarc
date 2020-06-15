@@ -52,13 +52,13 @@ exports.createPages = async ({graphql, actions}) => {
                     slug: node.fields.slug,
                 },
             }))
-        } else if (fullPath.includes('event')){
+        } else if (fullPath.includes('events')){
             (createPage({
                 path:node.fields.slug,
                 component:path.resolve(`./src/templates/events-template.js`),
                 context: {
                     slug: node.fields.slug,
-                }
+                },
             }))
         }
     })

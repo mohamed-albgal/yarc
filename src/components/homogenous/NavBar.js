@@ -63,3 +63,25 @@ const svgBG = {
     
     
 }
+
+
+/**
+ * 
+ * 
+ * 
+ * fix the events page
+ * add links to blogs and events
+ * fix slandtedcard components, svg not showing up i messed with the props
+ * 
+ * 
+ * navbar
+ * add fb images
+ * fix overall ui look
+ * 
+ * add fluff
+ * icons
+ * fix image loading
+ * add site text to a markdown file
+ * make markdowns link to their images in the assets dir
+ * 
+ */
