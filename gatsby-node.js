@@ -42,8 +42,8 @@ exports.createPages = async ({graphql, actions}) => {
     }`)
     result.data.allMarkdownRemark.edges.forEach(  ({ node }) => {
         console.log(node);
-        const path = node.fileAbsolutePath.split(path.sep);
-        if (path.includes('blog')){
+        const fullPath = node.fileAbsolutePath.split(path.sep);
+        if (fullPath.includes('blog')){
             (createPage({
                 path: node.fields.slug ,
                 component: path.resolve(`./src/templates/blog-template.js`),
@@ -52,7 +52,7 @@ exports.createPages = async ({graphql, actions}) => {
                     slug: node.fields.slug,
                 },
             }))
-        } else if (path.includes('event')){
+        } else if (fullPath.includes('event')){
             (createPage({
                 path:node.fields.slug,
                 component:path.resolve(`./src/templates/events-template.js`),
