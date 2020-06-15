@@ -25,7 +25,7 @@ export default ({data}) => {
 
     return (
         <Layout>
-            <div className="mt-0 pb-40 pt-56" >
+            <div className="mt-0 sm:pt-10 pt-56 mb-20">
                 <BlogIntro title="Our Voices" />
             </div>
             <div className="container mx-auto bg-gray-200">
@@ -69,7 +69,7 @@ export const query = graphql`
         frontmatter{
             caption
             title
-            date
+            date(formatString: "MMMM DD, YYYY")
             img
         }
         }
@@ -140,7 +140,7 @@ const BasicCard = ({title, caption, blogImg, date}) => {
 const BlogIntro = (props) => {
     return (
         <div className=" transform container mx-auto flex flex-col flex-no-wrap">
-            <div className="text-gray-900 font-extrabold tracking-wide " style={{fontSize:"8rem"}}> {props.title}
+            <div className="text-gray-900 font-extrabold tracking-wide text-8xl shadow-2xl">{props.title}
                 <span className="block h-1 -mt-4 bg-blue-900 self-stretch"></span>
             </div>
         </div>

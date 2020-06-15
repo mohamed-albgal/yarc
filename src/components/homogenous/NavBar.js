@@ -38,6 +38,7 @@ export default ({transparentNavbar}) => {
                         
                         <NavElement  text="About" linkTo="/about" />
                         <NavElement  text="Mission" linkTo="/mission"/>
+                        <NavElement  text="Events" linkTo="/events"/>
                         <NavElement  text="Blog" linkTo="/blogs"/>
                     </div>
                 </div>

@@ -3,7 +3,9 @@ const { createFilePath } =  require(`gatsby-source-filesystem`)
 
 /*
 onCreateNode:
-    tells Gatsby: 'everytime you create a node, do {code}'
+    tells Gatsby: 'everytime you create a node, check of type md remark,
+        create a new path (unsure of how name of slug is chosen here (!)
+        create a new field containing the newly created path+slug
 */
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -12,10 +14,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         const slug = createFilePath({ 
             node,
             getNode, 
-            // i added the /blogs to only get blogs to show up
-            basePath:`pages/blogs` ,
-            // ***note the default is true, this makes the slug be /about instead of /about/, change if sub-pages (?)
-            trailingSlash:false
+            basePath:`pages/` ,
+            trailingSlash:true
         });
         createNodeField({
             node,
@@ -42,14 +42,24 @@ exports.createPages = async ({graphql, actions}) => {
     }`)
     result.data.allMarkdownRemark.edges.forEach(  ({ node }) => {
         console.log(node);
-        node.fileAbsolutePath.split(path.sep).includes('blog') &&
-        (createPage({
-            path: node.fields.slug ,
-            component: path.resolve(`./src/templates/blog-template.js`),
-            context: {
-                //data passed here is available as a graphql query
-                slug: node.fields.slug,
-            },
-        }))
+        const path = node.fileAbsolutePath.split(path.sep);
+        if (path.includes('blog'){
+            (createPage({
+                path: node.fields.slug ,
+                component: path.resolve(`./src/templates/blog-template.js`),
+                context: {
+                    //data passed here is available as a graphql query
+                    slug: node.fields.slug,
+                },
+            }))
+        } else if (path.includes('event')){
+            (createPage({
+                path:node.fields.slug,
+                component:path.resolve(`./src/templates/events-template.js`),
+                context: {
+                    slug: node.fields.slug,
+                }
+            }))
+        }
     })
 }
