@@ -36,17 +36,19 @@ export default () => {
          * 
          */
         return (
-            <div className="flex max-w-full flex-wrap rounded-lg border-black --  m-4">
-                <div className=" sm:w-6/12 object-cover h-full rounded-lg overflow-hidden ">
+            <div className="flex max-w-full flex-wrap shadow-xl m-4">
+                <div className="order-first sm:w-2/3 object-cover rounded-l-lg h-full overflow-hidden ">
                     <img src={image} alt="big image"></img>
                 </div>
-                <div className=" h-full p-10">
-                    <h1 className=" sm:text-6xl text-3xl text-gray-700">
-                        Newest Blog
-                    </h1>
-                    <p className="text-gray-700 text-sm">
-                        {text}
-                    </p>
+                <div className=" order-last sm:w-1/3 rounded-lg border-blue-100 w-full  bg-gray-200">
+                    <div className=" sm:h-full flex-grow p-10 ">
+                        <h1 className=" sm:text-6xl text-3xl text-gray-700">
+                            Newest Blog
+                        </h1>
+                        <p className="text-gray-700 text-sm max-h-full">
+                            {text}
+                        </p>
+                    </div>
                 </div>
             </div>
         )

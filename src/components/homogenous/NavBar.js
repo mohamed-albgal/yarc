@@ -11,7 +11,7 @@ export default ({transparentNavbar}) => {
     }
     const openMenuBg = !closed ? svgBG : {};
     return (
-        <div className={`${!!transparentNavbar && "sm:bg-transparent sm:absolute sm:z-10 sm:mt-2 "} top-0 fixed z-10 bg-gray-900 opacity-75 w-screen `}>
+        <div className={`${!!transparentNavbar && "sm:bg-transparent sm:absolute sm:z-10 sm:mt-2 "} top-0 fixed z-10 bg-black w-screen `} style={{opacity:'90%'}}>
             <nav className={`sm:flex w-full  sm:px-10 sm:pb-1  sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between  items-center">
                     {/*left*/}
