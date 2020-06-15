@@ -7,11 +7,11 @@ const cardCaption = `Insert some important text here that dictates mission and w
 Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
 (injected humour and the like)`
 
-export default () => {
+export default ({}) => {
     return (
         <div className="flex flex-wrap items-center mt-32">
             <IndepthTextTopIcon />
-            <SlantedColorCard caption={cardCaption} title={cardTitle} tailwindColor={"pink-300"} />
+            <SlantedColorCard caption={cardCaption} title={cardTitle} bgColorTW={"orange-100"} textColorTW={"gray-900"} />
         </div>
     )
 }

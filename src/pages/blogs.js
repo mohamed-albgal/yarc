@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Layout from '../components/Layout'
-import { graphql} from 'gatsby'
+import { graphql, Link} from 'gatsby'
 import imgfeat from '../assets/img/hangingLights.jpg'
 import img0 from '../assets/img/graffiti_create.jpg'
 import img1 from '../assets/img/youth_sunset.jpg'
@@ -12,14 +12,16 @@ export default ({data}) => {
     const featureData = nodes[0].node;
     const blogNodes = nodes.slice(1);
     
-    const allBlogs = blogNodes.map(({node, i}) => (
-        <BasicCard 
-        blogImg={img2}
-        caption={node.frontmatter.caption} 
-        title={node.frontmatter.title} 
-        date={node.frontmatter.date}
-        />
-    ))
+    // const allBlogs = blogNodes.map(({node, i}) => (
+    //     <Link to={node.fields.slug}>
+    //         <BasicCard 
+    //         blogImg={img2}
+    //         caption={node.frontmatter.caption} 
+    //         title={node.frontmatter.title} 
+    //         date={node.frontmatter.date}
+    //         />
+    //     </Link>
+    // ))
 
 
 
@@ -29,31 +31,39 @@ export default ({data}) => {
                 <BlogIntro title="Our Voices" />
             </div>
             <div className="container mx-auto bg-gray-200">
-                <BigCard blogImg={imgfeat}
-                title={featureData.frontmatter.title} 
-                caption={featureData.frontmatter.caption}
-                date={featureData.frontmatter.date}
-                />
+                <Link to={featureData.fields.slug}>
+                    <BigCard blogImg={imgfeat}
+                    title={featureData.frontmatter.title} 
+                    caption={featureData.frontmatter.caption}
+                    date={featureData.frontmatter.date}
+                    />
+                </Link>
                 <div className=" sm:flex flex-wrap justify-start">
                     {/**allBlogs.length && allBlogs*/}
-                    <BasicCard 
-                    blogImg={img0}
-                    caption={nodes[1].node.frontmatter.caption} 
-                    title={nodes[1].node.frontmatter.title} 
-                    date={nodes[1].node.frontmatter.date}
-                    />
-                    <BasicCard 
-                    blogImg={img1}
-                    caption={nodes[2].node.frontmatter.caption} 
-                    title={nodes[2].node.frontmatter.title} 
-                    date={nodes[2].node.frontmatter.date}
-                    />
-                    <BasicCard 
-                    blogImg={img2}
-                    caption={nodes[3].node.frontmatter.caption} 
-                    title={nodes[3].node.frontmatter.title} 
-                    date={nodes[3].node.frontmatter.date}
-                    />
+                    <Link to={nodes[1].node.fields.slug}>
+                        <BasicCard 
+                        blogImg={img0}
+                        caption={nodes[1].node.frontmatter.caption} 
+                        title={nodes[1].node.frontmatter.title} 
+                        date={nodes[1].node.frontmatter.date}
+                        />
+                    </Link>
+                    <Link to={nodes[2].node.fields.slug}>
+                        <BasicCard 
+                        blogImg={img1}
+                        caption={nodes[2].node.frontmatter.caption} 
+                        title={nodes[2].node.frontmatter.title} 
+                        date={nodes[2].node.frontmatter.date}
+                        />
+                    </Link>
+                    <Link to={nodes[3].node.fields.slug}>
+                        <BasicCard 
+                        blogImg={img2}
+                        caption={nodes[3].node.frontmatter.caption} 
+                        title={nodes[3].node.frontmatter.title} 
+                        date={nodes[3].node.frontmatter.date}
+                        />
+                    </Link>
                 </div>
             </div>
         </Layout>

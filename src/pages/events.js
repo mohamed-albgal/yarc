@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 
 import kids from '../assets/img/village_kids.jpg'
@@ -9,7 +9,7 @@ export default  ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
     const newestEvent = nodes[0].node.frontmatter;
     const events = nodes.slice(1);
-    const BlogDisplay = ({title, date, description, ...rest}) => {
+    const BlogDisplay = ({title, date, description}) => {
         return (
             <div className="w-full sm:m-0 ">
             <div className="justify-start sm:mt-20 flex sm:flex-row flex-col hover:shadow-xl ">
@@ -29,10 +29,12 @@ export default  ({data}) => {
             <PageHeadText title="Upcoming Events" />
         </div>
         {events.map(({node})=>(
-            <BlogDisplay title={node.frontmatter.title}
-            date={node.frontmatter.date}
-            description={node.frontmatter.description}
-            />
+            <Link to={node.fields.slug}>
+                <BlogDisplay title={node.frontmatter.title}
+                date={node.frontmatter.date}
+                description={node.frontmatter.description}
+                />
+            </Link>
             ))}
         </Layout>
     )
