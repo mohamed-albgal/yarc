@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import logo from "../../assets/img/duo_logo.svg"
 
 
-export default ({withHero}) => {
+export default ({withHero, animate}) => {
     const [closed, setClosed] = useState("true");
     const hamburgerClick = (e) => {
         e.preventDefault();
@@ -13,7 +13,7 @@ export default ({withHero}) => {
     //styles for showing navbar with or without hero, as well as those needed regardless
     const wHero = "sm:bg-transparent sm:absolute"
     const noHero = "sm:relative"
-    const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl opacity-75sm:opacity-100"
+    const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl opacity-75 sm:opacity-100"
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
@@ -22,13 +22,13 @@ export default ({withHero}) => {
                     {/*left*/}
                     <div className="sm:px-4 flex-shrink opacity-100">
                         <Link to="/">
-                            <img className="sm:h-48 md:h-40 h-24"  src={logo} alt="YARC LOGO"/>
+                            <img className={`${animate && "tracking-in-expand-fwd-bottom"} sm:h-48 md:h-40 h-24`}  src={logo} alt="YARC LOGO"/>
                         </Link>
                     </div>
                     {/*right*/}
                     <div>
                         <button onClick={e=> hamburgerClick(e)} type="button" className="sm:hidden block text-white">
-                            <svg viewBox="0 0 100 80" className=" fill-current h-5 w-12 lg:h-6">
+                            <svg viewBox="0 0 100 80" className="  fill-current h-5 w-12 lg:h-6">
                                 <rect x={90/!closed} width="180" height="2"></rect>
                                 <rect x={50/!closed} y="30" width="180" height="2"></rect>
                                 <rect x={20/!closed} y="60" width="180" height="2"></rect>
@@ -67,9 +67,6 @@ const NavElement = ({linkTo, text, mobileOnly}) => {
  * 
  
  * test events page with different images by manually adding
- * 
- * fix spacing on blog content, events page
- *  fix links, transparent vs not issue
  * add fb images
  
  * icons
