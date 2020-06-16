@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import logo from "../../assets/img/duo_logo.svg"
 
 
-export default ({transparentNavbar}) => {
+export default ({withHero}) => {
     const [closed, setClosed] = useState("true");
     const hamburgerClick = (e) => {
         e.preventDefault();
@@ -11,7 +11,7 @@ export default ({transparentNavbar}) => {
     }
     
     return (
-        <div className={`${transparentNavbar && "sm:bg-transparent sm:mt-2 sm:pt-0 sm:absolute"} sm:z-10 sm:pt-2 sm:relative top-0 fixed z-10 bg-black w-screen sm:shadow-none shadow-xl `} style={{opacity:'85%'}}>
+        <div className={`${withHero && "sm:bg-transparent sm:mt-2 sm:pt-0 sm:absolute"} sm:z-10 sm:pt-2 top-0 fixed z-10 bg-black w-screen sm:shadow-none shadow-xl `} style={{opacity:'85%'}}>
             <nav className={`sm:flex w-full  sm:px-10 sm:pb-1  sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between  items-center">
                     {/*left*/}

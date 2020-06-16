@@ -3,10 +3,10 @@ import NavBar from './homogenous/NavBar'
 //import Hero from './homogenous/Hero'
 import Footer from './Footer'
 
-const Layout = ({children, transparentNavBar}) => {
+const Layout = ({children, navWithHero}) => {
     return (
         <>
-            <NavBar transparent={transparentNavBar}/>
+            <NavBar withHero={navWithHero} />
             <div className="bg-gray-200">
                 { children }
                 
