@@ -10,6 +10,7 @@ export default ({mainText, caption, heroImage}) => {
       <div className=" absolute top-0 w-full h-full bg-center bg-cover"
           style={{
           backgroundImage: `url(${heroImage})`,
+          animation:  `kenburns-right 5s ease-out both`,
           
           }}>
             <span id="blackOverlay" className="w-full h-full absolute opacity-50 bg-gray-900"></span> 
