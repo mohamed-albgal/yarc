@@ -10,9 +10,10 @@ export default ({withHero}) => {
         setClosed(!closed);
     }
 
+    //styles for showing navbar with or without hero, as well as those needed regardless
     const wHero = "sm:bg-transparent sm:absolute"
     const noHero = "sm:relative"
-    const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl opacity-75"
+    const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl opacity-75sm:opacity-100"
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
@@ -36,12 +37,13 @@ export default ({withHero}) => {
                     </div>
                 </div>
                 <div className={`${!closed ? 'h-64 relative z-0 top-0 transition-height duration-150 ease-linear' : ' h-0 transition-height duration-100 ease-linear sm:h-auto sm:w-auto '} flex`}>
-                    <div  className={ `w-full pt-10 pb-8 -mt-2 
+                    <div  className={ `sm:divide-y-0 divide-y divide-gray-800 w-full pt-10 pb-8 -mt-2 
                     sm:px-10 sm:block sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "hidden sm:visible"}`}>
                         <NavElement  text="About" linkTo="/about" />
                         <NavElement  text="Mission" linkTo="/mission"/>
                         <NavElement  text="Events" linkTo="/events"/>
                         <NavElement  text="Blog" linkTo="/blogs"/>
+                        
                     </div>
                 </div>
             </nav>
@@ -51,8 +53,8 @@ export default ({withHero}) => {
 
 const NavElement = ({linkTo, text, mobileOnly}) => {
     return (
-        <Link className={`text-center block  py-2 sm:hover:underline sm:hover:bg-indigo-900 hover:text-gray-900 font-semibold text-xl sm:ml-4`} to={linkTo}>
-            <div className="border-b-0 shadow-2xl  mx-32 sm:-m-2 sm:px-2 sm:bg-transparent text-gray-200 sm:rounded-none">{text} </div>
+        <Link className={`text-center shadow-xl block  py-2 sm:hover:underline sm:hover:scale-105 sm:hover:font-semibold transform duration-75 rounded-md hover:text-gray-900 font-hairline text-xl sm:ml-4`} to={linkTo}>
+            <div className=" shadow-2xl  mx-32 sm:-m-2 sm:px-4 lg:px-8 sm:bg-transparent text-gray-200 sm:rounded-none">{text} </div>
         </Link>
     )
 
