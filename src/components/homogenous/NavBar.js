@@ -12,14 +12,14 @@ export default ({withHero}) => {
 
     const wHero = "sm:bg-transparent sm:absolute"
     const noHero = "sm:relative"
-    const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl"
+    const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl opacity-75"
     
     return (
-        <div className={`${withHero ? wHero:noHero} ${shared}`} style={{opacity:'85%'}}>
+        <div className={`${withHero ? wHero:noHero} ${shared}`}>
             <nav className={`sm:flex w-full  sm:px-10 sm:pb-1  sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between  items-center">
                     {/*left*/}
-                    <div className="sm:px-4 flex-shrink">
+                    <div className="sm:px-4 flex-shrink opacity-100">
                         <Link to="/">
                             <img className="sm:h-48 md:h-40 h-24"  src={logo} alt="YARC LOGO"/>
                         </Link>
@@ -51,8 +51,8 @@ export default ({withHero}) => {
 
 const NavElement = ({linkTo, text, mobileOnly}) => {
     return (
-        <Link className={`${mobileOnly && "sm:hidden relative top-0 left-0"} text-center block  py-2 sm:hover:underline sm:hover:bg-indigo-900 hover:text-gray-900 font-semibold text-xl sm:ml-4`} to={linkTo}>
-            <div className="border-b-0 shadow-2xl bg-indigo-200 mx-32  rounded-sm p-0 sm:-m-2 sm:px-2 sm:bg-transparent sm:text-gray-200 sm:rounded-none">{text} </div>
+        <Link className={`text-center block  py-2 sm:hover:underline sm:hover:bg-indigo-900 hover:text-gray-900 font-semibold text-xl sm:ml-4`} to={linkTo}>
+            <div className="border-b-0 shadow-2xl  mx-32 sm:-m-2 sm:px-2 sm:bg-transparent text-gray-200 sm:rounded-none">{text} </div>
         </Link>
     )
 
