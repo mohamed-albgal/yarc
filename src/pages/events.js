@@ -29,7 +29,7 @@ export default  ({data}) => {
         )
     }
     return(
-        <Layout>
+        <Layout bgGradientColor="yellowBlue-topBottom">
         <div className="sm:mt-0 sm:pt-10 mb-20 pt-56  " >
             <PageHeadText title="Upcoming Events" />
         </div>

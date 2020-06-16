@@ -24,9 +24,9 @@ export default ({data}) => {
     return (
         <Layout>
             <div className="mt-0 sm:pt-10 pt-56 mb-20">
-                <BlogIntro title="Our Voices" />
+                <BlogIntro title="Our Voice" />
             </div>
-            <div className="container mx-auto bg-gray-200">
+            <div className="container mx-auto ">
                 <Link to={featureData.fields.slug}>
                     <BigCard blogImg={imgfeat}
                     title={featureData.frontmatter.title} 
@@ -108,7 +108,7 @@ const BasicCard = ({title, caption, blogImg, date}) => {
 const BlogIntro = (props) => {
     return (
         <div className=" transform container mx-auto flex flex-col flex-no-wrap">
-            <div className="text-gray-900 font-extrabold tracking-wide text-8xl shadow-2xl">{props.title}
+            <div className="text-gray-900 font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
                 <span className="block h-1 -mt-4 bg-blue-900 self-stretch"></span>
             </div>
         </div>

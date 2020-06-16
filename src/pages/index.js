@@ -37,7 +37,7 @@ const caption = `${siteTitle} is committed to providing a source of learning and
 export default () => {
   return (
     <>
-      <Layout navWithHero animate>
+      <Layout navWithHero animate bgGradientColor="blue-bottom">
       <main>
         <Hero caption={caption} mainText={siteTitle} heroImage={hands}/>
       
