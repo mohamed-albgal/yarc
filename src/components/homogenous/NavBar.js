@@ -12,7 +12,7 @@ export default ({withHero}) => {
 
     const wHero = "sm:bg-transparent sm:absolute"
     const noHero = "sm:relative"
-    const shared = "fixed sm:pt-4 z-10 top-0 bg-black w-screen sm:shadow-none shadow-xl"
+    const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl"
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`} style={{opacity:'85%'}}>
@@ -65,7 +65,7 @@ const NavElement = ({linkTo, text, mobileOnly}) => {
  * 
  
  * test events page with different images by manually adding
- * navbar
+ * 
  * fix spacing on blog content, events page
  *  fix links, transparent vs not issue
  * add fb images

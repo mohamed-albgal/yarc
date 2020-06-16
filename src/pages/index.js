@@ -1,7 +1,14 @@
 import React from      "react"
 //import { graphql } from 'gatsby'
 import Layout from "../components/Layout"
-import LandingPageContent from "../components/landingPageContent"
+import InDepthCardContainer from "../components/homogenous/IndepthCardContainer"
+import TopicCardContainer from "../components/TopicCardContainer.js"
+import ImageSideTextContainer from "../components/homogenous/ImageSideTextContainer"
+import ActionForm from "../components/homogenous/ActionForm"
+import Hero from "../components/homogenous/Hero"
+import StaffDisplayContainer from '../components/StaffDisplayContainer'
+import ClosingSection from "../components/homogenous/ClosingSection"
+import hands from "../assets/img/hands.jpg"
 import "../utils/font-awesome"
 
 
@@ -22,14 +29,36 @@ import "../utils/font-awesome"
 //   }
 // }
 // `
-
+const siteTitle = "Yemeni American Resource Center"
+const caption = `${siteTitle} is committed to providing a source of learning and growth for the entire
+                    Yemeni Community in the Bay Area`;
 
 
 export default () => {
   return (
     <>
       <Layout navWithHero>
-        <LandingPageContent />
+      <main>
+        <Hero caption={caption} mainText={siteTitle} heroImage={hands}/>
+      
+        <section className="pb-20 bg-gray-300 -mt-24">    
+          <TopicCardContainer />
+          <InDepthCardContainer />
+        </section>
+        
+        <section className="relative py-20">
+          <ImageSideTextContainer />
+        </section>
+        
+        <section className="bg-gray-300 pb-32">
+          <StaffDisplayContainer />
+        </section>
+        
+        <section>
+          <ClosingSection />
+          <ActionForm />
+        </section>
+      </main>
       </Layout>
     </>
   );
