@@ -22,7 +22,7 @@ export default ({data}) => {
     ))
 
     return (
-        <Layout>
+        <Layout bgGradientColor={"purple-bottom"}>
             <div className="mt-0 sm:pt-10 pt-56 mb-20">
                 <BlogIntro title="Our Voice" />
             </div>
