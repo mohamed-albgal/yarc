@@ -29,9 +29,9 @@ export default ({withHero, animate}) => {
                     <div>
                         <button onClick={e=> hamburgerClick(e)} type="button" className="sm:hidden block text-white">
                             <svg viewBox="0 0 100 80" className="  fill-current h-5 w-12 lg:h-6">
-                                <rect x={90/!closed} width="180" height="2"></rect>
-                                <rect x={50/!closed} y="30" width="180" height="2"></rect>
-                                <rect x={20/!closed} y="60" width="180" height="2"></rect>
+                                <rect x={30/!closed}  y='2' width="180" height="2"  transform ={ !closed &&`rotate(-45 100 100)`}></rect>
+                                <rect x={50/!closed} y="30" width="180" height="2"  transform = {  !closed &&`rotate(90 100 100)`}></rect>
+                                <rect x={4/!closed} y="55" width="180" height="2"  transform = { !closed && `rotate(45 100 100)`}></rect>
                             </svg>
                         </button>
                     </div>
