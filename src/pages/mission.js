@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { useStaticQuery, graphql } from 'gatsby'
-import pageTurn from '../assets/img/Page-Turner.svg'
+import pageTurn from '../assets/stock/Page-Turner.svg'
 import Hero from '../components/homogenous/Hero'
 
 export default () => {

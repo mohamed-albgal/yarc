@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link } from 'gatsby'
-import logo from "../../assets/img/duo_logo.svg"
+import logo from "../../assets/logo/duo_logo.svg"
 
 
 export default ({withHero, animate}) => {

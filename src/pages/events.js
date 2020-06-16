@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import kids from '../assets/img/village_kids.jpg'
+import kids from '../assets/stock/village_kids.jpg'
 
 
 export default  ({data}) => {
@@ -49,8 +49,8 @@ export default  ({data}) => {
 const PageHeadText = (props) => {
     return (
         <div className=" transform container mx-auto flex flex-col flex-no-wrap ">
-            <div className="text-gray-900 font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
-                <span className="block h-1 -mt-4 bg-blue-900 self-stretch"></span>
+            <div className="text-black font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
+                <span className="block h-1 -mt-4 bg-indigo-600 self-stretch"></span>
             </div>
         </div>
     )

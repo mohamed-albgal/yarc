@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
-import bayView from '../assets/img/bay_view.jpg'
+import bayView from '../assets/stock/bay_view.jpg'
 import Hero from '../components/homogenous/Hero'
 
 

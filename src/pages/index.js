@@ -8,7 +8,7 @@ import ActionForm from "../components/homogenous/ActionForm"
 import Hero from "../components/homogenous/Hero"
 import StaffDisplayContainer from '../components/StaffDisplayContainer'
 import ClosingSection from "../components/homogenous/ClosingSection"
-import hands from "../assets/img/hands.jpg"
+import kids from "../assets/stock/kids_playing.jpg"
 import "../utils/font-awesome"
 
 
@@ -39,7 +39,7 @@ export default () => {
     <>
       <Layout navWithHero animate bgGradientColor="blue-bottom">
       <main>
-        <Hero caption={caption} mainText={siteTitle} heroImage={hands}/>
+        <Hero caption={caption} mainText={siteTitle} heroImage={kids}/>
       
         <section className="pb-20  -mt-24">    
           <TopicCardContainer />

@@ -2,8 +2,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql, Link} from 'gatsby'
-import imgfeat from '../assets/img/hangingLights.jpg'
-import img2 from '../assets/img/covid_19_thanks.jpg'
+import imgfeat from '../assets/stock/hangingLights.jpg'
+import img2 from '../assets/stock/covid_19_thanks.jpg'
 
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
@@ -70,7 +70,7 @@ const BigCard = ({title, caption, blogImg, date}) => {
             <div className="order-first sm:w-2/3 object-cover sm:rounded-l-lg sm:rounded-r-none rounded-lg h-full overflow-hidden ">
                 <img src={blogImg} alt="big"></img>
             </div>
-            <div className=" order-last sm:w-1/3 rounded-lg border-blue-100 w-full  bg-gray-200">
+            <div className=" order-last sm:w-1/3 rounded-lg border-blue-100 w-full -ml-2 bg-gray-200">
                 <div className=" sm:h-full flex-grow p-10 sm:hover:text-indigo-800 ">
                     <h1 className=" sm:text-6xl text-3xl text-gray-700">
                         {title}
@@ -108,7 +108,7 @@ const BasicCard = ({title, caption, blogImg, date}) => {
 const BlogIntro = (props) => {
     return (
         <div className=" transform container mx-auto flex flex-col flex-no-wrap">
-            <div className="text-gray-900 font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
+            <div className="text-black font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
                 <span className="block h-1 -mt-4 bg-blue-900 self-stretch"></span>
             </div>
         </div>

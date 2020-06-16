@@ -12,7 +12,7 @@ export default ({mainText, caption, heroImage}) => {
           backgroundImage: `url(${heroImage})`,
           
           }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-50 bg-gray-900"></span> 
+            <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span> 
       </div>
       <div className="container relative mx-auto">
           <div className="items-center flex flex-wrap">
