@@ -53,7 +53,7 @@ export default ({withHero, animate}) => {
 
 const NavElement = ({linkTo, text, mobileOnly}) => {
     return (
-        <Link className={`text-center shadow-xl block  py-2 sm:hover:underline sm:hover:scale-105 sm:hover:font-semibold transform duration-75 rounded-md hover:text-gray-900 font-hairline text-xl sm:ml-4`} to={linkTo}>
+        <Link className={`text-center shadow-xl block  py-2  sm:hover:scale-105 sm:hover:font-semibold transform duration-75 rounded-md hover:text-gray-900 sm:font-hairline font-extrabold text-xl sm:ml-4`} to={linkTo}>
             <div className=" shadow-2xl  mx-32 sm:-m-2 sm:px-4 lg:px-8 sm:bg-transparent text-gray-200 sm:rounded-none">{text} </div>
         </Link>
     )

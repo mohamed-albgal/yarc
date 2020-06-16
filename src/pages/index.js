@@ -41,7 +41,7 @@ export default () => {
       <main>
         <Hero caption={caption} mainText={siteTitle} heroImage={hands}/>
       
-        <section className="pb-20 bg-gray-300 -mt-24">    
+        <section className="pb-20  -mt-24">    
           <TopicCardContainer />
           <InDepthCardContainer />
         </section>
@@ -50,7 +50,7 @@ export default () => {
           <ImageSideTextContainer />
         </section>
         
-        <section className="bg-gray-300 pb-32">
+        <section className=" pb-32">
           <StaffDisplayContainer />
         </section>
         

@@ -7,7 +7,7 @@ const Layout = ({children, navWithHero, animate}) => {
     return (
         <>
             <NavBar withHero={navWithHero} animate={animate} />
-            <div className=" bg-fixed bg-gray-200">
+            <div className=" sm:bg-gradient-blue-top bg-gradient-blue-bottom bg-fixed ">
                 { children }
                 
             </div>
