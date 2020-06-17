@@ -1,6 +1,9 @@
 import React from 'react'
 import TopicCard from './homogenous/TopicCard'
 
+
+
+//uses 3 icons
 export default () => {
     return (
         <div className="container mx-auto px-4">

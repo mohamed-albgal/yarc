@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import logo from "../../assets/logo/duo_logo.svg"
+import NavButton from './Navbutton'
 
 
 export default ({withHero, animate}) => {
@@ -14,6 +15,15 @@ export default ({withHero, animate}) => {
     const wHero = "sm:bg-transparent sm:absolute"
     const noHero = "sm:relative"
     const shared = "fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl opacity-75 sm:opacity-100"
+
+    const ArrowIcon = ({h, w}) => {
+        return (
+            <svg height={h} width={w} transform={!closed && "rotate(180)"} className=" fill-current text-white transition-transform duration-700">
+                <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2', transitionDuration:'0.5'}} />
+                <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
+            </svg>
+        )
+    }
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
@@ -28,11 +38,7 @@ export default ({withHero, animate}) => {
                     {/*right*/}
                     <div>
                         <button onClick={e=> hamburgerClick(e)} type="button" className="sm:hidden block text-white">
-                            <svg viewBox="0 0 100 80" className="  fill-current h-5 w-12 lg:h-6">
-                                <rect x={`30 * ${!closed}`}  y='0' width="180" height="4"  transform ={ !closed &&`rotate(-45 100 100)`}></rect>
-                                <rect x={`30 * ${!closed}`} y="30" width="180" height="4"  transform = {  !closed &&`rotate(90 100 100)`}></rect>
-                                <rect x={`30 * ${!closed}`} y="61" width="180" height="4"  transform = { !closed && `rotate(48 100 100)`}></rect>
-                            </svg>
+                            <ArrowIcon h="18" w="35" colorTW={"black"}/>
                         </button>
                     </div>
                 </div>
@@ -43,6 +49,7 @@ export default ({withHero, animate}) => {
                         <NavElement  text="Mission" linkTo="/mission"/>
                         <NavElement  text="Events" linkTo="/events"/>
                         <NavElement  text="Blog" linkTo="/blogs"/>
+                        <NavButton />
                         
                     </div>
                 </div>
@@ -57,14 +64,33 @@ const NavElement = ({linkTo, text, mobileOnly}) => {
             <div className=" shadow-2xl  mx-32 sm:-m-2 sm:px-4 lg:px-8 sm:bg-transparent text-gray-200 sm:rounded-none">
                 {text} 
             </div>
-            <div>
-                
-            </div>
+            
 
         </Link>
     )
 
 }
+
+// const BurgerIcon = () => {
+//     return (
+//         <svg viewBox="0 0 100 80" className=" fill-current h-5 w-12 lg:h-6">
+//             <rect x={`30 * ${!closed}`}  y='0' width="180" height="4"  transform ={ !closed &&`rotate(-45 100 100)`}></rect>
+//             <rect x={`30 * ${!closed}`} y="30" width="180" height="4"  transform = {  !closed &&`rotate(90 100 100)`}></rect>
+//             <rect x={`30 * ${!closed}`} y="60" width="180" height="4"  transform = { !closed && `rotate(48 100 100)`}></rect>
+//         </svg>
+        
+//     )
+// }
+
+// const ArrowIcon = () => {
+//     return (
+//         <svg height="50" width="90" transform={!closed && "rotate(180, 25, 45)"} className="fill-current h-5 w-12 lg:h-6">
+//             <line x1="0" y1="0" x2="45" y2="50" style={{stroke:'rgb(255,0,0)',strokeWidth:'2'}} />
+//             <line x1="45" y1="50" x2="90" y2="0" style={{stroke:'rgb(255,0,0)',strokeWidth:'2'}}/>
+//         </svg>
+//     )
+// }
+
 
 
 /**

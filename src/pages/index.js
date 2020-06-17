@@ -38,7 +38,7 @@ export default () => {
   return (
     <>
       <Layout navWithHero animate bgGradientColor="blue-bottom">
-      <main>
+      <main style={{backgroundPositionY:'10%'}}>
         <Hero caption={caption} mainText={siteTitle} heroImage={kids}/>
       
         <section className="pb-20  -mt-24">    
