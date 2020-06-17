@@ -1,10 +1,10 @@
+
 import React, { useState } from 'react'
 import { navigate, Link } from 'gatsby'
 
 const Navlink = ({text, subMenu, linkTo }) => {
     const [dropped, setDropped] = useState(false)
-    
-    const linkSlug = linkTo || `/${text.replace(" ","").toLowerCase()}`;
+    const linkSlug = (name) => `/${name.replace(" ","").toLowerCase()}`;
     const navClick = (toPage) => {
         setDropped(false);
         navigate(toPage);
@@ -32,13 +32,13 @@ const Navlink = ({text, subMenu, linkTo }) => {
             
             { dropped &&
                 <div className=" sm:absolute sm:cursor-pointer sm:w-48 w-full sm:mt-1 sm:py-2 sm:py-1  sm:rounded-lg rounded-none bg-indigo-900 text-gray-200 sm:divide-y-0 divide-y  divide-black">
-                    {subMenu.map((text) => (<div role="menuitem"  className="sm:py-4 py-2 pl-4 sm:hover:bg-indigo-600 " onClick={() => navClick(linkSlug)}>{text}</div>))}
+                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 py-2 pl-4 sm:hover:bg-indigo-600 " onClick={() => navClick(linkSlug(elt))}>{elt}</div>))}
                 </div>
             }
         </div> 
         )
         :
-            <Link activeStyle={{backgroundColor:'red'}} to={linkSlug}>
+            <Link activeStyle={{backgroundColor:'red'}} to={linkTo || linkSlug(text)}>
                 <div className={navItemStyle}>{text}</div>
 
             </Link>
