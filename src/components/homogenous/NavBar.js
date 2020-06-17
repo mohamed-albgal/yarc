@@ -19,7 +19,7 @@ export default ({withHero, animate}) => {
     const ArrowIcon = ({h, w}) => {
         return (
             <svg height={h} width={w} transform={!closed && "rotate(180)"} className=" fill-current text-white transition-transform duration-700">
-                <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2', transitionDuration:'0.5'}} />
+                <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}} />
                 <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
             </svg>
         )
@@ -47,9 +47,10 @@ export default ({withHero, animate}) => {
                     sm:px-10 sm:block sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "hidden sm:visible"}`}>
                         <NavElement  text="About" linkTo="/about" />
                         <NavElement  text="Mission" linkTo="/mission"/>
+                        <NavButton />
                         <NavElement  text="Events" linkTo="/events"/>
                         <NavElement  text="Blog" linkTo="/blogs"/>
-                        <NavButton />
+                        
                         
                     </div>
                 </div>
@@ -64,8 +65,6 @@ const NavElement = ({linkTo, text, mobileOnly}) => {
             <div className=" shadow-2xl  mx-32 sm:-m-2 sm:px-4 lg:px-8 sm:bg-transparent text-gray-200 sm:rounded-none">
                 {text} 
             </div>
-            
-
         </Link>
     )
 
