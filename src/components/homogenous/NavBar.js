@@ -13,7 +13,7 @@ export default ({withHero, animate}) => {
     //styles for showing navbar with or without hero, as well as those needed in both cases
     const wHero = "sm:bg-transparent sm:absolute"
     const noHero = "sm:relative"
-    const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-85 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
+    const shared = `fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
 
     const ArrowIcon = ({h, w}) => {
         return (
@@ -54,50 +54,3 @@ export default ({withHero, animate}) => {
         </div>
     )
 }
-
-// const BurgerIcon = () => {
-//     return (
-//         <svg viewBox="0 0 100 80" className=" fill-current h-5 w-12 lg:h-6">
-//             <rect x={`30 * ${!closed}`}  y='0' width="180" height="4"  transform ={ !closed &&`rotate(-45 100 100)`}></rect>
-//             <rect x={`30 * ${!closed}`} y="30" width="180" height="4"  transform = {  !closed &&`rotate(90 100 100)`}></rect>
-//             <rect x={`30 * ${!closed}`} y="60" width="180" height="4"  transform = { !closed && `rotate(48 100 100)`}></rect>
-//         </svg>
-        
-//     )
-// }
-
-// const ArrowIcon = () => {
-//     return (
-//         <svg height="50" width="90" transform={!closed && "rotate(180, 25, 45)"} className="fill-current h-5 w-12 lg:h-6">
-//             <line x1="0" y1="0" x2="45" y2="50" style={{stroke:'rgb(255,0,0)',strokeWidth:'2'}} />
-//             <line x1="45" y1="50" x2="90" y2="0" style={{stroke:'rgb(255,0,0)',strokeWidth:'2'}}/>
-//         </svg>
-//     )
-// }
-
-
-
-/**
- * 
- * 
- * 
- 
- * test events page with different images by manually adding
- * add fb images
- 
- * icons
-    use react-icons instead of fontaweseom, create a new branch!
- * make markdowns link to their images in the assets dir
- * fix image loading
- * 
- * add site text to a markdown file so that all content is not embedded in components
- *  
- * * link form to something
- *      done on netlify, wrap action form in form tag and thats it
- * fix homepage content/ aestheticl logic, tie in somehow
- *  fix overall ui look
- * add fluff
- * add a 404 page?
- 
- 
- */
