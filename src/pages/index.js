@@ -50,7 +50,7 @@ export default () => {
           <ImageSideTextContainer />
         </section>
         
-        <section className=" pb-32">
+        <section className=" pb-32 shadow-2xl-white">
           <StaffDisplayContainer />
         </section>
         

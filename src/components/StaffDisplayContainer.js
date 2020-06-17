@@ -7,7 +7,7 @@ import head2 from "../assets/stock/headshot2.jpg"
 
 export default () => {
     return (
-        <div className=" relative pt-10 bottom-0">
+        <div className=" relative pt-10 bottom-0 shadow-2xl">
             <div className="w-full px-4">
                     <p className="lg:text-6xl text-4xl font-bold text-center">
                         Our Contributors

@@ -7,7 +7,7 @@ export default ({mainText, caption, heroImage}) => {
           minHeight: "75vh"
       }}>
       {/* hero image*/}
-      <div className=" absolute top-0 w-full h-full bg-center bg-fixed bg-cover"
+      <div className=" shadow-inner shadow-2xl absolute top-0 w-full h-full bg-center bg-fixed bg-cover"
           style={{
           backgroundImage: `url(${heroImage})`,
           
