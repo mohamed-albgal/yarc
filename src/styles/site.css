@@ -82,6 +82,13 @@
     opacity: 1;
   }
 }
+.h-70{
+  height: 28rem;
+}
+
+.opacity-85{
+  opacity: 93%;
+}
 
 .gradient-blue-top {
   background: #005AA7;  /* fallback for old browsers */

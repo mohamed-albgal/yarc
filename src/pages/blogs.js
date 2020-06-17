@@ -109,7 +109,7 @@ const BlogIntro = (props) => {
     return (
         <div className=" transform container mx-auto flex flex-col flex-no-wrap">
             <div className="text-black font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
-                <span className="block h-1 -mt-4 bg-blue-900 self-stretch"></span>
+                <span className="block h-1 -mt-4 bg-yellow-600 self-stretch"></span>
             </div>
         </div>
     )
