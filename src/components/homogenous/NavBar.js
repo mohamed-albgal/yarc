@@ -29,9 +29,9 @@ export default ({withHero, animate}) => {
                     <div>
                         <button onClick={e=> hamburgerClick(e)} type="button" className="sm:hidden block text-white">
                             <svg viewBox="0 0 100 80" className="  fill-current h-5 w-12 lg:h-6">
-                                <rect x={`30 * ${!closed}`}  y='2' width="180" height="4"  transform ={ !closed &&`rotate(-45 100 100)`}></rect>
+                                <rect x={`30 * ${!closed}`}  y='0' width="180" height="4"  transform ={ !closed &&`rotate(-45 100 100)`}></rect>
                                 <rect x={`30 * ${!closed}`} y="30" width="180" height="4"  transform = {  !closed &&`rotate(90 100 100)`}></rect>
-                                <rect x={`30 * ${!closed}`} y="53" width="178" height="5"  transform = { !closed && `rotate(45 100 100)`}></rect>
+                                <rect x={`30 * ${!closed}`} y="61" width="180" height="4"  transform = { !closed && `rotate(48 100 100)`}></rect>
                             </svg>
                         </button>
                     </div>
@@ -53,8 +53,13 @@ export default ({withHero, animate}) => {
 
 const NavElement = ({linkTo, text, mobileOnly}) => {
     return (
-        <Link className={`text-center sm:ml-4 block  py-2  sm:hover:scale-105 sm:hover:font-semibold transform duration-75 hover:text-indigo-900 sm:font-hairline font-extrabold text-xl `} to={linkTo}>
-            <div className=" shadow-2xl  mx-32 sm:-m-2 sm:px-4 lg:px-8 sm:bg-transparent text-gray-200 sm:rounded-none">{text} </div>
+        <Link className={`text-center sm:ml-4 block  py-2  sm:hover:scale-105 sm:hover:font-semibold transform duration-75 relative hover:text-indigo-900 sm:font-hairline font-extrabold text-xl `} to={linkTo}>
+            <div className=" shadow-2xl  mx-32 sm:-m-2 sm:px-4 lg:px-8 sm:bg-transparent text-gray-200 sm:rounded-none">
+                {text} 
+            </div>
+            <div>
+                
+            </div>
 
         </Link>
     )
