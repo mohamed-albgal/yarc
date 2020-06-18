@@ -13,7 +13,7 @@ export default ({withHero, animate}) => {
     //styles for showing navbar with or without hero, as well as those needed in both cases
     const wHero = "sm:bg-transparent sm:absolute"
     const noHero = "sm:relative"
-    const shared = `fixed sm:pt-4 z-20 top-0 bg-black w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
+    const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
 
     const ArrowIcon = ({h, w}) => {
         return (

@@ -7,7 +7,7 @@ export default ({name, title, image}) => {
                 <img
                 alt="..."
                 src={image}
-                className="shadow-lg rounded-full max-w-full mx-auto"
+                className="shadow-lg border-2 border-white rounded-full max-w-full mx-auto"
                 style={{ maxWidth: "120px" }}
                 />
                 <div className="pt-6 text-center">

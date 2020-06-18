@@ -1,5 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { GoZap } from 'react-icons/go'
 
 export default () => {
     const longImageUrl = "https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
@@ -34,7 +34,7 @@ const SideTextIcon = () => {
                 </h3>
                 <div className="w-full mt-2 inline-flex justify-center">
                     <div className="text-white p-3 mt-4 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-orange-900">
-                        <FontAwesomeIcon icon={"coffee"}/>
+                        <GoZap />
                     </div>
                 </div>
                 <p className="mt-4 text-lg leading-relaxed text-center text-gray-600">

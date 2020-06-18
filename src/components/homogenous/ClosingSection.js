@@ -1,6 +1,7 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
+import { FcLike } from 'react-icons/fc'
+import { GoLightBulb } from 'react-icons/go'
+import { GoRocket } from 'react-icons/go'
 export default () => {
     return (
 
@@ -20,8 +21,8 @@ export default () => {
                         </div>
                         <div className="flex flex-wrap mt-12 justify-center">
                             <div className="w-full lg:w-3/12 px-4 text-center">
-                                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                                    <i className="fas fa-medal text-xl"></i>
+                                <div className="text-blue-900 text-4xl p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                                    <GoRocket />
                                 </div>
                                 <h6 className="text-xl mt-5 font-semibold text-white">
                                     Mentorship
@@ -32,8 +33,8 @@ export default () => {
                                 </p>
                             </div>
                             <div className="w-full lg:w-3/12 px-4 text-center">
-                                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                                    <i className="fas fa-poll text-xl"></i>
+                                <div className="text-red-900 text-5xl p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
+                                    <FcLike />
                                 </div>
                                 <h5 className="text-xl mt-5 font-semibold text-white">
                                     Networking
@@ -46,7 +47,7 @@ export default () => {
                             <div className="w-full lg:w-3/12 px-4 text-center">
                                 <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
                                     <i className="fas fa-lightbulb text-xl"></i>
-                                    <FontAwesomeIcon icon={["fas", "lightbulb"]} />
+                                    <GoLightBulb />
                                 </div>
                                 <h5 className="text-xl mt-5 font-semibold text-white">
                                     Youth Enrichment

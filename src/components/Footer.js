@@ -2,6 +2,7 @@ import React from 'react'
 import { FaTwitter } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
 import { FaWhatsapp} from 'react-icons/fa'
+//import insta from '../assets/logo/insta_icon.svg'
 import { FaInstagram } from 'react-icons/fa'
 import { FaFacebook } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
@@ -20,39 +21,44 @@ const Footer = () => {
                 <h5 className="text-lg mt-0 mb-2 text-gray-700">
                   Find us on any of these platforms, we'd love to connect!
                 </h5>
-                <div className="mt-6">
+                <div className="ml-0 flex flex-no-wrap">
                   <button
-                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl p-2"
+                    className="bg-transparent sm:text-4xl text-2xl my-2 mr-3 ml-0" style={{color:'#1DA1F2'}}
                     type="button"
                   >
                     <FaTwitter />
                   </button>
                   <button
-                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
+                    className="bg-transparent sm:text-4xl text-2xl my-2 mx-3" style={{color:'#3B5998'}}
                     type="button"
                   >
                     <FaFacebook />
                   </button>
                   <button
-                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
+                  className="bg-transparent sm:text-4xl text-2xl my-2 mx-3"
+                    
                     type="button"
                   >
-                    <FaInstagram />
+                    <FaInstagram style= {{
+                      borderRadius:"7px",
+                      color: 'white',
+                      background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
+                    }} />
                   </button>
                   <button
-                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
+                    className="bg-transparent sm:text-4xl text-2xl my-2 mx-3" style={{color:'#FF0000'}}
                     type="button"
                   >
                     <FaYoutube />
                   </button>
                   <button
-                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
+                    className="bg-transparent sm:text-4xl text-3xl my-2 mx-3" style={{color:'#4ac959'}}
                     type="button"
                   >
                     <FaWhatsapp />
                   </button>
                   <button
-                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
+                    className="bg-transparent sm:text-4xl text-2xl my-2 mx-3" style={{color:'#0072b1'}}
                     type="button"
                   >
                     <FaLinkedinIn />
