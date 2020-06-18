@@ -35,9 +35,9 @@ const Navlink = ({text, subMenu, linkTo }) => {
                 <div className=" sm:absolute sm:cursor-pointer sm:w-48 w-full sm:mt-1 sm:py-2 sm:py-1  
                 sm:rounded-lg rounded-none border border-gray-800 bg-indigo-900 
                 text-gray-300 sm:divide-y-0
-                sm:flex-none flex flex-col
+                 flex flex-col
                 ">
-                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 py-2 pl-4 font-hairline sm:hover:shadow-lg sm:hover:bg-indigo-800 shadow-inner " onClick={() => navClick(linkSlug(elt))}>{elt}</div>))}
+                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 py-2  font-hairline sm:hover:shadow-lg sm:hover:bg-indigo-800 shadow-inner " onClick={() => navClick(linkSlug(elt))}>{elt}</div>))}
                 </div>
             }
         </div> 
