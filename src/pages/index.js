@@ -9,7 +9,7 @@ import Hero from "../components/homogenous/Hero"
 import StaffDisplayContainer from '../components/StaffDisplayContainer'
 import ClosingSection from "../components/homogenous/ClosingSection"
 import kids from "../assets/stock/kids_playing.jpg"
-import "../utils/font-awesome"
+
 
 
 
