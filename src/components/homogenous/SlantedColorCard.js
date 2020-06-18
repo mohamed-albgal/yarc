@@ -22,10 +22,10 @@ const SlantedColorCard = ({bgColorTW, title, caption, textColorTW="white"}) => {
                     top: "-94px"
                     }}
                     >
-                        <polygon
-                        points="-30,95 583,95 583,65"
+                        <path
+                        d="M-30 95L583 95 583 65z"
                         className={`text-${bgColorTW} fill-current`}
-                        ></polygon>
+                        ></path>
                     </svg>
                     <h4 className={`sm:text-2xl font-bold text-${textColorTW}`}>
                         {title}

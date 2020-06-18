@@ -11,7 +11,7 @@ const Navlink = ({text, subMenu, linkTo }) => {
     }
     const ArrowIcon = ({h, w}) => {
         return (
-            <svg height={h} width={w} transform={dropped && "rotate(180)"}>
+            <svg height={h} width={w} transform={dropped && "rotate(180.1)"}>
                 <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'white',strokeWidth:'2.5'}} />
                 <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'white',strokeWidth:'2.5'}}/>
             </svg>
