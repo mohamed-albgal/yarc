@@ -1,6 +1,10 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import "../utils/font-awesome"
+import { FaTwitter } from 'react-icons/fa'
+import { FaYoutube } from 'react-icons/fa'
+import { FaWhatsapp} from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa'
 
 
 const Footer = () => {
@@ -18,28 +22,40 @@ const Footer = () => {
                 </h5>
                 <div className="mt-6">
                   <button
-                    className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl p-2"
                     type="button"
                   >
-                    <FontAwesomeIcon icon={["fab", "twitter"]}/>
+                    <FaTwitter />
                   </button>
                   <button
-                    className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
                     type="button"
                   >
-                    <FontAwesomeIcon icon={["fab", "facebook"]}/>
+                    <FaFacebook />
                   </button>
                   <button
-                    className="bg-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
                     type="button"
                   >
-                  <FontAwesomeIcon icon={["fab", "instagram"]}/>
+                    <FaInstagram />
                   </button>
                   <button
-                    className="bg-white text-red-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
                     type="button"
                   >
-                    <FontAwesomeIcon icon={["fab", "youtube"]}/>
+                    <FaYoutube />
+                  </button>
+                  <button
+                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
+                    type="button"
+                  >
+                    <FaWhatsapp />
+                  </button>
+                  <button
+                    className="bg-transparent text-blue-400 sm:text-4xl text-2xl py-2 px-3"
+                    type="button"
+                  >
+                    <FaLinkedinIn />
                   </button>
                 </div>
               </div>
