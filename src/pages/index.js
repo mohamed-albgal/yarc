@@ -1,5 +1,5 @@
 import React from      "react"
-//import { graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import InDepthCardContainer from "../components/homogenous/IndepthCardContainer"
 import TopicCardContainer from "../components/TopicCardContainer.js"
@@ -8,7 +8,8 @@ import ActionForm from "../components/homogenous/ActionForm"
 import Hero from "../components/homogenous/Hero"
 import StaffDisplayContainer from '../components/StaffDisplayContainer'
 import ClosingSection from "../components/homogenous/ClosingSection"
-import kids from "../assets/stock/kids_playing.jpg"
+import kids_playing from '../images/kids_playing.jpg'
+import Img from 'gatsby-image';
 
 
 
@@ -29,6 +30,10 @@ import kids from "../assets/stock/kids_playing.jpg"
 //   }
 // }
 // `
+
+{/*ideally all images should be fed into components from this page.*/}
+
+
 const siteTitle = "Yemeni American Resource Center"
 const caption = `${siteTitle} is committed to providing a source of learning and growth for the entire
                     Yemeni Community in the Bay Area`;
@@ -39,7 +44,7 @@ export default () => {
     <>
       <Layout navWithHero animate bgGradientColor="blue-bottom">
       <main style={{backgroundPositionY:'10%'}}>
-        <Hero caption={caption} mainText={siteTitle} heroImage={kids}/>
+        <Hero caption={caption} mainText={siteTitle} heroImage={kids_playing}/>
       
         <section className="pb-20  -mt-24">    
           <TopicCardContainer />

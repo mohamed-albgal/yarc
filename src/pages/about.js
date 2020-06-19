@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import jamb from '../assets/stock/jamb.jpg'
+import jamb from '../images/jamb.jpg'
 import Layout from '../components/Layout';
 import Hero from '../components/homogenous/Hero'
 import { FaBeer } from 'react-icons/fa'

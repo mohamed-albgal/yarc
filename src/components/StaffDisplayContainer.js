@@ -1,9 +1,9 @@
 import React from 'react'
 import StaffCard from './homogenous/StaffDisplayCard'
-import lights from  "../assets/stock/headshot3.jpg"
-import kids from    "../assets/stock/headshot4.jpg"
-import head1 from    "../assets/stock/headshot1.jpg"
-import head2 from "../assets/stock/headshot2.jpg"
+import lights from  "../images/headshot3.jpg"
+import kids from    "../images/headshot4.jpg"
+import head1 from    "../images/headshot1.jpg"
+import head2 from "../images/headshot2.jpg"
 
 export default () => {
     return (

@@ -2,8 +2,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql, Link} from 'gatsby'
-import imgfeat from '../assets/stock/hangingLights.jpg'
-import img2 from '../assets/stock/covid_19_thanks.jpg'
+import imgfeat from '../images/hangingLights.jpg'
+import img2 from '../images/covid_19_thanks.jpg'
 
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;

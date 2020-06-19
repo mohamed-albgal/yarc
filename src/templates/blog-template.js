@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
-import dock from '../assets/stock/oakland_dock.jpg'
+import dock from '../images/oakland_dock.jpg'
 import Hero from '../components/homogenous/Hero'
 
 export default ({ data }) => {

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { Link, navigate } from 'gatsby'
-import logo from "../../assets/logo/duo_logo.svg"
+import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
 
 
