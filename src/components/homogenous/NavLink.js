@@ -24,7 +24,7 @@ const Navlink = ({text, subMenu, linkTo }) => {
             </div>
         )
     }
-    const navItemStyle = `text-center block  relative lg:w-32 sm:w-24 w-full sm:py-1 sm:hover:bg-yellow-500 hover:text-black rounded sm:ml-4  py-2 sm:font-light font-extrabold 
+    const navItemStyle = `text-center block  relative sm:px-2 sm:py-1 sm:hover:bg-yellow-500 hover:text-black rounded sm:ml-4  py-2 sm:font-light font-extrabold 
     text-xl lg:text-2xl text-white sm:cursor-pointer  bg-transparent sm:hover:scale-105 sm:hover:font-normal transform duration-75`
     return (
         <div>

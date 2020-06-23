@@ -7,7 +7,7 @@ import Section3Content from "../components/Section3Content"
 import ActionForm from "../components/homogenous/ActionForm"
 import Hero from "../components/homogenous/Hero"
 import StaffDisplayContainer from '../components/StaffDisplayContainer'
-import ClosingSection from "../components/ClosingSection"
+
 import heroImage from '../images/tables2.jpg'
 import section2Image from '../images/award1.jpg'
 import section3Image from '../images/mothers_ws.jpg'
@@ -17,27 +17,29 @@ import staff3 from '../images/default-profile.png'
 import staff4 from '../images/default-profile.png'
 
 
-
+const siteTitle = "Yemeni American Resource Center"
+const caption = `A Space For Yemeni-American Men And Women, Young and Old to Come Together And Grow!`;
 const section1Content = {
   card1: {
-    head:"card 1",
-    body : "body 1"
+    head:"Enhancing The Community Experience",
+    body : "Community happens we people come together to learn and grow from one another"
   },
   card2: {
-    head:"card 2",
-    body : "body 2"
+    head:"Active Community Building",
+    body : "Everyone has something to offer. We provide the platform that enables all the pieces to fit together"
   },
   card3: {
-    head:"card 3",
-    body : "body 3"
+    head:"Tomorrow's Wins Begin Today!",
+    body : "We focus on all demographics represented in our community, but the youth are our future and main focus"
   },
 
 };
 
 const section2Content = {
   side:{
-    head: " head som",
-    body: "main text"
+    head: "The Sharpest Minds Are Here In Our Community",
+    body: `We welcome people from all walks of life to contribute and share in their experiences. Our staff is comprised of an equally 
+    diverse set of individuals who voluntarily take the time to ensure our collective success`
   },
 
   slantedCard: {
@@ -51,8 +53,9 @@ const section2Content = {
 const section3Content = {
   image: section3Image,
   side: {
-    head:" We Provide a Safe Alternative For Our Youth",
-    body:"By giving them something to do, they love it here and will learn valuable skills",
+    head:"Empowering Events, Held Regularly!",
+    body: `Events are announced and based on the requests we get from our community memebers. Some may repeat
+     and others may not. With involvement, we can continue providing a rich set of diverse learning and growth events.`,
   }
 };
 
@@ -82,22 +85,7 @@ const staffContent = {
 
 };
 
-const closingContent = {
-  head:"",
-  caption: "",
-  card1:{
-    head:"",
-    body:"",
-  },
-  card2:{
-    head:"",
-    body:"",
-  },
-  card3:{
-    head:"",
-    body:"",
-  },
-}
+
 
 
 /* note that for non page components, can use the staticQuery hook from gatsby, 
@@ -120,9 +108,7 @@ const closingContent = {
 /*ideally all images should be fed into components from this page.*/
 
 
-const siteTitle = "Yemeni American Resource Center"
-const caption = `${siteTitle} is committed to providing a source of learning and growth for the entire
-                    Yemeni Community in the Bay Area`;
+
 
 
 export default () => {
@@ -160,17 +146,6 @@ export default () => {
         
         <section className=" pb-32 shadow-2xl-white">
           <StaffDisplayContainer head ={staffContent.head} caption={staffContent.caption} card1={staffContent.card1} card2={staffContent.card2} card3={staffContent.card3} card4={staffContent.card4} />
-        </section>
-        
-        <section>
-          <ClosingSection 
-          head={closingContent.head}
-          caption={closingContent.caption}
-          card1={closingContent.card1}
-          card2={closingContent.card2}
-          card3={closingContent.card3}
-          />
-          <ActionForm />
         </section>
       </main>
       </Layout>

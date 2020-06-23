@@ -9,10 +9,10 @@ export default () => {
                         <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300">
                             <div className="flex-auto p-5 lg:p-10 border-2 border-gray-900">
                                 <h4 className="text-2xl font-semibold">
-                                    Want to work with us?
+                                    Interested In Working With Us?
                                 </h4>
                                 <p className="leading-relaxed mt-1 mb-4 text-gray-600">
-                                    Complete this form and we will get back to you in 24 hours.
+                                    Complete this form and we will get back to you ASAP!
                                 </p>
                                 <div className="relative w-full mb-3 mt-8">
                                     <label
@@ -61,11 +61,10 @@ export default () => {
                                 
                                 <div className="text-center mt-6">
                                     <button
-                                    className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                                    className="bg-gray-900 text-gray-900 bg-yellow-500 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
                                     type="button"
-                                    style={{ transition: "all .15s ease" }}
                                     >
-                                        Send Message
+                                        Send
                                     </button>
                                 </div>
                             </div>

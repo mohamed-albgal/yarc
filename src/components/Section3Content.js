@@ -28,7 +28,7 @@ const SideTextIcon = ({sideHead, sideBody}) => {
     return (
         <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
             <div className="md:pr-12 relative">
-                <h3 className="text-3xl font-semibold text-center">
+                <h3 className="text-5xl sm:text-6xl font-semibold text-center">
                 {sideHead}
                 </h3>
                 <div className="w-full mt-2 inline-flex justify-center">

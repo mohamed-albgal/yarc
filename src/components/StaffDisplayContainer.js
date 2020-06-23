@@ -6,10 +6,10 @@ export default (props) => {
     return (
         <div className=" relative pt-10 bottom-0">
             <div className="w-full px-4">
-                    <p className="lg:text-6xl text-4xl font-bold text-center">
+                    <p className="lg:text-6xl text-5xl font-bold text-center">
                         {head}
                     </p>
-                    <p className="text-center text-lg text-gray-600 mb-10">
+                    <p className="text-center text-lg text-gray-900 mb-10">
                         {caption}
                     </p>
             </div>
