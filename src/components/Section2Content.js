@@ -7,7 +7,7 @@ export default ({slantedCardImage, cardHeadText, cardBodyText, sideHead ,sideBod
     return (
         <div className="flex flex-wrap items-center sm:mt-32 mt-20">
             <IndepthTextTopIcon textColorTW={"black"} sideHead={sideHead} sideBody={sideBody} />
-            <SlantedColorCard cardImage={slantedCardImage} head={cardHeadText} body={cardBodyText} bgColorTW={"teal-700"} textColorTW={"gray-300"} />
+            <SlantedColorCard cardImage={slantedCardImage} head={cardHeadText} body={cardBodyText} bgColorTW="yellow-500" textColorTW="gray-900" />
         </div>
     )
 }

@@ -22,7 +22,7 @@ const caption = `A Space For Yemeni-American Men And Women, Young and Old to Com
 const section1Content = {
   card1: {
     head:"Enhancing The Community Experience",
-    body : "Community happens we people come together to learn and grow from one another"
+    body : "Communities thrive when people come together and share their experiences"
   },
   card2: {
     head:"Active Community Building",

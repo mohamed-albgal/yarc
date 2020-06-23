@@ -10,13 +10,13 @@ const SlantedColorCard = ({bgColorTW, head, body, textColorTW="white", cardImage
                 src={cardImage}
                 className="w-full align-middle rounded-t-lg"
                 />
-                <blockquote className="relative p-8 mb-4">
+                <div className="relative p-8 mb-4">
                     
                     <svg
                     preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 583 95"
-                    className="absolute left-0 w-full block"
+                    className={`absolute left-0 w-full block text-${bgColorTW} fill-current`}
                     style={{
                     height: "95px",
                     top: "-94px"
@@ -24,7 +24,6 @@ const SlantedColorCard = ({bgColorTW, head, body, textColorTW="white", cardImage
                     >
                         <path
                         d="M-30 95h613V65z"
-                        className={`text-${bgColorTW} fill-current`}
                         ></path>
                     </svg>
                     <h4 className={`sm:text-2xl font-bold text-${textColorTW}`}>
@@ -33,7 +32,7 @@ const SlantedColorCard = ({bgColorTW, head, body, textColorTW="white", cardImage
                     <p className={`text-md font-light mt-2 text-${textColorTW}`}>
                     {body}
                     </p>
-                </blockquote>
+                </div>
                 
             </div>
         </div>
