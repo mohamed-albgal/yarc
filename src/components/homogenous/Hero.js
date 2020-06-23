@@ -19,10 +19,10 @@ export default ({mainText, caption, heroImage}) => {
           minHeight: "75vh"
       }}>
       {/* hero image*/}
-      <div className=" shadow-inner shadow-2xl absolute top-0 w-full h-full bg-center sm:bg-fixed bg-cover bg-center sm:bg-left-top"
+      <div className=" shadow-2xl absolute top-0 w-full h-full bg-fixed bg-cover bg-center"
           style={{
           backgroundImage: `url(${heroImage})`,
-          
+          WebkitOverflowScrolling: "touch",
           }}>
             <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span> 
       </div>

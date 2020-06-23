@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link, navigate } from 'gatsby'
 import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
 
 
-export default ({withHero, animate}) => {
+const Navbar =  ({withHero, animate}) => {
     const [closed, setClosed] = useState(true);
     const hamburgerClick = (e) => {
         setClosed(!closed);
@@ -44,7 +44,7 @@ export default ({withHero, animate}) => {
                 <div className={`${!closed ? 'max-h-screen h-70 relative z-0 top-0 transition-height duration-300 ease-linear' : ' h-0 transition-height duration-300 ease-linear sm:h-auto sm:w-auto '} flex`}>
                     <div  className={ `sm:divide-y-0 divide-y divide-gray-900 w-full pt-10 pb-8 -mt-2 
                     sm:px-10 sm:block sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "h-0 hidden sm:visible"}`}>
-                        <NavLink  text="Home" linkTo="/" />
+                        <NavLink  text="Home" linkTo="/"/>
                         <NavLink  text="About" subMenu={["Mission", "Vision", "Staff", "Executives",]} />
                         <NavLink  text="Events" />
                         <NavLink  text="Our Voice" linkTo="/blogs"/>
@@ -54,3 +54,5 @@ export default ({withHero, animate}) => {
         </div>
     )
 }
+
+export default Navbar;

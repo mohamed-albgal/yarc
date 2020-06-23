@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import kids from '../images/village_kids.jpg'
+import kids from '../images/tables4.jpg'
 
 
 export default  ({data}) => {
