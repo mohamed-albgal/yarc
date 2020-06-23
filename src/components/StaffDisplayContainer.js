@@ -1,27 +1,24 @@
 import React from 'react'
 import StaffCard from './homogenous/StaffDisplayCard'
-import lights from  "../images/headshot3.jpg"
-import kids from    "../images/headshot4.jpg"
-import head1 from    "../images/headshot1.jpg"
-import head2 from "../images/headshot2.jpg"
 
-export default () => {
+export default (props) => {
+    const {card1, card2, card3, card4, caption, head} = props;
     return (
         <div className=" relative pt-10 bottom-0">
             <div className="w-full px-4">
                     <p className="lg:text-6xl text-4xl font-bold text-center">
-                        Our Contributors
+                        {head}
                     </p>
                     <p className="text-center text-lg text-gray-600 mb-10">
-                        Without the hard work and contributions of these people, none of this would be possible!
+                        {caption}
                     </p>
             </div>
             <div className="flex flex-wrap">
                 
-                <StaffCard name={"FirstN LastN"} title={"Leader"} image={lights}/>
-                <StaffCard name={"FirstN LastN"} title={"Developer"} image={kids}/>
-                <StaffCard name={"FirstN LastN"} title={"Executive Director"} image={head1}/>
-                <StaffCard name={"FirstN LastN"} title={"General Coordinator"} image={head2}/>
+                <StaffCard name={card1.name} title={card1.title} image={card1.image}/>
+                <StaffCard name={card2.name} title={card2.title} image={card2.image}/>
+                <StaffCard name={card3.name} title={card3.title} image={card3.image}/>
+                <StaffCard name={card4.name} title={card4.title} image={card4.image} />
             </div>
         </div>
     );

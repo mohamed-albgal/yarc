@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-const SlantedColorCard = ({bgColorTW, title, caption, textColorTW="white"}) => {
+const SlantedColorCard = ({bgColorTW, head, body, textColorTW="white", cardImage}) => {
     return (
         <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
             <div className={`relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-${bgColorTW}`} >
                 <img
                 alt="..."
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                src={cardImage}
                 className="w-full align-middle rounded-t-lg"
                 />
                 <blockquote className="relative p-8 mb-4">
@@ -23,15 +23,15 @@ const SlantedColorCard = ({bgColorTW, title, caption, textColorTW="white"}) => {
                     }}
                     >
                         <path
-                        d="M-30 95L583 95 583 65z"
+                        d="M-30 95h613V65z"
                         className={`text-${bgColorTW} fill-current`}
                         ></path>
                     </svg>
                     <h4 className={`sm:text-2xl font-bold text-${textColorTW}`}>
-                        {title}
+                        {head}
                     </h4>
                     <p className={`text-md font-light mt-2 text-${textColorTW}`}>
-                    {caption}
+                    {body}
                     </p>
                 </blockquote>
                 

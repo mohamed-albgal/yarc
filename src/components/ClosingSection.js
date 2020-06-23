@@ -2,7 +2,7 @@ import React from 'react'
 import { FcLike } from 'react-icons/fc'
 import { GoLightBulb } from 'react-icons/go'
 import { GoRocket } from 'react-icons/go'
-export default () => {
+export default ({card1, card2, card3, head, caption}) => {
     return (
 
         <div className="pb-20 relative block jigsaw-bg bg-fixed" >
@@ -11,11 +11,10 @@ export default () => {
                         <div className="flex flex-wrap text-center justify-center">
                             <div className="w-full lg:w-6/12 px-4">
                             <h2 className="text-4xl font-semibold text-white">
-                                We're All We Got!
+                                {head}
                             </h2>
                             <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                                Put the potentially record low maximum sea ice extent tihs year down to low ice.
-                                According to the National Oceanic and Atmospheric Administration, Ted, Scambos.
+                                {caption}
                             </p>
                             </div>
                         </div>
@@ -25,11 +24,10 @@ export default () => {
                                     <GoRocket />
                                 </div>
                                 <h6 className="text-xl mt-5 font-semibold text-white">
-                                    Mentorship
+                                    {card1.head}
                                 </h6>
                                 <p className="mt-2 mb-4 text-gray-500">
-                                    Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.
+                                    {card1.body}
                                 </p>
                             </div>
                             <div className="w-full lg:w-3/12 px-4 text-center">
@@ -37,11 +35,10 @@ export default () => {
                                     <FcLike />
                                 </div>
                                 <h5 className="text-xl mt-5 font-semibold text-white">
-                                    Networking
+                                    {card2.head}
                                 </h5>
                                 <p className="mt-2 mb-4 text-gray-500">
-                                    Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.
+                                    {card2.body}
                                 </p>
                             </div>
                             <div className="w-full lg:w-3/12 px-4 text-center">
@@ -50,11 +47,10 @@ export default () => {
                                     <GoLightBulb />
                                 </div>
                                 <h5 className="text-xl mt-5 font-semibold text-white">
-                                    Youth Enrichment
+                                    {card3.head}
                                 </h5>
                                 <p className="mt-2 mb-4 text-gray-500">
-                                    Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.
+                                    {card3.body}
                                 </p>
                             </div>
                         </div>

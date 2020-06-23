@@ -1,17 +1,103 @@
 import React from      "react"
 import { useStaticQuery, graphql } from 'gatsby'
 import Layout from "../components/Layout"
-import InDepthCardContainer from "../components/homogenous/IndepthCardContainer"
-import TopicCardContainer from "../components/TopicCardContainer.js"
-import ImageSideTextContainer from "../components/homogenous/ImageSideTextContainer"
+import Section1Content from "../components/Section1Content.js"
+import Section2Content from "../components/Section2Content"
+import Section3Content from "../components/Section3Content"
 import ActionForm from "../components/homogenous/ActionForm"
 import Hero from "../components/homogenous/Hero"
 import StaffDisplayContainer from '../components/StaffDisplayContainer'
-import ClosingSection from "../components/homogenous/ClosingSection"
+import ClosingSection from "../components/ClosingSection"
 import heroImage from '../images/tables2.jpg'
+import section2Image from '../images/award1.jpg'
+import section3Image from '../images/mothers_ws.jpg'
+import staff1  from '../images/default-profile.png'
+import staff2 from '../images/default-profile.png'
+import staff3 from '../images/default-profile.png'
+import staff4 from '../images/default-profile.png'
 
 
 
+const section1Content = {
+  card1: {
+    head:"card 1",
+    body : "body 1"
+  },
+  card2: {
+    head:"card 2",
+    body : "body 2"
+  },
+  card3: {
+    head:"card 3",
+    body : "body 3"
+  },
+
+};
+
+const section2Content = {
+  side:{
+    head: " head som",
+    body: "main text"
+  },
+
+  slantedCard: {
+    image: section2Image,
+    headText:" head text",
+    bodyText: "body text",
+  },
+
+};
+
+const section3Content = {
+  image: section3Image,
+  side: {
+    head:" We Provide a Safe Alternative For Our Youth",
+    body:"By giving them something to do, they love it here and will learn valuable skills",
+  }
+};
+
+const staffContent = {
+  head: "Featured Contributors",
+  caption:"YAR Center Would Be Impossible Without These People",
+  card1: {
+    image: staff1,
+    name: " Name 1",
+    title: " Chairman",
+  },
+  card2: {
+    image: staff2,
+    name: "Name 2",
+    title: "Co-Chairman",
+  },
+  card3: {
+    image: staff3,
+    name: "Name 3",
+    title: "Chief Planner ",
+  },
+  card4: {
+    image: staff4,
+    name: "Name 4",
+    title: "Chief Coordinator",
+  },
+
+};
+
+const closingContent = {
+  head:"",
+  caption: "",
+  card1:{
+    head:"",
+    body:"",
+  },
+  card2:{
+    head:"",
+    body:"",
+  },
+  card3:{
+    head:"",
+    body:"",
+  },
+}
 
 
 /* note that for non page components, can use the staticQuery hook from gatsby, 
@@ -31,7 +117,7 @@ import heroImage from '../images/tables2.jpg'
 // }
 // `
 
-{/*ideally all images should be fed into components from this page.*/}
+/*ideally all images should be fed into components from this page.*/
 
 
 const siteTitle = "Yemeni American Resource Center"
@@ -47,20 +133,43 @@ export default () => {
         <Hero caption={caption} mainText={siteTitle} heroImage={heroImage}/>
       
         <section className="pb-20  -mt-24">    
-          <TopicCardContainer />
-          <InDepthCardContainer />
+          <Section1Content 
+          card1Head={section1Content.card1.head}
+          card1Body={section1Content.card1.body}
+          card2Head={section1Content.card2.head}
+          card2Body={section1Content.card2.body}
+          card3Head={section1Content.card3.head}
+          card3Body={section1Content.card3.body}
+          />
+          <Section2Content 
+          sideHead={section2Content.side.head}
+          sideBody={section2Content.side.body}
+          slantedCardImage={section2Content.slantedCard.image} 
+          cardHeadText={section2Content.slantedCard.headText} 
+          cardBodyText={section2Content.slantedCard.bodyText}
+          />
         </section>
         
         <section className="relative py-20">
-          <ImageSideTextContainer />
+          <Section3Content
+          image={section3Content.image}
+          sideHead={section3Content.side.head}
+          sideBody={section3Content.side.body}
+          />
         </section>
         
         <section className=" pb-32 shadow-2xl-white">
-          <StaffDisplayContainer />
+          <StaffDisplayContainer head ={staffContent.head} card1={staffContent.card1} card2={staffContent.card2} card3={staffContent.card3} card4={staffContent.card4} />
         </section>
         
         <section>
-          <ClosingSection />
+          <ClosingSection 
+          head={closingContent.head}
+          caption={closingContent.caption}
+          card1={closingContent.card1}
+          card2={closingContent.card2}
+          card3={closingContent.card3}
+          />
           <ActionForm />
         </section>
       </main>

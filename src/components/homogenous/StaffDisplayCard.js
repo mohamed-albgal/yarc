@@ -14,7 +14,7 @@ export default ({name, title, image}) => {
                     <h5 className="text-xl font-bold">
                         {name}
                     </h5>
-                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    <p className="mt-1 text-sm text-gray-900 uppercase font-semibold">
                         {title}
                     </p>
                 </div>

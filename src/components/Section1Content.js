@@ -5,24 +5,24 @@ import { FcSerialTasks } from 'react-icons/fc'
 import { FcMultipleInputs } from 'react-icons/fc'
 
 
-//uses 3 icons
-export default () => {
+//uses 3 icons defined here and 3 card with content defined in referring page
+export default ({card1Head, card1Body, card2Head, card2Body, card3Head, card3Body}) => {
     return (
         <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
-                <Card1 />
-                <Card2 />
-                <Card3 />
+                <Card1 head={card1Head} body={card1Body} />
+                <Card2 head={card2Head} body={card2Body}/>
+                <Card3 head={card3Head} body={card3Body}/>
             </div>
         </div>
     )
 }
 
-const Card1 = () => {
+const Card1 = ({head, body}) => {
     return (
         <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-            <TopicCard tagline="Community Togetherness"
-            mainText="We offer spaces for our community to come together and exchange our experiences"
+            <TopicCard tagline={head}
+            mainText={body}
             iconComponent={FcMultipleInputs}
             iconColor={"indigo-900"}
             size={"1x"}
@@ -31,11 +31,11 @@ const Card1 = () => {
     )
 }
 
-const Card2 = () => {
+const Card2 = ({head, body}) => {
     return (
         <div className="w-full md:w-4/12 px-4 text-center">
-            <TopicCard  tagline="Local Resources Include The Community's Brightest" 
-            mainText="We enable those traveling the path to speak and interact with those who have met their destination."
+            <TopicCard  tagline={head}
+            mainText={body}
             iconComponent={FcSerialTasks}
             iconColor={"indigo-300"}
             size={"1x"}
@@ -44,11 +44,11 @@ const Card2 = () => {
     )
 }
 
-const Card3 = () => {
+const Card3 = ({head, body}) => {
     return (
         <div className="pt-6 w-full md:w-4/12 px-4 text-center">
-            <TopicCard tagline="You're All I'll Ever Need"
-            mainText="Give me what you want, I'll show you something"
+            <TopicCard tagline={head}
+            mainText={body}
             iconComponent={FcProcess}
             iconColor={"indigo-700"}
             size={"1x"}
