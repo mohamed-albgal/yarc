@@ -30,6 +30,21 @@ const Navbar =  ({withHero, animate}) => {
             </div>
         )
     }
+
+    const subMenuLinks = [
+        {
+            name:"Mission & Vision",
+            path:"about/mission"
+        }, 
+        {
+            name:"Our Team", 
+            path:"about/staff"
+        },
+        {
+            name:"Our Story",
+            path:"about/our-story"
+        },
+    ];
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
@@ -52,8 +67,8 @@ const Navbar =  ({withHero, animate}) => {
                     <div  className={ `sm:divide-y-0 divide-y divide-gray-900 w-full pt-10 pb-8 -mt-2 
                     sm:px-10 sm:block sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "h-0 hidden sm:visible"}`}>
                         <NavLink  text="Home" linkTo="/"/>
-                        <NavLink  text="About" subMenu={["Mission", "Vision", "Our Team", "Who We Are",]} />
-                        <NavLink  text="Events" />
+                        <NavLink  text="About" subMenu={subMenuLinks} />
+                        <NavLink  text="Events" linkTo="/events" />
                         <NavLink  text="Youth Voices" linkTo="/blogs"/>
                     </div>
                 </div>

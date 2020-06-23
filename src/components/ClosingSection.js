@@ -7,7 +7,7 @@ export default ({card1, card2, card3, head, caption}) => {
 
         <div className="pb-20 relative block jigsaw-bg bg-fixed" >
                 
-                    <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
+                    <div className="container mx-auto px-4 lg:pt-24 lg:pb-64 pt-20">
                         <div className="flex flex-wrap text-center justify-center">
                             <div className="w-full lg:w-6/12 px-4">
                             <h2 className="text-5xl font-semibold text-white">
