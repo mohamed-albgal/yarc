@@ -17,10 +17,17 @@ const Navbar =  ({withHero, animate}) => {
 
     const ArrowIcon = ({h, w}) => {
         return (
-            <svg height={h} width={w} transform={!closed && "rotate(180.1)"} className=" fill-current text-white transition-transform duration-700">
-                <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}} />
-                <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
-            </svg>
+            <div>{closed ?
+                <svg height={h} width={w} className=" fill-current text-white">
+                    <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}} />
+                    <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
+                </svg>
+                :
+                <svg height={h} width={w} className=" fill-current text-white">
+                    <line x1={0} y1={h} x2={w/2} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
+                    <line x1={w/2} y1="0" x2={w} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}} />
+                </svg>}
+            </div>
         )
     }
     

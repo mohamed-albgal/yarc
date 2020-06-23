@@ -11,10 +11,17 @@ const Navlink = ({text, subMenu, linkTo }) => {
     }
     const ArrowIcon = ({h, w}) => {
         return (
-            <svg height={h} width={w} transform={dropped && "rotate(180.1)"}>
-                <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'white',strokeWidth:'2.5'}} />
-                <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'white',strokeWidth:'2.5'}}/>
-            </svg>
+            <div>{!dropped ?
+                <svg height={h} width={w} className=" fill-current text-white">
+                    <line x1="0" y1="0" x2={w/2} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}} />
+                    <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
+                </svg>
+                :
+                <svg height={h} width={w} className=" fill-current text-white">
+                    <line x1={0} y1={h} x2={w/2} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
+                    <line x1={w/2} y1="0" x2={w} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}} />
+                </svg>}
+            </div>
         )
     }
     const navItemStyle = `text-center block  relative lg:w-32 sm:w-24 w-full sm:py-1 sm:hover:bg-indigo-900 rounded sm:ml-4  py-2 sm:font-light font-extrabold 

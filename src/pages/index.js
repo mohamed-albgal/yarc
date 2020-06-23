@@ -8,8 +8,8 @@ import ActionForm from "../components/homogenous/ActionForm"
 import Hero from "../components/homogenous/Hero"
 import StaffDisplayContainer from '../components/StaffDisplayContainer'
 import ClosingSection from "../components/homogenous/ClosingSection"
-import kids_playing from '../images/kids_playing.jpg'
-import Img from 'gatsby-image';
+import heroImage from '../images/tables2.jpg'
+
 
 
 
@@ -44,7 +44,7 @@ export default () => {
     <>
       <Layout navWithHero animate bgGradientColor="blue-bottom">
       <main style={{backgroundPositionY:'10%'}}>
-        <Hero caption={caption} mainText={siteTitle} heroImage={kids_playing}/>
+        <Hero caption={caption} mainText={siteTitle} heroImage={heroImage}/>
       
         <section className="pb-20  -mt-24">    
           <TopicCardContainer />
