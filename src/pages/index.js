@@ -159,7 +159,7 @@ export default () => {
         </section>
         
         <section className=" pb-32 shadow-2xl-white">
-          <StaffDisplayContainer head ={staffContent.head} card1={staffContent.card1} card2={staffContent.card2} card3={staffContent.card3} card4={staffContent.card4} />
+          <StaffDisplayContainer head ={staffContent.head} caption={staffContent.caption} card1={staffContent.card1} card2={staffContent.card2} card3={staffContent.card3} card4={staffContent.card4} />
         </section>
         
         <section>

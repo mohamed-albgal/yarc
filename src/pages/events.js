@@ -1,7 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
-import kids from '../images/tables4.jpg'
+import PageHeadText from '../components/homogenous/PageHeadText'
+import kids from '../images/mothers_ws.jpg'
 
 
 export default  ({data}) => {
@@ -31,7 +32,7 @@ export default  ({data}) => {
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className="sm:mt-0 sm:pt-10 mb-20 pt-56  " >
-            <PageHeadText title="Upcoming Events" />
+            <PageHeadText text="Upcoming Events" />
         </div>
         {nodes.map(({node})=>(
             <Link to={node.fields.slug}>
@@ -42,17 +43,6 @@ export default  ({data}) => {
             </Link>
             ))}
         </Layout>
-    )
-}
-
-
-const PageHeadText = (props) => {
-    return (
-        <div className=" transform container mx-auto flex flex-col flex-no-wrap ">
-            <div className="text-black font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
-                <span className="block h-1 -mt-4 bg-indigo-600 self-stretch"></span>
-            </div>
-        </div>
     )
 }
 

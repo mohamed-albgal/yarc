@@ -1,6 +1,7 @@
 
 import React from 'react'
 import Layout from '../components/Layout'
+import PageHeadText from '../components/homogenous/PageHeadText'
 import { graphql, Link} from 'gatsby'
 import imgfeat from '../images/hangingLights.jpg'
 import img2 from '../images/covid_19_thanks.jpg'
@@ -47,15 +48,7 @@ const BasicCard = ({title, caption, blogImg, date}) => {
     )
 }
 
-const BlogIntro = (props) => {
-    return (
-        <div className="mt-0 sm:pt-10 pt-56 mb-20 transform container mx-auto flex flex-col flex-no-wrap">
-            <div className="text-black font-extrabold tracking-wide sm:text-8xl text-6xl shadow-2xl">{props.title}
-                <span className="block h-1 -mt-4 bg-yellow-600 self-stretch"></span>
-            </div>
-        </div>
-    )
-}
+
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
     const featureData = nodes[0].node;
@@ -74,8 +67,8 @@ export default ({data}) => {
 
     return (
         <Layout bgGradientColor={"purple-bottom"}>
-            <div className="">
-                <BlogIntro title="Our Voice" />
+            <div className="sm:mt-0 sm:pt-10 mb-20 pt-56">
+                <PageHeadText text={"Youth Voices"} />
             </div>
             <div className="mx-auto">
                 <div className="">

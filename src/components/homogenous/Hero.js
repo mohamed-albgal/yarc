@@ -30,9 +30,10 @@ export default ({mainText, caption, heroImage}) => {
           <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-0">
-                      <h1 className="text-white font-semibold text-4xl pt-20 sm:text-5xl">
+                      <h1 className=" text-white font-semibold text-5xl pt-20 sm:text-6xl">
                           {mainText}
                       </h1>
+                      <span className="title-gradient block h-1 -mt-4 self-stretch"></span>
                   <p className="mt-4 text-lg sm:text-base text-gray-300">
                       {caption}
                   </p>

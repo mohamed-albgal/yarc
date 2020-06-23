@@ -32,7 +32,7 @@ const SideTextIcon = ({sideHead, sideBody}) => {
                 {sideHead}
                 </h3>
                 <div className="w-full mt-2 inline-flex justify-center">
-                    <div className="text-white p-3 mt-4 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-orange-900">
+                    <div className="text-yellow-500 text-5xl p-3 mt-4 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                         <GoZap />
                     </div>
                 </div>
