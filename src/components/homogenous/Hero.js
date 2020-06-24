@@ -26,17 +26,17 @@ export default ({mainText, caption, heroImage}) => {
           WebkitBackgroundSize: 'cover',
           MozBackgroundSize:"cover",
           }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span> 
+            <span id="blackOverlay" className="w-full h-full absolute opacity-0 bg-gray-300"></span> 
       </div>
       <div className="container relative mx-auto">
           <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-0">
-                      <h1 className=" text-white leading-tight font-semibold text-5xl pt-20 sm:text-6xl">
+                      <h1 className=" text-black leading-tight font-semibold text-5xl pt-20 sm:text-6xl">
                           {mainText}
                       </h1>
                       <span className="title-gradient block h-1 -mt-2 self-stretch"></span>
-                  <p className="mt-4 text-lg sm:text-base text-gray-300">
+                  <p className="mt-4 text-lg sm:text-base font-bold text-gray-900">
                       {caption}
                   </p>
                   </div>

@@ -64,23 +64,23 @@ const staffContent = {
   caption:"YAR Center Would Be Impossible Without These People",
   card1: {
     image: staff1,
-    name: " Name 1",
-    title: " Chairman",
+    name: " Izzuddin Ahmed",
+    title: "Executive Director",
   },
   card2: {
     image: staff2,
-    name: "Name 2",
-    title: "Co-Chairman",
+    name: "Mokhtar Mohamed",
+    title: "General Manager",
   },
   card3: {
     image: staff3,
-    name: "Name 3",
-    title: "Chief Planner ",
+    name: "Seena Almahan",
+    title: "Program Specialist",
   },
   card4: {
     image: staff4,
-    name: "Name 4",
-    title: "Chief Coordinator",
+    name: "Fatima Ali",
+    title: "Administrative Assistant",
   },
 
 };
