@@ -1,9 +1,12 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-const SlantCard = ({bgColor="bg-teal-400", head, subHead, body, img, svgTextColor, height="h-64"}) => {
+
+const SlantCard = ({bgColor="bg-teal-400", head, subHead, body, imgFluid, svgTextColor, height="h-64"}) => {
     return (
         <div className="flex flex-col rounded-lg shadow-2xl">
-            <img src={img} className={` sm:max-w-full w-full ${height} rounded-t-lg object-cover object-top overflow-hidden" alt="staff image`}/>
+            <Img fluid={imgFluid} className={` sm:max-w-full w-full ${height} rounded-t-lg object-cover object-top overflow-hidden" alt="staff image`}/>
             <div className="relative">
                 <svg
                 preserveAspectRatio="none"
