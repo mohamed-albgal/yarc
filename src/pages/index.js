@@ -44,8 +44,8 @@ const section2Content = {
 
   slantedCard: {
     image: section2Image,
-    headText:" head text",
-    bodyText: "body text",
+    headText:"Recognition Enhances The Confidence of Our Young Talent",
+    bodyText: "A young boy receives an award",
   },
 
 };

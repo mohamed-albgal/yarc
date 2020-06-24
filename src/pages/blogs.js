@@ -42,7 +42,6 @@ const BasicCard = ({title, caption, blogImg, date}) => {
                 <p className="text-gray-700 text-2xl">
                 Notice that you’re able to query with the $slug value from your context as an argument, which ensures that you’re returning only the data that matches
                 </p>
-                x
             </div>
         </div>
     )
