@@ -38,7 +38,7 @@ const Navbar =  ({withHero, animate}) => {
         }, 
         {
             name:"Our Team", 
-            path:"about/staff"
+            path:"about/team"
         },
         {
             name:"Our Story",

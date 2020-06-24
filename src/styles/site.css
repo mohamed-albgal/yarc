@@ -105,8 +105,8 @@
 
 .bg-gradient-purple-bottom{
   background: #03001e;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to top,  #03001e, #7303c0, #ec38bc);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,  #03001e, #7303c0, #ec38bc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -124,9 +124,6 @@ background: linear-gradient(to right, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, F
 
 
 }
-
-
-
 
 .bg-gradient-yellowBlue-topBottom {
   background: #00b09b;  /* fallback for old browsers */
