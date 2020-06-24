@@ -1,34 +1,10 @@
 ---
 title: "mission"
-viewTitle: "Misison & Vision"
-caption: "Our Vision Is To Lead The Future By Sourcing and Harnessing All Potential Resources"
+viewTitle: "Mission & Vision"
+caption: 
+mission: "The Yemeni American Resource Center's mission is to improve the quality of life for the Yemeni American community by providing a variety of educational, recreation, social and wellness programs."
+vision: "We envision a strong and collaborative community that preserves safety, prosperity and empowerment of everyone of its members mainly youth."
 type: "site_page"
+goals: "Our goals include: create a caring, safe and supportive environment for every member of our community; strengthen our community by sharing resources and providing growth opportunities; Support and inspire the youth to attain an excellent education; Help youth develop and improve their life skills such as leadership, communication and problem solving "
 
 ---
-#Mission Page
-
-"But I must explain to you how all this mistaken idea of denouncing pleasure and 
-praising pain was born and I will give you a complete account of the system, and 
-expound the actual teachings of the great explorer of the truth, the master-builder 
-of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it 
-is pleasure, but because those who do not know how to pursue pleasure rationally encounter 
-consequences that are extremely painful. Nor again is there anyone who loves or pursues or 
-desires to obtain pain of itself, because it is pain, but because occasionally circumstances
-occur in which toil and pain can procure him some great pleasure. To take a trivial example, 
-which of us ever undertakes laborious physical exercise, except to obtain some advantage from 
-it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no 
-annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
-
-Our Goals Are Broken Down into 3:
-- Provide support
-- Offer mentorship
-- Be enablers for a cohesive community
-
-Human happiness. No one rejects, dislikes, or avoids pleasure itself, because it 
-is pleasure, but because those who do not know how to pursue pleasure rationally encounter 
-consequences that are extremely painful. Nor again is there anyone who loves or pursues or 
-desires to obtain pain of itself, because it is pain, but because occasionally circumstances
-occur in which toil and pain can procure him some great pleasure. To take a trivial example, 
-which of us ever undertakes laborious physical exercise, except to obtain some advantage from 
-it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no 
-annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
