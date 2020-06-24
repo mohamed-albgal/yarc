@@ -19,10 +19,12 @@ export default ({mainText, caption, heroImage}) => {
           minHeight: "75vh"
       }}>
       {/* hero image*/}
-      <div className=" shadow-2xl absolute inset-0 w-full h-full sm:bg-fixed sm:bg-cover bg-center"
+      <div className=" mobileHero md:shadow-2xl absolute inset-0 w-full h-full bg-fixed bg-cover"
           style={{
           backgroundImage: `url(${heroImage})`,
           WebkitOverflowScrolling: "touch",
+          WebkitBackgroundSize: 'cover',
+          MozBackgroundSize:"cover",
           }}>
             <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span> 
       </div>

@@ -83,7 +83,11 @@
     opacity: 1;
   }
 }
-
+@media (hover: none) {
+  .mobileHero {
+      background-attachment: initial;
+  }
+}
 .h-70{
   height: 28rem;
 }
