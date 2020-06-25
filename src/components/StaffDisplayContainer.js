@@ -1,5 +1,6 @@
 import React from 'react'
 import StaffCard from './homogenous/StaffDisplayCard'
+import { useStaticQuery } from 'gatsby'
 
 export default (props) => {
     const {card1, card2, card3, card4, caption, head} = props;

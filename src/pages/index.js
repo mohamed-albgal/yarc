@@ -11,9 +11,9 @@ import StaffDisplayContainer from '../components/StaffDisplayContainer'
 import heroImage from '../images/tables2.jpg'
 import section2Image from '../images/award1.jpg'
 import section3Image from '../images/mothers_ws.jpg'
-import staff1  from '../images/default-profile.png'
-import staff2 from '../images/default-profile.png'
-import staff3 from '../images/default-profile.png'
+import staff1  from '../images/izz.jpg'
+import staff2 from '../images/mokh1.jpg'
+import staff3 from '../images/seena.jpg'
 import staff4 from '../images/default-profile.png'
 
 
@@ -85,27 +85,6 @@ const staffContent = {
 
 };
 
-
-
-
-/* note that for non page components, can use the staticQuery hook from gatsby, 
-    since this page is a page, using the graphql to make the query, and then receiving the 
-    data as a prop works
-*/
-
-// ideally pull all site data from graphql query sourced from a .md, injected into
-//components as props.
-// export const query = graphql`
-// {
-//   site{
-//     siteMetadata{
-//       title
-//     }
-//   }
-// }
-// `
-
-/*ideally all images should be fed into components from this page.*/
 
 
 

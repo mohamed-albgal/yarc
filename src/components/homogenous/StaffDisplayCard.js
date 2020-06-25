@@ -6,9 +6,10 @@ export default ({name, title, image}) => {
             <div className="px-6">
                 <img
                 alt="..."
+                
                 src={image}
-                className="shadow-2xl-white border-2 border-gray-600 rounded-full max-w-full mx-auto"
-                style={{ maxWidth: "120px" }}
+                className="shadow-2xl relative object-center object-cover overflow-hidden rounded-full  mx-auto"
+                style={{ width: "200px", height:'200px' }}
                 />
                 <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">

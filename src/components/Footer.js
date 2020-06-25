@@ -1,20 +1,62 @@
 import React from 'react'
 import { FaTwitter } from 'react-icons/fa'
+import { FaAddressBook } from 'react-icons/fa'
+import { FaBuilding } from 'react-icons/fa'
 import { FaYoutube } from 'react-icons/fa'
 import { FaWhatsapp} from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 import { FaFacebook } from 'react-icons/fa'
 import { FaLinkedinIn } from 'react-icons/fa'
+import { FcPhone } from 'react-icons/fc'
+import { FcAddressBook } from 'react-icons/fc'
 
 
 const Footer = () => {
     return (
         <footer className="relative bg-gray-300 pt-8 pb-6">
             
-          <div className="container mx-auto px-4 pt-8">
-            <div className="flex flex-wrap">
-              <div className="w-full lg:w-6/12 px-4">
-                <h4 className="text-3xl font-semibold">
+          <div className="container mx-auto px-4 sm:pt-4">
+            <div className="sm:flex flex-wrap">
+            <div className="sm:w-1/2 mb-6">
+                  <div className="">
+                    <div className="pb-3">
+                      <div className="text-3xl font-semibold mb-4">
+                        Contact
+                      </div>
+                      {/* address */}
+                      <a href="https://maps.google.com/?q=8001 Capwell Dr Oakland CA 94621">
+                        <FaBuilding className=" inline-block text-gray-600 text-2xl" />
+                        <div className="inline-block text-xs text-gray-500 tracking-widest">Address</div>
+                        <div className="inline-block pl-4 text-sm sm:text-base tracking-wide text-gray-700"> 8001 Capwell Dr Oakland CA 94621</div>
+                      </a>
+                    </div>
+                    {/* phone */}
+                    <div className="pb-3">
+                      
+                      <a href="tel:5102104175">
+                        <FcPhone className=" inline-block text-2xl" />
+                        <div className="inline-block text-xs text-gray-500 tracking-widest">Phone</div>
+                        <div className="inline-block pl-6 ml-1 text-sm sm:text-base tracking-wider text-gray-700">510-210-4175</div>
+                      </a>
+                      
+                    </div>
+                    {/* email */}
+                    <div className="pb-3">
+                      
+                      <a href="mailto:yayouthcenter@gmail.com">
+                        <FcAddressBook className=" inline-block text-2xl" />
+                        <div className="inline-block text-xs text-gray-500 tracking-widest">Email</div>
+                        <div className="inline-block pl-8 text-sm sm:text-base tracking-wider text-gray-700">info@yarc.org</div>
+                      </a>
+                      
+                    </div>
+                    
+                    
+                      
+                  </div>
+              </div>
+              <div className="sm:w-1/2 lg:w-6/12 sm:px-4">
+                <h4 className="text-3xl mb-4 font-semibold">
                   Let's keep in touch!
                 </h4>
                 <h5 className="text-lg mt-0 mb-2 text-gray-700">
