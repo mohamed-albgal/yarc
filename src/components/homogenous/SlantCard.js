@@ -25,8 +25,8 @@ const SlantCard = ({bgColor="bg-teal-400", head, subHead, body, imgFluid, svgTex
             </div>
             <div className={`${bgColor} text-center p-4 w-full rounded-b-lg leading-10`}>
                 <div id="name" className="-mt-3 sm:text-4xl text-3xl">{head}</div>
-                <div id="title" className="text-base text-gray-800 pb-2">{subHead}</div>
-                <div id="body" className="text-black sm:text-lg leading-6 leading-tight">{body}</div>
+                <div id="title" className="text-tiny text-gray-800 pb-2">{subHead}</div>
+                <div id="body" className="text-black sm:text-xl leading-tight">{body}</div>
             </div>
         </div>
     )
