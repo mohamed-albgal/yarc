@@ -1,9 +1,10 @@
 ﻿---
-caption: "The Reason For Our Existence"
-title: "Blog 4"
-date: "2020-06-19"
-type: "blog"
-img: "village_kids.jpg"
+title: Blog 4
+author: Some Author
+date: 2020-06-19
+type: blog
+blogImg: ../../images/play7.jpg
+tags: tag1 tag2 tag3 tag4 tag5
 ---
 
 # 4th Blog

@@ -1,10 +1,10 @@
 ---
-
-title: "First Blog"
-caption: "Test Blog"
-date: "2020-07-10"
-type: "blog"
-img: "oakland_dock.jpg"
+title: Blog 1
+author: Arthur Author
+date: 2020-05-19
+type: blog
+blogImg: ../../images/play6.jpg
+tags: tag1 tag2 tag3 tag4 tag5
 ---
 
 #Blog Post 1

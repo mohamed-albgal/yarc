@@ -1,6 +1,6 @@
 ---
 title: "mission"
-viewTitle: "Mission & Vision"
+viewTitle: "Mission, Vision, and Our Goals"
 caption: 
 mission: "The Yemeni American Resource Center's mission is to improve the quality of life for the Yemeni American community by providing a variety of educational, recreation, social and wellness programs."
 vision: "We envision a strong and collaborative community that preserves safety, prosperity and empowerment of everyone of its members mainly youth."

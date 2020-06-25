@@ -1,10 +1,12 @@
 ﻿---
-caption: "The Reason For Our Existence"
-title: "Blog 3"
-date: "2020-06-30"
-type: "blog"
-img: "graffiti_create.jpg"
+title: Blog 3
+author: Caesar Siezer
+date: 2020-07-19
+type: blog
+blogImg: ../../images/large-event1.jpg
+tags: tag1 tag2 tag3 tag4 tag5
 ---
+
 ## Why The Community Needs Me!
 
 ***

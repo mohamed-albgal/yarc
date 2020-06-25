@@ -1,12 +1,12 @@
 ---
-
-title: "Second Blog"
-caption: "Testing another Blog"
-date: "2020-06-20"
-type: "blog"
-img: "lock_arms.jpg"
-
+title: Blog 1
+author: Noel Notsowell
+date: 2020-08-19
+type: blog
+blogImg: ../../images/award2.jpg
+tags: tag1 tag2 tag3 tag4 tag5
 ---
+
 
 #Blog Post 2
 
