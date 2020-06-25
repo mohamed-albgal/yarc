@@ -33,10 +33,10 @@ const Footer = () => {
                     {/* phone */}
                     <div className="pb-3">
                       
-                      <a href="tel:5102104175">
+                      <a href="tel:5102004175">
                         <FcPhone className=" inline-block text-2xl" />
                         <div className="inline-block text-xs text-gray-500 tracking-widest">Phone</div>
-                        <div className="inline-block pl-6 ml-1 text-sm sm:text-base tracking-wider text-gray-700">510-210-4175</div>
+                        <div className="inline-block pl-6 ml-1 text-sm sm:text-base tracking-wider text-gray-700">510-200-4175</div>
                       </a>
                       
                     </div>
