@@ -37,7 +37,7 @@ export default  ({data}) => {
         )
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
-        <div className="sm:mt-0 sm:pt-10 mb-20 pt-56  " >
+        <div className="sm:mt-0 sm:pt-10 mb-20 pt-32  " >
             <PageHeadText text="Upcoming Events" />
         </div>
         <div className="flex flex-wrap mt-10 z-10 relative">
