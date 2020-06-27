@@ -13,10 +13,6 @@ const subMenuLinks = [
         name:"Our Team", 
         path:"about/team"
     },
-    {
-        name:"Programs We Offer",
-        path:"about/programs"
-    },
 ];
 
 const Navbar =  ({withHero, animate}) => {
@@ -66,6 +62,7 @@ const Navbar =  ({withHero, animate}) => {
                     sm:px-10  sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "h-0 hidden sm:visible"}`}>
                         <NavLink  text="Home" linkTo="/"/>
                         <NavLink  text="About" subMenu={subMenuLinks} />
+                        <NavLink  text="Programs" linkTo="/programs" />
                         <NavLink  text="Events" linkTo="/events" />
                         <NavLink  text="Youth Voices" linkTo="/blogs"/>
                     </div>

@@ -4,7 +4,6 @@ import Layout from "../components/Layout"
 import Section1Content from "../components/Section1Content.js"
 import Section2Content from "../components/Section2Content"
 import Section3Content from "../components/Section3Content"
-import ActionForm from "../components/homogenous/ActionForm"
 import Hero from "../components/homogenous/Hero"
 import StaffDisplayContainer from '../components/StaffDisplayContainer'
 

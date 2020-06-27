@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby';
-import Layout from '../../components/Layout';
-import PageHeadText from '../../components/homogenous/PageHeadText'
-import SlantCard from '../../components/homogenous/SlantCard'
+import Layout from '../components/Layout';
+import PageHeadText from '../components/homogenous/PageHeadText'
+import SlantCard from '../components/homogenous/SlantCard'
 
 
 
