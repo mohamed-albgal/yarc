@@ -1,5 +1,5 @@
 import React from      "react"
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import Layout from "../components/Layout"
 import Section1Content from "../components/Section1Content.js"
 import Section2Content from "../components/Section2Content"
@@ -113,6 +113,11 @@ export default () => {
           cardHeadText={section2Content.slantedCard.headText} 
           cardBodyText={section2Content.slantedCard.bodyText}
           />
+          <Link to="/events">
+              <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
+                View All Events <span className="font-extrabold">&rarr;</span>
+              </div>
+            </Link>
         </section>
         
         <section className="relative py-20">
@@ -120,11 +125,23 @@ export default () => {
           image={section3Content.image}
           sideHead={section3Content.side.head}
           sideBody={section3Content.side.body}
+          
           />
+          <Link to="about/programs">
+              <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
+                View All Programs <span className="font-extrabold">&rarr;</span>
+              </div>
+            </Link>
         </section>
         
         <section className=" pb-32 shadow-2xl-white">
           <StaffDisplayContainer head ={staffContent.head} caption={staffContent.caption} card1={staffContent.card1} card2={staffContent.card2} card3={staffContent.card3} card4={staffContent.card4} />
+          
+            <Link to="about/team">
+              <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
+                More About The Team <span className="font-extrabold">&rarr;</span>
+              </div>
+            </Link>
         </section>
       </main>
       </Layout>

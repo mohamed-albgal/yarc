@@ -23,7 +23,7 @@ export default  ({data}) => {
     const nodes = data.allMarkdownRemark.edges
     
     const dataBurger = nodes.map( ( { node }, i ) => (
-            <div key={i} className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
+            <div key={i} className="hover:scale-105 transform transition-transform duration-200 sm:p-2 pb-6 px-6 sm:pb-10 sm:w-1/3 w-full h-full">
                 <Link to={node.fields.slug}>
                     <SlantCard body={node.frontmatter.description} 
                     svgTextColor={`text-indigo-700`}  
@@ -42,7 +42,7 @@ export default  ({data}) => {
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className="text-center">
             <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
-                <PageHeadText text="Upcoming Events" />
+                <PageHeadText text="Y.A.R Center Events" />
             </div>
         </div>
         <div className="flex flex-wrap mt-10 z-10 relative">
