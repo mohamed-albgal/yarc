@@ -61,28 +61,28 @@ export default () => {
 const StaffCard = ({card}) => {
   const {image, name, title, bio } = card;
   return (
-    <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-    <div className="px-6">
-        <img
-        alt="..."
-        src={image}
-        className="shadow-2xl relative object-center object-cover overflow-hidden rounded-full  mx-auto"
-        style={{ width: "200px", height:'200px' }}
-        />
-        <div className="border border-gray-200 -mt-10 bg-gray-100 shadow-lg">
-          <div className="pt-6 mt-10 text-center">
-            <h5 className="text-2xl font-extrabold">
-                {name}
-            </h5>
-            <p className="mt-1 text-xl tracking-wider text-gray-500  font-semibold">
-                {title}
-            </p>
-            <p className="mt-6 leading-7 font-hairline text-lg text-gray-900 mx-2 text-left ">
-                {bio}
-            </p>
+    <div className="w-full lg:w-6/12 mb-12 mt-16 px-4">
+      <div className="px-6">
+          <img
+          alt="..."
+          src={image}
+          className="shadow-2xl relative object-center object-cover overflow-hidden rounded-full  mx-auto"
+          style={{ width: "200px", height:'200px' }}
+          />
+          <div className="-mt-16 rounded-lg sm:p-10 p-2 bg-gray-100 shadow-2xl">
+            <div className="pt-6 mt-10 text-center">
+              <h5 className="text-2xl font-extrabold">
+                  {name}
+              </h5>
+              <p className="mt-1 text-xl tracking-wider text-gray-500  font-semibold">
+                  {title}
+              </p>
+              <p className="mt-6 leading-7 font-hairline text-lg text-gray-900 mx-2 text-left ">
+                  {bio}
+              </p>
+            </div>
           </div>
-        </div>
-    </div>
+      </div>
   </div>
   )
  

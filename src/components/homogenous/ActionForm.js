@@ -14,59 +14,61 @@ export default () => {
                                 <p className="leading-relaxed mt-1 mb-4 text-gray-600">
                                     Complete this form and we will get back to you ASAP!
                                 </p>
-                                <div className="relative w-full mb-3 mt-8">
-                                    <label
-                                    className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                                    htmlFor="full-name"
-                                    >
-                                    Full Name
-                                    </label>
-                                    <input
-                                    type="text"
-                                    className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                                    placeholder="Full Name"
-                                    style={{ transition: "all .15s ease" }}
-                                    />
-                                </div>
+                                <form name="contact" method="POST" data-netlify="true">
+                                    <div className="relative w-full mb-3 mt-8">
+                                        <label
+                                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                        htmlFor="full-name"
+                                        >
+                                        Full Name
+                                        </label>
+                                        <input
+                                        type="text"
+                                        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                                        placeholder="Full Name"
+                                        style={{ transition: "all .15s ease" }}
+                                        />
+                                    </div>
 
-                                <div className="relative w-full mb-3">
-                                    <label
-                                    className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                                    htmlFor="email"
-                                    >
-                                    Email
-                                    </label>
-                                    <input
-                                    type="email"
-                                    className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                                    placeholder="Email"
-                                    style={{ transition: "all .15s ease" }}
-                                    />
-                                </div>
+                                    <div className="relative w-full mb-3">
+                                        <label
+                                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                        htmlFor="email"
+                                        >
+                                        Email
+                                        </label>
+                                        <input
+                                        type="email"
+                                        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                                        placeholder="Email"
+                                        style={{ transition: "all .15s ease" }}
+                                        />
+                                    </div>
 
-                                <div className="relative w-full mb-3">
-                                    <label
-                                    className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                                    htmlFor="message"
-                                    >
-                                    Message
-                                    </label>
-                                    <textarea
-                                    rows="4"
-                                    cols="80"
-                                    className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
-                                    placeholder="Type a message..."
-                                    />
-                                </div>
-                                
-                                <div className="text-center mt-6">
-                                    <button
-                                    className="bg-gray-900 text-gray-900 bg-yellow-500 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-                                    type="button"
-                                    >
-                                        Send
-                                    </button>
-                                </div>
+                                    <div className="relative w-full mb-3">
+                                        <label
+                                        className="block uppercase text-gray-700 text-xs font-bold mb-2"
+                                        htmlFor="message"
+                                        >
+                                        Message
+                                        </label>
+                                        <textarea
+                                        rows="4"
+                                        cols="80"
+                                        className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
+                                        placeholder="Type a message..."
+                                        />
+                                    </div>
+                                    
+                                    <div className="text-center mt-6">
+                                        <button
+                                        className=" text-gray-900 bg-yellow-500 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
+                                        type="submit"
+                                        >
+                                            Send
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

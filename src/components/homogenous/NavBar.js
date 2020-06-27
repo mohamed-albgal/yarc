@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { Link, navigate } from 'gatsby'
+import React, {useState} from 'react'
+import { Link } from 'gatsby'
 import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
 

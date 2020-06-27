@@ -37,10 +37,10 @@ const Navlink = ({text, subMenu, linkTo }) => {
             {subMenu ?  (      
             <div className="text-center">
                 {/**Any item with a submenu gets styled as any link but receives the arrow and the mechanism that allows clicking out of the submenu */}
-                <div onClick={() => setDropped(!dropped)} className={`${navItemStyle}`} >
+                <button onClick={() => setDropped(!dropped)} className={`${navItemStyle}`} >
                     {text} 
                     <div className="inline-block ml-2 pb-1"><ArrowIcon h="7" w="15"/></div>
-                </div>
+                </button>
                 {/*creates an invisible overlay that, when clicked, will close the dropdown, takes up entire w and h */}
                 <div onClick={() => setDropped(false)}className={dropped && "sm:fixed sm:top-0 font- sm:left-0 sm:w-screen sm:h-screen sm:transparent sm:shadow-2xl"} />
             
