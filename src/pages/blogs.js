@@ -43,9 +43,9 @@ export default ({data}) => {
     const featureData = nodes[0].node;
     const blogNodes = nodes.slice(1);
     
-    console.log(blogNodes)
-    const allBlogs = blogNodes.map(({ node }) => (
-        <Link to={node.fields.slug}>
+    
+    const allBlogs = blogNodes.map(({ node }, i) => (
+        <Link key={i} to={node.fields.slug}>
             <BasicCard
             fluidImage={node.frontmatter.blogImg.childImageSharp.fluid}
             excerpt={node.excerpt} 

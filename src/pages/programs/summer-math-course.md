@@ -6,7 +6,7 @@ startDate: 2020-06-24
 endDate: 2020-08-21
 programImage: ../../images/award2.jpg
 leaders: Reshma Farooqui 
-tags: youth "college kids" teachers education
+tags: youth collge-kids teachers education
 ---
 
 # Summer math course: Math Interactive Course 

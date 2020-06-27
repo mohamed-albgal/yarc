@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import kids_learning from '../images/kids-learning.jpg'
 import Hero from '../components/homogenous/Hero'
 import Img from 'gatsby-image'
-import PageHeadText from '../components/homogenous/PageHeadText'
+import bg from '../images/Protruding-Squares.svg'
 
 
 
@@ -15,17 +15,21 @@ export default ({ data }) => {
         <div>
             <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
             <Hero heroImage={kids_learning} mainText={frontmatter.title} />
-            <div className="pt-24">
-              <PageHeadText text={frontmatter.title} />
-            </div>
-            <div className="sm:flex sm:p-10 p-2 justify-between ">
-              <div className="  sm:w-1/2 pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4">
-                <Img fluid={programImageFluid} />
-              </div>
-              <div className=" sm:w-1/2 text-center relative z-10">
-                  <div className=" text-left inline-block -mb-8 whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown" dangerouslySetInnerHTML={{__html:html}} />
-                   {/** extra space in bottom right 'segment' can used here by duplicating above div and adding content */}
-              </div>
+            
+            <div className="" style={{backgroundImage:`url(${bg})`}}>
+                <div className="lg:p-20 p-2 ">
+                    
+                    {/* trick to center all content in a wrapper div: on wrapper div, set it to text-center, on the child set to inline block*/}
+                    <div className="text-center">
+                        <div className=" inline-block sm:w-10/12 overflow-hidden pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4">
+                            <Img fluid={programImageFluid} />
+                        </div>
+                    </div>
+                    
+                    <div className=" text-center">
+                        <div className=" text-center inline-block whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown" dangerouslySetInnerHTML={{__html:html}} />
+                    </div>
+                </div>
             </div>
             </Layout>
         </div>

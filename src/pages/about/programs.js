@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
-import PageHeadText from '../components/homogenous/PageHeadText'
-import SlantCard from '../components/homogenous/SlantCard';
+import Layout from '../../components/Layout';
+import PageHeadText from '../../components/homogenous/PageHeadText'
+import SlantCard from '../../components/homogenous/SlantCard'
 
 
 
@@ -20,14 +20,16 @@ export default  ({data}) => {
     
     //get the array of nodes that contain the fields i need including the slug
     const nodes = data.allMarkdownRemark.edges
-    
     const allProgramsFiles = nodes.map( ( { node } ) => {
+            const tagList = node.frontmatter.tags.split(" ");
+            console.log(tagList);
             return (
                 <div className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
                 <Link to={node.fields.slug}>
                     <SlantCard body={node.frontmatter.description} 
                     svgTextColor={`text-orange-500`}  
                     head={node.frontmatter.title} 
+                    tags={tagList}
                     imgFluid={node.frontmatter.programImage.childImageSharp.fluid} 
                     subHead={`${node.frontmatter.endDate ? node.frontmatter.startDate + " - " + node.frontmatter.endDate: node.frontmatter.startDate}`} 
                     bgColor={`bg-orange-500`} />
@@ -38,8 +40,10 @@ export default  ({data}) => {
         )
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
-        <div className="sm:mt-0 sm:pt-10 mb-20 pt-32  " >
-            <PageHeadText text="Upcoming Events" />
+        <div className="text-center">
+            <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
+                <PageHeadText text="Current Programs" />
+            </div>
         </div>
         <div className="flex flex-wrap mt-10 z-10 relative">
             {allProgramsFiles}        
@@ -60,6 +64,7 @@ export const query = graphql`
                 frontmatter{
                     title
                     description
+                    tags
                     startDate(formatString: "MMMM DD, YYYY")
                     endDate(formatString: "MMMM DD, YYYY")
                     type

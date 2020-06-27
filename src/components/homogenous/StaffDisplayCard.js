@@ -6,7 +6,6 @@ export default ({name, title, image}) => {
             <div className="px-6">
                 <img
                 alt="..."
-                
                 src={image}
                 className="shadow-2xl relative object-center object-cover overflow-hidden rounded-full  mx-auto"
                 style={{ width: "200px", height:'200px' }}

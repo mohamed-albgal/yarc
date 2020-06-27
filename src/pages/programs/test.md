@@ -1,6 +1,6 @@
 ---
 
-title: Summer Math Course
+title: Test Program
 type: program
 startDate: 2020-06-24
 endDate: 2020-08-21
