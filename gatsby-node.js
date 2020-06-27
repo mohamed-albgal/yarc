@@ -59,7 +59,15 @@ exports.createPages = async ({graphql, actions}) => {
                 context: {
                     slug: node.fields.slug,
                 },
-            }))
+            }));
+        } else if (fullPath.includes('programs')){
+            (createPage({
+                path:node.fields.slug,
+                component: path.resolve(`./src/templates/programs-template.js`),
+                context: {
+                    slug: node.fields.slug,
+                },
+            }));
         }
     })
 }

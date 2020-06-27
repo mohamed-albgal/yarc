@@ -4,17 +4,26 @@ import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
 
 
+const subMenuLinks = [
+    {
+        name:"Mission & Vision",
+        path:"about/mission"
+    }, 
+    {
+        name:"Our Team", 
+        path:"about/team"
+    },
+    {
+        name:"Programs We Offer",
+        path:"about/programs"
+    },
+];
+
 const Navbar =  ({withHero, animate}) => {
     const [closed, setClosed] = useState(true);
     const hamburgerClick = (e) => {
         setClosed(!closed);
     }
-
-    //styles for showing navbar with or without hero, as well as those needed in both cases
-    const wHero = "sm:bg-transparent sm:absolute"
-    const noHero = "sm:relative"
-    const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
-
     const ArrowIcon = ({h, w}) => {
         return (
             <div>{closed ?
@@ -30,21 +39,10 @@ const Navbar =  ({withHero, animate}) => {
             </div>
         )
     }
-
-    const subMenuLinks = [
-        {
-            name:"Mission & Vision",
-            path:"about/mission"
-        }, 
-        {
-            name:"Our Team", 
-            path:"about/team"
-        },
-        {
-            name:"Our Story",
-            path:"about/our-story"
-        },
-    ];
+    //styles for showing navbar with or without hero, as well as those needed in both cases
+    const wHero = "sm:bg-transparent sm:absolute"
+    const noHero = "sm:relative"
+    const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
@@ -76,5 +74,4 @@ const Navbar =  ({withHero, animate}) => {
         </div>
     )
 }
-
 export default Navbar;

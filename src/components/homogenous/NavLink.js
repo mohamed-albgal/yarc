@@ -40,7 +40,7 @@ const Navlink = ({text, subMenu, linkTo }) => {
                 <div onClick={() => setDropped(false)}className={dropped && "sm:fixed sm:top-0 font- sm:left-0 sm:w-screen sm:h-screen sm:transparent sm:shadow-2xl"} />
             
             { dropped &&
-                <div className=" sm:absolute sm:cursor-pointer sm:w-48 w-full sm:mt-1 sm:py-2 sm:py-1  
+                <div className=" sm:absolute sm:cursor-pointer sm:w-48 w-full sm:mt-1 sm:py-2  
                 sm:rounded-lg rounded-none border border-gray-800 
                 text-black sm:divide-y-0
                  flex flex-col bg-gradient-blue-bottom
