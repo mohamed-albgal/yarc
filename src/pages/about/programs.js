@@ -22,7 +22,6 @@ export default  ({data}) => {
     const nodes = data.allMarkdownRemark.edges
     const allProgramsFiles = nodes.map( ( { node } ) => {
             const tagList = node.frontmatter.tags.split(" ");
-            console.log(tagList);
             return (
                 <div className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
                 <Link to={node.fields.slug}>
@@ -42,7 +41,7 @@ export default  ({data}) => {
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className="text-center">
             <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
-                <PageHeadText text="Current Programs" />
+                <PageHeadText text="Y.A.R Center Programs" />
             </div>
         </div>
         <div className="flex flex-wrap mt-10 z-10 relative">

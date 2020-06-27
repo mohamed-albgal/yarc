@@ -1,14 +1,23 @@
 import React from 'react'
-import { FaTwitter } from 'react-icons/fa'
-import { FaAddressBook } from 'react-icons/fa'
+//import { FaTwitter } from 'react-icons/fa'
 import { FaBuilding } from 'react-icons/fa'
-import { FaYoutube } from 'react-icons/fa'
+//import { FaYoutube } from 'react-icons/fa'
 import { FaWhatsapp} from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
+//import { FaInstagram } from 'react-icons/fa'
 import { FaFacebook } from 'react-icons/fa'
-import { FaLinkedinIn } from 'react-icons/fa'
+//import { FaLinkedinIn } from 'react-icons/fa'
 import { FcPhone } from 'react-icons/fc'
 import { FcAddressBook } from 'react-icons/fc'
+
+
+const contact = {
+  phone: "510-200-4175",
+  social: {
+    facebookLink: "https://www.facebook.com/Yemeni-American-Youth-Center-%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B4%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-110243897202862/",
+  },
+  email: "info@yarcenter.org",
+  address: "8001 Capwell Dr Oakland CA 94621"
+}
 
 
 const Footer = () => {
@@ -24,10 +33,10 @@ const Footer = () => {
                         Contact
                       </div>
                       {/* address */}
-                      <a href="https://maps.google.com/?q=8001 Capwell Dr Oakland CA 94621">
+                      <a href={`https://maps.google.com/?q=${contact.address}`}>
                         <FaBuilding className=" inline-block text-gray-600 text-2xl" />
-                        <div className="inline-block pl-2 text-xs text-gray-500 tracking-widest">Address</div>
-                        <div className="inline-block pl-4 text-sm sm:text-base tracking-wide text-gray-700"> 8001 Capwell Dr Oakland CA 94621</div>
+                        <div className="inline-block pl-1 text-xs text-gray-500 tracking-widest">Address</div>
+                        <div className="inline-block pl-4 text-sm sm:text-base tracking-wide text-gray-700">{contact.address}</div>
                       </a>
                     </div>
                     {/* phone */}
@@ -36,17 +45,17 @@ const Footer = () => {
                       <a href="tel:5102004175">
                         <FcPhone className=" inline-block text-2xl" />
                         <div className="inline-block text-xs pl-2 text-gray-500 tracking-widest">Phone</div>
-                        <div className="inline-block pl-6 ml-1 text-sm sm:text-base tracking-wider text-gray-700">510-200-4175</div>
+                        <div className="inline-block pl-6 ml-1 text-sm sm:text-base tracking-wider text-gray-700">{contact.phone}</div>
                       </a>
                       
                     </div>
                     {/* email */}
                     <div className="pb-3">
                       
-                      <a href="mailto:yayouthcenter@gmail.com">
+                      <a href={`mailto:${contact.email}`}>
                         <FcAddressBook className=" inline-block text-2xl" />
                         <div className="inline-block text-xs text-gray-500 pl-2 tracking-widest">Email</div>
-                        <div className="inline-block pl-8 text-sm sm:text-base tracking-wider text-gray-700">yayouthcenter@gmail.com</div>
+                        <div className="inline-block pl-8 text-sm sm:text-base tracking-wider text-gray-700">{contact.email}</div>
                       </a>
                       
                     </div>
@@ -73,7 +82,7 @@ const Footer = () => {
                     className="bg-transparent sm:text-4xl text-2xl my-2 mx-3" style={{color:'#3B5998'}}
                     type="button"
                   >
-                    <a href="https://www.facebook.com/Yemeni-American-Youth-Center-%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B4%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-110243897202862/">
+                    <a href={contact.social.facebookLink}>
                     <FaFacebook /></a>
                   </button>
                   {/* <button
@@ -97,7 +106,7 @@ const Footer = () => {
                     className="bg-transparent sm:text-4xl text-3xl my-2 mx-3" style={{color:'#4ac959'}}
                     type="button"
                   >
-                    <a href="https://api.whatsapp.com/send?phone=15102004175"><FaWhatsapp /></a>
+                    <a href={`https://api.whatsapp.com/send?phone=${contact.phone}`}><FaWhatsapp /></a>
                   </button>
                   {/*<button
                     className="bg-transparent sm:text-4xl text-2xl my-2 mx-3" style={{color:'#0072b1'}}

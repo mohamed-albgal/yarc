@@ -21,13 +21,13 @@ export default ({ data }) => {
                     
                     {/* trick to center all content in a wrapper div: on wrapper div, set it to text-center, on the child set to inline block*/}
                     <div className="text-center">
-                        <div className=" inline-block sm:w-10/12 overflow-hidden pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4">
+                        <div className=" inline-block sm:w-10/12 overflow-hidden pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4 w-full">
                             <Img fluid={programImageFluid} />
                         </div>
                     </div>
                     
                     <div className=" text-center">
-                        <div className=" text-center inline-block whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown" dangerouslySetInnerHTML={{__html:html}} />
+                        <div className="text-left inline-block whitespace-normal sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown" dangerouslySetInnerHTML={{__html:html}} />
                     </div>
                 </div>
             </div>

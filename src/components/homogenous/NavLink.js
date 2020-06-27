@@ -25,7 +25,12 @@ const Navlink = ({text, subMenu, linkTo }) => {
         )
     }
 
-    const navItemStyle = `text-center block  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded sm:ml-4  py-2 sm:font-light font-extrabold 
+
+
+
+
+
+    const navItemStyle = `text-center block uppercase  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded sm:ml-4  py-2 sm:font-hairline font-extrabold 
     text-xl lg:text-2xl text-white sm:cursor-pointer  bg-transparent sm:hover:scale-95 sm:hover:font-normal transform duration-75`
     return (
         <div>
@@ -41,12 +46,12 @@ const Navlink = ({text, subMenu, linkTo }) => {
             
             { dropped &&
                 <div className=" sm:absolute sm:cursor-pointer sm:w-48 w-full sm:mt-1 sm:py-2  
-                sm:rounded-lg rounded-none border border-gray-800 
+                sm:rounded-lg rounded-none 
                 text-black sm:divide-y-0
                  flex flex-col bg-gradient-blue-bottom
                 "
                 >
-                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 py-2 font-hairline sm:hover:shadow-lg sm:hover:bg-yellow-500 shadow-inner " onClick={() => navClick(elt.path)}>{elt.name}</div>))}
+                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 py-2 font-medium text-tiny text-blue-900 uppercase sm:hover:shadow-lg sm:hover:bg-yellow-500 shadow-inner " onClick={() => navClick(elt.path)}>{elt.name}</div>))}
                 </div>
             }
         </div> 
