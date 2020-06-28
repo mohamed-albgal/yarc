@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import PageHeadText from '../components/homogenous/PageHeadText'
 import { graphql, Link} from 'gatsby'
 // import imgfeat from '../images/hangingLights.jpg'
-// import img2 from '../images/covid_19_thanks.jpg'
+import img2 from '../images/covid_19_thanks.jpg'
 import Img from 'gatsby-image'
 
 export const query = graphql`
@@ -47,7 +47,7 @@ export default ({data}) => {
     const allBlogs = blogNodes.map(({ node }, i) => (
         <Link key={i} to={node.fields.slug}>
             <BasicCard
-            fluidImage={node.frontmatter.blogImg.childImageSharp.fluid}
+            fluidImage={ node.frontmatter.blogImg.childImageSharp.fluid}
             excerpt={node.excerpt} 
             title={node.frontmatter.title} 
             date={node.frontmatter.date}

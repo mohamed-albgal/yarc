@@ -1,0 +1,54 @@
+backend:
+  name: git-gateway
+  branch: even_more_fixes
+local_backend: true
+
+media_folder: src/images
+public_folder: /static
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'src/pages/blog'
+    create: true
+    slug: "{{slug}}-{{month}}-{{year}}"
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Author', name: 'author', widget: 'string' }
+      - { label: 'Image', name: blogImg, widget: 'image'}
+      - { label: 'Tags', name: 'tags', widget: 'string'}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'blog'}
+      
+  
+  - name: 'event'
+    label: "Events"
+    folder: src/pages/events
+    slug: "{{slug}}-{{month}}-{{year}}"
+    create: true
+    fields: 
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date:', name: 'startDate', widget: 'date' }
+      - { label: 'Image', name: 'eventImage', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'string'}
+      - { label: 'Tags', name: 'tags', widget: 'string'}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'event'}
+
+  
+  - name: 'programs'
+    label: "Programs"
+    folder: src/pages/programs
+    slug: "{{slug}}-{{month}}-{{year}}"
+    create: true
+    fields: 
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Starts:', name: 'startDate', widget: 'date' }
+      - { label: 'Ends::', name: 'endDate', widget: 'date' }
+      - { label: 'Image', name: 'programImage', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'string'}
+      - { label: 'Tags', name: 'tags', widget: 'string'}
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'program'}
+    
