@@ -51,4 +51,5 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'program'}
+
     

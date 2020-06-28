@@ -23,12 +23,12 @@ const SlantCard = ({bgColor="bg-teal-400", head, subHead, body, imgFluid, svgTex
                     ></path>
                 </svg>
             </div>
-            <div className={`${bgColor} text-center p-4 w-full rounded-b-lg leading-10`}>
+            <div className={`${bgColor} text-center p-4 w-full rounded-b-none leading-10`}>
                 <div id="name" className="-mt-3 sm:text-4xl text-3xl">{head}</div>
                 <div id="title" className="text-tiny text-gray-800 pb-2">{subHead}</div>
                 <div id="body" className="text-black sm:text-xl leading-tight">{body}</div>
             </div>
-            {tags && <div className={`text-right text-xs p-2 ${bgColor}`}>
+            {tags && <div className={`text-right rounded-b-lg text-xs p-2 ${bgColor}`}>
                 {tags.map((tag, i) => <div key={i} className={tagStyles}>{tag}</div>)}
             </div>}
         </div>
