@@ -11,10 +11,10 @@ backend:
 media_folder: src/images
 public_folder: /static
 
-local_backend: true
-
 logo_url: 'https://www.yarcenter.org/icons/icon-512x512.png'
+
 publish_mode: editorial_workflow
+
 site_url: https://yarcenter.org
 
 collections:
