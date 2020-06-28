@@ -4,7 +4,15 @@ module.exports = {
     title: "Yemeni American Resource Center",
   },
   plugins: [
-    `gatsby-transformer-remark`,
+    {
+      resolve:`gatsby-transformer-remark`,
+      options: {
+        plugins: [{
+          resolve: `gatsby-remark-relative-images`,
+        }]
+      },
+
+    },
     `gatsby-plugin-postcss`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-emotion`,
