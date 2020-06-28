@@ -1,6 +1,6 @@
 backend:
-    name: git-gateway
-    branch: master
+      name: github
+      repo: mohamed-albgal/yarc
     commit_messages:
       create: 'Create {{collection}} “{{slug}}”'
       update: 'Update {{collection}} “{{slug}}”'

@@ -126,7 +126,7 @@ export default () => {
           sideBody={section3Content.side.body}
           
           />
-          <Link to="about/programs">
+          <Link to="/programs">
               <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
                 View All Programs <span className="font-extrabold">&rarr;</span>
               </div>
