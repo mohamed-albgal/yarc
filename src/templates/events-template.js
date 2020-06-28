@@ -15,9 +15,6 @@ export default ({ data }) => {
         <div>
             <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
             <Hero heroImage={bayView} mainText={frontmatter.description} />
-            <div className="pt-24">
-              <PageHeadText text={frontmatter.title} />
-            </div>
             <div className="sm:flex sm:p-10 p-2 justify-between ">
               <div className="  sm:w-1/2 pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4">
                 <Img fluid={eventImageFluid} />

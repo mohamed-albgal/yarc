@@ -6,6 +6,8 @@ local_backend: true
 media_folder: src/images
 public_folder: /static
 
+logo_url: 'https://www.yarcenter.org/icons/icon-512x512.png'
+
 collections:
   - name: 'blog'
     label: 'Blog'

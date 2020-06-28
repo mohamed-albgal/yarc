@@ -31,21 +31,37 @@ exports.createPages = async ({graphql, actions}) => {
     const { createPage } = actions;
     const result = await graphql(`
     {
-        allMarkdownRemark {
-            edges {
-                node {
-                    fileAbsolutePath
-                    fields {
-                        slug
-                    }
-                }
+        blog:allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}){
+          edges{
+            node{
+                fields{
+                slug
+              }
             }
+          }
         }
-    }`)
-    result.data.allMarkdownRemark.edges.forEach(  ({ node }) => {
+        events:allMarkdownRemark(filter: {frontmatter: {type: {eq: "event"}}}){
+          edges{
+            node{
+                fields{
+                slug
+              }
+            }
+          }
+        }
+        programs:allMarkdownRemark(filter: {frontmatter: {type: {eq: "program"}}}){
+          edges{
+            node{
+                fields{
+                slug
+              }
+            }
+          }
+        }
         
-        const fullPath = node.fileAbsolutePath.split(path.sep);
-        if (fullPath.includes('blog')){
+    }
+    `)
+    result.data.blog.edges.forEach(  ({ node }) => {
             (createPage({
                 path: node.fields.slug ,
                 component: path.resolve(`./src/templates/blog-template.js`),
@@ -54,15 +70,20 @@ exports.createPages = async ({graphql, actions}) => {
                     slug: node.fields.slug,
                 },
             }))
-        } else if (fullPath.includes('events')){
+        });
+
+        result.data.events.edges.forEach( ({node }) => {
+        
             (createPage({
                 path:node.fields.slug,
                 component:path.resolve(`./src/templates/events-template.js`),
                 context: {
                     slug: node.fields.slug,
                 },
-            }));
-        } else if (fullPath.includes('programs')){
+            }))
+        });
+
+        result.data.programs.edges.forEach( ({ node }) => {
             (createPage({
                 path:node.fields.slug,
                 component: path.resolve(`./src/templates/programs-template.js`),
@@ -70,6 +91,6 @@ exports.createPages = async ({graphql, actions}) => {
                     slug: node.fields.slug,
                 },
             }));
-        }
-    })
+        });
+            
 }
