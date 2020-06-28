@@ -1,12 +1,19 @@
 backend:
-  name: git-gateway
-  branch: even_more_fixes
-local_backend: true
+    name: git-gateway
+    branch: master
+    commit_messages:
+      create: 'Create {{collection}} “{{slug}}”'
+      update: 'Update {{collection}} “{{slug}}”'
+      delete: 'Delete {{collection}} “{{slug}}”'
+      uploadMedia: '[skip ci] Upload “{{path}}”'
+      deleteMedia: '[skip ci] Delete “{{path}}”'
 
 media_folder: src/images
 public_folder: /static
 
 logo_url: 'https://www.yarcenter.org/icons/icon-512x512.png'
+publish_mode: editorial_workflow
+site_url: https://yarcenter.org
 
 collections:
   - name: 'blog'
@@ -14,6 +21,8 @@ collections:
     folder: 'src/pages/blog'
     create: true
     slug: "{{slug}}-{{month}}-{{year}}"
+    preview_path: blog/{{slug}}
+    preview_path_date_field: date
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Author', name: 'author', widget: 'string' }
@@ -27,8 +36,10 @@ collections:
   - name: 'event'
     label: "Events"
     folder: src/pages/events
-    slug: "{{slug}}-{{month}}-{{year}}"
+    slug: "{{slug}}-{{year}}"
     create: true
+    preview_path: events/{{slug}}
+    preview_path_date_field: startDate
     fields: 
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date:', name: 'startDate', widget: 'date' }
@@ -42,8 +53,10 @@ collections:
   - name: 'programs'
     label: "Programs"
     folder: src/pages/programs
-    slug: "{{slug}}-{{month}}-{{year}}"
+    slug: "{{slug}}-{{year}}"
     create: true
+    preview_path: programs/{{slug}}
+    preview_path_date_field: startDate
     fields: 
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Starts:', name: 'startDate', widget: 'date' }
