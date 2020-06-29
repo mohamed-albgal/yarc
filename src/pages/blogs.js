@@ -12,30 +12,30 @@ export const query = graphql`
     allMarkdownRemark(limit: 10,
         sort: { order: DESC, fields: [frontmatter___date]}
         filter: {fileAbsolutePath: {regex: "/(blog)/"}}) {
-            edges {
-                node {
-                    excerpt
-                    timeToRead
-                    fields {
-                        slug
-                    }
-                frontmatter {
-                    author
-                    title
-                    tags
-                    date(formatString: "MMMM DD, YYYY")
-                    blogImg{
-                        childImageSharp{
-                            fluid(maxWidth: 800) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                }
-                }
+          edges {
+            node {
+            excerpt
+            timeToRead
+            fields {
+                slug
             }
+            frontmatter {
+              author
+              title
+              tags
+              date(formatString: "MMMM Do YYYY")
+              blogImg {
+                childImageSharp{
+                  fluid(maxWidth: 800){
+                    src
+                  }
+                }
+              }
+            }
+          }
         }
-    }`;
+    }
+  }`;
 
 
 export default ({data}) => {

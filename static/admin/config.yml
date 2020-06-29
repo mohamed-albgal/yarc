@@ -7,16 +7,11 @@ backend:
         delete: 'Delete {{collection}} “{{slug}}”'
         uploadMedia: '[skip ci] Upload “{{path}}”'
         deleteMedia: '[skip ci] Delete “{{path}}”'
-
 media_folder: src/images
 public_folder: /static
-
 logo_url: 'https://www.yarcenter.org/icons/icon-512x512.png'
-
 publish_mode: editorial_workflow
-
 site_url: https://yarcenter.org
-
 collections:
   - name: 'blog'
     label: 'Blog'
@@ -33,8 +28,6 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Publish Date', name: 'date', widget: 'date' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'blog'}
-      
-  
   - name: 'event'
     label: "Events"
     folder: src/pages/events
@@ -50,8 +43,6 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'event'}
-
-  
   - name: 'programs'
     label: "Programs"
     folder: src/pages/programs

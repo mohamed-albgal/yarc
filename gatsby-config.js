@@ -4,6 +4,8 @@ module.exports = {
     title: "Yemeni American Resource Center",
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve:`gatsby-transformer-remark`,
       options: {
@@ -13,10 +15,9 @@ module.exports = {
       },
 
     },
+    
     `gatsby-plugin-postcss`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,8 +41,7 @@ module.exports = {
         background_color: `#1e57b3`,
         theme_color: `#1e57b3`,
         display: `minimal-ui`,
-        icon: `src/images/yarc_logo_icon.svg` 
-
+        icon: `src/images/yarc_logo_icon.svg`, 
       }
     },
     `gatsby-plugin-netlify-cms`,
