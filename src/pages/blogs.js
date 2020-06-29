@@ -46,7 +46,7 @@ export default ({data}) => {
     const allBlogs = nodes.map(({ node }, i) => (
         <Link key={i} to={node.fields.slug}>
             <BasicCard
-            fluidImage={ node.frontmatter.blogImg.childImageSharp.fluid}
+            fluidImage={node.frontmatter.blogImg.childImageSharp.fluid}
             excerpt={node.excerpt} 
             title={node.frontmatter.title} 
             date={node.frontmatter.date}
