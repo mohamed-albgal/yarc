@@ -12,39 +12,38 @@ export const query = graphql`
     allMarkdownRemark(limit: 10,
         sort: { order: DESC, fields: [frontmatter___date]}
         filter: {fileAbsolutePath: {regex: "/(blog)/"}}) {
-      edges {
-        node {
-            excerpt
-            timeToRead
-            fields {
-                slug
-            }
-          frontmatter {
-            author
-            title
-            tags
-            date(formatString: "MMMM DD, YYYY")
-            blogImg{
-                childImageSharp{
-                    fluid(maxWidth: 800) {
-                        ...GatsbyImageSharpFluid
-                      }
+            edges {
+                node {
+                    excerpt
+                    timeToRead
+                    fields {
+                        slug
+                    }
+                frontmatter {
+                    author
+                    title
+                    tags
+                    date(formatString: "MMMM DD, YYYY")
+                    blogImg{
+                        childImageSharp{
+                            fluid(maxWidth: 800) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                }
                 }
             }
-          }
         }
-      }
-    }
-}`;
+    }`;
 
 
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
-    const featureData = nodes[0].node;
-    const blogNodes = nodes.slice(1);
-    
-    
-    const allBlogs = blogNodes.map(({ node }, i) => (
+    // const featureData = nodes[0].node;
+    // const blogNodes = nodes.length > 0 ?  nodes.slice(1): [];
+
+    const allBlogs = nodes.map(({ node }, i) => (
         <Link key={i} to={node.fields.slug}>
             <BasicCard
             fluidImage={ node.frontmatter.blogImg.childImageSharp.fluid}
@@ -63,17 +62,6 @@ export default ({data}) => {
                 <PageHeadText text={"Youth Voices"} />
             </div>
             <div className="mx-auto">
-                <div className="">
-                    <Link to={featureData.fields.slug}>
-                        <BigCard fluidImg={featureData.frontmatter.blogImg.childImageSharp.fluid}
-                        title={featureData.frontmatter.title}
-                        medText={featureData.frontmatter.author} 
-                        excerpt={featureData.frontmatter.excerpt}
-                        date={featureData.frontmatter.date}
-                        smallText={`${featureData.timeToRead} minutes`}
-                        />
-                    </Link>
-                </div>
                 <div className="sm:flex justify-center mx-4">
                     {allBlogs}
                 </div>
@@ -112,8 +100,8 @@ const BasicCard = ({title, excerpt, fluidImage, date, smallText, medText}) => {
             <div className="">
                 <Img fluid={fluidImage} alt="something" />
             </div>
-            <div className="px-6 py-4">
-                <div className=" font-hairline bold sm:text-5xl text-4xl mb-2 sm:hover:text-indigo-800 "> {title}
+            <div className="px-6 py-4 w-full">
+                <div className="font-hairline bold sm:text-5xl text-4xl mb-2 sm:hover:text-indigo-800 "> {title}
                 </div>
                 <p className="text-xs text-gray-500 leading-tight">{date}</p>
                 <p className="text-gray-700 text-2xl">

@@ -2,12 +2,6 @@ const path = require('path');
 const { createFilePath } =  require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-/*
-onCreateNode:
-    tells Gatsby: 'everytime you create a node, check of type md remark,
-        create a new path (unsure of how name of slug is chosen here (!)
-        create a new field containing the newly created path+slug
-*/
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     fmImagesToRelative(node);
