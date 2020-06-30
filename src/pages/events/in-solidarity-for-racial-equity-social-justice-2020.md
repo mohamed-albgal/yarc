@@ -2,8 +2,7 @@
 title: In Solidarity for Racial Equity & Social Justice
 startDate: 2020-06-30T20:56:36.881Z
 eventImage: src/images/social_justice.jpg
-description: Stand for equality and social justice and show your solidarity for
-  the African American Community
+description: In Solidarity for Racial Equity & Social Justice
 tags: social-justice community all
 type: event
 ---
