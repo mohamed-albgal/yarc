@@ -23,11 +23,11 @@ export const query = graphql`
               author
               title
               tags
-              date(formatString: "MMMM Do YYYY")
+              date(formatString: "MMMM DD, YYYY")
               blogImg {
                 childImageSharp{
                   fluid(maxWidth: 800){
-                    src
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -40,11 +40,14 @@ export const query = graphql`
 
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
+    console.log(nodes.length)
     // const featureData = nodes[0].node;
     // const blogNodes = nodes.length > 0 ?  nodes.slice(1): [];
 
-    const allBlogs = nodes.map(({ node }, i) => (
-        <Link key={i} to={node.fields.slug}>
+    const allBlogs = nodes.map(({ node }, i) => {
+        console.log(node);
+        return(
+            <Link key={i} to={node.fields.slug}>
             <BasicCard
             fluidImage={node.frontmatter.blogImg.childImageSharp.fluid}
             excerpt={node.excerpt} 
@@ -54,7 +57,8 @@ export default ({data}) => {
             smallText={`${node.timeToRead} minutes`}
             />
         </Link>
-    ))
+        )
+    })
 
     return (
         <Layout bgGradientColor={"purple-bottom"}>
