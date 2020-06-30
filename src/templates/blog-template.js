@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import dock from '../images/oakland_dock.jpg'
 import Hero from '../components/homogenous/Hero'
-import Content, { MarkdownHTML } from '../components/homogenous/Content';
+import MarkdownHTML, { Content } from '../components/homogenous/Content';
 
 
 export const markdownStyle = `text-left markdown inline-block -mb-8 -mt-20 h-full max-w-full 

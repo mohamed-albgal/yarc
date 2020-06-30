@@ -65,6 +65,11 @@ module.exports = {
         icon: `src/images/yarc_logo_icon.svg`, 
       }
     },
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
   ],
 }

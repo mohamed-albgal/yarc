@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlogTemplate, markdownStyles } from  '../../templates/blog-template'
+import { BlogTemplate, markdownStyle } from  '../../templates/blog-template'
 import dock from '../../images/oakland_dock.jpg'
 
 const BlogPreviewTemplate = ({entry, widgetFor}) => (
@@ -8,7 +8,7 @@ const BlogPreviewTemplate = ({entry, widgetFor}) => (
         title={entry.getIn(['data', 'title'])}
         content={widgetFor('body')}
         heroBg={dock}
-        mdStyle={markdownStyles}
+        mdStyle={markdownStyle}
     />
 )
 

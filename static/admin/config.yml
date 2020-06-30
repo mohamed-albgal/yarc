@@ -19,6 +19,8 @@ collections:
     folder: 'src/pages/blog'
     create: true
     slug: "{{slug}}-{{month}}-{{year}}"
+    editor:
+      preview: true
     preview_path: blog/{{slug}}
     preview_path_date_field: date
     fields:

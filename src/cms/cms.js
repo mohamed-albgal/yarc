@@ -3,6 +3,5 @@ import BlogPreviewTemplate from './PreviewTemplates/BlogPreviewTemplate'
 
 //CMS.registerPreviewTemplate('event', AboutPagePreview)
 //CMS.registerPreviewTemplate('programs', ProductPagePreview)
-CMS.init();
-console.log(CMS, 'seems to be working');
+console.log('test visibility');
 CMS.registerPreviewTemplate('blog', BlogPreviewTemplate)
