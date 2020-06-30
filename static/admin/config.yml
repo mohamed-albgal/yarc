@@ -7,6 +7,7 @@ backend:
         uploadMedia: '[skip ci] Upload “{{path}}”'
         deleteMedia: '[skip ci] Delete “{{path}}”'
 media_folder: src/images
+public_folder: src/images
 logo_url: 'https://www.yarcenter.org/icons/icon-512x512.png'
 publish_mode: editorial_workflow
 site_url: https://yarcenter.org

@@ -1,17 +1,27 @@
 
+
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     title: "Yemeni American Resource Center",
   },
   plugins: [
-    `gatsby-plugin-sharp`,
+    netlifyCmsPaths,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           // gatsby-remark-relative-images must
           // go before gatsby-remark-images
+          netlifyCmsPaths,
           {
             resolve: `gatsby-remark-relative-images`,
           },
@@ -40,7 +50,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/src/pages`,
       },
     },
     {
