@@ -3,8 +3,6 @@ import React from 'react'
 import Layout from '../components/Layout'
 import PageHeadText from '../components/homogenous/PageHeadText'
 import { graphql, Link} from 'gatsby'
-// import imgfeat from '../images/hangingLights.jpg'
-import img2 from '../images/covid_19_thanks.jpg'
 import Img from 'gatsby-image'
 
 export const query = graphql`
@@ -35,30 +33,25 @@ export const query = graphql`
           }
         }
     }
-  }`;
+  }
+  `;
 
 
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
-    console.log(nodes.length)
-    // const featureData = nodes[0].node;
-    // const blogNodes = nodes.length > 0 ?  nodes.slice(1): [];
-
-    const allBlogs = nodes.map(({ node }, i) => {
-        console.log(node);
-        return(
+    const allBlogs = nodes.map(({ node }, i) => (
             <Link key={i} to={node.fields.slug}>
-            <BasicCard
-            fluidImage={node.frontmatter.blogImg.childImageSharp.fluid}
-            excerpt={node.excerpt} 
-            title={node.frontmatter.title} 
-            date={node.frontmatter.date}
-            medText={node.frontmatter.author}
-            smallText={`${node.timeToRead} minutes`}
-            />
-        </Link>
+                <BasicCard
+                fluidImage={node.frontmatter.blogImg.childImageSharp.fluid}
+                excerpt={node.excerpt} 
+                title={node.frontmatter.title} 
+                date={node.frontmatter.date}
+                medText={node.frontmatter.author}
+                smallText={`${node.timeToRead} minutes`}
+                />
+            </Link>
         )
-    })
+    )
 
     return (
         <Layout bgGradientColor={"purple-bottom"}>
@@ -98,11 +91,11 @@ export default ({data}) => {
     )
 }
 
-const BasicCard = ({title, excerpt, fluidImage, date, smallText, medText}) => {
+const BasicCard = ({title, excerpt, fluidImage, date, smallText, medText, height="h-64"}) => {
     return (
         <div className="lg:max-w-md  rounded-md bg-gray-300 overflow-hidden shadow-2xl sm:mx-4 my-8 ">
             <div className="">
-                <Img fluid={fluidImage} alt="something" />
+                <Img fluid={fluidImage} alt="something" className={` sm:max-w-full w-full ${height} rounded-t-lg object-cover object-top overflow-hidden" alt="staff image`} />
             </div>
             <div className="px-6 py-4 w-full">
                 <div className="font-hairline bold sm:text-5xl text-4xl mb-2 sm:hover:text-indigo-800 "> {title}

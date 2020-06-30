@@ -11,6 +11,7 @@ public_folder: src/images
 logo_url: 'https://www.yarcenter.org/icons/icon-512x512.png'
 publish_mode: editorial_workflow
 site_url: https://yarcenter.org
+local_backend: true
 
 collections:
   - name: 'blog'
@@ -21,6 +22,7 @@ collections:
     preview_path: blog/{{slug}}
     preview_path_date_field: date
     fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-page"}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Author', name: 'author', widget: 'string' }
       - { label: 'Image', name: blogImg, widget: 'image'}

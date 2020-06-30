@@ -8,7 +8,7 @@ const Navlink = ({text, subMenu, linkTo }) => {
         setDropped(false);
         navigate(toPage);
     }
-
+    
     const ArrowIcon = ({h, w}) => {
         return (
             <div>{!dropped ?
@@ -25,12 +25,7 @@ const Navlink = ({text, subMenu, linkTo }) => {
         )
     }
 
-
-
-
-
-
-    const navItemStyle = `text-center block uppercase  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded sm:ml-4  py-2 sm:font-hairline font-extrabold 
+    const navItemStyle = `text-center sm:block uppercase  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded sm:ml-4  py-2 sm:font-hairline font-extrabold 
     text-xl lg:text-2xl text-white sm:cursor-pointer  bg-transparent sm:hover:scale-95 sm:hover:font-normal transform duration-75`
     return (
         <div>

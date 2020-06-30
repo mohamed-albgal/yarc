@@ -32,7 +32,7 @@ export default  ({data}) => {
                     tagTextColor={"text-gray-200"}
                     tagBgColor={"bg-green-900"}
                     imgFluid={node.frontmatter.eventImage.childImageSharp.fluid} 
-                    subHead={`${node.frontmatter.endDate ? node.frontmatter.startDate + " - " + node.frontmatter.endDate: node.frontmatter.startDate}`} 
+                    subHead={`${node.frontmatter.startDate}`} 
                     bgColor={`bg-indigo-700`} />
                 </Link>
             </div>

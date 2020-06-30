@@ -3,16 +3,35 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import dock from '../images/oakland_dock.jpg'
 import Hero from '../components/homogenous/Hero'
+import Content, { MarkdownHTML } from '../components/homogenous/Content';
+
+
+export const markdownStyle = `text-left markdown inline-block -mb-8 -mt-20 h-full max-w-full 
+whitespace-pre-wrap sm:max-w-none sm:px-6 px-4 sm:w-11/12 lg:w-9/12 shadow-xl bg-white rounded-lg`
+
+export const BlogTemplate = ({title, author, content, contentComponent, heroBg, mdStyle}) => {
+    const PostContent = contentComponent || Content
+    return (
+      <div>
+        <Hero mainText={title} caption={author} heroImage={heroBg} />
+        <PostContent className={mdStyle} content={content} />
+      </div>
+    )
+};
+
 
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
     return (
         <div>
             <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
-            <Hero mainText={frontmatter.title} caption={frontmatter.author} heroImage={dock}/>
-            <div className=" text-center relative z-10">
-              <div className=" text-left inline-block -mb-8 -mt-20 h-full max-w-full whitespace-pre-wrap sm:max-w-none sm:px-6 px-4 sm:w-11/12 lg:w-9/12 shadow-xl bg-white rounded-lg markdown" dangerouslySetInnerHTML={{__html:html}} />
-            </div>
+              <BlogTemplate author={frontmatter.author}
+                contentComponent={MarkdownHTML}
+                title={frontmatter.title}
+                heroBg={dock}
+                content={html}
+                mdStyle={markdownStyle}
+              />
             </Layout>
         </div>
     )
