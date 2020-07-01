@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProgramsTemplate, programMdStyle } from  '../../templates/programs-template'
 import dock from '../../images/oakland_dock.jpg'
-import sq from '../images/Protruding-Squares.svg'
+import sq from '../../images/Protruding-Squares.svg'
 
 const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => {
     const data = entry.get('data').toJS();
