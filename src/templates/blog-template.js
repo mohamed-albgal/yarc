@@ -13,8 +13,10 @@ export const BlogTemplate = ({title, author, content, contentComponent, heroBg, 
     const PostContent = contentComponent || Content
     return (
       <div>
-        <Hero mainText={title} caption={author} heroImage={heroBg} />
-        <PostContent className={mdStyle} content={content} />
+        <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
+          <Hero mainText={title} caption={author} heroImage={heroBg} />    
+          <PostContent className={mdStyle} content={content} />
+        </Layout>
       </div>
     )
 };
@@ -23,17 +25,13 @@ export const BlogTemplate = ({title, author, content, contentComponent, heroBg, 
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
     return (
-        <div>
-            <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
-              <BlogTemplate author={frontmatter.author}
-                contentComponent={MarkdownHTML}
-                title={frontmatter.title}
-                heroBg={dock}
-                content={html}
-                mdStyle={markdownStyle}
-              />
-            </Layout>
-        </div>
+        <BlogTemplate author={frontmatter.author}
+          contentComponent={MarkdownHTML}
+          title={frontmatter.title}
+          heroBg={dock}
+          content={html}
+          mdStyle={markdownStyle}
+        />
     )
 }
 
