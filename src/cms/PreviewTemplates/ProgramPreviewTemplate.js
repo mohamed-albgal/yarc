@@ -7,7 +7,7 @@ const ProgramPreviewTemplate = ({entry, widgetFor}) => (
         content={widgetFor('body')}
         mainText={entry.getIn(['data', 'title'])}
         heroBg={dock}
-        programImageFluid={entry.widgetFor('programImage')}
+        programImageFluid={widgetFor('programImage')}
     />
 )
 

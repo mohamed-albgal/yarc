@@ -17,7 +17,7 @@ const Navlink = ({text, subMenu, linkTo }) => {
                     <line x1={w/2} y1={h} x2={w} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
                 </svg>
                 :
-                <svg height={h} width={w} className=" fill-current text-white">
+                <svg height={h} width={w} className=" fill-current">
                     <line x1={0} y1={h} x2={w/2} y2="0" style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}}/>
                     <line x1={w/2} y1="0" x2={w} y2={h} style={{stroke:'rgb(255,255,255)',strokeWidth:'2'}} />
                 </svg>}
@@ -25,16 +25,19 @@ const Navlink = ({text, subMenu, linkTo }) => {
         )
     }
 
-    const navItemStyle = `text-center sm:block uppercase  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded sm:ml-4  py-2 sm:font-hairline font-extrabold 
-    text-xl lg:text-2xl text-white sm:cursor-pointer  bg-transparent sm:hover:scale-95 sm:hover:font-normal transform duration-75`
+    const navItemStyle = `text-center sm:block uppercase  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded lg:ml-4  py-2 sm:font-hairline font-extrabold 
+    text-xl lg:text-2xl text-white cursor-pointer  bg-transparent  transform duration-75`
     return (
         <div>
             {subMenu ?  (      
             <div className="text-center">
                 {/**Any item with a submenu gets styled as any link but receives the arrow and the mechanism that allows clicking out of the submenu */}
-                <button onClick={() => setDropped(!dropped)} className={`${navItemStyle}`} >
-                    {text} 
-                    <div className="inline-block ml-2 pb-1"><ArrowIcon h="7" w="15"/></div>
+                <button onClick={() => setDropped(!dropped)} className="sm:inline-flex sm:flex-row sm:flex-no-wrap sm:align-text-bottom">
+                    <div className={`${navItemStyle} inline-block`} >
+                        {text} 
+                        
+                    </div>
+                    <div className="inline-block content-center lg:pt-5 sm:pt-4 "><ArrowIcon h="7" w="15"/></div>
                 </button>
                 {/*creates an invisible overlay that, when clicked, will close the dropdown, takes up entire w and h */}
                 <div onClick={() => setDropped(false)}className={dropped && "sm:fixed sm:top-0 font- sm:left-0 sm:w-screen sm:h-screen sm:transparent sm:shadow-2xl"} />
