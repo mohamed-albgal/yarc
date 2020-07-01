@@ -1,12 +1,16 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import defaultImage from '../../images/yarc_logo_icon.svg'
 
 
-const SlantCard = ({bgColor="bg-teal-400", head, subHead, body, imgFluid, svgTextColor, tagTextColor="bg-gray-200", tagBgColor="bg-teal-400", height="h-64", tags}) => {
+const SlantCard = ({bgColor="bg-teal-400", head, subHead, body, imgFluid=null, svgTextColor, tagTextColor="bg-gray-200", tagBgColor="bg-teal-400", height="h-64", tags}) => {
     const tagStyles =`inline-block px-2 mx-1 mt-1 rounded-lg text-center ${tagBgColor} ${tagTextColor} opacity-75 `
+    const imgStyle = ` sm:max-w-full w-full ${height} rounded-t-lg object-cover object-top overflow-hidden" alt="staff image`;
     return (
         <div className="flex flex-col rounded-lg shadow-2xl">
-            <Img fluid={imgFluid} className={` sm:max-w-full w-full ${height} rounded-t-lg object-cover object-top overflow-hidden" alt="staff image`}/>
+            {imgFluid ? <Img fluid={imgFluid} className={imgStyle}/>
+            : <img src={defaultImage} className={imgStyle} alt="defualt Image" />
+            }
             <div className="relative">
                 <svg
                 preserveAspectRatio="none"

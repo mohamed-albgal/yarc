@@ -22,7 +22,9 @@ export default  ({data}) => {
     //get the array of nodes that contain the fields i need including the slug
     const nodes = data.allMarkdownRemark.edges
     
-    const dataBurger = nodes.map( ( { node }, i ) => (
+    const dataBurger = nodes.map( ( { node }, i ) => {
+        const eventImage = node.frontmatter.eventImage;
+        return (
             <div key={i} className="hover:scale-105 transform transition-transform duration-200 sm:p-2 pb-6 px-6 sm:pb-10 sm:w-1/3 w-full h-full">
                 <Link to={node.fields.slug}>
                     <SlantCard body={node.frontmatter.description} 
@@ -31,12 +33,12 @@ export default  ({data}) => {
                     tags={node.frontmatter.tags && node.frontmatter.tags.split(" ")}
                     tagTextColor={"text-gray-200"}
                     tagBgColor={"bg-green-900"}
-                    imgFluid={node.frontmatter.eventImage.childImageSharp.fluid} 
+                    imgFluid={eventImage && eventImage.childImageSharp.fluid} 
                     subHead={`${node.frontmatter.startDate}`} 
                     bgColor={`bg-indigo-700`} />
                 </Link>
             </div>
-            )
+        )}
         )
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">

@@ -9,6 +9,7 @@ import MarkdownHTML, { Content } from '../components/homogenous/Content';
 export const markdownStyle = `text-left markdown inline-block -mb-8 -mt-20 h-full max-w-full 
 whitespace-pre-wrap sm:max-w-none sm:px-6 px-4 sm:w-11/12 lg:w-9/12 shadow-xl bg-white rounded-lg`
 
+
 export const BlogTemplate = ({title, author, content, contentComponent, heroBg, mdStyle}) => {
     const PostContent = contentComponent || Content
     return (
