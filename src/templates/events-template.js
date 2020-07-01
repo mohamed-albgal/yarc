@@ -6,7 +6,7 @@ import Hero from '../components/homogenous/Hero'
 import Img from 'gatsby-image'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 
-export const EventTemplate = ({eventImageFluid=null, heroBg={bayView}, heroTitle, content, contentComponent }) => {
+export const EventTemplate = ({eventImageFluid=null, heroBg={bayView}, mdStyle={eventMarkdownStyle},heroTitle, content, contentComponent }) => {
   const PostConent = contentComponent || Content
   return (
     <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
@@ -16,14 +16,14 @@ export const EventTemplate = ({eventImageFluid=null, heroBg={bayView}, heroTitle
           <Img fluid={eventImageFluid} />
         </div> }
         <div className={`${eventImageFluid ? 'sm:w-1/2': 'sm:w-full'} text-center relative z-10`}>
-            <PostConent content={content} className={eventMarkdownStyle}/>
+            <PostConent content={content} className={mdStyle}/>
         </div>
       </div>
     </Layout>
 
   )
 }
-export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
+const eventMarkdownStyle = " w-full text-left inline-block -mb-8 whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
     const eventImageFluid = frontmatter.eventImage && frontmatter.eventImage.childImageSharp.fluid;
