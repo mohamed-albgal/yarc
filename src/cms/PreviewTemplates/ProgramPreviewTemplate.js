@@ -5,7 +5,6 @@ import sq from '../../images/Protruding-Squares.svg'
 
 const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => {
     const data = entry.get('data').toJS();
-    console.log(data);
     const {title, image, } = data;
     return (
         <ProgramsTemplate 

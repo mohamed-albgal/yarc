@@ -6,14 +6,14 @@ import Hero from '../components/homogenous/Hero'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
-export const EventTemplate = ({eventImageFluid=null, heroBg={bayView}, mdStyle={eventMarkdownStyle},heroTitle, content, contentComponent }) => {
+export const EventTemplate = ({eventImageFluid, heroBg={bayView}, mdStyle ,heroTitle, content, contentComponent }) => {
   const PostConent = contentComponent || Content
   return (
     <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
       <Hero heroImage={heroBg} mainText={heroTitle} />
       <div className="sm:flex sm:p-10 p-2 justify-between ">
         { eventImageFluid && <div className="  sm:w-1/2 pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4">
-          <PreviewCompatibleImage imageInfo={eventImageFluid} />
+          <PreviewCompatibleImage image={eventImageFluid} />
         </div> }
         <div className={`${eventImageFluid ? 'sm:w-1/2': 'sm:w-full'} text-center relative z-10`}>
             <PostConent content={content} className={mdStyle}/>
@@ -34,6 +34,7 @@ export default ({ data }) => {
           eventImageFluid={eventImageFluid}
           heroBg={bayView}
           heroTitle={frontmatter.title}
+          mdStyle={eventMarkdownStyle}
         />
     )
 }
