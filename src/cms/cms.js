@@ -1,7 +1,10 @@
 import CMS from 'netlify-cms-app'
 import BlogPreviewTemplate from './PreviewTemplates/BlogPreviewTemplate'
+import ProgramPreviewTemplate from './PreviewTemplates/ProgramPreviewTemplate';
+import EventPreviewTemplate from './PreviewTemplates/EventPreviewTemplate';
 
-//CMS.registerPreviewTemplate('event', AboutPagePreview)
-//CMS.registerPreviewTemplate('programs', ProductPagePreview)
-console.log('test visibility');
+
 CMS.registerPreviewTemplate('blog', BlogPreviewTemplate)
+CMS.registerPreviewTemplate('event', EventPreviewTemplate)
+CMS.registerPreviewTemplate('programs', ProgramPreviewTemplate)
+
