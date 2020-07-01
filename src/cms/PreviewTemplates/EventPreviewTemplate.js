@@ -10,7 +10,7 @@ const EventPreviewTemplate = ({entry, widgetFor, getAsset}) => {
         <EventTemplate 
             heroTitle={entry.getIn(['data', 'title'])}
             content={widgetFor('body')}
-            eventImageFluid={imageAsset || otherImgOption}
+            eventImageFluid={imageAsset.path || otherImgOption}
             mdStyle={eventMarkdownStyle}
         />
     )}
