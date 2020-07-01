@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import PageHeadText from '../components/homogenous/PageHeadText'
 import { graphql, Link} from 'gatsby'
 import Img from 'gatsby-image'
+import defaultImage from '../images/yarc_logo_icon.svg'
 
 export const query = graphql`
 {
@@ -39,10 +40,12 @@ export const query = graphql`
 
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
-    const allBlogs = nodes.map(({ node }, i) => (
+    const allBlogs = nodes.map(({ node }, i) => {
+        const blogImage = node.frontmatter.blogImg;
+        return (    
             <Link key={i} to={node.fields.slug}>
                 <BasicCard
-                fluidImage={node.frontmatter.blogImg.childImageSharp.fluid}
+                fluidImage={blogImage && blogImage.childImageSharp.fluid}
                 excerpt={node.excerpt} 
                 title={node.frontmatter.title} 
                 date={node.frontmatter.date}
@@ -50,7 +53,7 @@ export default ({data}) => {
                 smallText={`${node.timeToRead} minutes`}
                 />
             </Link>
-        )
+        )}
     )
 
     return (
@@ -67,35 +70,15 @@ export default ({data}) => {
 
     )
 }
-  const BigCard = ({title, excerpt, fluidImg, date, smallText, medText}) => {
-    return (
-        <div className="flex max-w-full flex-wrap shadow-xl m-4">
-            <div className="order-first sm:w-2/3 w-full object-cover sm:rounded-l-lg sm:rounded-r-none rounded-lg rounded-b-none h-full overflow-hidden ">
-                <Img fluid={fluidImg} alt="big"/>
-            </div>
-            <div className=" order-last sm:w-1/3 rounded-lg sm:rounded-t-lg rounded-t-none border-blue-100 w-full bg-gray-200">
-                <div className=" sm:h-full flex-grow p-10 sm:hover:text-indigo-800 ">
-                    <h1 className=" sm:text-6xl text-3xl text-gray-700">
-                        {title}
-                    </h1>
-                    <p className="text-xs text-gray-500 leading-tight">{date}</p>
-                    <p className="text-gray-700 sm:text-3xl text-lg max-h-full">
-                    {excerpt}
-                    </p>
-                    <p className="text-gray-800 text-base tracking-wider">{medText}</p>
-                    <p className="text-gray-600 text-sm tracking-widest">{smallText}</p>
-                    
-                </div>
-            </div>
-        </div>
-    )
-}
 
-const BasicCard = ({title, excerpt, fluidImage, date, smallText, medText, height="h-64"}) => {
+const BasicCard = ({title, excerpt, fluidImage=null, date, smallText, medText, height="h-64"}) => {
+    const imageStyle = ` sm:max-w-full w-full ${height} rounded-t-lg object-cover object-top overflow-hidden" alt="staff image`
     return (
         <div className="lg:max-w-md  rounded-md bg-gray-300 overflow-hidden shadow-2xl sm:mx-4 my-8 ">
             <div className="">
-                <Img fluid={fluidImage} alt="something" className={` sm:max-w-full w-full ${height} rounded-t-lg object-cover object-top overflow-hidden" alt="staff image`} />
+                {fluidImage ? <Img fluid={fluidImage} alt="something" className={imageStyle} />
+                : <img src={defaultImage} alt="blog bg Image" className={imageStyle} />
+                }
             </div>
             <div className="px-6 py-4 w-full">
                 <div className="font-hairline bold sm:text-5xl text-4xl mb-2 sm:hover:text-indigo-800 "> {title}

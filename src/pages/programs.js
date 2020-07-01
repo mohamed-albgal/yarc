@@ -22,6 +22,7 @@ export default  ({data}) => {
     const nodes = data.allMarkdownRemark.edges
     const allProgramsFiles = nodes.map( ( { node } ) => {
             const tagList = node.frontmatter.tags.split(" ");
+            const progImage = node.frontmatter.programImage;
             return (
                 <div className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
                 <Link to={node.fields.slug}>
@@ -29,7 +30,7 @@ export default  ({data}) => {
                     svgTextColor={`text-orange-500`}  
                     head={node.frontmatter.title} 
                     tags={tagList}
-                    imgFluid={node.frontmatter.programImage.childImageSharp.fluid} 
+                    imgFluid={progImage && progImage.childImageSharp.fluid} 
                     subHead={`${node.frontmatter.endDate ? node.frontmatter.startDate + " - " + node.frontmatter.endDate: node.frontmatter.startDate}`} 
                     bgColor={`bg-orange-500`} />
                 </Link>
