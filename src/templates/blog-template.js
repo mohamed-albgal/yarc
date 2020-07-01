@@ -10,7 +10,7 @@ export const markdownStyle = `text-left markdown inline-block -mb-8 -mt-20 h-ful
 whitespace-pre-wrap sm:max-w-none sm:px-6 px-4 sm:w-11/12 lg:w-9/12 shadow-xl bg-white rounded-lg`
 
 
-export const BlogTemplate = ({title, author, content, contentComponent, heroBg={dock}, mdStyle}) => {
+export const BlogTemplate = ({title, author, content, contentComponent, heroBg={dock}, mdStyle={markdownStyle}}) => {
     const PostContent = contentComponent || Content
     return (
       <div>
