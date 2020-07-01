@@ -2,7 +2,7 @@ import React from 'react'
 import { ProgramsTemplate } from  '../../templates/programs-template'
 import dock from '../../images/oakland_dock.jpg'
 
-const ProgramPreviewTemplate = ({entry, widgetFor}) => (
+const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => (
     <ProgramsTemplate 
         content={widgetFor('body')}
         mainText={entry.getIn(['data', 'title'])}
