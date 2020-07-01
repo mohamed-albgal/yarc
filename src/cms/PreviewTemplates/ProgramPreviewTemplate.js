@@ -1,14 +1,22 @@
 import React from 'react'
-import { ProgramsTemplate } from  '../../templates/programs-template'
+import { ProgramsTemplate, programMdStyle } from  '../../templates/programs-template'
 import dock from '../../images/oakland_dock.jpg'
+import sq from '../images/Protruding-Squares.svg'
 
-const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => (
-    <ProgramsTemplate 
-        content={widgetFor('body')}
-        mainText={entry.getIn(['data', 'title'])}
+const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => {
+    const data = entry.get('data').toJS();
+    console.log(data);
+    const {body, title, image, } = data;
+    return (
+        <ProgramsTemplate 
+        content={body}
+        mainText={title}
         heroBg={dock}
-        programImageFluid={getAsset(entry.getIn(['data', 'programImage']))}
-    />
-)
+        programImageFluid={image}
+        markdownStyle={programMdStyle}
+        pageBg={sq}
+        />
+    )
+}
 
 export default ProgramPreviewTemplate

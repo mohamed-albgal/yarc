@@ -23,7 +23,7 @@ export const EventTemplate = ({eventImageFluid=null, heroBg={bayView}, mdStyle={
 
   )
 }
-const eventMarkdownStyle = " w-full text-left inline-block -mb-8 whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
+export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
     const eventImageFluid = frontmatter.eventImage && frontmatter.eventImage.childImageSharp.fluid;

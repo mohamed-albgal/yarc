@@ -8,7 +8,7 @@ import bg from '../images/Protruding-Squares.svg'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 
 
-const programMdStyle = "text-left inline-block whitespace-normal sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
+ export const programMdStyle = "text-left inline-block whitespace-normal sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
 
 export const ProgramsTemplate = ({programImageFluid=null, mainText, markdownStyle={programMdStyle}, pageBg={bg}, content, contentComponent }) => {
   const PostContent = contentComponent || Content
