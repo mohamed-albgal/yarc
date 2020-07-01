@@ -3,8 +3,8 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import bayView from '../images/bay_view.jpg'
 import Hero from '../components/homogenous/Hero'
-import Img from 'gatsby-image'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
+import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
 export const EventTemplate = ({eventImageFluid=null, heroBg={bayView}, mdStyle={eventMarkdownStyle},heroTitle, content, contentComponent }) => {
   const PostConent = contentComponent || Content
@@ -13,7 +13,7 @@ export const EventTemplate = ({eventImageFluid=null, heroBg={bayView}, mdStyle={
       <Hero heroImage={heroBg} mainText={heroTitle} />
       <div className="sm:flex sm:p-10 p-2 justify-between ">
         { eventImageFluid && <div className="  sm:w-1/2 pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4">
-          <Img fluid={eventImageFluid} />
+          <PreviewCompatibleImage imageInfo={eventImageFluid} />
         </div> }
         <div className={`${eventImageFluid ? 'sm:w-1/2': 'sm:w-full'} text-center relative z-10`}>
             <PostConent content={content} className={mdStyle}/>

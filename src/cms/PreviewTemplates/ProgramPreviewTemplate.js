@@ -6,10 +6,10 @@ import sq from '../../images/Protruding-Squares.svg'
 const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => {
     const data = entry.get('data').toJS();
     console.log(data);
-    const {body, title, image, } = data;
+    const {title, image, } = data;
     return (
         <ProgramsTemplate 
-        content={body}
+        content={widgetFor('body')}
         mainText={title}
         heroBg={dock}
         programImageFluid={image}
