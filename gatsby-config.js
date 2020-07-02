@@ -65,7 +65,14 @@ module.exports = {
         icon: `src/images/yarc_logo_icon.svg`, 
       }
     },
-
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: false,
+        tailwind: true,
+      },
+    },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
