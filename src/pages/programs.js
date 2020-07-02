@@ -25,19 +25,19 @@ export default  ({data}) => {
             const progImage = node.frontmatter.programImage;
             return (
                 <div className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
-                <Link to={node.fields.slug}>
-                    <SlantCard body={node.frontmatter.description} 
-                    svgTextColor={`text-orange-500`}  
-                    head={node.frontmatter.title} 
-                    tags={tagList}
-                    imgFluid={progImage && progImage.childImageSharp.fluid} 
-                    subHead={`${node.frontmatter.endDate ? node.frontmatter.startDate + " - " + node.frontmatter.endDate: node.frontmatter.startDate}`} 
-                    bgColor={`bg-orange-500`} />
-                </Link>
-            </div>
+                    <Link to={node.fields.slug}>
+                        <SlantCard body={node.frontmatter.description} 
+                        svgTextColor={`text-orange-500`}  
+                        head={node.frontmatter.title} 
+                        tags={tagList}
+                        imgFluid={progImage && progImage.childImageSharp.fluid} 
+                        subHead={`${node.frontmatter.endDate ? node.frontmatter.startDate + " - " + node.frontmatter.endDate: node.frontmatter.startDate}`} 
+                        bgColor={`bg-orange-500`} />
+                    </Link>
+                </div>
+                )
+            }
             )
-        }
-        )
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className="text-center">

@@ -1,7 +1,7 @@
 ---
 title: In Solidarity for Racial Equity & Social Justice
 startDate: 2020-06-30T20:56:36.881Z
-eventImage: src/images/social_justice.jpg
+eventImage: src/images/uploads/social_justice.jpg
 description: In Solidarity for Racial Equity & Social Justice
 tags: social-justice community all
 type: event

@@ -2,7 +2,7 @@
 title: Yemeni Youth In Dialogue
 startDate: 2020-06-20
 type: event
-eventImage: ../../images/convo.png
+eventImage: ../../images/uploads/convo.png
 description: Group Discussion Time!
 tags: adults all-youth
 ---
