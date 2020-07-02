@@ -4,7 +4,7 @@ title: “Mothers We are here for you” Workshop
 startDate: 2020-06-24
 endDate: 2020-08-21
 description: "Event For Mothers"
-programImage: ../../images/mothers_ws.jpg
+programImage: ../../images/uploads/mothers_ws.jpg
 leaders: Reshma Farooqui 
 type: program
 tags: youth collge-kids math teachers education

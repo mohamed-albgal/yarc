@@ -5,7 +5,7 @@ type: program
 description: Learn English Taught by Pros
 startDate: 2020-06-22
 endDate: 2020-08-20
-programImage: ../../images/graffiti_create.jpg
+programImage: ../../images/uploads/graffiti_create.jpg
 leaders: Mohamed Algarmi 
 tags: youth collge-kids English education
 ---

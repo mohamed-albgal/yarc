@@ -1,7 +1,7 @@
 ---
 title: image in post
 author: M.a.q
-blogImg: src/images/cms_test.jpg
+blogImg: src/images/uploads/cms_test.jpg
 tags: "test "
 date: 2020-06-30T08:02:37.212Z
 type: blog

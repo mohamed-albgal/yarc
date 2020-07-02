@@ -1,7 +1,7 @@
 ---
 title: Covid-19 Alert
 author: Yarc center
-blogImg: /src/images/covid_19_thanks.jpg
+blogImg: src/images/uploads/covid_19_thanks.jpg
 tags: "public "
 date: 2020-06-30T07:24:52.004Z
 type: blog
