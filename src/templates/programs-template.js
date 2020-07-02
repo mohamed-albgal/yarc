@@ -3,13 +3,12 @@ import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import kids_learning from '../images/kids-learning.jpg'
 import Hero from '../components/homogenous/Hero'
-import Img from 'gatsby-image'
 import bg from '../images/Protruding-Squares.svg'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
 
- export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
+export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
 
 export const ProgramsTemplate = ({image, mainText, subText, markdownStyle={programMdStyle}, pageBg={bg}, content, contentComponent }) => {
   const PostContent = contentComponent || Content

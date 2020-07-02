@@ -8,8 +8,10 @@ const MarkdownHTML = ({className, content}) => (
 );
 
 export const Content = ( {content, className} ) => (
-    <div className={className}>
-        {content}
+    <div className=" text-center relative z-10">
+        <div className={`${className}`}>
+            {content}
+        </div>
     </div>
 )
 

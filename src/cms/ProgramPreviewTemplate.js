@@ -1,6 +1,6 @@
 import React from 'react'
 import { ProgramsTemplate, programMdStyle } from  '../templates/programs-template'
-import dock from '../images/oakland_dock.jpg'
+import kids_learning from '../images/kids-learning.jpg'
 import sq from '../images/Protruding-Squares.svg'
 
 const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => {
@@ -11,7 +11,7 @@ const ProgramPreviewTemplate = ({entry, widgetFor, getAsset}) => {
         <ProgramsTemplate 
         content={widgetFor('body')}
         mainText={title}
-        heroBg={dock}
+        heroBg={kids_learning}
         subText={description}
         image={imageSrc}
         markdownStyle={programMdStyle}

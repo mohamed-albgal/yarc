@@ -1,5 +1,6 @@
 import React from 'react'
 import { EventTemplate, eventMarkdownStyle } from  '../templates/events-template'
+import bayView from '../images/bay_view.jpg'
 
 
 const EventPreviewTemplate = ({entry, widgetFor, getAsset}) => {
@@ -14,6 +15,7 @@ const EventPreviewTemplate = ({entry, widgetFor, getAsset}) => {
             image={imgPath}
             mdStyle={eventMarkdownStyle}
             description={description}
+            heroBg={bayView}
         />
     )}
 

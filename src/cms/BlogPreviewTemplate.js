@@ -1,5 +1,6 @@
 import React from 'react'
 import { BlogTemplate, markdownStyle } from  '../templates/blog-template'
+import dock from '../images/oakland_dock.jpg'
 
 const BlogPreviewTemplate = ({entry, widgetFor}) => {
     const data = entry.get('data').toJS();
@@ -10,6 +11,7 @@ const BlogPreviewTemplate = ({entry, widgetFor}) => {
             title={title}
             content={widgetFor('body')}
             mdStyle={markdownStyle}
+            heroBg={dock}
         />
     )
 }
