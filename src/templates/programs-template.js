@@ -9,7 +9,7 @@ import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
 
- export const programMdStyle = "text-left inline-block whitespace-normal sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
+ export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
 
 export const ProgramsTemplate = ({programImageFluid, mainText, markdownStyle={programMdStyle}, pageBg={bg}, content, contentComponent }) => {
   const PostContent = contentComponent || Content

@@ -12,7 +12,7 @@ export const EventTemplate = ({eventImageFluid, heroBg={bayView}, mdStyle ,heroT
     <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
       <Hero heroImage={heroBg} mainText={heroTitle} />
       <div className="sm:flex sm:p-10 p-2 justify-between ">
-        { eventImageFluid && <div className="  sm:w-1/2 pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4">
+        { eventImageFluid && <div className="  sm:w-1/2 pt-10 sm:pt-0 whitespace-pre-wrap shadow-xl z-20 sm:pr-4">
           <PreviewCompatibleImage image={eventImageFluid} />
         </div> }
         <div className={`${eventImageFluid ? 'sm:w-1/2': 'sm:w-full'} text-center relative z-10`}>
@@ -23,7 +23,7 @@ export const EventTemplate = ({eventImageFluid, heroBg={bayView}, mdStyle ,heroT
 
   )
 }
-export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 whitespace-normal sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
+export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
     const eventImageFluid = frontmatter.eventImage && frontmatter.eventImage.childImageSharp.fluid;

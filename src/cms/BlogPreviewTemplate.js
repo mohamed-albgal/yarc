@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlogTemplate, markdownStyle } from  '../../templates/blog-template'
+import { BlogTemplate, markdownStyle } from  '../templates/blog-template'
 
 const BlogPreviewTemplate = ({entry, widgetFor}) => (
     <BlogTemplate 

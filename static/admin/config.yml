@@ -12,6 +12,8 @@ logo_url: 'https://www.yarcenter.org/icons/icon-512x512.png'
 publish_mode: editorial_workflow
 site_url: https://yarcenter.org
 
+local_backend: true
+
 collections:
   - name: 'blog'
     label: 'Blog'

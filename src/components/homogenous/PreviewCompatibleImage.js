@@ -8,8 +8,8 @@ const PreviewCompatibleImage = ({ image }) => {
     )
   }
 
-  if (typeof imageInfo === 'string')
-    return <img  src={image} alt={alt} />
+  if (typeof image === 'string')
+    return <img  src={image} alt={' '} />
   return null
 }
 
