@@ -4,13 +4,14 @@ import { EventTemplate, eventMarkdownStyle } from  '../templates/events-template
 
 const EventPreviewTemplate = ({entry, widgetFor, getAsset}) => {
     const data = entry.get('data').toJS();
-    const {title, eventImage, } = data;
-    const imgPath = (getAsset(eventImage).path)
-    return(
+    const imgPath = (getAsset(entry.getIn(['data', 'eventImage'])))
+    console.log(imgPath)
+    
+    return (
         <EventTemplate 
-            heroTitle={title}
+            heroTitle={data.title}
             content={widgetFor('body')}
-            eventImageFluid={imgPath}
+            image={imgPath.url}
             mdStyle={eventMarkdownStyle}
         />
     )}

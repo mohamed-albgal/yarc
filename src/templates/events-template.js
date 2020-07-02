@@ -6,16 +6,20 @@ import Hero from '../components/homogenous/Hero'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
-export const EventTemplate = ({eventImageFluid, heroBg={bayView}, mdStyle ,heroTitle, content, contentComponent }) => {
+export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
+
+export const EventTemplate = ({image, heroBg={bayView}, mdStyle ,heroTitle, content, contentComponent }) => {
   const PostConent = contentComponent || Content
   return (
     <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
       <Hero heroImage={heroBg} mainText={heroTitle} />
       <div className="sm:flex sm:p-10 p-2 justify-between ">
-        { eventImageFluid && <div className="  sm:w-1/2 pt-10 sm:pt-0 whitespace-pre-wrap shadow-xl z-20 sm:pr-4">
-          <PreviewCompatibleImage image={eventImageFluid} />
+        
+        { image && <div className="  sm:w-1/2 pt-10 sm:pt-0 whitespace-pre-wrap shadow-xl z-20 sm:pr-4">
+          <PreviewCompatibleImage image={image} />
         </div> }
-        <div className={`${eventImageFluid ? 'sm:w-1/2': 'sm:w-full'} text-center relative z-10`}>
+
+        <div className={`${image ? 'sm:w-1/2': 'sm:w-full'} text-center relative z-10`}>
             <PostConent content={content} className={mdStyle}/>
         </div>
       </div>
@@ -23,15 +27,15 @@ export const EventTemplate = ({eventImageFluid, heroBg={bayView}, mdStyle ,heroT
 
   )
 }
-export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 sm:px-6 px-4 shadow-xl bg-white rounded-lg markdown";
+
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
-    const eventImageFluid = frontmatter.eventImage && frontmatter.eventImage.childImageSharp.fluid;
+    
     return (
         <EventTemplate 
           content={html}
           contentComponent={MarkdownHTML}
-          eventImageFluid={eventImageFluid}
+          image={frontmatter.eventImage}
           heroBg={bayView}
           heroTitle={frontmatter.title}
           mdStyle={eventMarkdownStyle}
