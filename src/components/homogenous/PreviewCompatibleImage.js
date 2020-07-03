@@ -1,8 +1,9 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-const PreviewCompatibleImage = ({ image }) => {
-  const style = "rounded-lg "
+const PreviewCompatibleImage = ({ image, imageStyle }) => {
+  const style = imageStyle || "rounded-lg "
+  
   if (image && image.childImageSharp) 
     return  <Img className={style} fluid={image.childImageSharp.fluid} alt={' fluid '} />
 

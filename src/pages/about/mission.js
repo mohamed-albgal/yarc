@@ -1,6 +1,5 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import jamb from '../../images/jamb.jpg'
 import Layout from '../../components/Layout';
 import Hero from '../../components/homogenous/Hero'
 
@@ -13,10 +12,13 @@ export default () => {
             node {
               html
               frontmatter {
-                viewTitle
+                head
                 mission
                 vision
                 goals
+                bgImage{
+                  publicURL
+                }
               }
             }
           }
@@ -28,7 +30,7 @@ export default () => {
     return (
         <div>
             <Layout navWithHero bgGradientColor={"blue-top"}>
-                <Hero caption={frontmatter.caption} mainText={frontmatter.viewTitle} heroImage={jamb} />
+                <Hero caption={frontmatter.caption} mainText={frontmatter.head} heroImage={frontmatter.bgImage.publicURL} />
                 <div className="relative z-10 container shadow-xl bg-white rounded-lg p-2 sm:mx-20 sm:-my-10 mt-4">
                   <PageSection head={"Our Mission"} body={frontmatter.mission}/>
                   <PageSection head={"Our Vision"} body={frontmatter.vision}/>
@@ -43,7 +45,7 @@ export default () => {
 const PageHeadText = ({text}) => {
   return (
           <div className=" container mr-4 flex flex-col flex-no-wrap pt-10 ">
-              <div className="text-black font-extrabold tracking-wide sm:text-8xl text-5xl sm:pl-2 sm:pr-10">{text}
+              <div className="text-black font-extrabold tracking-normal sm:text-6xl text-5xl sm:pl-2 sm:pr-10">{text}
                   <span className="title-gradient block h-1 -mt-4 self-stretch w-full"></span>
               </div>
           </div>

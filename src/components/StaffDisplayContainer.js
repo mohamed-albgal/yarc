@@ -16,10 +16,10 @@ export default (props) => {
             </div>
             <div className="flex flex-wrap">
                 
-                <StaffCard name={card1.name} title={card1.title} image={card1.image}/>
-                <StaffCard name={card2.name} title={card2.title} image={card2.image}/>
-                <StaffCard name={card3.name} title={card3.title} image={card3.image}/>
-                <StaffCard name={card4.name} title={card4.title} image={card4.image} />
+                <StaffCard name={card1.name} title={card1.title} image={card1.image.publicURL || card1.image}/>
+                <StaffCard name={card2.name} title={card2.title} image={card2.image.publicURL || card2.image}/>
+                <StaffCard name={card3.name} title={card3.title} image={card3.image.publicURL || card3.image}/>
+                <StaffCard name={card4.name} title={card4.title} image={card4.image.publicURL || card4.image} />
             </div>
         </div>
     );

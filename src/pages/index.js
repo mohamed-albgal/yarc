@@ -1,5 +1,5 @@
 import React from      "react"
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from "../components/Layout"
 import Section1Content from "../components/Section1Content.js"
 import Section2Content from "../components/Section2Content"
@@ -15,130 +15,150 @@ import staff2 from '../images/mokh1.jpg'
 import staff3 from '../images/seena.jpg'
 import staff4 from '../images/default-profile.png'
 
-
-const siteTitle = "Yemeni American Resource Center"
-const caption = `A Space For Yemeni-American Men And Women, Young and Old to Come Together And Grow!`;
-const section1Content = {
-  card1: {
-    head:"Enhancing The Community Experience",
-    body : "Communities thrive when people come together and share their experiences"
-  },
-  card2: {
-    head:"Active Community Building",
-    body : "Everyone has something to offer. We provide the platform that enables all the pieces to fit together"
-  },
-  card3: {
-    head:"Tomorrow's Wins Begin Today!",
-    body : "We focus on all demographics represented in our community, but the youth are our future and main focus"
-  },
-
-};
-
-const section2Content = {
-  side:{
-    head: "The Sharpest Minds Are Here In Our Community",
-    body: `We welcome people from all walks of life to contribute and share in their experiences. Our staff is comprised of an equally 
-    diverse set of individuals who voluntarily take the time to ensure our collective success`
-  },
-
-  slantedCard: {
-    image: section2Image,
-    headText:"Recognition Enhances The Confidence of Our Young Talent",
-    bodyText: "A young boy receives an award",
-  },
-
-};
-
-const section3Content = {
-  image: section3Image,
-  side: {
-    head:"Empowering Events, Held Regularly!",
-    body: `Events are announced and based on the requests we get from our community memebers. Some may repeat
-     and others may not. With involvement, we can continue providing a rich set of diverse learning and growth events.`,
+export const query = graphql`
+{
+  allMarkdownRemark(filter: {fields: {slug: {eq: "/"}}}) {
+    edges {
+      node {
+        frontmatter {
+          head
+          caption
+          bgImage{
+            publicURL
+          }
+          section1{
+            card1{
+              body
+              head
+            }
+            card2{
+              body
+              head
+            }
+            card3{
+              body
+              head
+            }
+          }
+          section2{
+            linkText
+            side{
+              body
+              head
+            }
+            slantCard{
+              body
+              head
+              image{
+                publicURL
+              }
+            }
+          }
+          section3{
+            linkText
+            image{
+              publicURL
+            }
+            side{
+              head
+              body
+            }
+          }
+          section4{
+            linkText
+            card1{
+              member
+              title
+              image{
+                publicURL
+              }
+            }
+            card2{
+              member
+              title
+              image{
+                publicURL
+              }
+            }
+            card3{
+              member
+              title
+              image{
+                publicURL
+              }
+            }
+            card4{
+              member
+              title
+              image{
+                publicURL
+              }
+            }
+          }
+        }
+      }
+    }
   }
-};
-
-const staffContent = {
-  head: "Featured Contributors",
-  caption:"YAR Center Would Be Impossible Without These People",
-  card1: {
-    image: staff1,
-    name: " Izzuddin Ahmed",
-    title: "Executive Director",
-  },
-  card2: {
-    image: staff2,
-    name: "Mokhtar Mohamed",
-    title: "General Manager",
-  },
-  card3: {
-    image: staff3,
-    name: "Seena Almahan",
-    title: "Program Specialist",
-  },
-  card4: {
-    image: staff4,
-    name: "Fatima Ali",
-    title: "Administrative Assistant",
-  },
-
-};
+}
+`
 
 
 
 
 
+export default ({ data }) => {
+  const {head, caption, bgImage, section1, section2, section3, section4  } = data.allMarkdownRemark.edges[0].node.frontmatter
 
-export default () => {
   return (
     <>
       <Layout navWithHero animate bgGradientColor="blue-bottom">
       <main style={{backgroundPositionY:'10%'}}>
-        <Hero caption={caption} mainText={siteTitle} heroImage={heroImage}/>
+        <Hero caption={caption} mainText={head} heroImage={bgImage.publicURL}/>
       
         <section className="pb-20  -mt-24">    
           <Section1Content 
-          card1Head={section1Content.card1.head}
-          card1Body={section1Content.card1.body}
-          card2Head={section1Content.card2.head}
-          card2Body={section1Content.card2.body}
-          card3Head={section1Content.card3.head}
-          card3Body={section1Content.card3.body}
+          card1Head={section1.card1.head}
+          card1Body={section1.card1.body}
+          card2Head={section1.card2.head}
+          card2Body={section1.card2.body}
+          card3Head={section1.card3.head}
+          card3Body={section1.card3.body}
           />
           <Section2Content 
-          sideHead={section2Content.side.head}
-          sideBody={section2Content.side.body}
-          slantedCardImage={section2Content.slantedCard.image} 
-          cardHeadText={section2Content.slantedCard.headText} 
-          cardBodyText={section2Content.slantedCard.bodyText}
+          sideHead={section2.side.head}
+          sideBody={section2.side.body}
+          slantedCardImage={section2.slantCard.image.publicURL} 
+          cardHeadText={section2.slantCard.head} 
+          cardBodyText={section2.slantCard.body}
           />
           <Link to="/events">
               <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
-                View All Events <span className="font-extrabold">&rarr;</span>
+                {section2.linkText} <span className="font-extrabold">&rarr;</span>
               </div>
             </Link>
         </section>
         
         <section className="relative py-20">
           <Section3Content
-          image={section3Content.image}
-          sideHead={section3Content.side.head}
-          sideBody={section3Content.side.body}
+          image={section3.image.publicURL}
+          sideHead={section3.side.head}
+          sideBody={section3.side.body}
           
           />
           <Link to="/programs">
               <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
-                View All Programs <span className="font-extrabold">&rarr;</span>
+                {section3.linkText} <span className="font-extrabold">&rarr;</span>
               </div>
             </Link>
         </section>
         
         <section className=" pb-32 shadow-2xl-white">
-          <StaffDisplayContainer head ={staffContent.head} caption={staffContent.caption} card1={staffContent.card1} card2={staffContent.card2} card3={staffContent.card3} card4={staffContent.card4} />
-          
+          <StaffDisplayContainer head={section4.head} 
+          caption={section4.caption} card1={section4.card1} card2={section4.card2} 
+          card3={section4.card3} card4={section4.card4} />
             <Link to="about/team">
               <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
-                More About The Team <span className="font-extrabold">&rarr;</span>
+                {section4.linkText} <span className="font-extrabold">&rarr;</span>
               </div>
             </Link>
         </section>
