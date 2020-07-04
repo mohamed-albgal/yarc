@@ -6,13 +6,14 @@ import { FcMultipleInputs } from 'react-icons/fc'
 
 
 //uses 3 icons defined here and 3 card with content defined in referring page
-export default ({card1Head, card1Body, card2Head, card2Body, card3Head, card3Body}) => {
+export default ({ section1 }) => {
+    const { card1, card2, card3 } = section1;
     return (
         <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
-                <Card1 head={card1Head} body={card1Body} />
-                <Card2 head={card2Head} body={card2Body}/>
-                <Card3 head={card3Head} body={card3Body}/>
+                <Card1 head={card1.head} body={card1.body} />
+                <Card2 head={card2.head} body={card2.body}/>
+                <Card3 head={card3.head} body={card3.body}/>
             </div>
         </div>
     )

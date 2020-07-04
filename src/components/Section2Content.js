@@ -3,11 +3,12 @@ import { FaBrain } from "react-icons/fa"
 import SlantedColorCard from './homogenous/SlantedColorCard'
 
 
-export default ({slantedCardImage, cardHeadText, cardBodyText, sideHead ,sideBody}) => {
+export default ({ section2 }) => {
+    const {slantCard, side} = section2;
     return (
         <div className="flex flex-wrap items-center sm:mt-32 mt-20">
-            <IndepthTextTopIcon textColorTW={"black"} sideHead={sideHead} sideBody={sideBody} />
-            <SlantedColorCard cardImage={slantedCardImage} head={cardHeadText} body={cardBodyText} bgColorTW="yellow-500" textColorTW="gray-900" />
+            <IndepthTextTopIcon textColorTW={"black"} sideHead={side.head} sideBody={side.body} />
+            <SlantedColorCard cardImage={slantCard.image.publicURL || slantCard.image} head={slantCard.head} body={slantCard.body} bgColorTW="yellow-500" textColorTW="gray-900" />
         </div>
     )
 }

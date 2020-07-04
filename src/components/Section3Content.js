@@ -1,12 +1,13 @@
 import React from 'react';
 import { GoZap } from 'react-icons/go'
 
-export default ({image, sideHead, sideBody}) => {
+export default ({ section3 }) => {
+    const {image, side } = section3;
     return (
         <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-                <LongImage imgSrc={image}/>
-                <SideTextIcon sideHead={sideHead} sideBody={sideBody} />
+                <LongImage imgSrc={image.publicURL || image}/>
+                <SideTextIcon sideHead={side.head} sideBody={side.body} />
             </div>
         </div>
     )

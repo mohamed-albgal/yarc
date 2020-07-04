@@ -40,7 +40,7 @@ export const query = graphql`
 
 export default ({data}) => {
     const nodes = data.allMarkdownRemark.edges;
-    const allBlogs = nodes.map(({ node }, i) => {
+    const allBlogs = nodes &&  nodes.map(({ node }, i) => {
         const blogImage = node.frontmatter.blogImg;
         return (    
             <Link key={i} to={node.fields.slug}>

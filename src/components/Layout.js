@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from './homogenous/NavBar'
 import ActionForm from './homogenous/ActionForm'
 import Footer from './Footer'
-import ClosingSection from "../components/ClosingSection"
+import ClosingSection from "./homogenous/ClosingSection"
 
 const closingContent = {
     head:"Become A Valuable Resource",
