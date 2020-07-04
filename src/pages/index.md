@@ -19,11 +19,11 @@ section2:
     slantCard:
       body: "A young boy receives an award"
       head: "Recognition Enhances The Confidence of Our Young Talent"
-      image: award1.jpg
+      image: src/images/uploads/award1.jpg
     linkText: View All Events
 section3: 
   linkText: View All Programs
-  image: mothers_ws.jpg
+  image: ../images/uploads/mothers_ws.jpg
   side: 
     body: "Events are announced and based on the requests we get from our community memebers. Some may repeat and others may not. With involvement, we can continue providing a rich set of diverse learning and growth events."
     head: "Empowering Events, Held Regularly!"
@@ -35,19 +35,19 @@ section4:
   card1:
     member: Izzudin Ahmed
     title: Executive Director
-    image: about/izz.jpg
+    image: ../images/uploads/izz.jpg
   card2:
     member: Mokhtar Mohamed
     title: General Manager
-    image: about/mokh1.jpg
+    image: ../images/uploads/mokh1.jpg
   card3:
     member: Seena Almahan
     title: Program Specialist
-    image: about/seena.jpg
+    image: ../images/uploads/seena.jpg
   card4:
     member: Fatima Ali
     title: Administrative Assistant
-    image: about/default-profile.png
+    image: ../images/uploads/default-profile.png
 title: index
 
 

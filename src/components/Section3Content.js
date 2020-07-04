@@ -6,7 +6,7 @@ export default ({ section3 }) => {
     return (
         <div className="container mx-auto px-4">
             <div className="items-center flex flex-wrap">
-                <LongImage imgSrc={image.publicURL || image}/>
+                <LongImage imgSrc={image && image.publicURL || image}/>
                 <SideTextIcon sideHead={side.head} sideBody={side.body} />
             </div>
         </div>
@@ -15,10 +15,10 @@ export default ({ section3 }) => {
 
 export const LongImage = ({imgSrc}) => {
     return (
-        <div className="w-full md:w-4/12 mx-auto my-4 px-4">
+        <div className="w-full md:w-4/12 mx-auto my-4 ">
             <img
                 alt="..."
-                className="max-w-full rounded-lg shadow-lg"
+                className=" object-cover w-full rounded-lg shadow-lg"
                 src={imgSrc}
             />
         </div>

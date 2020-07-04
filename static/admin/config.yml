@@ -77,3 +77,105 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'program'}
+  - name: pages
+    label: "Site Pages"
+    create: false
+    editor:
+      preview: true
+    files:
+      - file: src/pages/index.md
+        label: "Home Page"
+        name: index
+        fields:
+          - { label: "BackgroundImage", name: bgImage, widget: image }    
+          - { label: 'Main Text', name: head, widget: 'string'}
+          - { label: "Sub Text", name: caption, widget: 'string' }
+          - label: "Icon Cards" 
+            name: section1
+            widget: object
+            fields:
+              - label: "Left Card" 
+                name: card1 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+              - label: "Center Card" 
+                name: card2 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+              - label: "Right Card" 
+                name: card3 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+          - label: "Events Section" 
+            name: section2
+            widget: object
+            fields:
+              - label: "Left Text" 
+                name: side
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+              - label: "Slant Card" 
+                name: slantCard 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+                  - {label: "Image", name: image, widget: image}
+              - label: "Link Text"
+                name: linkText
+                widget: string
+          - label: Programs Section
+            name: section3
+            widget: object
+            fields:
+              - label: Side Text
+                name: side
+                widget: object
+                fields:
+                  - { label: "Main Text", name: head, widget: string}
+                  - { label: "Sub Text", name: body, widget: string}
+              - { label: Image, name: image, widget: image }
+              - { label: Link Text, name: linkText, widget: string }
+          - label: Team Section
+            name: section4
+            widget: object
+            fields:
+              - { label: Main , name: head, widget: string }
+              - { label: Sub Text, name: body, widget: string }
+              - label: Staff 1
+                name: card1
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+              - label: Staff 2
+                name: card2
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+              - label: Staff 3
+                name: card3
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+              - label: Staff 4
+                name: card4
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+            

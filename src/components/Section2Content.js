@@ -4,11 +4,12 @@ import SlantedColorCard from './homogenous/SlantedColorCard'
 
 
 export default ({ section2 }) => {
+    
     const {slantCard, side} = section2;
     return (
         <div className="flex flex-wrap items-center sm:mt-32 mt-20">
             <IndepthTextTopIcon textColorTW={"black"} sideHead={side.head} sideBody={side.body} />
-            <SlantedColorCard cardImage={slantCard.image.publicURL || slantCard.image} head={slantCard.head} body={slantCard.body} bgColorTW="yellow-500" textColorTW="gray-900" />
+            <SlantedColorCard cardImage={slantCard.image && slantCard.image.publicURL || slantCard.image} head={slantCard.head} body={slantCard.body} bgColorTW="yellow-500" textColorTW="gray-900" />
         </div>
     )
 }
