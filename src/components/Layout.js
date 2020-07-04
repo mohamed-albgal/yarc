@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './homogenous/NavBar'
 import ActionForm from './homogenous/ActionForm'
-import Footer from './Footer'
+import Footer from './homogenous/Footer'
 import ClosingSection from "./homogenous/ClosingSection"
 
 const closingContent = {

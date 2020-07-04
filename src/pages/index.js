@@ -118,17 +118,18 @@ export const HomePageTemplate = ({head, caption, bgImage, section1, section2, se
       </Layout>
 )
 
-const SectionLink = ({ linkText, linkTo}) => (
-    <Link to={linkTo} >
-      <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600"> 
+const SectionLink = ({ linkText, linkTo}) => {
+  return (
+    <Link to={linkTo}>
+      <div className=" text-center w-full my-10 text-3xl font-thin sm:hover:text-yellow-600">
         {linkText} <span className="font-extrabold">&rarr;</span>
       </div>
     </Link>
-)
+  )
+}
 
 
 export default ({ data }) => {
-  console.log(data.allMarkdownRemark.edges[0].node.frontmatter)
   return (
     <HomePageTemplate {...data.allMarkdownRemark.edges[0].node.frontmatter } />
   )
