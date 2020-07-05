@@ -29,8 +29,6 @@ Sister Iminah Ahmad
 
 Co-founder / Leader / Program Manager of African American Female Excellence for OUSD
 
-
-
 **Rasheed Shabazz**
 
 Director Director of Habari Ummah
