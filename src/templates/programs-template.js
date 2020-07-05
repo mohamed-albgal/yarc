@@ -9,28 +9,35 @@ import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleIm
 
 
 export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
-
-export const ProgramsTemplate = ({image, mainText, subText, markdownStyle={programMdStyle}, pageBg={bg}, content, contentComponent }) => {
+export const PageCore = (props) => {
+  const {mainText, subText, pageBg, content, markdownStyle, image, contentComponent  } = props;
   const PostContent = contentComponent || Content
   return (
-      <div>
-        <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
-          <Hero heroImage={kids_learning} mainText={mainText} caption={subText} />
-          
-          <div className="" style={{backgroundImage:`url(${pageBg})`}}>
-              <div className="lg:p-20 p-2 ">
-                  
-                  {/* trick to center all content in a wrapper div: on wrapper div, set it to text-center, on the child set to inline block*/}
-                  <div className="text-center">
-                      {image && <div className=" inline-block sm:w-6/12 overflow-hidden pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4 w-full">
-                        <PreviewCompatibleImage image={image} />
-                      </div> }
-                  </div>
-                  <PostContent className={markdownStyle} content={content} />
+    <>
+      <Hero heroImage={kids_learning} mainText={mainText} caption={subText} />  
+      <div className="" style={{backgroundImage:`url(${pageBg})`}}>
+          <div className="lg:p-20 p-2 ">
+              
+              {/* trick to center all content in a wrapper div: on wrapper div, set it to text-center, on the child set to inline block*/}
+              <div className="text-center">
+                  {image && <div className=" inline-block sm:w-6/12 overflow-hidden pt-10 sm:pt-0 shadow-xl z-20 sm:pr-4 w-full">
+                    <PreviewCompatibleImage image={image} />
+                  </div> }
               </div>
+              <PostContent className={markdownStyle} content={content} />
           </div>
-        </Layout>
       </div>
+    </>
+  )
+}
+export const ProgramsTemplate = (props) => {
+  
+  return (
+      <>
+        <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
+         <PageCore {...props}/>
+        </Layout>
+      </>
 
   )
 }
