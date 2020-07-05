@@ -4,7 +4,7 @@ import HomePageTemplate from '../templates/home-template'
 const HomePreviewTemplate = ({entry, getAsset}) => {
     const data = entry.get('data').toJS();
     
-    const { bgImage, caption, head, section1, section2, section3, section4 } = data;
+    const { bgImage, caption, head, section1, section2, section3, section4, section5 } = data;
     //get image location of hero
     const bgImagePre = getAsset(bgImage).url
     
@@ -72,7 +72,7 @@ const HomePreviewTemplate = ({entry, getAsset}) => {
     }
     
 
-    console.log(section4Pre(), "right?");
+    console.log(section5, "right?");
     
     return (
         <HomePageTemplate 
@@ -83,6 +83,7 @@ const HomePreviewTemplate = ({entry, getAsset}) => {
         section2={section2Pre()}
         section3={section3Pre()}
         section4={section4Pre()}
+        section5={section5}
           />
 
     )

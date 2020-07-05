@@ -83,11 +83,24 @@ collections:
     editor:
       preview: true
     files:
+      - file: src/pages/about/mission.md
+        label: "Mission & Vision Page"
+        name: "mission"
+        fields:
+          - { label: 'Main Text', name: 'head', widget: 'string'}
+          - { label: 'Sub Text', name: 'caption', widget: 'string', required: false}
+          - { label: 'Background Image', name: 'bgImage', widget: 'image'}
+          - { label: 'Mission Heading', name: 'missionHead', widget: 'string'}
+          - { label: 'Mission Statement', name: 'mission', widget: 'string'}
+          - { label: 'Vision Heading', name: 'visionHead', widget: 'string'}
+          - { label: 'Vision Statement', name: 'vision', widget: 'string'}
+          - { label: 'Goals Heading', name: 'goalsHead', widget: 'string'}
+          - { label: 'Goals Statement', name: 'goals', widget: 'string'}
       - file: src/pages/index.md
         label: "Home Page"
         name: index
         fields:
-          - { label: "BackgroundImage", name: bgImage, widget: image }    
+          - { label: "Background Image", name: bgImage, widget: image }    
           - { label: 'Main Text', name: head, widget: 'string'}
           - { label: "Sub Text", name: caption, widget: 'string' }
           - label: "Icon Cards" 
@@ -178,4 +191,62 @@ collections:
                   - { label: Name, name: member, widget: string }
                   - { label: "Title", name: title, widget: string }
                   - { label: Image, name: image, widget: image }
+          - label: Footer Section
+            name: section5
+            widget: object
+            fields:
+              - { label: Main Text, name: head, widget: string}
+              - { label: Sub Text, name: caption, widget: string}
+              - label: Call 1 
+                name: card1
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: body, widget: string}
+              - label: Call 2 
+                name: card2
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: body, widget: string}
+              - label: Call 3 
+                name: card3
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: body, widget: string}
+              - label: Form Text
+                name: form
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: caption, widget: string}
+                  - { label: Name Label, name: nameLabel, widget: string}
+                  - { label: Email Lable, name: emailLabel, widget: string}
+                  - { label: Message Text, name: messageLabel, widget: string}
+                  - { label: Button Text, name: sendLabel, widget: string}
+              - label: Contact Text
+                name: contact
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Address, name: address, widget: string}
+                  - { label: Address Label, name: addressLabel, widget: string}
+                  - { label: Phone Number, name: phone, widget: string}
+                  - { label: Phone Label, name: phoneLabel, widget: string}
+                  - { label: Email Address, name: email, widget: string}
+                  - { label: Email Label, name: emailLabel, widget: string}
+              - label: Social Text
+                name: social
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Sub Heading, name: caption, widget: string}
+                  - label: Social Link Destination Addresses
+                    name: links
+                    widget: object
+                    fields:
+                      - { label: Facebook, name: fb, widget: string}
+                  
+                
             

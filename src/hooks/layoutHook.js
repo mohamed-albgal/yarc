@@ -54,7 +54,8 @@ const useLayoutHook = () => {
       }
     }
     `)
-    
+    console.log('from hook')
+    console.log(allMarkdownRemark.edges[0].node.frontmatter)
     return allMarkdownRemark.edges[0].node.frontmatter
 }
 export default useLayoutHook

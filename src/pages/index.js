@@ -1,4 +1,5 @@
 import React from      "react"
+import { graphql } from 'gatsby'
 import HomePageTemplate from '../templates/home-template'
 
 export const query = graphql`

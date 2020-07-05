@@ -8,7 +8,7 @@ const EventPreviewTemplate = ({entry, widgetFor, getAsset}) => {
     const { title, eventImage, description } = data;
     const imgPublicURL =  eventImage && getAsset(eventImage).url
 
-    console.log(imgPublicURL)
+    
     return (
         <EventTemplate 
             heroTitle={title}
