@@ -6,4 +6,10 @@ description: "Grand Opening of the Yemeni American Youth Center "
 tags: Grand Opening
 type: event
 ---
-We are pleased to invite you to the grand opening of the Yemeni American Youth Center on February 23, 2020.
+![](src/images/uploads/play3.jpg)
+
+![](src/images/uploads/play2.jpg)
+
+![](src/images/uploads/kids-prize.jpg)
+
+![](src/images/uploads/play7.jpg)
