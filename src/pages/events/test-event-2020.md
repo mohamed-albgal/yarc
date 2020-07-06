@@ -1,5 +1,5 @@
 ---
-title: "Mothers We are here for you Webinar "
+title: "Mothers We are Here For You Workshop "
 startDate: 2020-06-14T07:00:00.000Z
 eventImage: src/images/uploads/mothers_ws.jpg
 description: Free Community Event
