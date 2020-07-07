@@ -53,6 +53,15 @@ exports.createPages = async ({graphql, actions}) => {
             }
           }
         }
+        youth:allMarkdownRemark(filter: {frontmatter: {type: {eq: "youth_leader"}}}){
+          edges{
+            node{
+                fields{
+                slug
+              }
+            }
+          }
+        }
         
     }
     `)
@@ -87,5 +96,14 @@ exports.createPages = async ({graphql, actions}) => {
                 },
             }));
         });
+        result.data.youth_leader.edges.forEach( ({ node }) => {
+          (createPage({
+              path:node.fields.slug,
+              component: path.resolve(`./src/templates/youth-leaders-template.js`),
+              context: {
+                  slug: node.fields.slug,
+              },
+          }));
+      });
             
 }
