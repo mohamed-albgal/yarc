@@ -1,8 +1,9 @@
 ---
-title: "Reading Forum "
+title: Reading Pioneers Forum     منتدى رواد القراءة
 startDate: 2020-03-18T19:46:00.387Z
 endDate: 2021-03-19T19:46:00.605Z
 programImage: src/images/uploads/reading-forum.jpg
+description: "     أعـز مكـان في الدنــى سرج سابـح   وخيـر جليس في الزمان كتاب       "
 tags: Arabic
 type: program
 ---
