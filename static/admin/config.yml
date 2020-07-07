@@ -101,7 +101,7 @@ collections:
                 - { label: Name, name: member, widget: string } 
                 - { label: Role, name: role, widget: string }
                 - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: markdown}
+                - { label: Bio, name: bio, widget: text}
               - label: Member 2
                 name: memberCard2
                 widget: object
@@ -109,7 +109,7 @@ collections:
                 - { label: Name, name: member, widget: string } 
                 - { label: Role, name: role, widget: string }
                 - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: markdown}
+                - { label: Bio, name: bio, widget: text}
               - label: Member 3
                 name: memberCard3
                 widget: object
@@ -117,7 +117,7 @@ collections:
                 - { label: Name, name: member, widget: string } 
                 - { label: Role, name: role, widget: string }
                 - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: markdown}
+                - { label: Bio, name: bio, widget: text}
               - label: Member 4
                 name: memberCard4
                 widget: object
@@ -125,7 +125,7 @@ collections:
                 - { label: Name, name: member, widget: string } 
                 - { label: Role, name: role, widget: string }
                 - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: markdown }
+                - { label: Bio, name: bio, widget: text }
       - file: src/pages/about/mission.md
         label: "Mission & Vision Page"
         name: "mission"

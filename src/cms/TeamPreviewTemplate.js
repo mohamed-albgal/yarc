@@ -9,9 +9,11 @@ const TeamPreviewTemplate = ({entry, getAsset}) => {
         memberCards[card].image = getAsset(memberCards[card].image).url
         cards.push(memberCards[card])
     }
+    const imgURL = getAsset(heroImage).url
     const properties = {cards, ...rest}
+    console.log(data.bio)
     return (
-        <TeamPageTemplate heroImage={getAsset(heroImage).url} {...properties } />
+        <TeamPageTemplate heroImage={imgURL} {...properties } />
     )
 }
 

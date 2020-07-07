@@ -4,8 +4,9 @@ import Hero from '../components/homogenous/Hero'
 import staff4 from '../images/default-profile.png'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
-
+//any caller needs to format the memberCards to be an array of objects named 'cards'
 const TeamPageTemplate = ({head, caption, heroImage, cards,}) => {
+  
   return (
     <Layout navWithHero bgGradientColor="yellow-green">
       <Hero mainText={head} caption={caption} heroImage={heroImage} />

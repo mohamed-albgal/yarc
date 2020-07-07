@@ -56,10 +56,11 @@ export const query = graphql`
 //couldnt get the config.yml for the cms and this gql query to play nice when an array of objects was used
 //used a an object of objects instead, refactor to make tighter
 export default ({data}) => {
+  
   const {head, caption, memberCards, heroImage} = data.allMarkdownRemark.edges[0].node.frontmatter
-  const heroImg = (heroImage && heroImage.publicURL) || heroImage
+  const publicURL = (heroImage && heroImage.publicURL) || heroImage
   const cards = [memberCards.memberCard1, memberCards.memberCard2, memberCards.memberCard3, memberCards.memberCard4]
-  const properties = { head, caption, cards, heroImg };
+  const properties = { head, caption, cards, heroImage:publicURL };
     return (
         <TeamPageTemplate { ...properties} />
     )
