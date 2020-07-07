@@ -2,7 +2,7 @@
 title: team
 head: Our Staff and Contributors
 caption: Yar Center Would Be Impossible Without These People
-heroImage: src/images/uploads/books.jpg
+heroImage: src/images/uploads/hands.jpg
 memberCards:
   memberCard1:
     image: src/images/uploads/img-6931-min.jpg
