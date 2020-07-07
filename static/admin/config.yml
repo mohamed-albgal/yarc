@@ -224,28 +224,6 @@ collections:
                   - { label: Email Lable, name: emailLabel, widget: string}
                   - { label: Message Text, name: messageLabel, widget: string}
                   - { label: Button Text, name: sendLabel, widget: string}
-              - label: Contact Text
-                name: contact
-                widget: object
-                fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Address, name: address, widget: string}
-                  - { label: Address Label, name: addressLabel, widget: string}
-                  - { label: Phone Number, name: phone, widget: string}
-                  - { label: Phone Label, name: phoneLabel, widget: string}
-                  - { label: Email Address, name: email, widget: string}
-                  - { label: Email Label, name: emailLabel, widget: string}
-              - label: Social Text
-                name: social
-                widget: object
-                fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Sub Heading, name: caption, widget: string}
-                  - label: Social Link Destination Addresses
-                    name: links
-                    widget: object
-                    fields:
-                      - { label: Facebook, name: fb, widget: string}
                   
                 
             

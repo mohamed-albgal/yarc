@@ -49,25 +49,4 @@ section4:
     title: Administrative Assistant
     image: ../images/uploads/default-profile.png
 title: index
-section5: 
-  head: "Become A Valuable Resource"
-  card1:
-    head: "Lead An Event"
-    body: > 
-      Have A Skill or Specialty? Reach out to us and share in your expertise!
-  card2:
-    head: Donate To Our Cause
-    body: >
-     The only funding we have is from people like YOU. A little goes a long way!
-  card3:
-    head: Become A Mentor
-    body: > 
-      Give back to those who could benefit from your own experiences. Attend our mentorship events!
-  form:
-    head: Interested In Working With Us?
-    caption: Complete this form and we will get back to you ASAP!
-    nameLabel: Name
-    emailLabel: Email
-    messageLabel: Message
-    sendLabel: Send
 ---

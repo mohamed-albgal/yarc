@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './homogenous/NavBar'
 import Footer from './homogenous/Footer'
+import ClosingSection from './homogenous/ClosingSection'
 //import useLayoutData from '../hooks/useLayoutData.js'
 
 const Layout = ({ children, navWithHero, animate, bgGradientColor="blue-top" }) => {
@@ -14,6 +15,7 @@ const Layout = ({ children, navWithHero, animate, bgGradientColor="blue-top" }) 
                 <div className={` bg-gradient-${bgGradientColor} sm:bg-fixed bg-center sm:bg-left-top  bg-cover `}>
                     { children }    
                 </div>
+                <ClosingSection />
                 <Footer />
             </div>
         )

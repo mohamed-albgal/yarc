@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlogTemplate, markdownStyle } from  '../templates/blog-template'
+import { BlogTemplate, markdownStyle } from  '../templates/blog-template.js'
 import dock from '../images/oakland_dock.jpg'
 
 const BlogPreviewTemplate = ({entry, widgetFor}) => {

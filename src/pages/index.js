@@ -82,29 +82,6 @@ export const query = graphql`
               }
             }
           }
-          section5 {
-            head
-            card1{
-              head
-              body
-            }
-            card2{
-              head
-              body
-            }
-            card3{
-              head
-              body
-            }
-            form{
-              head
-              caption
-              nameLabel
-              emailLabel
-              messageLabel
-              sendLabel
-            }
-          }
         }
       }
     }

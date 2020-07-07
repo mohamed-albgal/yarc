@@ -1,5 +1,5 @@
 import React from 'react'
-import HomePageTemplate from '../templates/home-template'
+import HomePageTemplate from '../templates/home-template.js'
 
 const HomePreviewTemplate = ({entry, getAsset}) => {
     const data = entry.get('data').toJS();

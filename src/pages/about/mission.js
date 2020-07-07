@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import MissionTemplate from '../../templates/MissionTemplate'
+import MissionTemplate from '../../templates/mission-template'
 
 export default () => {
     const data = useStaticQuery(graphql`

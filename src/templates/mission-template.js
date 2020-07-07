@@ -36,7 +36,7 @@ const MissionTemplate = (props) => {
   return (
         <div> 
             <Layout navWithHero bgGradientColor={"blue-top"}> 
-              <PageContent {...rest}  />
+              <PageContent {...props}  />
            </Layout>
         </div>
   )

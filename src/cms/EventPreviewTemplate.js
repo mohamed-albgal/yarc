@@ -1,5 +1,5 @@
 import React from 'react'
-import { EventTemplate, eventMarkdownStyle } from  '../templates/events-template'
+import { EventTemplate, eventMarkdownStyle } from  '../templates/events-template.js'
 import bayView from '../images/bay_view.jpg'
 
 

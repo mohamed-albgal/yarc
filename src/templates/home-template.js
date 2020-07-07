@@ -1,6 +1,6 @@
 import React from      "react"
 import { Link } from 'gatsby'
-import Layout, { LayoutTemplate } from "../components/Layout"
+import Layout from "../components/Layout"
 import Section1Content from "../components/Section1Content.js"
 import Section2Content from "../components/Section2Content"
 import Section3Content from "../components/Section3Content"
@@ -9,7 +9,6 @@ import Hero from "../components/homogenous/Hero"
 import ClosingSection from "../components/homogenous/ClosingSection"
 
 const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, section3, section4, section5 }) => {
-  const closingProps = { head:section5.head, card1:section5.card1, card2:section5.card2, card3: section5.card3,};
   return(
     <Layout navWithHero animate bgGradientColor="blue-bottom" section5={section5}>
       <main style={{backgroundPositionY:'10%'}}>
@@ -31,7 +30,7 @@ const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, sectio
             <SectionLink linkText={section4.linkText} linkTo='about/team' />
         </section>
         <section className=" ">
-          <ClosingSection { ...closingProps}/>
+          <ClosingSection { ...section5}/>
         </section>
       </main>
     </Layout>
