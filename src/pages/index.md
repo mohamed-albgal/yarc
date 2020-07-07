@@ -51,37 +51,23 @@ section4:
 title: index
 section5: 
   head: "Become A Valuable Resource"
-  caption: ""
   card1:
     head: "Lead An Event"
     body: > 
-      "Have A Skill or Specialty? Reach out to us and share in your expertise!"
+      Have A Skill or Specialty? Reach out to us and share in your expertise!
   card2:
-    head: "Donate To Our Cause"
+    head: Donate To Our Cause
     body: >
-     "The only funding we have is from people like YOU. A little goes a long way!"
+     The only funding we have is from people like YOU. A little goes a long way!
   card3:
-    head: "Become A Mentor"
+    head: Become A Mentor
     body: > 
-      "Give back to those who could benefit from your own experiences. Attend our mentorship events!"
+      Give back to those who could benefit from your own experiences. Attend our mentorship events!
   form:
-    head: "Interested In Working With Us?"
-    caption: "Complete this form and we will get back to you ASAP!"
-    nameLabel: "Name"
+    head: Interested In Working With Us?
+    caption: Complete this form and we will get back to you ASAP!
+    nameLabel: Name
     emailLabel: Email
     messageLabel: Message
     sendLabel: Send
-  contact:
-    head: "Contact" 
-    addressLabel: Address
-    address: "8001 Capwell Dr Oakland CA 94621"
-    phoneLabel: Phone
-    phone: "510 200 4175"
-    emailLabel: Email 
-    email: "info@yarcenter.org"
-  social: 
-    head: "Let's keep in touch!"
-    caption: "Find us on any of these platforms, we'd love to connect!"
-    links:
-      fb: "https://www.facebook.com/Yemeni-American-Youth-Center-%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B4%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-110243897202862/"
 ---

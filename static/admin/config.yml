@@ -191,12 +191,11 @@ collections:
                   - { label: Name, name: member, widget: string }
                   - { label: "Title", name: title, widget: string }
                   - { label: Image, name: image, widget: image }
-          - label: Footer Section
+          - label: Form Section
             name: section5
             widget: object
             fields:
               - { label: Main Text, name: head, widget: string}
-              - { label: Sub Text, name: caption, widget: string}
               - label: Call 1 
                 name: card1
                 widget: object

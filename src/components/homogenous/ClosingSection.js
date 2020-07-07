@@ -2,7 +2,7 @@ import React from 'react'
 import { FcLike } from 'react-icons/fc'
 import { GoLightBulb } from 'react-icons/go'
 import { GoRocket } from 'react-icons/go'
-export default ({card1, card2, card3, head, caption}) => {
+export default ({card1, card2, card3, head}) => {
     return (
 
         <div className="pb-20 relative block jigsaw-bg bg-fixed" >       
@@ -12,9 +12,6 @@ export default ({card1, card2, card3, head, caption}) => {
                     <h2 className="text-5xl font-semibold text-white">
                         {head}
                     </h2>
-                    <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-                        {caption}
-                    </p>
                     </div>
                 </div>
                 <div className="flex flex-wrap mt-12 justify-center">
