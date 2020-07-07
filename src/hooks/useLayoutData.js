@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql} from 'gatsby'
 
-const useLayoutHook = () => {
+const useLayoutData = () => {
     const { allMarkdownRemark } = useStaticQuery(graphql`
     {
         allMarkdownRemark(filter: {fields: {slug: {eq: "/"}}}) {
@@ -58,4 +58,4 @@ const useLayoutHook = () => {
     console.log(allMarkdownRemark.edges[0].node.frontmatter)
     return allMarkdownRemark.edges[0].node.frontmatter
 }
-export default useLayoutHook
+export default useLayoutData

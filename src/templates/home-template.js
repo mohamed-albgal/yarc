@@ -9,11 +9,11 @@ import Hero from "../components/homogenous/Hero"
 
 const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, section3, section4, section5 }) => {
   
-  const CorrectLayout = !!section5 ? LayoutTemplate : Layout
+  //const CorrectLayout = !!section5 ? LayoutTemplate : Layout
   
-  console.log(CorrectLayout)
+  //console.log(CorrectLayout)
   return(
-    <CorrectLayout navWithHero animate bgGradientColor="blue-bottom" section5={section5}>
+    <Layout navWithHero animate bgGradientColor="blue-bottom" section5={section5}>
       <main style={{backgroundPositionY:'10%'}}>
         <Hero caption={caption} mainText={head} heroImage={bgImage && bgImage.publicURL || bgImage}/>
       
@@ -33,7 +33,7 @@ const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, sectio
             <SectionLink linkText={section4.linkText} linkTo='about/team' />
         </section>
       </main>
-    </CorrectLayout>
+    </Layout>
 )}
 
 const SectionLink = ({ linkText, linkTo}) => {
