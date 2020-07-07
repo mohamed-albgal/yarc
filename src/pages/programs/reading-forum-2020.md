@@ -6,4 +6,5 @@ programImage: src/images/uploads/reading-forum.jpg
 tags: Arabic
 type: program
 ---
-This program focuses in promoting Arabic reading, writing, healthy conversations and debates among our community. The program management assign a book for 2-3 weeks were participants read and write a reflection about their readings and meet virtually via Zoom once a week to discuss their writings. 
+Started in March 17, 2020, this program focuses in promoting Arabic reading, writing, healthy conversations and debates among our community. 
+The program management assign a book for 2-3 weeks were participants read and write a reflection about their readings and meet virtually via Zoom once a week to discuss their writings. 
