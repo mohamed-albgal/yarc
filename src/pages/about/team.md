@@ -17,7 +17,7 @@ memberCards:
       members.  "
   memberCard2:
     image: src/images/uploads/izzy-min.jpg
-    member: Mokhtar Mohamed
+    member: "Izzuddin Ahmed "
     role: "Co-founder and Executive Director "
     bio: >+
       As co-founder and Executive director, Izzuddin advocates for empowering
