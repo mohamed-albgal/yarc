@@ -53,7 +53,7 @@ exports.createPages = async ({graphql, actions}) => {
             }
           }
         }
-        youth:allMarkdownRemark(filter: {frontmatter: {type: {eq: "youth_leader"}}}){
+        leaders:allMarkdownRemark(filter: {frontmatter: {type: {eq: "leader"}}}){
           edges{
             node{
                 fields{
@@ -86,7 +86,6 @@ exports.createPages = async ({graphql, actions}) => {
                 },
             }))
         });
-
         result.data.programs.edges.forEach( ({ node }) => {
             (createPage({
                 path:node.fields.slug,
@@ -96,10 +95,10 @@ exports.createPages = async ({graphql, actions}) => {
                 },
             }));
         });
-        result.data.youth_leader.edges.forEach( ({ node }) => {
+        result.data.leaders.edges.forEach( ({ node }) => {
           (createPage({
               path:node.fields.slug,
-              component: path.resolve(`./src/templates/youth-leaders-template.js`),
+              component: path.resolve(`./src/templates/leaders-template.js`),
               context: {
                   slug: node.fields.slug,
               },

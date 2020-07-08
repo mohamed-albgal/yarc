@@ -10,7 +10,7 @@ export const query = graphql`
 {
     allMarkdownRemark(limit: 10,
         sort: { order: DESC, fields: [frontmatter___date]}
-        filter: {fileAbsolutePath: {regex: "/(blog)/"}}) {
+        filter: {frontmatter: {type: {eq: "blog"}}}) {
           edges {
             node {
             excerpt
