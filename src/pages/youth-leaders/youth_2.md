@@ -1,9 +1,9 @@
 ---
 
-leader: Person McPearson
+leader: Nother McNother
 image: ../../images/default-profile.png
 type: leader
-bio: "Random pre text to show before the main bio page"
+bio: "Random pre text to show before the main bio page Random pre text to show before the main bio page Random pre text to show before the main bio page"
 
 ---
 

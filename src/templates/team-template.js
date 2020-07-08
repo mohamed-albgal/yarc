@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Hero from '../components/homogenous/Hero'
-import staff4 from '../images/default-profile.png'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
 //any caller needs to format the memberCards to be an array of objects named 'cards'
@@ -21,7 +20,7 @@ const TeamPageTemplate = ({head, caption, heroImage, cards,}) => {
 
 
 
-const StaffCard = ({card}) => {
+export const StaffCard = ({card}) => {
   const {image, member, title, bio } = card;
   const imageClass =" shadow-2xl  relative object-center object-cover overflow-hidden rounded-full w-56 h-56  mx-auto"
   const cardImage = (image && image.publicURL) || image 
