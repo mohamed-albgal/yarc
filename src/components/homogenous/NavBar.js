@@ -14,6 +14,16 @@ const subMenuLinks = [
         path:"about/team"
     },
 ];
+const youthSubMenu = [
+    {
+        name:"Youth Voices",
+        path:"/blogs"
+    }, 
+    {
+        name:"Youth Leaders", 
+        path:"/youth-leaders"
+    },
+];
 
 const Navbar =  ({withHero, animate}) => {
     const [closed, setClosed] = useState(true);
@@ -64,7 +74,7 @@ const Navbar =  ({withHero, animate}) => {
                         <NavLink  text="About" subMenu={subMenuLinks} />
                         <NavLink  text="Programs" linkTo="/programs" />
                         <NavLink  text="Events" linkTo="/events" />
-                        <NavLink  text="Youth Voices" linkTo="/blogs"/>
+                        <NavLink  text="Yarc Youth" subMenu={youthSubMenu}/>
                     </div>
                 </div>
             </nav>
