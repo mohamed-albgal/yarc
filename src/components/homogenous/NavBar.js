@@ -74,7 +74,7 @@ const Navbar =  ({withHero, animate}) => {
                         <NavLink  text="About" subMenu={subMenuLinks} />
                         <NavLink  text="Programs" linkTo="/programs" />
                         <NavLink  text="Events" linkTo="/events" />
-                        <NavLink  text="Yarc Youth" subMenu={youthSubMenu}/>
+                        <NavLink  text="Youth" subMenu={youthSubMenu}/>
                     </div>
                 </div>
             </nav>

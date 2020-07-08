@@ -25,31 +25,30 @@ const Navlink = ({text, subMenu, linkTo }) => {
         )
     }
 
-    const navItemStyle = `text-center sm:block uppercase  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded lg:ml-4  py-2 sm:font-hairline font-extrabold 
-    text-xl lg:text-2xl text-white cursor-pointer  bg-transparent  transform duration-75`
+    const navItemStyle = `text-center sm:block uppercase flex flex-col justify-center  relative sm:px-2 sm:py-1 sm:hover:text-yellow-500 rounded lg:ml-4  py-2 sm:font-hairline font-extrabold 
+    text-xl lg:text-2xl text-white sm:h-auto h-16 bg-transparent transform duration-75`
     return (
-        <div>
+        <div onMouseLeave={() => setDropped(false)}>
             {subMenu ?  (      
-            <div className="text-center">
+            <div className="text-center" onMouseEnter={() => setDropped(true)} >
                 {/**Any item with a submenu gets styled as any link but receives the arrow and the mechanism that allows clicking out of the submenu */}
-                <button onClick={() => setDropped(!dropped)} className="sm:inline-flex sm:flex-row sm:flex-no-wrap sm:align-text-bottom">
+                <button onClick={() => setDropped(!dropped)}  className="sm:inline-flex sm:flex-row sm:flex-no-wrap sm:align-text-bottom">
                     <div className={`${navItemStyle} inline-block`} >
                         {text} 
-                        
                     </div>
-                    <div className="inline-block content-center lg:pt-5 sm:pt-4 "><ArrowIcon h="7" w="15"/></div>
                 </button>
                 {/*creates an invisible overlay that, when clicked, will close the dropdown, takes up entire w and h */}
-                <div onClick={() => setDropped(false)}className={dropped && "sm:fixed sm:top-0 font- sm:left-0 sm:w-screen sm:h-screen sm:transparent sm:shadow-2xl"} />
+                
+                
             
             { dropped &&
-                <div className=" sm:absolute sm:cursor-pointer sm:w-48 w-full sm:mt-1 sm:py-2  
-                sm:rounded-lg rounded-none 
+                <div  className=" sm:absolute sm:cursor-pointer w-full sm:w-auto sm:py-2  
+                sm:rounded-t-sm sm:rounded-b-lg rounded-none 
                 text-black sm:divide-y-0
-                 flex flex-col bg-gradient-blue-bottom
+                 flex flex-col jigsaw-bg
                 "
                 >
-                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 py-2 font-medium text-tiny text-blue-900 uppercase sm:hover:shadow-lg sm:hover:bg-yellow-500 shadow-inner " onClick={() => navClick(elt.path)}>{elt.name}</div>))}
+                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 font-semibold sm:px-6 tracking-wider text-base text-gray-300 sm:hover:text-yellow-500 sm:h-auto h-16 flex flex-col justify-center shadow-inner " onClick={() => navClick(elt.path)}>{elt.name}</div>))}
                 </div>
             }
         </div> 
