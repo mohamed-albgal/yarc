@@ -63,7 +63,7 @@ const YouthCard = (props) => {
                 <p className="mt-6 leading-7 font-hairline text-lg text-gray-900 mx-2 text-left ">
                     {bio}
                 </p>
-                <div className="font-hairline text-yellow-700 sm:text-lg text-sm py-10 text-center">
+                <div className="font-hairline hover:text-yellow-400 text-gray-700 sm:text-lg text-sm py-10 text-center">
                   <Link to={linkTo}>
                     Read More About {leader.split(" ")[0]}
                   </Link>
