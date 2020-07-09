@@ -11,7 +11,6 @@ const TeamPreviewTemplate = ({entry, getAsset}) => {
     }
     const imgURL = getAsset(heroImage).url
     const properties = {cards, ...rest}
-    console.log(data.bio)
     return (
         <TeamPageTemplate heroImage={imgURL} {...properties } />
     )

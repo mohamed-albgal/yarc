@@ -77,9 +77,25 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'program'}
+  - name: 'leaders'
+    label: "Youth Leaders"
+    folder: src/pages/youth-leaders
+    slug: "{{slug}}-{{year}}"
+    create: true
+    preview_path: youth-leaders/{{slug}}
+    preview_path_date_field: startDate
+    fields: 
+      - { label: 'Leader', name: 'leader', widget: 'string' }
+      - { label: 'Start Date:', name: 'startDate', widget: 'datetime' }
+      - label: 'Image'
+        name: 'image'
+        widget: 'image'
+      - { label: Caption, name: caption, widget: 'string', required: false }
+      - { label: 'Short Bio', name: 'bio', widget: 'string', required: false, hint: "Optional, if not bio is entered, the first 50 words from are taken from the long bio below." }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Type', name: 'type', widget: 'hidden', default: 'leader'}
   - name: pages
     label: "Site Pages"
-    create: false
     editor:
       preview: true
     files:

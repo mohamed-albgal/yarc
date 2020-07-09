@@ -1,10 +1,11 @@
 ---
 
 leader: Nother McNother
+caption: 
 startDate: 2020-07-29
 image: ../../images/default-profile.png
 type: leader
-bio: "Random pre text to show before the main bio page Random pre text to show before the main bio page Random pre text to show before the main bio page"
+bio: 
 
 ---
 

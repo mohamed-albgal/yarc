@@ -1,6 +1,7 @@
 ---
 
 leader: Person McPearson
+caption: 
 startDate: 2020-07-29
 image: ../../images/default-profile.png
 type: leader
