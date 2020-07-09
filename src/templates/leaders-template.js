@@ -10,7 +10,7 @@ import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleIm
 
 
 export const markdownStyle = `text-left markdown whitespace-pre-wrap inline-block 
-                              px-2 sm:px-16 pt-20  mx-4 sm:-mt-20 -mt-12 sm:mb-10  
+                              px-2 sm:px-16 pt-20 sm:pt-32  mx-4 sm:-mt-20 -mt-12 sm:mb-10  
                               sm:max-w-none h-full max-w-full sm:w-11/12 lg:w-9/12 
                               bg-white  shadow-xl rounded-lg`
 
@@ -21,7 +21,7 @@ const pageBgStyle = {
 const circleImageStyles =" shadow-2xl relative object-center object-cover overflow-hidden rounded-full sm:w-56 sm:h-56 w-32 h-32 z-20  mx-auto"
 export const LeadersTemplate = ({title, caption, content, contentComponent, profileImage, heroBg, mdStyle, startDate} ) => {
     mdStyle = mdStyle || markdownStyle
-    caption = caption || `Member since ${startDate}`
+    caption = caption || `Youth Leader Since ${startDate}`
     const PostContent = contentComponent || Content
     return (
       <div>
@@ -39,18 +39,16 @@ export const LeadersTemplate = ({title, caption, content, contentComponent, prof
 
 
 export default ({ data }) => {
-    const {frontmatter, html } = data.markdownRemark;
-    const profileImage = frontmatter.image && frontmatter.image.publicURL || defaultPhoto
+    let props = {contentComponent:MarkdownHTML,  heroBg:dock,  mdStyle:markdownStyle }
+    if (data) {
+      const {frontmatter, html } = data.markdownRemark;
+      const profileImage = frontmatter.image && frontmatter.image.publicURL || defaultPhoto
+      const { leader, caption, startDate, } = frontmatter
+      props = { title:leader, profileImage, caption, startDate, content: html, ...props }
+    }
     return (
         <LeadersTemplate 
-          contentComponent={MarkdownHTML}
-          title={frontmatter.leader}
-          caption={frontmatter.caption}
-          startDate={frontmatter.startDate}
-          heroBg={dock}
-          content={html}
-          mdStyle={markdownStyle}
-          profileImage={profileImage}
+        {...props}
         />
     )
 }
