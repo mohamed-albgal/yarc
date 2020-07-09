@@ -94,7 +94,7 @@ collections:
         required: false
         hint: If no image is selected, the default will be used
       - { label: Caption, name: caption, widget: 'string', required: false }
-      - { label: 'Short Bio', name: 'bio', widget: 'string', default: " ", required: false, hint: "Optional, if not bio is entered, the first 50 words from are taken from the long bio below." }
+      - { label: 'Short Bio', name: 'bio', widget: 'string', default: "", required: false, hint: "Optional, if not bio is entered, the first 50 words from are taken from the long bio below." }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'leader'}
   - name: pages

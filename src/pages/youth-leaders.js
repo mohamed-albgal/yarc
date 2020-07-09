@@ -26,7 +26,6 @@ export const query = graphql`
 }`
 
 export default ({data}) => {
-  console.log(data)
   const cards = data.allMarkdownRemark.edges.map( ({ node} , i) => {
     const { excerpt, fields, } = node;
     const { leader, image, bio} = node.frontmatter

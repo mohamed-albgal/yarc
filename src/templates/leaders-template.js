@@ -21,12 +21,12 @@ const pageBgStyle = {
 const circleImageStyles =" shadow-2xl relative object-center object-cover overflow-hidden rounded-full sm:w-56 sm:h-56 w-32 h-32 z-20  mx-auto"
 export const LeadersTemplate = ({title, caption, content, contentComponent, profileImage, heroBg, mdStyle, startDate} ) => {
     mdStyle = mdStyle || markdownStyle
-    caption = caption || `Youth Leader Since ${startDate}`
+    const subText = caption || `Youth Leader Since ${startDate}`
     const PostContent = contentComponent || Content
     return (
       <div>
         <Layout navWithHero >
-          <Hero mainText={title} caption={caption} heroImage={heroBg} />
+          <Hero mainText={title} caption={subText} heroImage={heroBg} />
           <div style={pageBgStyle}>
             <div className="relative z-20 sm:-mt-40  -mt-12">
               <PreviewCompatibleImage image={profileImage} imageStyle={circleImageStyles} />
@@ -39,13 +39,10 @@ export const LeadersTemplate = ({title, caption, content, contentComponent, prof
 
 
 export default ({ data }) => {
-    let props = {contentComponent:MarkdownHTML,  heroBg:dock,  mdStyle:markdownStyle }
-    if (data) {
-      const {frontmatter, html } = data.markdownRemark;
-      const profileImage = frontmatter.image && frontmatter.image.publicURL || defaultPhoto
-      const { leader, caption, startDate, } = frontmatter
-      props = { title:leader, profileImage, caption, startDate, content: html, ...props }
-    }
+    const {frontmatter, html } = data.markdownRemark;
+    const profileImage = frontmatter.image && frontmatter.image.publicURL || defaultPhoto
+    const { leader, caption, startDate, } = frontmatter
+    const props  = { title:leader, profileImage, caption, startDate, content: html, contentComponent:MarkdownHTML,  heroBg:dock,  mdStyle:markdownStyle }
     return (
         <LeadersTemplate 
         {...props}
