@@ -1,6 +1,6 @@
 ---
 leader: Selwan Amari
-startDate: 2020-07-09T01:24:36.383Z
+startDate: 2020-05-01T07:00:00.000Z
 image: src/images/uploads/default-profile.png
 caption: "Youth Leader "
 bio: Selwan Amari is a fourth year Sociology undergraduate at UC Berkeley. She
