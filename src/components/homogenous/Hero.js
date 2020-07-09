@@ -19,7 +19,7 @@ export default ({mainText, caption, heroImage}) => {
           minHeight: "75vh"
       }}>
       {/* hero image*/}
-      <div className=" md:shadow-2xl absolute inset-0 w-full h-full sm:bg-fixed bg-cover bg-scroll"
+      <div className=" md:shadow-2xl absolute inset-0 w-full h-full sm:bg-fixed bg-cover sm:bg-center bg-scroll"
           style={{
           backgroundImage: `url(${heroImage})`,
           WebkitOverflowScrolling: "touch",
