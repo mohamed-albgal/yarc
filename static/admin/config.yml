@@ -86,10 +86,12 @@ collections:
     preview_path_date_field: startDate
     fields: 
       - { label: 'Leader', name: 'leader', widget: 'string' }
-      - { label: 'Start Date:', name: 'startDate', widget: 'datetime' }
+      - { label: 'Start Date:', name: 'startDate', widget: 'datetime', dateFormat: "DD/MM/YYYY" }
       - label: 'Image'
         name: 'image'
         widget: 'image'
+        required: false
+        hint: If no image is selected, the default will be used
       - { label: Caption, name: caption, widget: 'string', required: false }
       - { label: 'Short Bio', name: 'bio', widget: 'string', required: false, hint: "Optional, if not bio is entered, the first 50 words from are taken from the long bio below." }
       - { label: 'Body', name: 'body', widget: 'markdown' }

@@ -5,8 +5,9 @@ import dock from '../images/oakland_dock.jpg'
 const LeaderPreviewTemplate = ( {entry, widgetFor, getAsset}) => {
     const data = entry.get('data').toJS();
     const { leader, startDate, image, caption } = data;
+    console.log(startDate)
     const profileImage = getAsset(image).url;
-    const props = { title:leader, caption, content: widgetFor('body'), profileImage: profileImage, heroBg:dock, date:startDate}
+    const props = { title:leader, caption, content: widgetFor('body'), profileImage: profileImage, heroBg:dock, startDate}
     return (
         <LeadersTemplate { ...props} />
     )
