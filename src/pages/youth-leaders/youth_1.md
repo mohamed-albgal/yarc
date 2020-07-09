@@ -1,27 +1,9 @@
 ---
-
 leader: Person McPearson
-caption: 
 startDate: 2020-07-29
-image: ../../images/default-profile.png
+image: src/images/uploads/cms_av.jpg
+caption: null
+bio: Random pre text to show before the main bio page
 type: leader
-bio: "Random pre text to show before the main bio page"
-
 ---
-
-# My cool bio would go here
-## My cool bio would go here
-### My cool bio would go here
-#### My cool bio would go here
-> My cool bio would go here
-> My cool bio would go here
-My cool bio would go here
-My cool bio would go here
-v
-My cool bio would go here
-v
-My cool bio would go here
-My cool bio would go here
-My cool bio would go here
-My cool bio would go here
-My cool bio would go here
+# Bio of person

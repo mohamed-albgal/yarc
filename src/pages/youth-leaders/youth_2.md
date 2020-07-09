@@ -1,12 +1,10 @@
 ---
-
 leader: Nother McNother
-caption: 
 startDate: 2020-07-29
-image: ../../images/default-profile.png
+image: src/images/uploads/covid_19_thanks.jpg
+caption: null
+bio: null
 type: leader
-bio: 
-
 ---
 
 # My cool bio would go here

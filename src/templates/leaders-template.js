@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import dock from '../images/oakland_dock.jpg'
+import defaultPhoto from '../images/default-profile.png'
 import Hero from '../components/homogenous/Hero'
 import pageBg from '../images/Hollowed-Boxes.svg'
 import MarkdownHTML, { Content } from '../components/homogenous/Content';
@@ -39,6 +40,7 @@ export const LeadersTemplate = ({title, caption, content, contentComponent, prof
 
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
+    const profileImage = frontmatter.image && frontmatter.image.publicURL || defaultPhoto
     return (
         <LeadersTemplate 
           contentComponent={MarkdownHTML}
@@ -48,7 +50,7 @@ export default ({ data }) => {
           heroBg={dock}
           content={html}
           mdStyle={markdownStyle}
-          profileImage={frontmatter.image.publicURL}
+          profileImage={profileImage}
         />
     )
 }
