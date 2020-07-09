@@ -3,7 +3,7 @@ leader: Aseel Fara
 startDate: 2020-07-09T01:35:21.843Z
 image: src/images/uploads/aseel.jpg
 caption: "Youth Leader "
-bio: seel is a 20-year-old college student attending San Francisco State
+bio: Aseel is a 20-year-old college student attending San Francisco State
   University. As a third-year student, Aseel is majoring in Political Science
   and minoring in Psychology. He plans on attending law school when he finishes
   college. Currently, Aseel is an intern for San Francisco’s District 10
