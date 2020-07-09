@@ -1,16 +1,31 @@
 ---
-leader: Person McPearson
+leader: Aseel Fara
 startDate: 2020-07-09T01:35:21.843Z
-
-bio: ""
+image: src/images/uploads/aseel.jpg
+caption: "Youth Leader "
+bio: seel is a 20-year-old college student attending San Francisco State
+  University. As a third-year student, Aseel is majoring in Political Science
+  and minoring in Psychology. He plans on attending law school when he finishes
+  college. Currently, Aseel is an intern for San Francisco’s District 10
+  Supervisor, Shamman Walton. As an intern, he has been working closely with
+  Shamman pushing for reparations for our African American community. Aseel has
+  also been working closely with COVID-19 testing sights in San Francisco’s
+  Dogpatch neighborhood during this pandemic. In addition to Aseel’s involvement
+  in City Hall, he also knows how to run a business, where he works as a manager
+  at AMC Theatres. Despite his age, Aseel quickly rose to the top starting as a
+  crew member and working his way into a management position. As a manager, his
+  duties include training, motivating, and developing an effective team ensuring
+  an effective operation and excellent guest service. In addition, he
+  specializes in scheduling and human resources, giving him a well-rounded
+  experience in business and finance. Lastly, Aseel is working on an initiative
+  to help aid his home country Yemen. Aseel’s aspiration is to speak out against
+  the world’s injustices.
 type: leader
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus elementum sagittis vitae et leo. Porta lorem mollis aliquam ut porttitor leo a. Ut sem viverra aliquet eget sit amet tellus. Mattis ullamcorper velit sed ullamcorper. Sagittis purus sit amet volutpat consequat mauris nunc congue. Ac turpis egestas integer eget aliquet. Tortor at risus viverra adipiscing at. In hendrerit gravida rutrum quisque non tellus. Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. Eget mi proin sed libero enim sed. Fermentum posuere urna nec tincidunt. At risus viverra adipiscing at in. Pretium lectus quam id leo in. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Dignissim suspendisse in est ante in nibh. Tempus iaculis urna id volutpat lacus laoreet non. Bibendum neque egestas congue quisque egestas diam. Amet nulla facilisi morbi tempus iaculis urna.
+If my life were a quote it would be “if it doesn't challenge you, it won't change you.” I believe that if you're ever too comfortable with what it is you are doing then it either means one of two things: you're not doing it right or the work is too easy. Luckily being an immigrant and a Muslim who faces the repercussions of 9/11 will always come with challenges.
 
-Dis parturient montes nascetur ridiculus mus mauris vitae. Libero justo laoreet sit amet cursus sit amet dictum. Eu tincidunt tortor aliquam nulla facilisi cras fermentum. Quis blandit turpis cursus in hac habitasse platea. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Sit amet nisl suscipit adipiscing bibendum est ultricies. Convallis tellus id interdum velit laoreet id donec. Pellentesque sit amet porttitor eget dolor morbi non. Justo donec enim diam vulputate ut pharetra. Risus feugiat in ante metus dictum at tempor. Nibh nisl condimentum id venenatis. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Viverra maecenas accumsan lacus vel facilisis volutpat est velit. Quis auctor elit sed vulputate mi sit amet mauris. Dolor purus non enim praesent elementum facilisis leo vel fringilla. In massa tempor nec feugiat nisl pretium.
+Islam teaches me to be humble and modest which is why I won’t be sharing any of my struggles or accomplishments. However, I can say that being an immigrant comes with a package of challenges. The challenge of reaching for success while multitasking work, school, friends, and family is something many, including myself, must face. We face pressure everywhere, such as trying to achieve the American dream or trying to do right by our parents who have risked everything they had for our happiness.
 
-Convallis posuere morbi leo urna molestie at. Id ornare arcu odio ut sem nulla pharetra diam. Enim ut tellus elementum sagittis vitae et. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Diam maecenas ultricies mi eget mauris pharetra et. Amet facilisis magna etiam tempor orci eu lobortis. Volutpat blandit aliquam etiam erat velit scelerisque. Enim nunc faucibus a pellentesque sit. Maecenas pharetra convallis posuere morbi. Malesuada nunc vel risus commodo. Odio tempor orci dapibus ultrices in. Commodo odio aenean sed adipiscing. Eget arcu dictum varius duis at. Egestas quis ipsum suspendisse ultrices gravida dictum fusce. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis. Sit amet est placerat in egestas. Donec massa sapien faucibus et molestie ac feugiat sed lectus.
+You’d think that living in America would be easy, but the truth is as soon as you overcome adversity, it doesn’t matter where you are, there will always be another one. The acceptance of the fact has been my source of motivation whenever put into a difficult situation.
 
-Augue lacus viverra vitae congue eu consequat ac. Pellentesque sit amet porttitor eget dolor morbi non arcu risus. Pellentesque adipiscing commodo elit at imperdiet dui. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Placerat duis ultricies lacus sed turpis tincidunt id. At varius vel pharetra vel turpis nunc eget. Auctor urna nunc id cursus metus aliquam eleifend mi. Habitant morbi tristique senectus et netus. Porta nibh venenatis cras sed felis. Gravida arcu ac tortor dignissim convallis aenean et tortor at.
-
-Commodo ullamcorper a lacus vestibulum sed arcu non. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Dolor sit amet consectetur adipiscing. Dui sapien eget mi proin. Imperdiet proin fermentum leo vel orci. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Cursus in hac habitasse platea dictumst quisque sagittis purus. At in tellus integer feugiat scelerisque varius morbi enim. Elit pellentesque habitant morbi tristique senectus. Rhoncus mattis rhoncus urna neque. Ac turpis egestas maecenas pharetra.
+**Currently, my heart pours for our Muslim nations. Nations such as Syria, Palestine, Yemen, and Iraq are in turmoil. Other countries such as China and France who oppress Muslims by keeping them in concentration camps and banning headscarves. My aspiration is to speak out against any injustices I encounter. Currently, I am working on a fundraiser that will aid deprived neighborhoods in Sana, Yemen with clean fresh water, food, and packages for families suffering from famine. I plan on working closely with our city leaders soon speaking out against the media. I am constantly reminded how our news outlets are failing Middle Eastern counties by not reporting what is happening, however, little to no action has been done. I will not stop until we are represented fairly and till the whole world knows the truth about where we come from.**
