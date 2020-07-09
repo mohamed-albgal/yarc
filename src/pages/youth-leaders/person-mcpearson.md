@@ -1,6 +1,6 @@
 ---
 leader: Aseel Fara
-startDate: 2020-07-09T01:35:21.843Z
+startDate: 2020-05-02T01:35:21.843Z
 image: src/images/uploads/aseel.jpg
 caption: "Youth Leader "
 bio: Aseel is a 20-year-old college student attending San Francisco State
