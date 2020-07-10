@@ -52,6 +52,8 @@ export const query = graphql`
             }
           }
           section4{
+            head
+            caption
             linkText
             card1{
               member

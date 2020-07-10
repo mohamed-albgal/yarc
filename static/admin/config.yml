@@ -224,7 +224,7 @@ collections:
             widget: object
             fields:
               - { label: Main , name: head, widget: string }
-              - { label: Sub Text, name: body, widget: string }
+              - { label: Sub Text, name: caption, widget: string }
               - label: Staff 1
                 name: card1
                 widget: object
@@ -253,39 +253,39 @@ collections:
                   - { label: Name, name: member, widget: string }
                   - { label: "Title", name: title, widget: string }
                   - { label: Image, name: image, widget: image }
-          - label: Form Section
-            name: section5
-            widget: object
-            fields:
-              - { label: Main Text, name: head, widget: string}
-              - label: Call 1 
-                name: card1
-                widget: object
-                fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: body, widget: string}
-              - label: Call 2 
-                name: card2
-                widget: object
-                fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: body, widget: string}
-              - label: Call 3 
-                name: card3
-                widget: object
-                fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: body, widget: string}
-              - label: Form Text
-                name: form
-                widget: object
-                fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: caption, widget: string}
-                  - { label: Name Label, name: nameLabel, widget: string}
-                  - { label: Email Lable, name: emailLabel, widget: string}
-                  - { label: Message Text, name: messageLabel, widget: string}
-                  - { label: Button Text, name: sendLabel, widget: string}
+ #         - label: Form Section
+ #           name: section5
+ #           widget: object
+ #           fields:
+ #             - { label: Main Text, name: head, widget: string}
+ #             - label: Call 1 
+ #               name: card1
+ #               widget: object
+ #               fields:
+ #                 - { label: Heading, name: head, widget: string}
+ #                 - { label: Caption, name: body, widget: string}
+ #             - label: Call 2 
+ #               name: card2
+ #               widget: object
+ #               fields:
+ #                 - { label: Heading, name: head, widget: string}
+ #                 - { label: Caption, name: body, widget: string}
+ #             - label: Call 3 
+ #               name: card3
+ #               widget: object
+ #               fields:
+ #                 - { label: Heading, name: head, widget: string}
+ #                 - { label: Caption, name: body, widget: string}
+ #             - label: Form Text
+ #               name: form
+ #               widget: object
+ #               fields:
+ #                 - { label: Heading, name: head, widget: string}
+ #                 - { label: Caption, name: caption, widget: string}
+# #                 - { label: Name Label, name: nameLabel, widget: string}
+ #                 - { label: Email Lable, name: emailLabel, widget: string}
+# #                 - { label: Message Text, name: messageLabel, widget: string}
+ #                 - { label: Button Text, name: sendLabel, widget: string}
                   
                 
             
