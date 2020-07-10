@@ -61,6 +61,8 @@ export default ({data}) => {
   const publicURL = (heroImage && heroImage.publicURL) || heroImage
   const cards = [memberCards.memberCard1, memberCards.memberCard2, memberCards.memberCard3, memberCards.memberCard4]
   const properties = { head, caption, cards, heroImage:publicURL };
+
+  console.log(cards, 'from the query')
     return (
         <TeamPageTemplate { ...properties} />
     )

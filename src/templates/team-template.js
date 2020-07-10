@@ -21,7 +21,7 @@ const TeamPageTemplate = ({head, caption, heroImage, cards,}) => {
 
 
 const StaffCard = ({card}) => {
-  const {image, member, title, bio } = card;
+  const {image, member, role, bio } = card;
   const imageClass =" shadow-2xl  relative object-center object-cover overflow-hidden rounded-full w-56 h-56  mx-auto"
   const cardImage = (image && image.publicURL) || image 
   return (
@@ -34,7 +34,7 @@ const StaffCard = ({card}) => {
                     {member}
                 </h5>
                 <p className="mt-1 text-xl tracking-wider text-gray-500  font-semibold">
-                    {title}
+                    {role}
                 </p>
                 <p className="mt-6 leading-7 font-hairline text-lg text-gray-900 mx-2 text-left ">
                     {bio}
