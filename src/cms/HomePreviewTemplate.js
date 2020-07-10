@@ -3,7 +3,6 @@ import HomePageTemplate from '../templates/home-template.js'
 
 const HomePreviewTemplate = ({entry, getAsset}) => {
     const data = entry.get('data').toJS();
-    console.log(data);
     
     const { bgImage, caption, head, section1, section2, section3, section4, section5 } = data;
     //get image location of hero
