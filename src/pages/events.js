@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import PageHeadText from '../components/homogenous/PageHeadText'
@@ -47,6 +47,7 @@ export default  ({data}) => {
                 <PageHeadText text="Y.A.R Center Events" />
             </div>
         </div>
+        <PageBar />
         <div className="flex flex-wrap mt-10 z-10 relative">
             {dataBurger}        
         </div>
@@ -88,3 +89,19 @@ export const query = graphql`
 `
 
 
+export const PageBar = () => {
+    const [selection, setSelection] = useState("");
+    return (
+        <div className="container mx-auto border-b-2 border-gray-600 h-8 bg-opacity-50">
+            <div className="w-1/3 text-center inline-block">
+                <button className="font-hairline sm:text-xl text-xs"> Current Events </button>
+            </div>
+            <div className="w-1/3 text-center inline-block">
+                <button className="font-hairline sm:text-xl text-xs"> Passed Events </button>
+            </div>
+            <div className="w-1/3 text-center inline-block">
+                <button className="font-hairline sm:text-xl text-xs"> Upcoming Events </button>
+            </div>
+        </div>
+    )
+}
