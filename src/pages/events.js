@@ -102,7 +102,7 @@ export default  ({ data }) => {
                 <PageHeadText text="Y.A.R Center Events" />
             </div>
         </div>
-        <PageBar onBarSelect={onBarSelect} barSelections={Object.keys(barSelections)} />
+        <PageBar onBarSelect={onBarSelect} externalSelection='0' barSelections={Object.keys(barSelections)} />
         <div className="flex flex-wrap mt-10 z-10 relative">
             { makeCards(selection) }     
         </div>
@@ -117,15 +117,20 @@ export const PageBar = (props) => {
       setSelected(props.externalSelection)  
     },[props.externalSelection])
     const selections = props.barSelections;
-    const divStyle = props.divStyle || "w-1/2 text-center inline-block border-b border-gray-600"
-    const buttonStyle =props.buttonStyle || "font-hairline sm:text-xl w-full text-xs text-gray-600"
-    const selectedDivStyle = props.selectedDivStyle ||" border-b-2 border-indigo-500";
-    const selectedButtonStyle = props.selectedButtonStyle ||"tracking-wider font-thin text-indigo-700 "
-    const showSelections = selections.map( (elt, i) => (
-            <div key={i} className={` ${divStyle} ${selected === i && selectedDivStyle} `}>
-                <button onClick={() => handleClick(i)} className={`${selected === i && selectedButtonStyle} ${buttonStyle} `}> {elt} </button>
+    const divStyle = props.divStyle || "w-1/2 text-center inline-block border-b border-green-600 hover:border-yellow-100"
+    const selectedDivStyle = props.selectedDivStyle ||" w-1/2 text-center inline-block border-b-2 border-yellow-500 ";
+    const buttonStyle =props.buttonStyle || "font-hairline sm:text-xl w-full text-xs text-green-600 hover:text-yellow-100"
+    const selectedButtonStyle = props.selectedButtonStyle ||"tracking-wider sm:text-xl w-full text-xs font-thin text-yellow-500 "
+    
+    
+    const showSelections = selections.map( (elt, i) => {
+        console.log(selected,i, 'are they equal?')
+        return (
+            <div key={i} className={`${selected == i ? selectedDivStyle : divStyle } `}>
+                <button onClick={() => handleClick(i)} className={`${selected == i ? selectedButtonStyle : buttonStyle} `}> {elt} </button>
             </div>
         )
+    }
     )
     const handleClick = (i) => {
         props.onBarSelect(i);
