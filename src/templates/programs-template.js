@@ -7,8 +7,27 @@ import bg from '../images/Protruding-Squares.svg'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        tags
+        description
+        programImage {
+          childImageSharp{
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
-export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 px-4 shadow-xl bg-white rounded-lg markdown"
+export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 min-w-full min-h-full px-4 shadow-xl bg-white rounded-lg markdown"
 export const PageCore = (props) => {
   const {mainText, subText, pageBg, content, markdownStyle, image, contentComponent  } = props;
   const PostContent = contentComponent || Content
@@ -58,22 +77,4 @@ export default ({ data }) => {
     )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        title
-        tags
-        description
-        programImage {
-          childImageSharp{
-            fluid(maxWidth: 600) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+

@@ -56,9 +56,6 @@ export default  ({data, location}) => {
     }, [data.allMarkdownRemark.edges])
     useEffect( () => {
         let sel = location.state && location.state.selection;
-        // if (location.state && location.state.selection){
-        //     sel = location.state.selection
-        // }
         setSelection(sel || 0)
     }, [location.state])
 
@@ -90,7 +87,7 @@ export default  ({data, location}) => {
         const nodes = nodeCategories[key];
         return (
             nodes.map( ( { frontmatter, fields }, i ) => {
-            const tagList = frontmatter.tags.split(" ");
+            const tagList = frontmatter.tags && frontmatter.tags.split(" ");
             const progImage = frontmatter.programImage;
             return (
                 <div className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
