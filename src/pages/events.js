@@ -18,35 +18,38 @@ import SlantCard from '../components/homogenous/SlantCard';
     
     
     //get the array of nodes that contain the fields i need including the slug
-export default  ({data, location}) => {
+export default  ({ data }) => {
     const [upcoming, setUpcoming] = useState([]);
     const [passed, setPassed] = useState([]);
     const [showPassed, setShowPassed] = useState(false);
     useEffect(() => {
-        partitionEvents(data.allMarkdownRemark.edges);
+        const [old, neu ] = splitData(data.allMarkdownRemark.edges);
+        setUpcoming(neu);
+        setPassed(old);
     }, [data.allMarkdownRemark.edges]);
     //divide events into 2 buckets, passed and current, update state with each
-    const partitionEvents = (nodes) => {
+    const splitData = (nodes) => {
+        const neu = [];
+        const old = [];
         nodes.forEach( ( { node } )  => {
             const currentDate = Date.now()
             const endDate = new Date(node.frontmatter.startDate);
             const isFutureEvent = endDate > currentDate
             
             if (isFutureEvent) {
-                upcoming.push(node);
+                neu.push(node);
             }    
             else { 
-                passed.push(node);
+                old.push(node);
             }
         });
-        setUpcoming(upcoming);
-        setPassed(passed);
+        return ([old, neu])
     }
     //based on the state, show either passed or current events
-    const mapToCards =(nodes) => {
-        try {
-            console.log(nodes, "is what i see")
+    const makeCards =() => {
+            const nodes = showPassed ? passed : upcoming
             return (
+                
                 nodes.map( ( { frontmatter, fields }, i ) => {
                     const eventImage = frontmatter.eventImage;
                     return (
@@ -66,9 +69,6 @@ export default  ({data, location}) => {
                     );
                 })
             )   
-        }catch{
-            console.log("NOTHING TO SHOW")
-        }
     }
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
@@ -79,7 +79,7 @@ export default  ({data, location}) => {
         </div>
         <PageBar showPassed={setShowPassed} />
         <div className="flex flex-wrap mt-10 z-10 relative">
-            { showPassed? mapToCards(passed) : mapToCards(upcoming) }     
+            { makeCards() }     
         </div>
         </Layout>
     )
@@ -118,19 +118,19 @@ export const query = graphql`
 }
 `
 
+//this is tightly coupled, on re-factor, fix to make this more flexible
 export const PageBar = ({ showPassed }) => {
     const [selected, setSelected] = useState(0);
-    const selections = ["Upcoming Events", "Passed Events"]
-    const divStyle = "w-1/2 text-center inline-block"
-    const buttonStyle ="font-hairline sm:text-xl w-full text-xs"
-    const selectedDivStyle = " bg-red-300";
-    const selectedButtonStyle = "text-xl"
-    const show = () => (
-        selections.map( (elt, i) => (
-            <div key={i} className={`${selected == i && selectedDivStyle} ${divStyle}`}>
-                <button onClick={() => handleClick(i)} className={`${selected == i && selectedButtonStyle} ${buttonStyle} `}> {elt} </button>
+    const selections = ["Upcoming Events", "Past Events"]
+    const divStyle = "w-1/2 text-center inline-block border-b border-gray-700"
+    const buttonStyle ="font-hairline sm:text-xl w-full text-xs text-gray-700"
+    const selectedDivStyle = "border-indigo-500 border-b-2";
+    const selectedButtonStyle = "tracking-wider font-thin text-indigo-700 "
+    const showSelections = selections.map( (elt, i) => (
+            <div key={i} className={` ${selected === i && selectedDivStyle} ${divStyle}`}>
+                <button onClick={() => handleClick(i)} className={`${selected === i && selectedButtonStyle} ${buttonStyle} `}> {elt} </button>
             </div>
-        ))
+        )
     )
 
     const handleClick = (i) => {
@@ -140,8 +140,8 @@ export const PageBar = ({ showPassed }) => {
         setSelected(i);
     }
     return (
-        <div className="container mx-auto border-b-2 border-gray-600 h-8 bg-opacity-50">
-            {show()}
+        <div className="container mx-auto  h-8 bg-opacity-50">
+            {showSelections}
         </div>
     )
 }
