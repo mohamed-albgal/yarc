@@ -124,7 +124,6 @@ export const PageBar = (props) => {
     
     
     const showSelections = selections.map( (elt, i) => {
-        console.log(selected,i, 'are they equal?')
         return (
             <div key={i} className={`${selected == i ? selectedDivStyle : divStyle } `}>
                 <button onClick={() => handleClick(i)} className={`${selected == i ? selectedButtonStyle : buttonStyle} `}> {elt} </button>

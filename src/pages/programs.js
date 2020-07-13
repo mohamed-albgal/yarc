@@ -81,7 +81,6 @@ export default  ({data, location}) => {
         return {ed, comm, eng, ar, all}
     }
     const makePrograms = (selection) => {
-        console.log(selection)
         const key = Object.keys(nodeCategories)[selection];
         
         const nodes = nodeCategories[key];
