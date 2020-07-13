@@ -68,6 +68,10 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Starts:', name: 'startDate', widget: 'date' }
       - { label: 'Ends::', name: 'endDate', widget: 'date' }
+      - label: "Program Category"
+        name: "category"
+        widget: "select"
+        options: ["education", "arabic", "english", "community"]
       - label: 'Image'
         name: 'programImage'
         widget: 'image'
