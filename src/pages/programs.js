@@ -110,10 +110,11 @@ export default  ({data, location}) => {
         
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
-        <div className="text-center">
-            <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
+        <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
                 <PageHeadText text="Y.A.R Center Programs" />
             </div>
+        <div className="text-center">
+            
             <PageBar {...barProps} externalSelection={selection} />
         </div>
         <div className="flex flex-wrap mt-10 sm:px-12 z-10 relative">

@@ -97,10 +97,10 @@ export default  ({ data }) => {
     }
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
-        <div className="text-center">
-            <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
+        <div className=" sm:mt-0 sm:px-16 mx-4 sm:pt-10 mb-32 pt-32 " >
                 <PageHeadText text="Y.A.R Center Events" />
-            </div>
+        </div>
+        <div className="text-center">
         </div>
         <PageBar onBarSelect={onBarSelect} externalSelection='0' barSelections={Object.keys(barSelections)} />
         <div className="flex flex-wrap mt-10 sm:px-16 z-10 relative">
