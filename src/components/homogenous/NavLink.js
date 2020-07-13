@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { navigate, Link } from 'gatsby'
 
-const Navlink = ({text, subMenu, linkTo }) => {
+const Navlink = ({text, subMenu, linkTo, linkState }) => {
     const [dropped, setDropped] = useState(false)
     const navClick = (toPage) => {
         setDropped(false);
@@ -54,7 +54,7 @@ const Navlink = ({text, subMenu, linkTo }) => {
         </div> 
         )
         :
-            <Link to={linkTo}>
+            <Link to={linkTo} state={linkState}>
                 <div className={navItemStyle}>{text}</div>
             </Link>
         }

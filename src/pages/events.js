@@ -18,13 +18,13 @@ import SlantCard from '../components/homogenous/SlantCard';
     
     
     //get the array of nodes that contain the fields i need including the slug
-export default  ({data}) => {
-    const [currentEvents, setCurrentEvents] = useState([]);
-    const [passedEvents, setPassedEvents] = useState([]);
+export default  ({data, location}) => {
+    const [upcoming, setUpcoming] = useState([]);
+    const [passed, setPassed] = useState([]);
+    const [showPassed, setShowPassed] = useState(false);
     useEffect(() => {
         partitionEvents(data.allMarkdownRemark.edges);
-    }, [data]);
-    
+    }, []);
     //divide events into 2 buckets, passed and current, update state with each
     const partitionEvents = (nodes) => {
         nodes.forEach( ( { node } )  => {
@@ -33,18 +33,18 @@ export default  ({data}) => {
             const isFutureEvent = endDate > currentDate
             
             if (isFutureEvent) {
-                currentEvents.push(node);
+                upcoming.push(node);
             }    
             else { 
-                passedEvents.push(node);
+                passed.push(node);
             }
         });
-        setCurrentEvents(currentEvents);
-        setPassedEvents(passedEvents);
+        setUpcoming(upcoming);
+        setPassed(passed);
     }
     //based on the state, show either passed or current events
     const mapToCards =(nodes) => {
-        console.log(currentEvents, passedEvents)
+        console.log(upcoming, passed)
         try {
             console.log(nodes, "is what i see")
             return (
@@ -68,7 +68,6 @@ export default  ({data}) => {
                 })
             )   
         }catch{
-            console.log("i see nothing: ", nodes)
         }
     }
     return(
@@ -78,9 +77,9 @@ export default  ({data}) => {
                 <PageHeadText text="Y.A.R Center Events" />
             </div>
         </div>
-        <PageBar />
+        <PageBar showPassed={setShowPassed} />
         <div className="flex flex-wrap mt-10 z-10 relative">
-            {mapToCards(passedEvents)}        
+            { showPassed? mapToCards(passed):mapToCards(upcoming) }     
         </div>
         </Layout>
     )
@@ -119,20 +118,19 @@ export const query = graphql`
 }
 `
 
-
-export const PageBar = () => {
+export const PageBar = ({ showPassed }) => {
     const [seleced, setSelected] = useState("");
+    const selection = ["Upcoming Events, Passed Events"]
     return (
         <div className="container mx-auto border-b-2 border-gray-600 h-8 bg-opacity-50">
             <div className="w-1/3 text-center inline-block">
-                <button className="font-hairline sm:text-xl text-xs"> Current Events </button>
-            </div>
+                <button onClick={() => showPassed(false)} className="font-hairline sm:text-xl text-xs"> Upcoming Events </button>
+            </div>    
+        
             <div className="w-1/3 text-center inline-block">
-                <button className="font-hairline sm:text-xl text-xs"> Passed Events </button>
+                <button onClick={() => showPassed(true)} className="font-hairline sm:text-xl text-xs"> Passed Events </button>
             </div>
-            <div className="w-1/3 text-center inline-block">
-                <button className="font-hairline sm:text-xl text-xs"> Upcoming Events </button>
-            </div>
+            
         </div>
     )
 }

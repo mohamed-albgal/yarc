@@ -27,16 +27,6 @@ const youthSubMenu = [
 
 //to pass state to component from a link see: https://www.gatsbyjs.org/docs/location-data-from-props/#example-of-providing-state-to-a-link-component
 
-// const eventSubMenu = [
-//     {
-//         name:"Events",
-//         path:"/events"
-//     }, 
-//     {
-//         name:"Youth Leaders", 
-//         path:"/youth-leaders",
-//     },
-// ];
 
 const Navbar =  ({withHero, animate}) => {
     const [closed, setClosed] = useState(true);
@@ -86,7 +76,7 @@ const Navbar =  ({withHero, animate}) => {
                         <NavLink  text="Home" linkTo="/"/>
                         <NavLink  text="About" subMenu={subMenuLinks} />
                         <NavLink  text="Programs" linkTo="/programs" />
-                        <NavLink  text="Events" linkTo="/events" />
+                        <NavLink  text="Events" linkTo="/events" state={{display: 'upcoming'}} />
                         <NavLink  text="Youth" subMenu={youthSubMenu}/>
                     </div>
                 </div>
