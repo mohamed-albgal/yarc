@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import PageHeadText from '../components/homogenous/PageHeadText'
@@ -9,8 +9,6 @@ import SlantCard from '../components/homogenous/SlantCard';
 
 
 
-
-export default  ({data}) => {
     
     /**come back to this idea, random color for cards, but not random on each visit */
     //"text-teal-400", "text-orange-200", "btext-reen-500", "text-purple-200", "text-red-800", "text-blue-800", "text-indigo-700"
@@ -20,26 +18,59 @@ export default  ({data}) => {
     
     
     //get the array of nodes that contain the fields i need including the slug
-    const nodes = data.allMarkdownRemark.edges
+export default  ({data}) => {
+    const [currentEvents, setCurrentEvents] = useState([]);
+    const [passedEvents, setPassedEvents] = useState([]);
+    useEffect(() => {
+        partitionEvents(data.allMarkdownRemark.edges);
+    }, [data]);
     
-    const dataBurger = nodes.map( ( { node }, i ) => {
-        const eventImage = node.frontmatter.eventImage;
-        return (
-            <div key={i} className="hover:scale-105 transform transition-transform duration-200 sm:p-2 pb-6 px-6 sm:pb-10 sm:w-1/3 w-full h-full">
-                <Link to={node.fields.slug}>
-                    <SlantCard body={node.frontmatter.description} 
-                    svgTextColor={`text-indigo-700`}  
-                    head={node.frontmatter.title}
-                    tags={node.frontmatter.tags && node.frontmatter.tags.split(" ")}
-                    tagTextColor={"text-gray-200"}
-                    tagBgColor={"bg-green-900"}
-                    imgFluid={eventImage && eventImage.childImageSharp.fluid} 
-                    subHead={`${node.frontmatter.startDate}`} 
-                    bgColor={`bg-indigo-700`} />
-                </Link>
-            </div>
-        )}
-        )
+    //divide events into 2 buckets, passed and current, update state with each
+    const partitionEvents = (nodes) => {
+        nodes.forEach( ( { node } )  => {
+            const currentDate = Date.now()
+            const endDate = new Date(node.frontmatter.startDate);
+            const isFutureEvent = endDate > currentDate
+            
+            if (isFutureEvent) {
+                currentEvents.push(node);
+            }    
+            else { 
+                passedEvents.push(node);
+            }
+        });
+        setCurrentEvents(currentEvents);
+        setPassedEvents(passedEvents);
+    }
+    //based on the state, show either passed or current events
+    const mapToCards =(nodes) => {
+        console.log(currentEvents, passedEvents)
+        try {
+            console.log(nodes, "is what i see")
+            return (
+                nodes.map( ( { frontmatter, fields }, i ) => {
+                    const eventImage = frontmatter.eventImage;
+                    return (
+                        <div key={i} className="hover:scale-105 transform transition-transform duration-200 sm:p-2 pb-6 px-6 sm:pb-10 sm:w-1/3 w-full h-full">
+                            <Link to={fields.slug}>
+                                <SlantCard body={frontmatter.description} 
+                                svgTextColor={`text-indigo-700`}  
+                                head={frontmatter.title}
+                                tags={frontmatter.tags && frontmatter.tags.split(" ")}
+                                tagTextColor={"text-gray-200"}
+                                tagBgColor={"bg-green-900"}
+                                imgFluid={eventImage && eventImage.childImageSharp.fluid} 
+                                subHead={`${frontmatter.startDate}`} 
+                                bgColor={`bg-indigo-700`} />
+                            </Link>
+                        </div>
+                    );
+                })
+            )   
+        }catch{
+            console.log("i see nothing: ", nodes)
+        }
+    }
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className="text-center">
@@ -49,7 +80,7 @@ export default  ({data}) => {
         </div>
         <PageBar />
         <div className="flex flex-wrap mt-10 z-10 relative">
-            {dataBurger}        
+            {mapToCards(passedEvents)}        
         </div>
         </Layout>
     )
@@ -59,7 +90,7 @@ export default  ({data}) => {
 
 export const query = graphql`
 {
-    allMarkdownRemark(limit: 10
+    allMarkdownRemark(limit: 1000
         sort: { order: DESC, fields: [frontmatter___startDate]}
         filter: {fileAbsolutePath: {regex: "/(events)/"}}) {
             edges {
@@ -90,7 +121,7 @@ export const query = graphql`
 
 
 export const PageBar = () => {
-    const [selection, setSelection] = useState("");
+    const [seleced, setSelected] = useState("");
     return (
         <div className="container mx-auto border-b-2 border-gray-600 h-8 bg-opacity-50">
             <div className="w-1/3 text-center inline-block">
