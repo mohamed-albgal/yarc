@@ -28,20 +28,24 @@ const youthSubMenu = [
 const programsSubMenu = [
     {
         name: "Education",
-        path: "/programs"
+        path: "/programs",
+        state: {selection:1}
     },
 
     {
         name: "English",
-        path: "/programs"
+        path: "/programs",
+        state: {selection:3}
     },
     {
         name: "Arabic",
-        path: "/programs"
+        path: "/programs",
+        state: {selection:4}
     },
     {
         name: "Community",
-        path: "/programs"
+        path: "/programs",
+        state: {selection:2}
     }
 ]
 

@@ -40,7 +40,7 @@ export const query = graphql`
 
 
 
-export default  ({data}) => {
+export default  ({data, location}) => {
     const [nodeCategories, setNodeCategories] = useState({
         All: [],
         Education: [],
@@ -54,6 +54,13 @@ export default  ({data}) => {
         const {ed, comm, eng, ar, all} = splitData(data.allMarkdownRemark.edges)
         setNodeCategories({All: all, Education: ed, Community: comm, English: eng, Arabic: ar,  });
     }, [data.allMarkdownRemark.edges])
+    useEffect( () => {
+        let sel = location.state && location.state.selection;
+        // if (location.state && location.state.selection){
+        //     sel = location.state.selection
+        // }
+        setSelection(sel || 0)
+    }, [location.state])
 
     const splitData = (nodes) => {
         const ed = []
@@ -77,7 +84,9 @@ export default  ({data}) => {
         return {ed, comm, eng, ar, all}
     }
     const makePrograms = (selection) => {
+        console.log(selection)
         const key = Object.keys(nodeCategories)[selection];
+        
         const nodes = nodeCategories[key];
         return (
             nodes.map( ( { frontmatter, fields }, i ) => {
@@ -108,7 +117,7 @@ export default  ({data}) => {
             <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
                 <PageHeadText text="Y.A.R Center Programs" />
             </div>
-            <PageBar {...barProps} />
+            <PageBar {...barProps} externalSelection={selection} />
         </div>
         <div className="flex flex-wrap mt-10 sm:px-12 z-10 relative">
             {makePrograms(selection)}        
@@ -118,10 +127,10 @@ export default  ({data}) => {
 }
 
 const barStyles = {
-    divStyle: `w-1/5 text-center inline-block border-b border-green-600`,
-    buttonStyle: `font-hairline sm:text-xl w-full text-xs text-green-600`,
-    selectedDivStyle: `border-b-2 border-black`,
-    selectedButtonStyle: `tracking-wider font-thin text-orange-400`,
+    divStyle: `w-1/5 text-center inline-block border-b border-gray-600`,
+    buttonStyle: `font-hairline sm:text-xl w-full text-xs text-gray-600`,
+    selectedDivStyle: `border-b-2 border-yellow-500`,
+    selectedButtonStyle: `tracking-wider font-thin text-yellow-400`,
 
 }
 

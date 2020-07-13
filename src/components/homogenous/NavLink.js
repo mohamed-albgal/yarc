@@ -1,14 +1,9 @@
 
 import React, { useState } from 'react'
-import { navigate, Link } from 'gatsby'
+import { Link } from 'gatsby'
 
 const Navlink = ({text, subMenu, linkTo, linkState }) => {
     const [dropped, setDropped] = useState(false)
-    const navClick = (toPage) => {
-        setDropped(false);
-        navigate(toPage);
-    }
-    
     const droppedDivStyle = `flex flex-col sm:absolute sm:cursor-pointer w-full sm:w-auto sm:py-2  
     sm:rounded-t-sm sm:rounded-b-lg rounded-none text-black 
     jigsaw-bg
@@ -30,8 +25,10 @@ const Navlink = ({text, subMenu, linkTo, linkState }) => {
                 
             
             { dropped && <div  className={droppedDivStyle}>
-                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 font-semibold sm:px-6 tracking-wider text-base text-gray-300 sm:hover:text-yellow-500 sm:h-auto h-16 flex flex-col justify-center shadow-inner " 
-                    onClick={() => navClick(elt.path)}> {elt.name} </div>))}
+                    {subMenu.map((elt) => (<Link to={elt.path} state={elt.state}>
+                        <div role="menuitem"  className="sm:py-4 font-semibold sm:px-6 tracking-wider text-base text-gray-300 sm:hover:text-yellow-500 sm:h-auto h-16 flex flex-col justify-center shadow-inner " 
+                        onClick={() => setDropped(false)}> {elt.name} </div>
+                        </Link>))}
                     </div>}
                 </div> )
             :

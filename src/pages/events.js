@@ -113,6 +113,9 @@ export default  ({ data }) => {
 //this is tightly coupled, on re-factor, fix to make this more flexible
 export const PageBar = (props) => {
     const [selected, setSelected] = useState(0);
+    useEffect(() => {
+      setSelected(props.externalSelection)  
+    },[props.externalSelection])
     const selections = props.barSelections;
     const divStyle = props.divStyle || "w-1/2 text-center inline-block border-b border-gray-600"
     const buttonStyle =props.buttonStyle || "font-hairline sm:text-xl w-full text-xs text-gray-600"
