@@ -6,6 +6,7 @@ startDate: 2020-06-24T00:00:00.000Z
 programImage: ../../images/uploads/math.jpg
 description: Become the Next Isaac Newton?
 tags: youth collge-kids math teachers education
+category: education
 type: program
 ---
 ### Summer math course: Math Interactive Course

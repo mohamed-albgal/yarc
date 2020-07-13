@@ -5,6 +5,7 @@ endDate: 2021-03-19T19:46:00.605Z
 programImage: src/images/uploads/reading-forum.jpg
 description: "     أعـز مكـان في الدنــى سرج سابـح   وخيـر جليس في الزمان كتاب       "
 tags: Arabic
+category: community
 type: program
 ---
 # Reading Pioneers Forum 

@@ -29,20 +29,17 @@ const Navlink = ({text, subMenu, linkTo, linkState }) => {
                 
                 
             
-            { dropped &&
-                <div  className={droppedDivStyle}
-                >
-                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 font-semibold sm:px-6 tracking-wider text-base text-gray-300 sm:hover:text-yellow-500 sm:h-auto h-16 flex flex-col justify-center shadow-inner " onClick={() => navClick(elt.path)}>{elt.name}</div>))}
-                </div>
-            }
-        </div> 
-        )
-        :
+            { dropped && <div  className={droppedDivStyle}>
+                    {subMenu.map((elt) => (<div role="menuitem"  className="sm:py-4 font-semibold sm:px-6 tracking-wider text-base text-gray-300 sm:hover:text-yellow-500 sm:h-auto h-16 flex flex-col justify-center shadow-inner " 
+                    onClick={() => navClick(elt.path)}> {elt.name} </div>))}
+                    </div>}
+                </div> )
+            :
             <Link to={linkTo} state={linkState}>
                 <div className={navItemStyle}>{text}</div>
             </Link>
-        }
-    </div>
+            }
+        </div>
     )
 }
 

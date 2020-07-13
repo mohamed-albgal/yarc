@@ -6,6 +6,7 @@ startDate: 2020-06-22T00:00:00.000Z
 programImage: src/images/uploads/graffiti_create.jpg
 description: Learn English Taught by Pros
 tags: youth collge-kids English education
+category: english
 type: program
 ---
 ## Summer English course: College Freshman Year Composition

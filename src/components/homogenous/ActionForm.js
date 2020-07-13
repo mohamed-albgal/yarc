@@ -1,5 +1,6 @@
 import React from 'react'
 
+//see https://www.gatsbyjs.org/docs/building-a-contact-form/ for linking form
 export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel}) => {
     return (
         <div className="relative block py-24 lg:pt-0 jigsaw-bg bg-fixed">

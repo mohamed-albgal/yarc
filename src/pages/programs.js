@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import PageHeadText from '../components/homogenous/PageHeadText'
@@ -16,6 +16,7 @@ export const query = graphql`
                     title
                     description
                     tags
+                    category
                     startDate(formatString: "MMMM DD, YYYY")
                     endDate(formatString: "MMMM DD, YYYY")
                     type
@@ -40,54 +41,88 @@ export const query = graphql`
 
 
 export default  ({data}) => {
-    
-    /**come back to this idea, random color for cards, but not random on each visit */
-    //"text-teal-400", "text-orange-200", "btext-reen-500", "text-purple-200", "text-red-800", "text-blue-800", "text-indigo-700"
-    //"bg-teal-400", "bg-orange-200", "bg-green-500", "bg-purple-200", "bg-red-800", "bg-blue-800", "bg-indigo-700"
-    //const colorList = ["teal-400", "orange-200", "green-500", "purple-200", "red-800", "blue-800", "indigo-700"];
-    //const randomColor = () => colorList[Math.floor(Math.random() * colorList.length)];
-    
-    
-    //get the array of nodes that contain the fields i need including the slug
-    const nodes = data.allMarkdownRemark.edges
-    const allProgramsFiles = nodes.map( ( { node } ) => {
-            const tagList = node.frontmatter.tags.split(" ");
-            const progImage = node.frontmatter.programImage;
+    const [nodeCategories, setNodeCategories] = useState({
+        All: [],
+        Education: [],
+        Community: [],
+        English: [],
+        Arabic: [],
+        
+    })
+    const [selection, setSelection ] = useState(0);
+    useEffect( () => {
+        const {ed, comm, eng, ar, all} = splitData(data.allMarkdownRemark.edges)
+        setNodeCategories({All: all, Education: ed, Community: comm, English: eng, Arabic: ar,  });
+    }, [data.allMarkdownRemark.edges])
+
+    const splitData = (nodes) => {
+        const ed = []
+        const comm = []
+        const eng = []
+        const ar = []
+        // const all = []
+        nodes.forEach( ( { node }) => {
+            let cat = node.frontmatter.category.toLowerCase()
+            if (cat === 'education'){
+                ed.push(node)
+            }else if (cat === 'arabic'){
+                ar.push(node)
+            }else if (cat === 'english') {
+                eng.push(node)
+            }else {
+                comm.push(node);
+            }
+        });
+        const all = [ ...ed, ...comm, ...eng, ...ar]
+        console.log(all, 'is all of them')
+        return {ed, comm, eng, ar, all}
+    }
+    const makePrograms = (selection) => {
+        const key = Object.keys(nodeCategories)[selection];
+        const nodes = nodeCategories[key];
+        return (
+            nodes.map( ( { frontmatter, fields }, i ) => {
+            const tagList = frontmatter.tags.split(" ");
+            const progImage = frontmatter.programImage;
             return (
                 <div className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
-                    <Link to={node.fields.slug}>
-                        <SlantCard body={node.frontmatter.description} 
+                    <Link to={fields.slug}>
+                        <SlantCard body={frontmatter.description} 
                         svgTextColor={`text-orange-500`}  
-                        head={node.frontmatter.title} 
+                        head={frontmatter.title} 
                         tags={tagList}
                         imgFluid={progImage && progImage.childImageSharp.fluid} 
-                        subHead={`${node.frontmatter.endDate ? node.frontmatter.startDate + " - " + node.frontmatter.endDate: node.frontmatter.startDate}`} 
+                        subHead={`${frontmatter.endDate ? frontmatter.startDate + " - " + frontmatter.endDate: frontmatter.startDate}`} 
                         bgColor={`bg-orange-500`} />
                     </Link>
                 </div>
                 )
             }
-            )
+        )
+    )}
+    const onBarSelect = (i) => setSelection(i)
+    const barProps = { ...barStyles, onBarSelect, barSelections:Object.keys(nodeCategories) }
+        
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className="text-center">
             <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
                 <PageHeadText text="Y.A.R Center Programs" />
-                <PageBar {...barProps} />
             </div>
+            <PageBar {...barProps} />
         </div>
         <div className="flex flex-wrap mt-10 z-10 relative">
-            {allProgramsFiles}        
+            {makePrograms(selection)}        
         </div>
         </Layout>
     )
 }
 
 const barStyles = {
-    divStyle: ``,
-    buttonStyle: ``,
-    selectedDivStyle: ``,
-    selectedButtonStyle: ``,
+    divStyle: `w-1/5 text-center inline-block border-b border-gray-600`,
+    buttonStyle: `font-hairline sm:text-xl w-full text-xs text-gray-600`,
+    selectedDivStyle: `border-b-2 border-indigo-500`,
+    selectedButtonStyle: `tracking-wider font-thin text-indigo-700`,
 
 }
 
