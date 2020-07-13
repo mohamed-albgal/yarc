@@ -3,8 +3,38 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import PageHeadText from '../components/homogenous/PageHeadText'
 import SlantCard from '../components/homogenous/SlantCard'
+import { PageBar } from './events';
 
-
+export const query = graphql`
+{
+    allMarkdownRemark(limit: 10
+        sort: { order: DESC, fields: [frontmatter___startDate]}
+        filter: {fileAbsolutePath: {regex: "/(programs)/"}}) {
+            edges {
+                node{
+                frontmatter{
+                    title
+                    description
+                    tags
+                    startDate(formatString: "MMMM DD, YYYY")
+                    endDate(formatString: "MMMM DD, YYYY")
+                    type
+                    programImage{
+                        childImageSharp{
+                            fluid(maxWidth: 400) {
+                                ...GatsbyImageSharpFluid
+                              }
+                        }
+                    }
+                }
+                fields {
+                    slug
+                }
+            }
+        }
+    }
+}
+`
 
 
 
@@ -43,6 +73,7 @@ export default  ({data}) => {
         <div className="text-center">
             <div className=" inline-block sm:mt-0 sm:pt-10 mb-20 pt-32  " >
                 <PageHeadText text="Y.A.R Center Programs" />
+                <PageBar {...barProps} />
             </div>
         </div>
         <div className="flex flex-wrap mt-10 z-10 relative">
@@ -52,37 +83,12 @@ export default  ({data}) => {
     )
 }
 
+const barStyles = {
+    divStyle: ``,
+    buttonStyle: ``,
+    selectedDivStyle: ``,
+    selectedButtonStyle: ``,
 
-
-export const query = graphql`
-{
-    allMarkdownRemark(limit: 10
-        sort: { order: DESC, fields: [frontmatter___startDate]}
-        filter: {fileAbsolutePath: {regex: "/(programs)/"}}) {
-            edges {
-                node{
-                frontmatter{
-                    title
-                    description
-                    tags
-                    startDate(formatString: "MMMM DD, YYYY")
-                    endDate(formatString: "MMMM DD, YYYY")
-                    type
-                    programImage{
-                        childImageSharp{
-                            fluid(maxWidth: 400) {
-                                ...GatsbyImageSharpFluid
-                              }
-                        }
-                    }
-                }
-                fields {
-                    slug
-                }
-            }
-        }
-    }
 }
-`
 
 
