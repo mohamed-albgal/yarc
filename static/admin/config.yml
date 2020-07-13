@@ -34,7 +34,7 @@ collections:
         hint: >
           This is optional. This image will not be displayed in the blog post, but on the preview card that links to this post.
           You can optionally insert an image, link, or video link in the blog post.
-      - { label: 'Tags', name: 'tags', widget: 'string'}
+      - { label: 'Tags', name: 'tags', widget: 'string', required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Publish Date', name: 'date', widget: 'date' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'blog'}
@@ -54,7 +54,7 @@ collections:
         required: false
         hint: "This is optional. Image can be added from within the text box below, or added here to be alongside the text content" 
       - { label: 'Description', name: 'description', widget: 'string', required: false}
-      - { label: 'Tags', name: 'tags', widget: 'string'}
+      - { label: 'Tags', name: 'tags', widget: 'string', required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'event'}
   - name: 'programs'
