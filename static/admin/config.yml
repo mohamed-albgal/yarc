@@ -67,7 +67,7 @@ collections:
     fields: 
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Starts:', name: 'startDate', widget: 'date' }
-      - { label: 'Ends::', name: 'endDate', widget: 'date' }
+      - { label: 'Ends:', name: 'endDate', widget: 'date' }
       - label: "Program Category"
         name: "category"
         widget: "select"
@@ -78,7 +78,7 @@ collections:
         required: false
         hint: "This is optional. Image can be embedded in the text box as well"
       - { label: 'Description', name: 'description', widget: 'string', required: false}
-      - { label: 'Tags', name: 'tags', widget: 'string'}
+      - { label: 'Tags', name: 'tags', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'program'}
   - name: 'leaders'
