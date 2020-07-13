@@ -6,7 +6,6 @@ import Section2Content from "../components/Section2Content"
 import Section3Content from "../components/Section3Content"
 import Section4Content from '../components/Section4Content'
 import Hero from "../components/homogenous/Hero"
-import ClosingSection from "../components/homogenous/ClosingSection"
 
 const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, section3, section4, section5 }) => {
   return(
