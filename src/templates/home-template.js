@@ -29,9 +29,6 @@ const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, sectio
           <Section4Content section4={section4}/>
             <SectionLink linkText={section4.linkText} linkTo='about/team' />
         </section>
-        <section className=" ">
-          <ClosingSection { ...section5}/>
-        </section>
       </main>
     </Layout>
 )}

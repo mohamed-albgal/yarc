@@ -103,7 +103,7 @@ export default  ({ data }) => {
             </div>
         </div>
         <PageBar onBarSelect={onBarSelect} externalSelection='0' barSelections={Object.keys(barSelections)} />
-        <div className="flex flex-wrap mt-10 z-10 relative">
+        <div className="flex flex-wrap mt-10 sm:px-16 z-10 relative">
             { makeCards(selection) }     
         </div>
         </Layout>
