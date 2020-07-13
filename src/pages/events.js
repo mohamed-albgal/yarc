@@ -122,12 +122,12 @@ export const query = graphql`
 export const PageBar = ({ showPassed }) => {
     const [selected, setSelected] = useState(0);
     const selections = ["Upcoming Events", "Past Events"]
-    const divStyle = "w-1/2 text-center inline-block border-b border-gray-700"
-    const buttonStyle ="font-hairline sm:text-xl w-full text-xs text-gray-700"
-    const selectedDivStyle = "border-indigo-500 border-b-2";
+    const divStyle = "w-1/2 text-center inline-block border-b border-gray-600"
+    const buttonStyle ="font-hairline sm:text-xl w-full text-xs text-gray-600"
+    const selectedDivStyle = " border-b-2 border-indigo-500";
     const selectedButtonStyle = "tracking-wider font-thin text-indigo-700 "
     const showSelections = selections.map( (elt, i) => (
-            <div key={i} className={` ${selected === i && selectedDivStyle} ${divStyle}`}>
+            <div key={i} className={` ${divStyle} ${selected === i && selectedDivStyle} `}>
                 <button onClick={() => handleClick(i)} className={`${selected === i && selectedButtonStyle} ${buttonStyle} `}> {elt} </button>
             </div>
         )
