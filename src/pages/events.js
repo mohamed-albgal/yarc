@@ -24,7 +24,7 @@ export default  ({data, location}) => {
     const [showPassed, setShowPassed] = useState(false);
     useEffect(() => {
         partitionEvents(data.allMarkdownRemark.edges);
-    }, []);
+    }, [data.allMarkdownRemark.edges]);
     //divide events into 2 buckets, passed and current, update state with each
     const partitionEvents = (nodes) => {
         nodes.forEach( ( { node } )  => {
@@ -44,7 +44,6 @@ export default  ({data, location}) => {
     }
     //based on the state, show either passed or current events
     const mapToCards =(nodes) => {
-        console.log(upcoming, passed)
         try {
             console.log(nodes, "is what i see")
             return (
@@ -68,6 +67,7 @@ export default  ({data, location}) => {
                 })
             )   
         }catch{
+            console.log("NOTHING TO SHOW")
         }
     }
     return(
@@ -79,7 +79,7 @@ export default  ({data, location}) => {
         </div>
         <PageBar showPassed={setShowPassed} />
         <div className="flex flex-wrap mt-10 z-10 relative">
-            { showPassed? mapToCards(passed):mapToCards(upcoming) }     
+            { showPassed? mapToCards(passed) : mapToCards(upcoming) }     
         </div>
         </Layout>
     )
@@ -119,18 +119,29 @@ export const query = graphql`
 `
 
 export const PageBar = ({ showPassed }) => {
-    const [seleced, setSelected] = useState("");
-    const selection = ["Upcoming Events, Passed Events"]
+    const [selected, setSelected] = useState(0);
+    const selections = ["Upcoming Events", "Passed Events"]
+    const divStyle = "w-1/2 text-center inline-block"
+    const buttonStyle ="font-hairline sm:text-xl w-full text-xs"
+    const selectedDivStyle = " bg-red-300";
+    const selectedButtonStyle = "text-xl"
+    const show = () => (
+        selections.map( (elt, i) => (
+            <div key={i} className={`${selected == i && selectedDivStyle} ${divStyle}`}>
+                <button onClick={() => handleClick(i)} className={`${selected == i && selectedButtonStyle} ${buttonStyle} `}> {elt} </button>
+            </div>
+        ))
+    )
+
+    const handleClick = (i) => {
+        if ( i > 0)
+            showPassed(true)
+        else showPassed(false)
+        setSelected(i);
+    }
     return (
         <div className="container mx-auto border-b-2 border-gray-600 h-8 bg-opacity-50">
-            <div className="w-1/3 text-center inline-block">
-                <button onClick={() => showPassed(false)} className="font-hairline sm:text-xl text-xs"> Upcoming Events </button>
-            </div>    
-        
-            <div className="w-1/3 text-center inline-block">
-                <button onClick={() => showPassed(true)} className="font-hairline sm:text-xl text-xs"> Passed Events </button>
-            </div>
-            
+            {show()}
         </div>
     )
 }
