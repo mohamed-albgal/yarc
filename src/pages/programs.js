@@ -74,7 +74,6 @@ export default  ({data}) => {
             }
         });
         const all = [ ...ed, ...comm, ...eng, ...ar]
-        console.log(all, 'is all of them')
         return {ed, comm, eng, ar, all}
     }
     const makePrograms = (selection) => {
@@ -111,7 +110,7 @@ export default  ({data}) => {
             </div>
             <PageBar {...barProps} />
         </div>
-        <div className="flex flex-wrap mt-10 z-10 relative">
+        <div className="flex flex-wrap mt-10 sm:px-12 z-10 relative">
             {makePrograms(selection)}        
         </div>
         </Layout>
@@ -119,10 +118,10 @@ export default  ({data}) => {
 }
 
 const barStyles = {
-    divStyle: `w-1/5 text-center inline-block border-b border-gray-600`,
-    buttonStyle: `font-hairline sm:text-xl w-full text-xs text-gray-600`,
-    selectedDivStyle: `border-b-2 border-indigo-500`,
-    selectedButtonStyle: `tracking-wider font-thin text-indigo-700`,
+    divStyle: `w-1/5 text-center inline-block border-b border-green-600`,
+    buttonStyle: `font-hairline sm:text-xl w-full text-xs text-green-600`,
+    selectedDivStyle: `border-b-2 border-black`,
+    selectedButtonStyle: `tracking-wider font-thin text-orange-400`,
 
 }
 
