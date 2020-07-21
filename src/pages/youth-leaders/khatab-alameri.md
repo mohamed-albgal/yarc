@@ -1,7 +1,7 @@
 ---
 leader: Khatab Alameri
 startDate: 2020-05-01T19:46:49.858Z
-image: src/images/uploads/khattab.jpg
+image: src/images/uploads/khattab-2.jpg
 caption: "Freshmen Student at UC Irvine "
 bio: "Khatab is a recent high school graduate from San Francisco. He was born
   and raised in SF where he loved to do community work throughout the Bay Area.
