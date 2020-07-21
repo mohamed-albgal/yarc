@@ -2,7 +2,7 @@
 leader: Eman Algarmi
 startDate: 2020-05-01T19:40:38.480Z
 image: src/images/uploads/default-profile.png
-caption: Senior Student at Cal State East Bay, majoring in Human Development
+caption: Senior student at Cal State East Bay, majoring in Human Development
 bio: "Eman Algarmi is a senior at Cal State East Bay, majoring in Human
   Development with a concentration in Childhood Development. She has over 4
   years of experience working as a recreation leader serving children and
