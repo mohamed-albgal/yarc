@@ -1,70 +1,14 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import useTranslations from '../../hooks/useTranslations'
 import TeamPageTemplate from '../../templates/team-template'
-export const query = graphql`
-{
-  allMarkdownRemark(filter: {fields: {slug: {eq: "/about/team/"}}}) {
-    edges {
-      node {
-        frontmatter {
-          head
-          caption
-          heroImage{
-            publicURL
-          }
-          memberCards {
-            memberCard1 {
-              image {
-                publicURL
-              }
-              member
-              role
-              bio
-            }
-            memberCard2 {
-              image {
-                publicURL
-              }
-              member
-              role
-              bio
-            }
-            memberCard3 {
-              image {
-                publicURL
-              }
-              member
-              role
-              bio
-            }
-            memberCard4 {
-              image {
-                publicURL
-              }
-              member
-              role
-              bio
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
-`
-//couldnt get the config.yml for the cms and this gql query to play nice when an array of objects was used
-//used a an object of objects instead, refactor to make tighter
-export default ({data}) => {
-  
-  const {head, caption, memberCards, heroImage} = data.allMarkdownRemark.edges[0].node.frontmatter
-  const publicURL = (heroImage && heroImage.publicURL) || heroImage
-  const cards = [memberCards.memberCard1, memberCards.memberCard2, memberCards.memberCard3, memberCards.memberCard4]
-  const properties = { head, caption, cards, heroImage:publicURL };
-
-  
+export default () => {
+  const translatedText = useTranslations("team");
+  const { memberCards } = translatedText;
+  const cards = Object.keys(memberCards).map(card => memberCards[card]);
+  const props = { cards, ...translatedText }
     return (
-        <TeamPageTemplate { ...properties} />
+        <TeamPageTemplate {...props } />
     )
 }
 

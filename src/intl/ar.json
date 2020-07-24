@@ -4,6 +4,21 @@
   "programs": "برامج",
   "events": "مشاريع",
   "youth": "شباب",
+  "blogs": "شباب شباب",
+  "aboutSubmenu": {
+    "mission": "رؤيتنا و مهمتنا",
+    "team": "المساهمون"
+  },
+  "programsSubmenu": {
+    "education": "التعليم",
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "community": "الجماعة"
+  },
+  "youthSubmenu": {
+    "youthVoices": "آراء الشباب",
+    "youthLeaders": "نجوم الشباب"
+  },
   "index": {
     "lang": "ar",
     "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",

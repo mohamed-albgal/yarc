@@ -223,13 +223,12 @@ exports.createPages = async ({graphql, actions}) => {
     }
     `)
 
-    // taken from : https://www.npmjs.com/package/jsonfile
+    // docs for write/read to json at: https://www.npmjs.com/package/jsonfile
     const enJsonPath = 'src/intl/en.json';
     const arJsonPath = 'src/intl/ar.json'
     let intl_en = jsonfile.readFileSync(enJsonPath);
     let intl_ar = jsonfile.readFileSync(arJsonPath);
     const dumpToIntl = (key, data) => {
-      //fix the image?
       const appendage = {}
       appendage[key] = data;
       if (data.lang === "ar")

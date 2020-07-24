@@ -4,6 +4,21 @@
   "programs": "Programs",
   "events": "Events",
   "youth": "Youth",
+  "blogs": "Youth Voices",
+  "aboutSubmenu": {
+    "mission": "Mission & Vision",
+    "team": "Our Team"
+  },
+  "programsSubmenu": {
+    "education": "Education",
+    "english": "English",
+    "arabic": "Arabic",
+    "community": "Community"
+  },
+  "youthSubmenu": {
+    "youthVoices": "Youth Voices",
+    "youthLeaders": "Youth Leaders"
+  },
   "index": {
     "lang": "en",
     "head": "Yemeni American Resource Center",

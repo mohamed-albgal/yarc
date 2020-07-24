@@ -1,5 +1,5 @@
 import React from      "react"
-import { Link } from 'gatsby'
+import {Link } from "gatsby-plugin-intl"
 import Layout from "../components/Layout"
 import Section1Content from "../components/Section1Content.js"
 import Section2Content from "../components/Section2Content"
@@ -26,7 +26,7 @@ const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, sectio
         
         <section className=" pb-32 shadow-2xl-white">
           <Section4Content section4={section4}/>
-            <SectionLink linkText={section4.linkText} linkTo='about/team' />
+            <SectionLink linkText={section4.linkText} linkTo='/about/team' />
         </section>
       </main>
     </Layout>

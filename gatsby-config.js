@@ -69,7 +69,7 @@ module.exports = {
         // Default site language
         defaultLanguage: `en`,
         // Redirects to `/en` in the route `/`
-        redirect: false,
+        redirect: true,
       },
     },
     {

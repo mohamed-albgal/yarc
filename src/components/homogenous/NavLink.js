@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-plugin-intl'
 
 const Navlink = ({text, subMenu, linkTo, linkState }) => {
     const [dropped, setDropped] = useState(false)
