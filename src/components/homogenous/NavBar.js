@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Link } from 'gatsby'
 import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
+import { useIntl } from "gatsby-plugin-intl"
 
 
 const subMenuLinks = [
@@ -53,6 +54,9 @@ const programsSubMenu = [
 
 
 const Navbar =  ({withHero, animate}) => {
+    const intl = useIntl();
+    console.log(intl.locale);
+    const locale = intl.locale === "en" ? ``:  `/${intl.locale}`  
     const [closed, setClosed] = useState(true);
     const hamburgerClick = (e) => {
         setClosed(!closed);
@@ -97,11 +101,11 @@ const Navbar =  ({withHero, animate}) => {
                 <div className={`${!closed ? 'max-h-screen h-70 relative z-0 top-0 transition-height duration-300 ease-linear' : ' h-0 transition-height duration-300 ease-linear sm:h-auto sm:w-auto '} flex`}>
                     <div  className={ `sm:divide-y-0 divide-y divide-gray-900 w-full pt-10 pb-8 -mt-2 
                     sm:px-10  sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "h-0 hidden sm:visible"}`}>
-                        <NavLink  text="Home" linkTo="/"/>
-                        <NavLink  text="About" subMenu={subMenuLinks} />
-                        <NavLink  text="Programs" linkTo="/programs" subMenu={programsSubMenu} />
-                        <NavLink  text="Events" linkTo="/events" state={{display: 'upcoming'}} />
-                        <NavLink  text="Youth" subMenu={youthSubMenu}/>
+                        <NavLink  text={intl.formatMessage({id:"index.head"})} linkTo="/"/>
+                        <NavLink  text={intl.formatMessage({id:"about"})} subMenu={subMenuLinks} />
+                        <NavLink  text={intl.formatMessage({id:"programs"})} linkTo="/programs" subMenu={programsSubMenu} />
+                        <NavLink  text={intl.formatMessage({id:"events"})} linkTo="/events" state={{display: 'upcoming'}} />
+                        <NavLink  text={intl.formatMessage({id:"youth"})} subMenu={youthSubMenu}/>
                     </div>
                 </div>
             </nav>

@@ -1,7 +1,141 @@
 {
-    "home": "الصفحة الرئيسية",
-    "about": "عن المركز",
-    "programs":"برامج",
-    "events": "مشاريع",
-    "youth": "شباب"
+  "home": "الصفحة الرئيسية",
+  "about": "عن المركز",
+  "programs": "برامج",
+  "events": "مشاريع",
+  "youth": "شباب",
+  "index": {
+    "lang": "ar",
+    "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+    "caption": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+    "bgImage": {
+      "publicURL": "/static/7bd0a52374be17446397cc126a2fefe7/tables2.jpg"
+    },
+    "section1": {
+      "card1": {
+        "body": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية"
+      },
+      "card2": {
+        "body": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية"
+      },
+      "card3": {
+        "body": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية"
+      }
+    },
+    "section2": {
+      "linkText": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+      "side": {
+        "body": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "head": "The Sharpest Minds Are Here In Our Community"
+      },
+      "slantCard": {
+        "body": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "image": {
+          "publicURL": "/static/6c83bcf207b81316cf0874a89807cc6a/award1.jpg"
+        }
+      }
+    },
+    "section3": {
+      "linkText": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+      "image": {
+        "publicURL": "/static/821d37df539029b54114b6cfe1703871/mothers_ws.jpg"
+      },
+      "side": {
+        "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "body": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية"
+      }
+    },
+    "section4": {
+      "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+      "caption": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+      "linkText": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+      "card1": {
+        "member": "Izzudin Ahmed",
+        "title": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "image": {
+          "publicURL": "/static/0960c80f6cd6e2255a4a4945d0da9032/izz.jpg"
+        }
+      },
+      "card2": {
+        "member": "Mokhtar Mohamed",
+        "title": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "image": {
+          "publicURL": "/static/3cbfc0daf8c18a5ecbb3ea3448bc7e9c/mokh1.jpg"
+        }
+      },
+      "card3": {
+        "member": "Seena Almahan",
+        "title": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "image": {
+          "publicURL": "/static/8ee55484b61931384668789b4d83728d/seena.jpg"
+        }
+      },
+      "card4": {
+        "member": "Fatima Ali",
+        "title": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",
+        "image": {
+          "publicURL": "/static/1f6bf937da39d4ed8cb320bc1044043f/default-profile.png"
+        }
+      }
+    }
+  },
+  "mission": {
+    "lang": "ar",
+    "head": "مشاريعمشاريعمشاريعمشاريعمشاريع",
+    "mission": "مشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريع",
+    "missionHead": "مشاريعمشاريعمشاريعمشاريعمشاريع",
+    "vision": "مشاريعمشاريعمشاريعمشاريعمشاريعمشاريع",
+    "visionHead": "مشاريعمش اريع",
+    "goals": "مشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريع مشاريعم شاريعمشاريعم شاريعمشاريعمشاريعمشاريعمشاريعمشار يع مشاريعمش اريع مشاريعمشاري عمشاريعمشاريعمشاريعمشاري عمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريعمشاريع مشاريعمشاريعمشاريعمشاريع ",
+    "goalsHead": "مشاريع مشاريع مشاريعمشاري عمشاريع",
+    "bgImage": {
+      "publicURL": "/static/69d252d711322e741275a5c5f9de6d83/hands.jpg"
+    }
+  },
+  "team": {
+    "lang": "ar",
+    "head": "Our Staff and Contributors",
+    "caption": "Yar Center Would Be Impossible Without These People",
+    "heroImage": {
+      "publicURL": "/static/69d252d711322e741275a5c5f9de6d83/hands.jpg"
+    },
+    "memberCards": {
+      "memberCard1": {
+        "image": {
+          "publicURL": "/static/86298ba2af9c81570687288ada87518d/img-6931-min.jpg"
+        },
+        "member": "شباب شباب",
+        "role": "Co-founder",
+        "bio": "شبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشب ابشبابشبابش بابشبابشباب شبابشبابشبا بشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشب ابشبا بشباب شبابشبابشبا بشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشباب.  "
+      },
+      "memberCard2": {
+        "image": {
+          "publicURL": "/static/0ff7fe303125d7f1fa7edb9d6b3a6b15/izzy-min.jpg"
+        },
+        "member": "شباب شباب ",
+        "role": "Co-founder and Executive Director ",
+        "bio": "As co-founder and Executive director, Izzuddin advocates for empowering every member of the Yemeni American community. He is passionately committed to education, community sustainability and youth leadership.He is responsible for developing and implementing strategies and policies that help achieve the organization’s mission and goals. He engages with community groups to deliver the mission of the organization and ensure the sustainability of the organization. Before co-founding this center, Izzuddin had been leading his organization of Generous Hands Foundation, a nonprofit charity that has been funding many youth and educational programs in our community and delivering humanitarian aid to the people of Yemen.  \n \n"
+      },
+      "memberCard3": {
+        "image": {
+          "publicURL": "/static/3cbfc0daf8c18a5ecbb3ea3448bc7e9c/mokh1.jpg"
+        },
+        "member": "Mokhtar Mohamed",
+        "role": "General Manager",
+        "bio": "Mokhtar joined with extensive experience in leadership, youth development, advocacy and community engagement. Mokhtar received his education in the field of International Relations from San Francisco State University. "
+      },
+      "memberCard4": {
+        "image": {
+          "publicURL": "/static/8ee55484b61931384668789b4d83728d/seena.jpg"
+        },
+        "member": "Seena Almahan",
+        "role": "Program Specialist ",
+        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n      Lorem Ipsum has been the industry's standard dummy text ever since the\n      1500s, when an unknown printer took a galley of type and scrambled it to\n      make a type specimen book. It has survived not only five centuries, but\n      also the leap into electronic typesetting, remaining essentially\n      unchanged. It was popularised in the 1960s with the release of Letraset\n      sheets containing Lorem Ipsum passages, and more recently with desktop\n      publishing software like Aldus PageMaker including versions of Lorem\n      IpsumLorem Ipsum is simply dummy text of the printing and typesetting\n      industry."
+      }
+    }
+  }
 }

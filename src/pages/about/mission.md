@@ -1,6 +1,7 @@
 ---
 head: Mission, Vision, and Our Goals
-caption: null
+lang: en
+caption: " "
 bgImage: src/images/uploads/hands.jpg
 missionHead: Our Mission
 mission: The Yemeni American Resource Center's mission is to improve the quality

@@ -60,6 +60,19 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // Directory with the strings JSON
+        path: `${__dirname}/src/intl`,
+        // Supported languages
+        languages: [`en`, `ar`],
+        // Default site language
+        defaultLanguage: `en`,
+        // Redirects to `/en` in the route `/`
+        redirect: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Yemeni-American Resource Center`,

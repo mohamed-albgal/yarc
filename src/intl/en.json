@@ -1,7 +1,141 @@
 {
-    "home": "Home",
-    "about": "About",
-    "programs": "Programs",
-    "events": "Events",
-    "youth": "Youth"
+  "home": "Home",
+  "about": "About",
+  "programs": "Programs",
+  "events": "Events",
+  "youth": "Youth",
+  "index": {
+    "lang": "en",
+    "head": "Yemeni American Resource Center",
+    "caption": "A Space For Yemeni-American Men And Women, Young and Old to Come Together And Grow!",
+    "bgImage": {
+      "publicURL": "/static/7bd0a52374be17446397cc126a2fefe7/tables2.jpg"
+    },
+    "section1": {
+      "card1": {
+        "body": "Communities thrive when people come together and      share their experiences",
+        "head": "Enhancing The Community Experience"
+      },
+      "card2": {
+        "body": "Everyone has something to offer. We provide the platform that enables all the pieces to fit together",
+        "head": "Active Community Building"
+      },
+      "card3": {
+        "body": "We focus on all demographics represented in our community, but the youth are our future and main focus",
+        "head": "Tomorrow's Wins Begin Today!"
+      }
+    },
+    "section2": {
+      "linkText": "View All Events",
+      "side": {
+        "body": "We welcome people from all walks of life to contribute and share in their experiences. Our staff is comprised of an equally diverse set of individuals who voluntarily take the time to ensure our collective success",
+        "head": "The Sharpest Minds Are Here In Our Community"
+      },
+      "slantCard": {
+        "body": "A young boy receives an award",
+        "head": "Recognition Enhances The Confidence of Our Young Talent",
+        "image": {
+          "publicURL": "/static/6c83bcf207b81316cf0874a89807cc6a/award1.jpg"
+        }
+      }
+    },
+    "section3": {
+      "linkText": "View All Programs",
+      "image": {
+        "publicURL": "/static/821d37df539029b54114b6cfe1703871/mothers_ws.jpg"
+      },
+      "side": {
+        "head": "Empowering Events, Held Regularly!",
+        "body": "Events are announced and based on the requests we get from our community memebers. Some may repeat and others may not. With involvement, we can continue providing a rich set of diverse learning and growth events."
+      }
+    },
+    "section4": {
+      "head": "Featured Contributors",
+      "caption": "YAR Center Would Be Impossible Without These People!",
+      "linkText": "More About The Team",
+      "card1": {
+        "member": "Izzudin Ahmed",
+        "title": "Executive Director",
+        "image": {
+          "publicURL": "/static/0960c80f6cd6e2255a4a4945d0da9032/izz.jpg"
+        }
+      },
+      "card2": {
+        "member": "Mokhtar Mohamed",
+        "title": "General Manager",
+        "image": {
+          "publicURL": "/static/3cbfc0daf8c18a5ecbb3ea3448bc7e9c/mokh1.jpg"
+        }
+      },
+      "card3": {
+        "member": "Seena Almahan",
+        "title": "Program Specialist",
+        "image": {
+          "publicURL": "/static/8ee55484b61931384668789b4d83728d/seena.jpg"
+        }
+      },
+      "card4": {
+        "member": "Fatima Ali",
+        "title": "Administrative Assistant",
+        "image": {
+          "publicURL": "/static/1f6bf937da39d4ed8cb320bc1044043f/default-profile.png"
+        }
+      }
+    }
+  },
+  "mission": {
+    "lang": "en",
+    "head": "Mission, Vision, and Our Goals",
+    "mission": "The Yemeni American Resource Center's mission is to improve the quality of life for the Yemeni American community by providing a variety of educational, recreation, social and wellness programs.",
+    "missionHead": "Our Mission",
+    "vision": "We envision a strong and collaborative community that preserves safety, prosperity and empowerment of everyone of its members mainly youth.",
+    "visionHead": "Our Vision",
+    "goals": "Our goals include: create a caring, safe and supportive environment for every member of our community; strengthen our community by sharing resources and providing growth opportunities; Support and inspire the youth to attain an excellent education; Help youth develop and improve their life skills such as leadership, communication and problem solving ",
+    "goalsHead": "Our Goals",
+    "bgImage": {
+      "publicURL": "/static/69d252d711322e741275a5c5f9de6d83/hands.jpg"
+    }
+  },
+  "team": {
+    "lang": "en",
+    "head": "Our Staff and Contributors",
+    "caption": "Yar Center Would Be Impossible Without These People",
+    "heroImage": {
+      "publicURL": "/static/69d252d711322e741275a5c5f9de6d83/hands.jpg"
+    },
+    "memberCards": {
+      "memberCard1": {
+        "image": {
+          "publicURL": "/static/86298ba2af9c81570687288ada87518d/img-6931-min.jpg"
+        },
+        "member": "Fawaz Alriashi",
+        "role": "Co-founder",
+        "bio": "Fawaz Alriashi is currently the president of the Yemeni American Association. He is an innovative, inspirational and collaborative community leader. As a cofounder of the Yemeni American Youth Center, Fawaz aims to help the community learn, thrive and innovate by having access to the needed resources. He believes in Youth leadership and power to transform the community and improve the quality of life for its members.  "
+      },
+      "memberCard2": {
+        "image": {
+          "publicURL": "/static/0ff7fe303125d7f1fa7edb9d6b3a6b15/izzy-min.jpg"
+        },
+        "member": "Izzuddin Ahmed ",
+        "role": "Co-founder and Executive Director ",
+        "bio": "As co-founder and Executive director, Izzuddin advocates for empowering every member of the Yemeni American community. He is passionately committed to education, community sustainability and youth leadership.He is responsible for developing and implementing strategies and policies that help achieve the organization’s mission and goals. He engages with community groups to deliver the mission of the organization and ensure the sustainability of the organization. Before co-founding this center, Izzuddin had been leading his organization of Generous Hands Foundation, a nonprofit charity that has been funding many youth and educational programs in our community and delivering humanitarian aid to the people of Yemen.  \n \n"
+      },
+      "memberCard3": {
+        "image": {
+          "publicURL": "/static/3cbfc0daf8c18a5ecbb3ea3448bc7e9c/mokh1.jpg"
+        },
+        "member": "Mokhtar Mohamed",
+        "role": "General Manager",
+        "bio": "Mokhtar joined with extensive experience in leadership, youth development, advocacy and community engagement. Mokhtar received his education in the field of International Relations from San Francisco State University. "
+      },
+      "memberCard4": {
+        "image": {
+          "publicURL": "/static/8ee55484b61931384668789b4d83728d/seena.jpg"
+        },
+        "member": "Seena Almahan",
+        "role": "Program Specialist ",
+        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n      Lorem Ipsum has been the industry's standard dummy text ever since the\n      1500s, when an unknown printer took a galley of type and scrambled it to\n      make a type specimen book. It has survived not only five centuries, but\n      also the leap into electronic typesetting, remaining essentially\n      unchanged. It was popularised in the 1960s with the release of Letraset\n      sheets containing Lorem Ipsum passages, and more recently with desktop\n      publishing software like Aldus PageMaker including versions of Lorem\n      IpsumLorem Ipsum is simply dummy text of the printing and typesetting\n      industry."
+      }
+    }
+  }
 }

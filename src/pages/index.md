@@ -3,6 +3,7 @@ bgImage: ../images/uploads/tables2.jpg
 head: Yemeni American Resource Center
 caption: A Space For Yemeni-American Men And Women, Young and Old to Come
   Together And Grow!
+lang: en
 section1:
   card1:
     body: Communities thrive when people come together and      share their
@@ -56,4 +57,5 @@ section4:
     title: Administrative Assistant
     image: ../images/uploads/default-profile.png
 title: index
+type: site_page
 ---
