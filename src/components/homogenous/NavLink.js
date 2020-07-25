@@ -2,14 +2,14 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby-plugin-intl'
 
-const Navlink = ({text, subMenu, linkTo, linkState }) => {
+const Navlink = ({text, subMenu, linkTo, linkState, setNavUp }) => {
     const [dropped, setDropped] = useState(false)
     const droppedDivStyle = `flex flex-col sm:absolute sm:mt-10 sm:cursor-pointer w-full max-h-screen sm:w-auto sm:py-2  
-    sm:rounded-t-sm sm:rounded-b-lg rounded-none text-black 
+    sm:rounded-tl-none sm:rounded-lg rounded-none text-black
     jigsaw-bg
 `
-    const navItemStyle = `text-center sm:block uppercase flex flex-col justify-center  relative  sm:py-1 sm:hover:text-yellow-500 rounded mx-4  py-2 sm:font-hairline font-extrabold 
-    text-xl lg:text-2xl  text-white sm:h-auto h-16 bg-transparent transform duration-75`
+    const navItemStyle = `text-center sm:block uppercase flex flex-col justify-center  relative  sm:py-1 sm:hover:text-yellow-500 rounded mx-4  py-2 sm:font-bold font-extrabold 
+    text-xl lg:text-2xl  sm:text-blue-900 text-white sm:h-auto h-16 bg-transparent transform duration-75`
     return (
         <div onMouseLeave={() => setDropped(false)}>
             {subMenu ?  (      
@@ -19,10 +19,10 @@ const Navlink = ({text, subMenu, linkTo, linkState }) => {
                     <div className={`${navItemStyle} inline-block`} >
                         {text} 
                     </div>
-                    { dropped && <div  className={droppedDivStyle}>
-                    {subMenu.map((elt) => (<Link to={elt.path} state={elt.state}>
+                    { dropped && <div  className={droppedDivStyle} style={{opacity:"95%",}}>
+                    {subMenu.map((elt) => (<Link onClick={() => setNavUp(true)} to={elt.path} state={elt.state}>
                         <div role="menuitem"  className="sm:py-4 font-semibold sm:px-6 tracking-wider text-base text-gray-300 sm:hover:text-yellow-500 sm:w-full w-screen sm:h-auto h-16 flex flex-col justify-center shadow-inner " 
-                        onClick={() => setDropped(false)}> {elt.name} </div>
+                        > {elt.name} </div>
                         </Link>))}
                     </div>}
                 </button>

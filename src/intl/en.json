@@ -43,7 +43,7 @@
     },
     "section1": {
       "card1": {
-        "body": "Communities thrive when people come together and      share their experiences",
+        "body": "Communities thrive when people come together and share their experiences",
         "head": "Enhancing The Community Experience"
       },
       "card2": {
@@ -85,16 +85,16 @@
       "linkText": "More About The Team",
       "card1": {
         "member": "Izzudin Ahmed",
-        "title": "Executive Director",
+        "title": "Co-Founder & Executive Director",
         "image": {
           "publicURL": "/static/0960c80f6cd6e2255a4a4945d0da9032/izz.jpg"
         }
       },
       "card2": {
-        "member": "Mokhtar Mohamed",
-        "title": "General Manager",
+        "member": "Fawwaz Alriashi",
+        "title": "Co-Founder",
         "image": {
-          "publicURL": "/static/3cbfc0daf8c18a5ecbb3ea3448bc7e9c/mokh1.jpg"
+          "publicURL": "/static/86298ba2af9c81570687288ada87518d/img-6931-min.jpg"
         }
       },
       "card3": {
@@ -105,30 +105,30 @@
         }
       },
       "card4": {
-        "member": "Fatima Ali",
-        "title": "Administrative Assistant",
+        "member": "Mokhtar Mohamed",
+        "title": "General Manager",
         "image": {
-          "publicURL": "/static/1f6bf937da39d4ed8cb320bc1044043f/default-profile.png"
+          "publicURL": "/static/3cbfc0daf8c18a5ecbb3ea3448bc7e9c/mokh1.jpg"
         }
       }
     },
     "section5": {
-      "head": "Form Head",
+      "head": "Become A Valuable Resource",
       "card1": {
-        "head": "hh-fooooo",
-        "body": "body"
+        "head": "Lead An Event",
+        "body": "Have A Skill or Specialty? Reach out to us and share in your expertise!"
       },
       "card2": {
-        "head": "hh",
-        "body": "body"
+        "head": "Donate To Our Cause",
+        "body": "The only funding we have is from people like YOU. A little goes a long way!"
       },
       "card3": {
-        "head": "hh",
-        "body": "body"
+        "head": "Become A Mentor",
+        "body": "Give back to those who could benefit from your own experiences. Attend our mentorship events!"
       },
       "form": {
-        "head": "forfor",
-        "caption": "text",
+        "head": "Interested In Working With Us?",
+        "caption": "Complete this form and we will get back to you ASAP!",
         "nameLabel": "Name",
         "emailLabel": "Email",
         "messageLabel": "Message",
@@ -157,10 +157,10 @@
     "missionHead": "Our Mission",
     "vision": "We envision a strong and collaborative community that preserves safety, prosperity and empowerment of everyone of its members mainly youth.",
     "visionHead": "Our Vision",
-    "goals": "Our goals include: create a caring, safe and supportive environment for every member of our community; strengthen our community by sharing resources and providing growth opportunities; Support and inspire the youth to attain an excellent education; Help youth develop and improve their life skills such as leadership, communication and problem solving ",
+    "goals": "Our goals include: creating a caring, safe and supportive environment for every member of our community; strengthening our community by sharing resources and providing growth opportunities; Supporting and inspiring the youth to attain an excellent education; Helping youth develop and improve their life skills such as leadership, communication and problem solving",
     "goalsHead": "Our Goals",
     "bgImage": {
-      "publicURL": "/static/69d252d711322e741275a5c5f9de6d83/hands.jpg"
+      "publicURL": "/static/5650452deb481d57f51460b3745bc14b/yarc_logo_icon.svg"
     }
   },
   "team": {

@@ -6,8 +6,8 @@ import PageHeadText from '../components/homogenous/PageHeadText'
 const PageSection = ({body, head}) => {
   return (
         <div className="sm:w-full w-11/12">
-          <PageHeadText text={head} size="6xl" />
-          <div className="text-left sm:text-4xl text-2xl sm:leading-normal leading-normal font-thin sm:p-10 pl-2 pr-1 py-8  ">
+          <PageHeadText text={head} size="sm:text-6xl text-4xl" />
+          <div className="text-left sm:text-2xl text-xl sm:leading-normal leading-normal font-thin sm:p-10 pl-2 pr-1 py-8  ">
             {body}
           </div>
         </div>

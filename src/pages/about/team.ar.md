@@ -2,43 +2,46 @@
 title: team
 lang: ar
 type: site_page
-head: Our Staff and Contributors
-caption: Yar Center Would Be Impossible Without These People
+head: أعضاؤنا ومساهمونا
+caption: سيكون المركز مستحيلاً بدون جهود هؤلاء الأشخاص!
 heroImage: src/images/uploads/hands.jpg
 memberCards:
   memberCard1:
     image: src/images/uploads/img-6931-min.jpg
-    member: شباب شباب
-    role: Co-founder
-    bio: "شبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشب ابشبابشبابش بابشبابشباب شبابشبابشبا بشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشب ابشبا بشباب شبابشبابشبا بشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشبابشباب.  "
+    member: فواز الرياشي
+    role: المؤسس المشارك
+    bio: >+
+    يشغل فواز الرياشي حاليا منصب رئيس الجمعية اليمنية الأمريكية. وهو مبتكر وملهم وتعاوني 
+      زعيم الطائفة. بصفته أحد مؤسسي مركز الشباب اليمني الأمريكي ،تهدف فواز إلى مساعدة المجتمع على التعلم والازدهار والابتكار من خلال امتلاك الوصول إلى الموارد اللازمة. يؤمن بقيادة الشباب وقوته لتغيير المجتمع وتحسين نوعية الحياة له
+      أفراد.
   memberCard2:
     image: src/images/uploads/izzy-min.jpg
-    member: "شباب شباب "
-    role: "Co-founder and Executive Director "
+    member: عز الدين حمران
+    role: المدير التنفيذي والمؤسس المشارك
     bio: >+
-      As co-founder and Executive director, Izzuddin advocates for empowering
-      every member of the Yemeni American community. He is passionately
-      committed to education, community sustainability and youth leadership.He
-      is responsible for developing and implementing strategies and policies
-      that help achieve the organization’s mission and goals. He engages with
-      community groups to deliver the mission of the organization and ensure the
-      sustainability of the organization. Before co-founding this center,
-      Izzuddin had been leading his organization of Generous Hands Foundation, a
-      nonprofit charity that has been funding many youth and educational
-      programs in our community and delivering humanitarian aid to the people of
-      Yemen.  
+      بصفته المؤسس المشارك والمدير التنفيذي ، يدعو عز الدين إلى التمكين
+      كل فرد من الجالية اليمنية الأمريكية. إنه عاطفي
+      ملتزمون بالتعليم واستدامة المجتمع وقيادة الشباب
+      هي المسؤولة عن تطوير وتنفيذ الاستراتيجيات والسياسات
+      التي تساعد في تحقيق مهمة المنظمة وأهدافها. يتعامل معها
+      مجموعات المجتمع لتسليم مهمة المنظمة وضمان
+      استدامة المنظمة. قبل التأسيس المشترك لهذا المركز ،
+      كان عز الدين يقود منظمته لمؤسسة الأيدي الكريمة ، أ
+      مؤسسة خيرية غير ربحية تم تمويل العديد من الشباب والتعليم
+      برامج في مجتمعنا وتقديم المساعدات الإنسانية لشعب
+      اليمن.  
        
   memberCard3:
     image: src/images/uploads/mokh1.jpg
-    member: Mokhtar Mohamed
-    role: General Manager
-    bio: "Mokhtar joined with extensive experience in leadership, youth development,
-      advocacy and community engagement. Mokhtar received his education in the
-      field of International Relations from San Francisco State University. "
+    member: مختار الشجاع
+    role: مدير عام
+    bio: انضم مختار إلى خبرة واسعة في القيادة وتنمية الشباب
+      الدعوة وإشراك المجتمع. تلقى مختار تعليمه في
+      مجال العلاقات الدولية من جامعة ولاية سان فرانسيسكو. "
   memberCard4:
     image: src/images/uploads/seena.jpg
-    member: Seena Almahan
-    role: "Program Specialist "
+    member: سينا المحن
+    role: أخصائي برنامج
     bio: >-
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
             Lorem Ipsum has been the industry's standard dummy text ever since the

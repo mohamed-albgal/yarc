@@ -8,7 +8,7 @@ caption: A Space For Yemeni-American Men And Women, Young and Old to Come
 lang: en
 section1:
   card1:
-    body: Communities thrive when people come together and      share their
+    body: Communities thrive when people come together and share their
       experiences
     head: Enhancing The Community Experience
   card2:
@@ -21,8 +21,7 @@ section1:
     head: Tomorrow's Wins Begin Today!
 section2:
   side:
-    body: We welcome people from all walks of life to contribute and share in their
-      experiences. Our staff is comprised of an equally diverse set of
+    body: We welcome people from all walks of life to contribute and share in their experiences. Our staff is comprised of an equally diverse set of
       individuals who voluntarily take the time to ensure our collective success
     head: The Sharpest Minds Are Here In Our Community
   slantCard:
@@ -44,34 +43,34 @@ section4:
   caption: YAR Center Would Be Impossible Without These People!
   card1:
     member: Izzudin Ahmed
-    title: Executive Director
+    title: Co-Founder & Executive Director
     image: ../images/uploads/izz.jpg
   card2:
-    member: Mokhtar Mohamed
-    title: General Manager
-    image: ../images/uploads/mokh1.jpg
+    member: Fawwaz Alriashi
+    title: Co-Founder
+    image: ../images/uploads/img-6931-min.jpg
   card3:
     member: Seena Almahan
     title: Program Specialist
     image: ../images/uploads/seena.jpg
   card4:
-    member: Fatima Ali
-    title: Administrative Assistant
-    image: ../images/uploads/default-profile.png
+    member: Mokhtar Mohamed
+    title: General Manager
+    image: ../images/uploads/mokh1.jpg
 section5:
-  head: "Form Head"
+  head: "Become A Valuable Resource"
   card1:
-    head: "hh-fooooo"
-    body: "body"
+    head: Lead An Event
+    body: Have A Skill or Specialty? Reach out to us and share in your expertise!
   card2:
-    head: "hh"
-    body: "body"
+    head: Donate To Our Cause
+    body: The only funding we have is from people like YOU. A little goes a long way!
   card3:
-    head: "hh"
-    body: "body"
+    head: Become A Mentor
+    body: Give back to those who could benefit from your own experiences. Attend our mentorship events!
   form:
-    head: "forfor"
-    caption: "text"
+    head: Interested In Working With Us?
+    caption: Complete this form and we will get back to you ASAP!
     nameLabel: "Name"
     emailLabel: "Email"
     messageLabel: "Message"
