@@ -59,11 +59,10 @@ export default  ({data, location}) => {
     
     useEffect( () => {
         splitData(data.allMarkdownRemark.edges)
-        console.log("effect ran!", selection, nodeCategories)
     }, [])
     useEffect( () => {
         let sel = location.state && location.state.selection;
-        setSelection(sel || 0)
+        setSelection(sel || 1)
     }, [location.state])
 
     const splitData = (nodes) => {
