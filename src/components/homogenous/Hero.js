@@ -1,25 +1,14 @@
 import React from 'react'
-// import {useStaticQuery } from 'gatsby'
 
 export default ({mainText, caption, heroImage}) => {
-//       const data = useStaticQuery(graphql`
-//   {
-//     file(relativePath: { eq: "images/kids_playing.jpg" }) {
-//       childImageSharp {
-//         fixed(width: 400, height: 400) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//   }
-//   `)
+    console.log(heroImage, 'from HERO')
     return (
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
       style={{
           minHeight: "75vh"
       }}>
       {/* hero image*/}
-      <div className=" md:shadow-2xl absolute inset-0 w-full h-full sm:bg-fixed bg-cover sm:bg-center bg-scroll"
+      <div className=" md:shadow-2xl absolute sm:inset-0 w-full h-full sm:bg-fixed bg-cover sm:bg-center bg-scroll"
           style={{
           backgroundImage: `url(${heroImage})`,
           WebkitOverflowScrolling: "touch",

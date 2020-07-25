@@ -72,11 +72,13 @@ const HomePreviewTemplate = ({entry, getAsset}) => {
             })
     }
     
-    const coreProps = { bgImage, caption,head, section1}
+    const coreProps = {caption,head, section1}
+    console.log(bgImage)
     return (
         <HomeCMSLayout section5={section5} >
             <PageCore 
             fromCMS
+            bgImage={bgImagePre}
             section2={section2Pre()}
             section3={section3Pre()}
             section4={section4Pre()}

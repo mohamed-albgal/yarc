@@ -17,6 +17,7 @@ const PageSection = ({body, head}) => {
 export const PageContent = (props) => {
   const { caption, head, bgImage, vision, visionHead, mission, missionHead, goals, goalsHead } = props;
   const sections = []
+  console.log(bgImage, 'from pc comp')
   sections.push({head: visionHead, body: vision})
   sections.push({head: missionHead, body: mission})
   sections.push({head: goalsHead, body: goals})
