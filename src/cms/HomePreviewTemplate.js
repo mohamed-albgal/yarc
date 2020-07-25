@@ -1,5 +1,6 @@
 import React from 'react'
-import HomePageTemplate from '../templates/home-template.js'
+import { PageCore } from '../templates/home-template.js'
+import { HomeCMSLayout } from '../components/Layout'
 
 const HomePreviewTemplate = ({entry, getAsset}) => {
     const data = entry.get('data').toJS();
@@ -71,20 +72,17 @@ const HomePreviewTemplate = ({entry, getAsset}) => {
             })
     }
     
-
-    
-    
+    const coreProps = { bgImage, caption,head, section1}
     return (
-        <HomePageTemplate 
-        bgImage={bgImagePre}
-        caption={caption}
-        head={head}
-        section1={section1}
-        section2={section2Pre()}
-        section3={section3Pre()}
-        section4={section4Pre()}
-        section5={section5}
-          />
+        <HomeCMSLayout section5={section5} >
+            <PageCore 
+            fromCMS
+            section2={section2Pre()}
+            section3={section3Pre()}
+            section4={section4Pre()}
+            {...coreProps}
+            />
+        </HomeCMSLayout>
 
     )
 }

@@ -4,19 +4,24 @@ import Hero from '../components/homogenous/Hero'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
 //any caller needs to format the memberCards to be an array of objects named 'cards'
-const TeamPageTemplate = ({head, caption, heroImage, cards,}) => {
-  
+const TeamPageTemplate = (props) => {
   return (
     <Layout navWithHero bgGradientColor="yellow-green">
+      <PageCore {...props} />
+    </Layout>
+  )
+}
+
+export const PageCore = ({head, caption, cards, heroImage}) => ( 
+    <div>
       <Hero mainText={head} caption={caption} heroImage={heroImage} />
       <div className="py-32">
         <div className="flex flex-wrap w-screen justify-center sm:mx-auto" >
           {cards.map((card, i) => <StaffCard key={i} card={card} /> ) }
         </div>
       </div>
-    </Layout>
-  )
-}
+    </div>
+)
 
 
 

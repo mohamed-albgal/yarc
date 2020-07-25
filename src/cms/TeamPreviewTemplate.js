@@ -1,5 +1,6 @@
 import React from 'react'
-import TeamPageTemplate from '../templates/team-template.js'
+import { PageCore } from '../templates/team-template.js'
+import { CMSLayout } from '../components/Layout'
 
 const TeamPreviewTemplate = ({entry, getAsset}) => {
     const data = entry.get('data').toJS();
@@ -14,7 +15,9 @@ const TeamPreviewTemplate = ({entry, getAsset}) => {
     const properties = {cards, ...rest}
     
     return (
-        <TeamPageTemplate heroImage={imgURL} {...properties } />
+        <CMSLayout bgGradientColor="yellow-green" >
+            <PageCore heroImage={imgURL} {...properties } />
+        </CMSLayout>
     )
     
 }
