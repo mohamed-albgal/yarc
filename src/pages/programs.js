@@ -110,7 +110,7 @@ export default  ({data, location}) => {
     const barProps = { ...barStyles, onBarSelect, barSelections:Object.keys(nodeCategories) }
         
     return(
-        <Layout bgGradientColor="yellowBlue-topBottom">
+        <Layout bgGradientColor="sand-bottom">
         <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
                 <PageHeadText text={intl.formatMessage({id:"programsHeadText"})} />
             </div>
