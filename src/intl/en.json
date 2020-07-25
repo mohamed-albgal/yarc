@@ -19,6 +19,19 @@
     "youthVoices": "Youth Voices",
     "youthLeaders": "Youth Leaders"
   },
+  "programsCategories": {
+    "all": "All",
+    "education": "Education",
+    "community": "Community",
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "eventsCategories": {
+    "upcoming": "Upcoming Events",
+    "past": "Past Events"
+  },
+  "programsHeadText": "Y.A.R Center Programs",
+  "eventsHeadText": "Y.A.R Center Events",
   "index": {
     "lang": "en",
     "head": "Yemeni American Resource Center",

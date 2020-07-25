@@ -12,7 +12,7 @@ import {FaArchway } from 'react-icons/fa'
 
 const Navbar =  ({withHero, animate}) => {
     const intl = useIntl();
-    console.log(intl);
+    
     const [closed, setClosed] = useState(true);
     const hamburgerClick = (e) => {
         setClosed(!closed);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
-import { graphql, Link } from 'gatsby';
+import { Link, useIntl } from 'gatsby-plugin-intl';
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout';
 import PageHeadText from '../components/homogenous/PageHeadText'
 import SlantCard from '../components/homogenous/SlantCard'
@@ -41,55 +42,55 @@ export const query = graphql`
 
 
 export default  ({data, location}) => {
-    const [nodeCategories, setNodeCategories] = useState({
-        All: [],
-        Education: [],
-        Community: [],
-        English: [],
-        Arabic: [],
-        
-    })
+    const intl = useIntl();
+    const all = intl.formatMessage({id:"programsCategories.all"});
+    const  ed = intl.formatMessage({id:"programsCategories.education"});
+    const eng = intl.formatMessage({id:"programsCategories.english"});
+    const ar = intl.formatMessage({id:"programsCategories.arabic"});
+    const comm = intl.formatMessage({id:"programsCategories.community"});
+    const catsArray = {}
+    catsArray[all] = [];
+    catsArray[ed] = [];
+    catsArray[eng] = [];
+    catsArray[ar] = [];
+    catsArray[comm] = [];
+    const [nodeCategories, setNodeCategories] = useState(catsArray);
     const [selection, setSelection ] = useState(0);
     useEffect( () => {
-        const {ed, comm, eng, ar, all} = splitData(data.allMarkdownRemark.edges)
-        setNodeCategories({All: all, Education: ed, Community: comm, English: eng, Arabic: ar,  });
-    }, [data.allMarkdownRemark.edges])
+        splitData(data.allMarkdownRemark.edges)
+    }, [intl.locale])
     useEffect( () => {
         let sel = location.state && location.state.selection;
         setSelection(sel || 0)
     }, [location.state])
 
     const splitData = (nodes) => {
-        const ed = []
-        const comm = []
-        const eng = []
-        const ar = []
-        // const all = []
         nodes.forEach( ( { node }) => {
             let cat = node.frontmatter.category.toLowerCase()
             if (cat === 'education'){
-                ed.push(node)
+                catsArray[ed].push(node)
             }else if (cat === 'arabic'){
-                ar.push(node)
+                catsArray[ar].push(node)
             }else if (cat === 'english') {
-                eng.push(node)
+                catsArray[eng].push(node);
             }else {
-                comm.push(node);
+                catsArray[comm].push(node)
             }
         });
-        const all = [ ...ed, ...comm, ...eng, ...ar]
-        return {ed, comm, eng, ar, all}
+        catsArray[all] =  [ ...catsArray[ed], ...catsArray[comm], ...catsArray[eng], ...catsArray[ar]]
+        console.log(catsArray);
+        setNodeCategories(catsArray);
     }
     const makePrograms = (selection) => {
         const key = Object.keys(nodeCategories)[selection];
-        
+        console.log(key);
         const nodes = nodeCategories[key];
         return (
             nodes.map( ( { frontmatter, fields }, i ) => {
             const tagList = frontmatter.tags && frontmatter.tags.split(" ");
             const progImage = frontmatter.programImage;
             return (
-                <div className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
+                <div key={i} className="hover:scale-105 transform transition-transform duration-200 px-4 sm:pb-10 pb-4 sm:w-1/3 w-full h-full">
                     <Link to={fields.slug}>
                         <SlantCard body={frontmatter.description} 
                         svgTextColor={`text-orange-500`}  
@@ -110,7 +111,7 @@ export default  ({data, location}) => {
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
-                <PageHeadText text="Y.A.R Center Programs" />
+                <PageHeadText text={intl.formatMessage({id:"programsHeadText"})} />
             </div>
         <div className="text-center">
             

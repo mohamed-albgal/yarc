@@ -2,7 +2,7 @@
   "home": "الصفحة الرئيسية",
   "about": "عن المركز",
   "programs": "برامج",
-  "events": "مشاريع",
+  "events": "اجتماعات",
   "youth": "شباب",
   "blogs": "شباب شباب",
   "aboutSubmenu": {
@@ -19,6 +19,19 @@
     "youthVoices": "آراء الشباب",
     "youthLeaders": "نجوم الشباب"
   },
+  "programsCategories": {
+    "all": "مجموع",
+    "education": "التعليم",
+    "community": "اجتماعي",
+    "english": "الإنجليزية",
+    "arabic": "العربية"
+  },
+  "eventsCategories": {
+    "upcoming": "جميع الاجتماعات",
+    "past": "الاجتماعات السابقة"
+  },
+  "programsHeadText": "برامج المركز",
+  "eventsHeadText": "اجتماعات المركز",
   "index": {
     "lang": "ar",
     "head": "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية",

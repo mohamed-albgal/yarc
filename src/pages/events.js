@@ -1,39 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { graphql, Link } from 'gatsby';
+import { Link, useIntl } from 'gatsby-plugin-intl';
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout';
 import PageHeadText from '../components/homogenous/PageHeadText'
 import SlantCard from '../components/homogenous/SlantCard';
 
-export const query = graphql`
-{
-    allMarkdownRemark(limit: 1000
-        sort: { order: DESC, fields: [frontmatter___startDate]}
-        filter: {fileAbsolutePath: {regex: "/(events)/"}}) {
-            edges {
-                node{
-                frontmatter{
-                    title
-                    description
-                    tags
-                    startDate(formatString: "MMMM DD, YYYY")
-                    endDate(formatString: "MMMM DD, YYYY")
-                    type
-                    eventImage{
-                        childImageSharp{
-                            fluid(maxWidth: 400) {
-                                ...GatsbyImageSharpFluid
-                              }
-                        }
-                    }
-                }
-                fields {
-                    slug
-                }
-            }
-        }
-    }
-}
-`
+
     /**come back to this idea, random color for cards, but not random on each visit */
     //"text-teal-400", "text-orange-200", "btext-reen-500", "text-purple-200", "text-red-800", "text-blue-800", "text-indigo-700"
     //"bg-teal-400", "bg-orange-200", "bg-green-500", "bg-purple-200", "bg-red-800", "bg-blue-800", "bg-indigo-700"
@@ -41,6 +13,7 @@ export const query = graphql`
     //const randomColor = () => colorList[Math.floor(Math.random() * colorList.length)];
     //get the array of nodes that contain the fields i need including the slug
 export default  ({ data }) => {
+    const intl = useIntl();
     const [upcoming, setUpcoming] = useState([]);
     const [passed, setPassed] = useState([]);
     const [selection, setSelection] = useState(0);
@@ -68,7 +41,10 @@ export default  ({ data }) => {
         return ([old, neu])
     }
     //based on the index of which key was selected, make cards for that key's value array of nodes
-    const barSelections = {"Upcoming Events" : upcoming, "Past Events": passed};
+    // const barSelections = { : upcoming, "Past Events": passed};
+    const barSelections = {}
+    barSelections[intl.formatMessage({id:"eventsCategories.upcoming"})] = upcoming;
+    barSelections[intl.formatMessage({id:"eventsCategories.past"})] = passed;
     const onBarSelect = (i) => setSelection(i);
     const makeCards =(i) => {
             const key = Object.keys(barSelections)[i];
@@ -98,7 +74,7 @@ export default  ({ data }) => {
     return(
         <Layout bgGradientColor="yellowBlue-topBottom">
         <div className=" sm:mt-0 sm:px-16 mx-4 sm:pt-10 mb-32 pt-32 " >
-                <PageHeadText text="Y.A.R Center Events" />
+                <PageHeadText text={intl.formatMessage({id:"eventsHeadText"})} />
         </div>
         <div className="text-center">
         </div>
@@ -141,3 +117,34 @@ export const PageBar = (props) => {
         </div>
     )
 }
+
+export const query = graphql`
+{
+    allMarkdownRemark(limit: 1000
+        sort: { order: DESC, fields: [frontmatter___startDate]}
+        filter: {fileAbsolutePath: {regex: "/(events)/"}}) {
+            edges {
+                node{
+                frontmatter{
+                    title
+                    description
+                    tags
+                    startDate(formatString: "MMMM DD, YYYY")
+                    endDate(formatString: "MMMM DD, YYYY")
+                    type
+                    eventImage{
+                        childImageSharp{
+                            fluid(maxWidth: 400) {
+                                ...GatsbyImageSharpFluid
+                              }
+                        }
+                    }
+                }
+                fields {
+                    slug
+                }
+            }
+        }
+    }
+}
+`
