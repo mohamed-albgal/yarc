@@ -41,14 +41,12 @@ export default ({data}) => {
   })
     return (
         <Layout bgGradientColor='youth'>
-        <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
+        <div className=" sm:mt-0 sm:pl-16 sm:pt-10 sm:mb-8 pt-32  " >
                 <PageHeadText text={intl.formatMessage({id:"youthHeadText"})} />
             </div>
-        <div className="py-32">
-          <div className="flex flex-wrap w-screen justify-center sm:mx-auto" >
-            {cards}
+        <div className="flex flex-wrap w-screen justify-center sm:mx-auto" >
+          {cards}
         </div>
-      </div>
           
         </Layout>
     )
