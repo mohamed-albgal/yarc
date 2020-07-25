@@ -81,9 +81,13 @@ const Navbar =  ({withHero, animate}) => {
     const noHero = "sm:relative"
     const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
     
+    const activeLang = `text-gray-100 sm:text-lg text-sm font-bold`
+    const langButton = `w-full py-1 sm:text-sm text-xs tracking-widest`
+    const disActiveLang = ` text-gray-600 font-hairline`
+    
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
-            <nav className={`sm:flex w-full  sm:px-10 sm:pb-1  sm:items-center sm:justify-between`}>
+            <nav className={`sm:flex w-full   sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between h-auto items-center">
                     {/*left*/}
                     <div className="sm:pr-4 px-1 py-2 sm:flex-shrink-0 opacity-100">
@@ -92,9 +96,14 @@ const Navbar =  ({withHero, animate}) => {
                         </Link>
                     </div>
                     {/*right*/}
-                    <button onClick={() => changeLocale(intl.locale === 'ar' ? 'en' : 'ar', null)} className="sm:w-10">
-                            <FaArchway className="text-red-600 text-3xl ml-8" />
+                    <div className="relative h-full border-l-2 border-gray-600 inline-block sm:inset-0 leading-4 sm:ml-0 -ml-24">
+                        <button onClick={() => changeLocale('ar', null)} className={`${langButton} ${intl.locale === 'en' ? activeLang:disActiveLang} font-xl`}>
+                        العربية
                         </button>
+                        <button onClick={() => changeLocale('en',null)} className={`${langButton} ${intl.locale === 'ar' ? activeLang:disActiveLang}`}>
+                            English
+                        </button>
+                    </div>
                     <div className="sm:flex-shrink items-center">
                          
                         <button onClick={e=> hamburgerClick(e)} type="button" className="sm:hidden block text-white">
