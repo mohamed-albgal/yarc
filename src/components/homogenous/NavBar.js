@@ -88,7 +88,7 @@ const Navbar =  ({withHero, animate}) => {
                     {/*left*/}
                     <div className="sm:px-4 sm:flex-shrink-0 pt-1 opacity-100">
                         <Link to="/">
-                            <img className={`${animate && "tracking-in-expand-fwd-bottom"} sm:h-48 md:h-40 h-24`}  src={logo} alt="YARC LOGO"/>
+                            <img className={`${animate && "tracking-in-expand-fwd-bottom"} sm:h-32 h-24`}  src={logo} alt="YARC LOGO"/>
                         </Link>
                     </div>
                     {/*right*/}

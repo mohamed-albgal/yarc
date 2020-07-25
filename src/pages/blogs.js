@@ -1,8 +1,8 @@
-
 import React from 'react'
 import Layout from '../components/Layout'
 import PageHeadText from '../components/homogenous/PageHeadText'
-import { graphql, Link} from 'gatsby'
+import { graphql} from 'gatsby'
+import { Link, useIntl} from 'gatsby-plugin-intl'
 import Img from 'gatsby-image'
 import defaultImage from '../images/yarc_logo_icon.svg'
 
@@ -39,6 +39,7 @@ export const query = graphql`
 
 
 export default ({data}) => {
+    const intl = useIntl();
     const nodes = data.allMarkdownRemark.edges;
     const allBlogs = nodes &&  nodes.map(({ node }, i) => {
         const blogImage = node.frontmatter.blogImg;
@@ -58,8 +59,8 @@ export default ({data}) => {
 
     return (
         <Layout bgGradientColor={"purple-bottom"}>
-            <div className="sm:mt-0 sm:pt-10 mb-20 pt-32">
-                <PageHeadText text={"Youth Voices"} />
+            <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
+                <PageHeadText text={intl.formatMessage({id:"blogHeadText"})} />
             </div>
             <div className="mx-auto">
                 <div className="sm:flex justify-center mx-4">

@@ -55,10 +55,12 @@ export default  ({data, location}) => {
     catsArray[ar] = [];
     catsArray[comm] = [];
     const [nodeCategories, setNodeCategories] = useState(catsArray);
-    const [selection, setSelection ] = useState(0);
+    const [selection, setSelection ] = useState(1);
+    
     useEffect( () => {
         splitData(data.allMarkdownRemark.edges)
-    }, [intl.locale])
+        console.log("effect ran!", selection, nodeCategories)
+    }, [])
     useEffect( () => {
         let sel = location.state && location.state.selection;
         setSelection(sel || 0)
@@ -67,24 +69,24 @@ export default  ({data, location}) => {
     const splitData = (nodes) => {
         nodes.forEach( ( { node }) => {
             let cat = node.frontmatter.category.toLowerCase()
+            catsArray[all].push(node);
             if (cat === 'education'){
                 catsArray[ed].push(node)
             }else if (cat === 'arabic'){
                 catsArray[ar].push(node)
             }else if (cat === 'english') {
                 catsArray[eng].push(node);
-            }else {
+            }else if (cat ==='community') {
                 catsArray[comm].push(node)
             }
         });
-        catsArray[all] =  [ ...catsArray[ed], ...catsArray[comm], ...catsArray[eng], ...catsArray[ar]]
-        console.log(catsArray);
         setNodeCategories(catsArray);
     }
-    const makePrograms = (selection) => {
-        const key = Object.keys(nodeCategories)[selection];
-        console.log(key);
+    const makePrograms = (sel) => {
+        const key = Object.keys(nodeCategories)[sel];
+        console.log('making progs key is:', key);
         const nodes = nodeCategories[key];
+        console.log('making progs', nodes);
         return (
             nodes.map( ( { frontmatter, fields }, i ) => {
             const tagList = frontmatter.tags && frontmatter.tags.split(" ");
@@ -118,7 +120,7 @@ export default  ({data, location}) => {
             <PageBar {...barProps} externalSelection={selection} />
         </div>
         <div className="flex flex-wrap mt-10 sm:px-12 z-10 relative">
-            {makePrograms(selection)}        
+            { makePrograms(selection) }       
         </div>
         </Layout>
     )

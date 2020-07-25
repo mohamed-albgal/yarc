@@ -1,8 +1,10 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import { Link, useIntl } from 'gatsby-plugin-intl'
 import defaultPhoto from '../images/default-profile.png'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
+import PageHeadText from '../components/homogenous/PageHeadText'
 
 export const query = graphql`
 {
@@ -26,6 +28,7 @@ export const query = graphql`
 }`
 
 export default ({data}) => {
+  const intl = useIntl();
   const cards = data.allMarkdownRemark.edges.map( ({ node} , i) => {
     const { excerpt, fields, } = node;
     const { leader, image, bio} = node.frontmatter
@@ -38,6 +41,9 @@ export default ({data}) => {
   })
     return (
         <Layout bgGradientColor='youth'>
+        <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
+                <PageHeadText text={intl.formatMessage({id:"youthHeadText"})} />
+            </div>
         <div className="py-32">
           <div className="flex flex-wrap w-screen justify-center sm:mx-auto" >
             {cards}
