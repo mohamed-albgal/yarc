@@ -275,7 +275,6 @@ exports.createPages = async ({graphql, actions}) => {
     }
     result.data.indexPages.edges.forEach( ({ node }) => {
       dumpToIntl("index", node.frontmatter)
-      console.log(node.frontmatter)
     });
     result.data.missionPages.edges.forEach( ({ node}) => {
       dumpToIntl("mission", node.frontmatter)

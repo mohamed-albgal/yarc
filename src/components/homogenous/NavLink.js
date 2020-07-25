@@ -26,11 +26,6 @@ const Navlink = ({text, subMenu, linkTo, linkState, setNavUp }) => {
                         </Link>))}
                     </div>}
                 </button>
-                {/*creates an invisible overlay that, when clicked, will close the dropdown, takes up entire w and h */}
-                
-                
-            
-            
                 </div> )
             :
             <Link to={linkTo} state={linkState}>

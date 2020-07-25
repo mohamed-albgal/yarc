@@ -26,7 +26,7 @@ export default ({mainText, caption, heroImage}) => {
           WebkitBackgroundSize: 'cover',
           MozBackgroundSize:"cover",
           }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-50 bg-indigo-300"></span> 
+            <span id="blackOverlay" className="w-full h-full absolute opacity-50 bg-blue-300"></span> 
       </div>
       <div className="container relative mx-auto">
           <div className="items-center flex flex-wrap">
