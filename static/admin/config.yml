@@ -105,16 +105,21 @@ collections:
       - { label: 'Short Bio', name: 'bio', widget: 'string', default: "", required: false, hint: "Optional, if not bio is entered, the first 50 words from are taken from the long bio below." }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'leader'}
+
+# SITE PAGES ENLGISH BEGIN HERE  
   - name: pages
     label: "Site Pages"
     editor:
       preview: true
     files:
+# TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - TEAM - 
       - file: src/pages/about/team.md
         label: "Team Page"
         name: team
         fields:
           - { label: 'Main Text', name: 'head', widget: 'string'}
+          - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: en}
+          - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
           - { label: 'Sub Text', name: 'caption', widget: 'string', required: false, default: ""}
           - { label: 'Background Image', name: 'heroImage', widget: 'image'}
           - label: Cards
@@ -153,11 +158,14 @@ collections:
                 - { label: Role, name: role, widget: string }
                 - { label: Image, name: image, widget: image }
                 - { label: Bio, name: bio, widget: text }
+# MISSION - MISSION - MISSION - MISSION - MISSION - MISSION - MISSION - MISSION - MISSION - MISSION - 
       - file: src/pages/about/mission.md
         label: "Mission & Vision Page"
         name: "mission"
         fields:
           - { label: 'Main Text', name: 'head', widget: 'string'}
+          - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: en}
+          - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
           - { label: 'Sub Text', name: 'caption', widget: 'string', required: false, default: ""}
           - { label: 'Background Image', name: 'bgImage', widget: 'image'}
           - { label: 'Mission Heading', name: 'missionHead', widget: 'string'}
@@ -166,11 +174,14 @@ collections:
           - { label: 'Vision Statement', name: 'vision', widget: 'string'}
           - { label: 'Goals Heading', name: 'goalsHead', widget: 'string'}
           - { label: 'Goals Statement', name: 'goals', widget: 'string'}
+# HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME -HOME - 
       - file: src/pages/index.md
         label: "Home Page"
         name: index
         fields:
           - { label: "Background Image", name: bgImage, widget: image }    
+          - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: en}
+          - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
           - { label: 'Main Text', name: head, widget: 'string'}
           - { label: "Sub Text", name: caption, widget: 'string' }
           - label: "Icon Cards" 
@@ -311,6 +322,228 @@ collections:
                   - {label: Main Text, name: head, widget: string}
                   - {label: Sub Text, name: caption, widget: string}
                   - {label: Facebook Link, name: fbLink, widget: string}
+# ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME
+
+# ARABIC SITE PAGES
+# SITE PAGES ENLGISH BEGIN HERE  
+  - name: arabic-pages
+    label: "Arabic Site Pages"
+    editor:
+      preview: true
+    files:
+# TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - 
+      - file: src/pages/about/team.ar.md
+        label: "Team Page"
+        name: team
+        fields:
+          - { label: 'Main Text', name: 'head', widget: 'string'}
+          - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: ar}
+          - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
+          - { label: 'Sub Text', name: 'caption', widget: 'string', required: false, default: ""}
+          - { label: 'Background Image', name: 'heroImage', widget: 'image'}
+          - label: Cards
+            name: memberCards
+            widget: object
+            fields:
+              - label: Member 1
+                name: memberCard1
+                widget: object
+                fields:
+                - { label: Name, name: member, widget: string } 
+                - { label: Role, name: role, widget: string }
+                - { label: Image, name: image, widget: image }
+                - { label: Bio, name: bio, widget: text}
+              - label: Member 2
+                name: memberCard2
+                widget: object
+                fields:
+                - { label: Name, name: member, widget: string } 
+                - { label: Role, name: role, widget: string }
+                - { label: Image, name: image, widget: image }
+                - { label: Bio, name: bio, widget: text}
+              - label: Member 3
+                name: memberCard3
+                widget: object
+                fields:
+                - { label: Name, name: member, widget: string } 
+                - { label: Role, name: role, widget: string }
+                - { label: Image, name: image, widget: image }
+                - { label: Bio, name: bio, widget: text}
+              - label: Member 4
+                name: memberCard4
+                widget: object
+                fields:
+                - { label: Name, name: member, widget: string } 
+                - { label: Role, name: role, widget: string }
+                - { label: Image, name: image, widget: image }
+                - { label: Bio, name: bio, widget: text }
+# MISSION(AR) - MISSION(AR) - MISSION(AR) - MISSION(AR) - MISSION(AR) - MISSION(AR) - 
+      - file: src/pages/about/mission.md
+        label: "Mission & Vision Page"
+        name: "mission"
+        fields:
+          - { label: 'Main Text', name: 'head', widget: 'string'}
+          - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: ar}
+          - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
+          - { label: 'Sub Text', name: 'caption', widget: 'string', required: false, default: ""}
+          - { label: 'Background Image', name: 'bgImage', widget: 'image'}
+          - { label: 'Mission Heading', name: 'missionHead', widget: 'string'}
+          - { label: 'Mission Statement', name: 'mission', widget: 'string'}
+          - { label: 'Vision Heading', name: 'visionHead', widget: 'string'}
+          - { label: 'Vision Statement', name: 'vision', widget: 'string'}
+          - { label: 'Goals Heading', name: 'goalsHead', widget: 'string'}
+          - { label: 'Goals Statement', name: 'goals', widget: 'string'}
+# HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - 
+      - file: src/pages/index.md
+        label: "Home Page"
+        name: index
+        fields:
+          - { label: "Background Image", name: bgImage, widget: image }    
+          - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: ar}
+          - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
+          - { label: 'Main Text', name: head, widget: 'string'}
+          - { label: "Sub Text", name: caption, widget: 'string' }
+          - label: "Icon Cards" 
+            name: section1
+            widget: object
+            fields:
+              - label: "Left Card" 
+                name: card1 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+              - label: "Center Card" 
+                name: card2 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+              - label: "Right Card" 
+                name: card3 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+          - label: "Events Section" 
+            name: section2
+            widget: object
+            fields:
+              - label: "Left Text" 
+                name: side
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+              - label: "Slant Card" 
+                name: slantCard 
+                widget: object 
+                fields:
+                  - {label: "Main Text", name: head, widget: string}
+                  - {label: "Sub Text", name: body, widget: string}
+                  - {label: "Image", name: image, widget: image}
+              - label: "Link Text"
+                name: linkText
+                widget: string
+          - label: Programs Section
+            name: section3
+            widget: object
+            fields:
+              - label: Side Text
+                name: side
+                widget: object
+                fields:
+                  - { label: "Main Text", name: head, widget: string}
+                  - { label: "Sub Text", name: body, widget: string}
+              - { label: Image, name: image, widget: image }
+              - { label: Link Text, name: linkText, widget: string }
+          - label: Team Section
+            name: section4
+            widget: object
+            fields:
+              - { label: Main , name: head, widget: string }
+              - { label: Sub Text, name: caption, widget: string }
+              - label: Staff 1
+                name: card1
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+              - label: Staff 2
+                name: card2
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+              - label: Staff 3
+                name: card3
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+              - label: Staff 4
+                name: card4
+                widget: object
+                fields:
+                  - { label: Name, name: member, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: Image, name: image, widget: image }
+          - label: Form Section
+            name: section5
+            widget: object
+            fields:
+              - { label: Main Text, name: head, widget: string}
+              - label: Call 1 
+                name: card1
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: body, widget: string}
+              - label: Call 2 
+                name: card2
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: body, widget: string}
+              - label: Call 3 
+                name: card3
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: body, widget: string}
+              - label: Form Text
+                name: form
+                widget: object
+                fields:
+                  - { label: Heading, name: head, widget: string}
+                  - { label: Caption, name: caption, widget: string}
+                  - { label: Name Label, name: nameLabel, widget: string}
+                  - { label: Email Lable, name: emailLabel, widget: string}
+                  - { label: Message Text, name: messageLabel, widget: string}
+                  - { label: Button Text, name: sendLabel, widget: string}
+              - label: Contact Section
+                name: contact
+                widget: object
+                fields:
+                  - {label: Main Text, name: head, widget: string}
+                  - {label: Address Label, name: addressLabel, widget: string}
+                  - {label: Phone Label, name: phoneLabel, widget: string}
+                  - {label: Phone Number, name: phone, widget: string}
+                  - {label: Email Label, name: emailLabel, widget: string}
+                  - {label: Email, name: email, widget: string}
+              - label: Social Section
+                name: social
+                widget: object
+                fields:
+                  - {label: Main Text, name: head, widget: string}
+                  - {label: Sub Text, name: caption, widget: string}
+                  - {label: Facebook Link, name: fbLink, widget: string}
+
+                        
+
                   
 
                   
