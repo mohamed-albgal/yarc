@@ -29,7 +29,7 @@ export default  ({ data }) => {
         nodes.forEach( ( { node } )  => {
             const currentDate = Date.now()
             const endDate = new Date(node.frontmatter.startDate);
-            const isFutureEvent = endDate > currentDate
+            const isFutureEvent = endDate >= currentDate
             
             if (isFutureEvent) {
                 neu.push(node);
@@ -93,10 +93,10 @@ export const PageBar = (props) => {
       setSelected(props.externalSelection)  
     },[props.externalSelection])
     const selections = props.barSelections;
-    const divStyle = props.divStyle || "w-1/2 text-center inline-block border-b border-gray-900 hover:border-yellow-100"
-    const selectedDivStyle = props.selectedDivStyle ||" w-1/2 text-center inline-block border-b-2 border-yellow-500 ";
-    const buttonStyle =props.buttonStyle || "font-hairline sm:text-xl w-full text-xs text-black hover:text-yellow-100"
-    const selectedButtonStyle = props.selectedButtonStyle ||"tracking-wider sm:text-xl w-full text-xs font-thin text-yellow-500 "
+    const divStyle = props.divStyle || "w-1/2 text-center inline-block border-b border-green-700 hover:border-yellow-700"
+    const selectedDivStyle = props.selectedDivStyle ||" w-1/2 text-center inline-block border-b-2 border-green-900 ";
+    const buttonStyle =props.buttonStyle || "font-hairline sm:text-xl w-full text-xs text-black hover:text-yellow-700"
+    const selectedButtonStyle = props.selectedButtonStyle ||"tracking-wider sm:text-xl w-full text-xs font-normal text-green-900 "
     
     
     const showSelections = selections.map( (elt, i) => {
