@@ -93,9 +93,9 @@ export const PageBar = (props) => {
       setSelected(props.externalSelection)  
     },[props.externalSelection])
     const selections = props.barSelections;
-    const divStyle = props.divStyle || "w-1/2 text-center inline-block border-b border-green-600 hover:border-yellow-100"
+    const divStyle = props.divStyle || "w-1/2 text-center inline-block border-b border-gray-900 hover:border-yellow-100"
     const selectedDivStyle = props.selectedDivStyle ||" w-1/2 text-center inline-block border-b-2 border-yellow-500 ";
-    const buttonStyle =props.buttonStyle || "font-hairline sm:text-xl w-full text-xs text-green-600 hover:text-yellow-100"
+    const buttonStyle =props.buttonStyle || "font-hairline sm:text-xl w-full text-xs text-black hover:text-yellow-100"
     const selectedButtonStyle = props.selectedButtonStyle ||"tracking-wider sm:text-xl w-full text-xs font-thin text-yellow-500 "
     
     

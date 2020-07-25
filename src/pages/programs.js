@@ -126,9 +126,9 @@ export default  ({data, location}) => {
 }
 
 const barStyles = {
-    divStyle: `w-1/5 text-center inline-block border-b border-green-400 hover:border-yellow-100`,
+    divStyle: `w-1/5 text-center inline-block border-b border-gray-900 hover:border-yellow-100`,
     selectedDivStyle: `w-1/5 text-center inline-block border-b-2 border-yellow-500`,
-    buttonStyle: `font-hairline sm:text-xl w-full text-xs text-green-700 hover:text-yellow-100`,
+    buttonStyle: `font-hairline sm:text-xl w-full text-xs text-black hover:text-yellow-100`,
     selectedButtonStyle: ` sm:text-xl w-full text-xs tracking-wider font-thin text-yellow-500`,
 
 }
