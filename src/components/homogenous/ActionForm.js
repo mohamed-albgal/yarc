@@ -1,7 +1,43 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { useIntl } from "gatsby-plugin-intl";
+import PageHeadText from './PageHeadText';
 
-//see https://www.gatsbyjs.org/docs/building-a-contact-form/ for linking form
+//https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
 export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel}) => {
+    const [name ,setName] = useState("");
+    const [email ,setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    const [sent, setSent] = useState(false);
+    const intl = useIntl();
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
+    const handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", name, email, message })
+        })
+          .then(() => setSent(true))
+        .catch(error => console.log(error));
+  
+        e.preventDefault();
+      };
+      const ThanksPrompt = () => {
+
+        const thank = intl.formatMessage({id:"contactThank"})
+          return (
+              <div className="container" >
+                <div className="shadow-xl bg-white p-8 sm:text-2xl text-lg">
+                    {thank}
+                </div>
+                <PageHeadText />
+                
+              </div>
+          )
+      }
     return (
         <div className="relative block py-24 lg:pt-0 jigsaw-bg bg-fixed">
             <div className="container mx-auto px-4">
@@ -15,7 +51,8 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                 <p className="leading-relaxed mt-1 mb-4 text-gray-600">
                                     {caption}
                                 </p>
-                                <form name="contact" method="POST" data-netlify="true">
+                                {sent ? <ThanksPrompt /> :
+                                    <form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true">
                                     <div className="relative w-full mb-3 mt-8">
                                         <label
                                         className="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -24,6 +61,7 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                         {nameLabel}
                                         </label>
                                         <input
+                                        onChange={e => setName(e.target.value)}
                                         type="text"
                                         className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                                         placeholder="Full Name"
@@ -40,6 +78,7 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                         </label>
                                         <input
                                         type="email"
+                                        onChange={e => setEmail(e.target.value)}
                                         className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                                         placeholder="Email"
                                         style={{ transition: "all .15s ease" }}
@@ -54,6 +93,7 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                         {messageLabel}
                                         </label>
                                         <textarea
+                                        onChange={e => setMessage(e.target.value)}
                                         rows="4"
                                         cols="80"
                                         className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
@@ -69,7 +109,7 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                             {sendLabel}
                                         </button>
                                     </div>
-                                </form>
+                                </form>}
                             </div>
                         </div>
                     </div>
