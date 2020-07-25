@@ -323,223 +323,223 @@ collections:
                   - {label: Sub Text, name: caption, widget: string}
                   - {label: Facebook Link, name: fbLink, widget: string}
 # ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME -ENDHOME
+# END ENGLISH SITE PAGES END ENGLISH SITE PAGES END ENGLISH SITE PAGES END ENGLISH SITE PAGES END ENGLISH SITE PAGES
 
 # ARABIC SITE PAGES
-# SITE PAGES ENLGISH BEGIN HERE  
   - name: arabic-pages
     label: "Arabic Site Pages"
     editor:
       preview: true
     files:
-# TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - 
+# TEAM(AR) - TEAM(ARABIC) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - TEAM(AR) - 
       - file: src/pages/about/team.ar.md
-        label: "Team Page"
+        label: "Team Page (عربى)"
         name: team
         fields:
-          - { label: 'Main Text', name: 'head', widget: 'string'}
+          - { label: 'Main Text (عربى)', name: 'head', widget: 'string'}
           - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: ar}
           - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
-          - { label: 'Sub Text', name: 'caption', widget: 'string', required: false, default: ""}
+          - { label: 'Sub Text (عربى)', name: 'caption', widget: 'string', required: false, default: ""}
           - { label: 'Background Image', name: 'heroImage', widget: 'image'}
           - label: Cards
             name: memberCards
             widget: object
             fields:
-              - label: Member 1
+              - label: Member 1 (عربى)
                 name: memberCard1
                 widget: object
                 fields:
-                - { label: Name, name: member, widget: string } 
-                - { label: Role, name: role, widget: string }
+                - { label: Name(عربى), name: member, widget: string } 
+                - { label: Role(عربى), name: role, widget: string }
                 - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: text}
-              - label: Member 2
+                - { label: Bio(عربى), name: bio, widget: text}
+              - label: Member 2(عربى)
                 name: memberCard2
                 widget: object
                 fields:
-                - { label: Name, name: member, widget: string } 
-                - { label: Role, name: role, widget: string }
+                - { label: Name (عربى), name: member, widget: string } 
+                - { label: Role (عربى), name: role, widget: string }
                 - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: text}
-              - label: Member 3
+                - { label: Bio (عربى), name: bio, widget: text}
+              - label: Member 3 (عربى)
                 name: memberCard3
                 widget: object
                 fields:
-                - { label: Name, name: member, widget: string } 
-                - { label: Role, name: role, widget: string }
+                - { label: Name (عربى), name: member, widget: string } 
+                - { label: Role (عربى), name: role, widget: string }
                 - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: text}
+                - { label: Bio (عربى), name: bio, widget: text}
               - label: Member 4
                 name: memberCard4
                 widget: object
                 fields:
-                - { label: Name, name: member, widget: string } 
-                - { label: Role, name: role, widget: string }
-                - { label: Image, name: image, widget: image }
-                - { label: Bio, name: bio, widget: text }
+                - { label: Name (عربى), name: member, widget: string } 
+                - { label: Role (عربى), name: role, widget: string }
+                - { label: Image (عربى), name: image, widget: image }
+                - { label: Bio (عربى), name: bio, widget: text }
 # MISSION(AR) - MISSION(AR) - MISSION(AR) - MISSION(AR) - MISSION(AR) - MISSION(AR) - 
-      - file: src/pages/about/mission.md
-        label: "Mission & Vision Page"
+      - file: src/pages/about/mission.ar.md
+        label: "Mission & Vision Page (عربى)"
         name: "mission"
         fields:
-          - { label: 'Main Text', name: 'head', widget: 'string'}
+          - { label: 'Main Text (عربى)', name: 'head', widget: 'string'}
           - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: ar}
           - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
-          - { label: 'Sub Text', name: 'caption', widget: 'string', required: false, default: ""}
+          - { label: 'Sub Text (عربى)', name: 'caption', widget: 'string', required: false, default: ""}
           - { label: 'Background Image', name: 'bgImage', widget: 'image'}
-          - { label: 'Mission Heading', name: 'missionHead', widget: 'string'}
-          - { label: 'Mission Statement', name: 'mission', widget: 'string'}
-          - { label: 'Vision Heading', name: 'visionHead', widget: 'string'}
-          - { label: 'Vision Statement', name: 'vision', widget: 'string'}
-          - { label: 'Goals Heading', name: 'goalsHead', widget: 'string'}
-          - { label: 'Goals Statement', name: 'goals', widget: 'string'}
+          - { label: 'Mission Heading (عربى)', name: 'missionHead', widget: 'string'}
+          - { label: 'Mission Statement (عربى)', name: 'mission', widget: 'string'}
+          - { label: 'Vision Heading (عربى)', name: 'visionHead', widget: 'string'}
+          - { label: 'Vision Statement (عربى)', name: 'vision', widget: 'string'}
+          - { label: 'Goals Heading (عربى)', name: 'goalsHead', widget: 'string'}
+          - { label: 'Goals Statement (عربى)', name: 'goals', widget: 'string'}
 # HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - HOME(AR) - 
-      - file: src/pages/index.md
-        label: "Home Page"
+      - file: src/pages/index.ar.md
+        label: "Home Page (عربى)"
         name: index
         fields:
           - { label: "Background Image", name: bgImage, widget: image }    
           - { label: 'Lang', name: 'lang', widget: 'hidden', defualt: ar}
           - { label: 'Type', name: 'type', widget: 'hidden', defualt: site_page}
-          - { label: 'Main Text', name: head, widget: 'string'}
-          - { label: "Sub Text", name: caption, widget: 'string' }
-          - label: "Icon Cards" 
+          - { label: 'Main Text (عربى)', name: head, widget: 'string'}
+          - { label: "Sub Text (عربى)", name: caption, widget: 'string' }
+          - label: "Icon Cards (عربى)" 
             name: section1
             widget: object
             fields:
-              - label: "Left Card" 
+              - label: "Left Card (عربى)" 
                 name: card1 
                 widget: object 
                 fields:
-                  - {label: "Main Text", name: head, widget: string}
-                  - {label: "Sub Text", name: body, widget: string}
-              - label: "Center Card" 
+                  - {label: "Main Text (عربى)", name: head, widget: string}
+                  - {label: "Sub Text (عربى)", name: body, widget: string}
+              - label: "Center Card (عربى)" 
                 name: card2 
                 widget: object 
                 fields:
-                  - {label: "Main Text", name: head, widget: string}
-                  - {label: "Sub Text", name: body, widget: string}
-              - label: "Right Card" 
+                  - {label: "Main Text (عربى)", name: head, widget: string}
+                  - {label: "Sub Text (عربى)", name: body, widget: string}
+              - label: "Right Card (عربى)" 
                 name: card3 
                 widget: object 
                 fields:
-                  - {label: "Main Text", name: head, widget: string}
-                  - {label: "Sub Text", name: body, widget: string}
-          - label: "Events Section" 
+                  - {label: "Main Text (عربى)", name: head, widget: string}
+                  - {label: "Sub Text (عربى)", name: body, widget: string}
+          - label: "Events Section (عربى)" 
             name: section2
             widget: object
             fields:
-              - label: "Left Text" 
+              - label: "Left Text (عربى)" 
                 name: side
                 widget: object 
                 fields:
-                  - {label: "Main Text", name: head, widget: string}
-                  - {label: "Sub Text", name: body, widget: string}
-              - label: "Slant Card" 
+                  - {label: "Main Text (عربى)", name: head, widget: string}
+                  - {label: "Sub Text (عربى)", name: body, widget: string}
+              - label: "Slant Card (عربى)" 
                 name: slantCard 
                 widget: object 
                 fields:
-                  - {label: "Main Text", name: head, widget: string}
-                  - {label: "Sub Text", name: body, widget: string}
-                  - {label: "Image", name: image, widget: image}
-              - label: "Link Text"
+                  - {label: "Main Text (عربى)", name: head, widget: string}
+                  - {label: "Sub Text (عربى)", name: body, widget: string}
+                  - {label: "Image(عربى)", name: image, widget: image}
+              - label: "Link Text(عربى)"
                 name: linkText
                 widget: string
-          - label: Programs Section
+          - label: Programs Section (عربى)
             name: section3
             widget: object
             fields:
-              - label: Side Text
+              - label: Side Text(عربى)
                 name: side
                 widget: object
                 fields:
-                  - { label: "Main Text", name: head, widget: string}
-                  - { label: "Sub Text", name: body, widget: string}
+                  - { label: "Main Text(عربى)", name: head, widget: string}
+                  - { label: "Sub Text(عربى)", name: body, widget: string}
               - { label: Image, name: image, widget: image }
-              - { label: Link Text, name: linkText, widget: string }
-          - label: Team Section
+              - { label: Link Text(عربى), name: linkText, widget: string }
+          - label: Team Section(عربى)
             name: section4
             widget: object
             fields:
-              - { label: Main , name: head, widget: string }
-              - { label: Sub Text, name: caption, widget: string }
-              - label: Staff 1
+              - { label: Main (عربى), name: head, widget: string }
+              - { label: Sub Text(عربى), name: caption, widget: string }
+              - label: Staff 1(عربى)
                 name: card1
                 widget: object
                 fields:
-                  - { label: Name, name: member, widget: string }
-                  - { label: "Title", name: title, widget: string }
-                  - { label: Image, name: image, widget: image }
-              - label: Staff 2
+                  - { label: Name(عربى), name: member, widget: string }
+                  - { label: "Title(عربى)", name: title, widget: string }
+                  - { label: Image(عربى), name: image, widget: image }
+              - label: Staff 2(عربى)
                 name: card2
                 widget: object
                 fields:
-                  - { label: Name, name: member, widget: string }
-                  - { label: "Title", name: title, widget: string }
+                  - { label: Name(عربى), name: member, widget: string }
+                  - { label: "Title(عربى)", name: title, widget: string }
                   - { label: Image, name: image, widget: image }
-              - label: Staff 3
+              - label: Staff 3(عربى)
                 name: card3
                 widget: object
                 fields:
-                  - { label: Name, name: member, widget: string }
-                  - { label: "Title", name: title, widget: string }
+                  - { label: Name(عربى), name: member, widget: string }
+                  - { label: "Title(عربى)", name: title, widget: string }
                   - { label: Image, name: image, widget: image }
-              - label: Staff 4
+              - label: Staff 4(عربى)
                 name: card4
                 widget: object
                 fields:
-                  - { label: Name, name: member, widget: string }
-                  - { label: "Title", name: title, widget: string }
-                  - { label: Image, name: image, widget: image }
-          - label: Form Section
+                  - { label: Name(عربى), name: member, widget: string }
+                  - { label: "Title(عربى)", name: title, widget: string }
+                  - { label: Image(عربى), name: image, widget: image }
+          - label: Form Section(عربى)
             name: section5
             widget: object
             fields:
-              - { label: Main Text, name: head, widget: string}
-              - label: Call 1 
+              - { label: Main Text(عربى), name: head, widget: string}
+              - label: Call 1 (عربى)
                 name: card1
                 widget: object
                 fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: body, widget: string}
-              - label: Call 2 
+                  - { label: Heading(عربى), name: head, widget: string}
+                  - { label: Caption(عربى), name: body, widget: string}
+              - label: Call 2 (عربى)
                 name: card2
                 widget: object
                 fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: body, widget: string}
-              - label: Call 3 
+                  - { label: Heading(عربى), name: head, widget: string}
+                  - { label: Caption(عربى), name: body, widget: string}
+              - label: Call 3 (عربى)
                 name: card3
                 widget: object
                 fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: body, widget: string}
-              - label: Form Text
+                  - { label: Heading(عربى), name: head, widget: string}
+                  - { label: Caption(عربى), name: body, widget: string}
+              - label: Form Text(عربى)
                 name: form
                 widget: object
                 fields:
-                  - { label: Heading, name: head, widget: string}
-                  - { label: Caption, name: caption, widget: string}
-                  - { label: Name Label, name: nameLabel, widget: string}
-                  - { label: Email Lable, name: emailLabel, widget: string}
-                  - { label: Message Text, name: messageLabel, widget: string}
-                  - { label: Button Text, name: sendLabel, widget: string}
-              - label: Contact Section
+                  - { label: Heading(عربى), name: head, widget: string}
+                  - { label: Caption(عربى), name: caption, widget: string}
+                  - { label: Name Label(عربى), name: nameLabel, widget: string}
+                  - { label: Email Lable(عربى), name: emailLabel, widget: string}
+                  - { label: Message Text(عربى), name: messageLabel, widget: string}
+                  - { label: Button Text(عربى), name: sendLabel, widget: string}
+              - label: Contact Section(عربى)
                 name: contact
                 widget: object
                 fields:
-                  - {label: Main Text, name: head, widget: string}
-                  - {label: Address Label, name: addressLabel, widget: string}
-                  - {label: Phone Label, name: phoneLabel, widget: string}
-                  - {label: Phone Number, name: phone, widget: string}
-                  - {label: Email Label, name: emailLabel, widget: string}
-                  - {label: Email, name: email, widget: string}
-              - label: Social Section
+                  - {label: Main Text(عربى), name: head, widget: string}
+                  - {label: Address Label(عربى), name: addressLabel, widget: string}
+                  - {label: Phone Label(عربى), name: phoneLabel, widget: string}
+                  - {label: Phone Number(عربى), name: phone, widget: string}
+                  - {label: Email Label(عربى), name: emailLabel, widget: string}
+                  - {label: Email(عربى), name: email, widget: string}
+              - label: Social Section(عربى)
                 name: social
                 widget: object
                 fields:
-                  - {label: Main Text, name: head, widget: string}
-                  - {label: Sub Text, name: caption, widget: string}
+                  - {label: Main Text(عربى), name: head, widget: string}
+                  - {label: Sub Text(عربى), name: caption, widget: string}
                   - {label: Facebook Link, name: fbLink, widget: string}
 
                         
