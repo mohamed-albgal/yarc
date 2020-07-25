@@ -87,7 +87,7 @@ const Navbar =  ({withHero, animate}) => {
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
-            <nav className={`sm:flex w-full   sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
+            <nav className={`sm:flex w-full sm:h-auto ${!closed && 'h-screen' } sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between h-auto items-center">
                     {/*left*/}
                     <div className="sm:pr-4 px-1 py-2  opacity-100">
