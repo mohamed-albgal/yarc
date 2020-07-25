@@ -8,6 +8,7 @@ import Section4Content from '../components/Section4Content'
 import Hero from "../components/homogenous/Hero"
 
 const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, section3, section4, section5 }) => {
+  console.log(section5)
   return(
     <Layout navWithHero animate bgGradientColor="blue-bottom" section5={section5}>
       <main style={{backgroundPositionY:'10%'}}>

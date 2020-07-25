@@ -1,5 +1,7 @@
 ---
 bgImage: ../images/uploads/tables2.jpg
+title: index
+type: site_page
 head: Yemeni American Resource Center
 caption: A Space For Yemeni-American Men And Women, Young and Old to Come
   Together And Grow!
@@ -56,6 +58,34 @@ section4:
     member: Fatima Ali
     title: Administrative Assistant
     image: ../images/uploads/default-profile.png
-title: index
-type: site_page
+section5:
+  head: "Form Head"
+  card1:
+    head: "hh-fooooo"
+    body: "body"
+  card2:
+    head: "hh"
+    body: "body"
+  card3:
+    head: "hh"
+    body: "body"
+  form:
+    head: "forfor"
+    caption: "text"
+    nameLabel: "Name"
+    emailLabel: "Email"
+    messageLabel: "Message"
+    sendLabel: "Send"
+  contact:
+    head: Contact
+    addressLabel: Address
+    address: 8001 Capwell Dr Oakland CA 94621
+    phoneLabel: Phone
+    phone: 510-200-4175
+    emailLabel: Email
+    email: info@yarcenter.org
+  social:
+    head: Let's keep in touch!
+    caption: Find us on any of these platforms, we'd love to connect!
+    fbLink: "https://www.facebook.com/Yemeni-American-Youth-Center-%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B4%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-110243897202862/"
 ---

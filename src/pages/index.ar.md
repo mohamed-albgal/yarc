@@ -50,4 +50,34 @@ section4:
     member: Fatima Ali
     title: الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسية
     image: ../images/uploads/default-profile.png
+section5:
+  head: "الصفحة الرئيسيةالصفحة الرئيسيةالصفحة الرئيسيةالصفحة "
+  card1:
+    head: الرئيسيةالصفحة
+    body: "body"
+  card2:
+    head: "الرئيسيةالصفحة"
+    body: "body"
+  card3:
+    head: "الرئيسيةالصفحة"
+    body: "body"
+  form:
+    head: "الرئيسيةالصفحة"
+    caption: "text"
+    nameLabel: "الر"
+    emailLabel: "الر"
+    messageLabel: "الر"
+    sendLabel: "الر"
+  contact:
+    head: Contact
+    addressLabel: Address
+    address: 8001 Capwell Dr Oakland CA 94621
+    phoneLabel: الر
+    phone: 510-200-4175
+    emailLabel: الر
+    email: info@yarcenter.org
+  social:
+    head: Let'sالر keep in touchالر!
+    caption: Find الر us on any of these platforms, we'd love to connect!
+    fbLink: "https://www.facebook.com/Yemeni-American-Youth-Center-%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B4%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-110243897202862/"
 ---

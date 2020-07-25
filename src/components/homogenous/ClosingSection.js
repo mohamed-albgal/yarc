@@ -19,27 +19,27 @@ import { GoRocket } from 'react-icons/go'
 //     body: > 
 //       Give back to those who could benefit from your own experiences. Attend our mentorship events!
 
-const section5 = {
-  head: "Become A Valuable Resource",
-  card1: {
-    head: "Lead An Event",
-    body: "Have A Skill or Specialty? Reach out to us and share in your expertise!",
-  },
-  card2:{
-    head: "Donate To Our Cause",
-    body: "The only funding we have is from people like YOU. A little goes a long way!",
-  },
+// const section5 = {
+//   head: "Become A Valuable Resource",
+//   card1: {
+//     head: "Lead An Event",
+//     body: "Have A Skill or Specialty? Reach out to us and share in your expertise!",
+//   },
+//   card2:{
+//     head: "Donate To Our Cause",
+//     body: "The only funding we have is from people like YOU. A little goes a long way!",
+//   },
     
-  card3:{
-    head: "Become A Mentor",
-    body: "Give back to those who could benefit from your own experiences. Attend our mentorship events!",
-  }
-}
+//   card3:{
+//     head: "Become A Mentor",
+//     body: "Give back to those who could benefit from your own experiences. Attend our mentorship events!",
+//   }
+// }
     
 
 
-export default () => {
-    const { card1, card2, card3, head } = section5
+export default ({ card1, card2, card3, head }) => {
+
     return (
 
         <div className="pb-20 relative block jigsaw-bg bg-fixed" >       

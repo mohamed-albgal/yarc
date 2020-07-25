@@ -10,32 +10,30 @@ import { FcPhone } from 'react-icons/fc'
 import { FcAddressBook } from 'react-icons/fc'
 import ActionForm from '../homogenous/ActionForm'
 
-const form = {
-    head: "Interested In Working With Us?",
-    caption: "Complete this form and we will get back to you ASAP!",
-    nameLabel: "Name",
-    emailLabel: "Email",
-    messageLabel: 'Message',
-    sendLabel: 'Send',
-  }
-  const contact = {
-    head: "Contact",
-    addressLabel: 'Address',
-    address: "8001 Capwell Dr Oakland CA 94621",
-    phoneLabel: 'Phone',
-    phone: "510 200 4175",
-    emailLabel: 'Email', 
-    email: "info@yarcenter.org",
-  }
-  const social = {
-    head: "Let's keep in touch!",
-    caption: "Find us on any of these platforms, we'd love to connect!",
-    links: {
-      fb: "https://www.facebook.com/Yemeni-American-Youth-Center-%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D8%B4%D8%A8%D8%A7%D8%A8-%D8%A7%D9%84%D9%8A%D9%85%D9%86%D9%8A-%D8%A7%D9%84%D8%A3%D9%85%D8%B1%D9%8A%D9%83%D9%8A-110243897202862/"
-    }
-  }
+// const form = {
+//     head: "Interested In Working With Us?",
+//     caption: "Complete this form and we will get back to you ASAP!",
+//     nameLabel: "Name",
+//     emailLabel: "Email",
+//     messageLabel: 'Message',
+//     sendLabel: 'Send',
+//   }
+//   const contact = {
+//     head: "Contact",
+//     addressLabel: 'Address',
+//     address: "8001 Capwell Dr Oakland CA 94621",
+//     phoneLabel: 'Phone',
+//     phone: "510 200 4175",
+//     emailLabel: 'Email', 
+//     email: "info@yarcenter.org",
+//   }
+//   const social = {
+//     head: "Let's keep in touch!",
+//     caption: "Find us on any of these platforms, we'd love to connect!",
+//     fbLinks:
+//   }
 
-const Footer = () => {
+const Footer = ({head, card1, card2, card3, form, contact, social}) => {
     return (
         <>
         <ActionForm {...form} />
@@ -99,7 +97,7 @@ const Footer = () => {
                     className="bg-transparent sm:text-4xl text-2xl my-2 mx-3" style={{color:'#3B5998'}}
                     type="button"
                   >
-                    <a href={social.links.fb}>
+                    <a href={social.fbLink}>
                     <FaFacebook /></a>
                   </button>
                   {/* <button

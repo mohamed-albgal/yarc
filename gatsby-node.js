@@ -148,6 +148,43 @@ exports.createPages = async ({graphql, actions}) => {
                     }
                   }
                 }
+                section5{
+                  head
+                  card1{
+                    head
+                    body
+                  }
+                  card2{
+                    head
+                    body
+                  }
+                  card3{
+                    head
+                    body
+                  }
+                  form{
+                    head
+                    caption
+                    nameLabel
+                    emailLabel
+                    messageLabel
+                    sendLabel
+                  }
+                  contact{
+                    head
+                    addressLabel
+                    address
+                    phoneLabel
+                    phone
+                    emailLabel
+                    email
+                  }
+                  social{
+                    head
+                    caption
+                    fbLink
+                  }
+                }
               }
             }
           }
@@ -232,12 +269,13 @@ exports.createPages = async ({graphql, actions}) => {
       const appendage = {}
       appendage[key] = data;
       if (data.lang === "ar")
-        intl_ar =  Object.assign(intl_ar,appendage);
+        intl_ar =  Object.assign(intl_ar, appendage);
       else
         intl_en = Object.assign(intl_en, appendage);
     }
     result.data.indexPages.edges.forEach( ({ node }) => {
       dumpToIntl("index", node.frontmatter)
+      console.log(node.frontmatter)
     });
     result.data.missionPages.edges.forEach( ({ node}) => {
       dumpToIntl("mission", node.frontmatter)
