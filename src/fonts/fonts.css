@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Athene;
+    font-weight: 400;
+    font-style: normal;
+    src: url("Athene.otf") format("opentype");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: Athene;
+    font-weight: 800;
+    font-style: bold;
+    src: url("Athene.otf") format("opentype");
+    font-display: swap;
+  }
+@font-face {
+font-family: Droid-Kufti;
+font-weight: 400;
+font-style: normal;
+src: url("DroidKufi-Regular.ttf") format("truetype");
+font-display: swap;
+}
+@font-face {
+font-family: Droid-Kufti;
+font-weight: 700;
+font-style: bold;
+src: url("DroidKufi-Bold.ttf") format("truetype");
+font-display: swap;
+}

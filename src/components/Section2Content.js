@@ -18,7 +18,7 @@ const IndepthTextTopIcon = ({textColorTW, sideHead, sideBody}) => {
     return (
         <>
             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <h3 className="sm:text-6xl text-5xl mb-2 font-semibold leading-tight">
+                <h3 className="sm:text-6xl text-center text-5xl mb-2 font-semibold leading-tight">
                     {sideHead}
                 </h3>
                 <div className="text-center pb-2 text-5xl">
