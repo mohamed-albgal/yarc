@@ -73,7 +73,7 @@ const HomePreviewTemplate = ({entry, getAsset}) => {
     }
     
     const coreProps = {caption,head, section1}
-    console.log(bgImage)
+    
     return (
         <HomeCMSLayout section5={section5} >
             <PageCore 

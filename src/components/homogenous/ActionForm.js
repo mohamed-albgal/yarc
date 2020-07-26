@@ -15,10 +15,11 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
             .join("&");
       }
     const handleSubmit = e => {
+        const dataObj = {name:name, email:email, message:message}
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact", name, email, message })
+          body: encode({ "form-name": "contact", ...dataObj })
         })
           .then(() => setSent(true))
         .catch(error => console.log(error));
@@ -52,7 +53,9 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                     {caption}
                                 </p>
                                 {sent ? <ThanksPrompt /> :
-                                    <form name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true">
+                                    <form enctype="application/x-www-form-urlencoded" name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                                    {/** honeypot to prevent bot submission  */}
+                                    <div hidden aria-hidden="true"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
                                     <div className="relative w-full mb-3 mt-8">
                                         <label
                                         className="block uppercase text-gray-700 text-xs font-bold mb-2"
@@ -62,6 +65,7 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                         </label>
                                         <input
                                         onChange={e => setName(e.target.value)}
+                                        name="name"
                                         type="text"
                                         className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                                         placeholder="Full Name"
@@ -79,6 +83,7 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                         <input
                                         type="email"
                                         onChange={e => setEmail(e.target.value)}
+                                        name="email"
                                         className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"
                                         placeholder="Email"
                                         style={{ transition: "all .15s ease" }}
@@ -94,6 +99,7 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                         </label>
                                         <textarea
                                         onChange={e => setMessage(e.target.value)}
+                                        name="message"
                                         rows="4"
                                         cols="80"
                                         className="px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:shadow-outline w-full"

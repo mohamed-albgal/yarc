@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default ({mainText, caption, heroImage}) => {
-    console.log(heroImage, 'from HERO')
+    
     return (
       <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
       style={{

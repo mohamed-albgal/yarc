@@ -28,7 +28,7 @@ export default  ({ data }) => {
         const old = [];
         nodes.forEach( ( { node } )  => {
             const currentDate = Date.now()
-            const endDate = new Date(node.frontmatter.startDate);
+            const endDate = new Date(node.frontmatter.startDate)
             const isFutureEvent = endDate >= currentDate
             
             if (isFutureEvent) {

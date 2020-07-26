@@ -83,9 +83,9 @@ export default  ({data, location}) => {
     }
     const makePrograms = (sel) => {
         const key = Object.keys(nodeCategories)[sel];
-        console.log('making progs key is:', key);
+        
         const nodes = nodeCategories[key];
-        console.log('making progs', nodes);
+        
         return (
             nodes.map( ( { frontmatter, fields }, i ) => {
             const tagList = frontmatter.tags && frontmatter.tags.split(" ");

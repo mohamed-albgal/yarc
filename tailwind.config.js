@@ -6,6 +6,10 @@ module.exports = {
         'height': 'height',
         'width' : 'width',
       },
+      fontFamily: {
+        "athene": "Athene",
+        "ArabicDroid": "Droid-Kufti"
+      },
       fontSize: {
         'xs': '.75rem',
         'sm': '.875rem',

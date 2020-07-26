@@ -48,17 +48,17 @@ const Navbar =  ({withHero, animate}) => {
         {
             name: intl.formatMessage({id:"programsSubmenu.english"}),
             path: "/programs",
-            state: {selection:3}
+            state: {selection:2}
         },
         {
             name: intl.formatMessage({id:"programsSubmenu.arabic"}),
             path: "/programs",
-            state: {selection:4}
+            state: {selection:3}
         },
         {
             name: intl.formatMessage({id:"programsSubmenu.community"}),
             path: "/programs",
-            state: {selection:2}
+            state: {selection:4}
         }
     ];
     const ArrowIcon = ({h, w}) => {

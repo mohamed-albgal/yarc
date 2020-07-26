@@ -17,7 +17,7 @@ const HomePageTemplate =   ({ head, caption, bgImage, section1, section2, sectio
 
 //needed for the cms, can't show footer or use any hooks / gql calls
 export const PageCore = ({bgImage, section1, section2, section3, section4, head, caption, fromCMS}) => {
-  console.log(bgImage)
+  
   return (
     <main style={{backgroundPositionY:'10%'}}>
         <Hero caption={caption} mainText={head} heroImage={bgImage && bgImage.publicURL || bgImage}/>
