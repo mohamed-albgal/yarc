@@ -56,6 +56,8 @@ export default ({head, caption, nameLabel, emailLabel, messageLabel, sendLabel})
                                     <form enctype="application/x-www-form-urlencoded" name="contact" onSubmit={handleSubmit} method="POST" data-netlify="true" netlify-honeypot="bot-field">
                                     {/** honeypot to prevent bot submission  */}
                                     <div hidden aria-hidden="true"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
+                                    <input type="hidden" name="form-name" value="contact" />
+
                                     <div className="relative w-full mb-3 mt-8">
                                         <label
                                         className="block uppercase text-gray-700 text-xs font-bold mb-2"
