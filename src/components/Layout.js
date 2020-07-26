@@ -3,7 +3,7 @@ import NavBar from './homogenous/NavBar'
 import Footer from './homogenous/Footer'
 import ClosingSection from './homogenous/ClosingSection'
 import useTranslations from '../hooks/useTranslations'
-//import useLayoutData from '../hooks/useLayoutData.js'
+
 
 const Layout = ({ children, navWithHero, animate, bgGradientColor="blue-top" }) => {
     const translatedText = useTranslations("index");
