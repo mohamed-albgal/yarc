@@ -55,14 +55,14 @@ export default  ({data, location}) => {
     catsArray[ar] = [];
     catsArray[comm] = [];
     const [nodeCategories, setNodeCategories] = useState(catsArray);
-    const [selection, setSelection ] = useState(1);
+    const [selection, setSelection ] = useState(0);
     
     useEffect( () => {
         splitData(data.allMarkdownRemark.edges)
-    }, [data.allMarkdownRemark.edges, selection])
+    }, [data.allMarkdownRemark.edges, selection, nodeCategories])
     useEffect( () => {
         let sel = location.state && location.state.selection;
-        setSelection(sel || 1)
+        setSelection(sel || 0)
     }, [location.state])
 
     const splitData = (nodes) => {
