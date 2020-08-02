@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
 import { useIntl, Link, changeLocale } from "gatsby-plugin-intl"
-import {FaArchway } from 'react-icons/fa'
+
 
 
 
@@ -82,7 +82,7 @@ const Navbar =  ({withHero, animate}) => {
     const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
     
     const activeLang = `text-blue-700 hover:text-yellow-600 rounded-sm inner-shadow bg-opacity-50 sm:text-lg text-sm font-bold`
-    const langButton = `w-full text-left py-1 sm:text-sm text-xs tracking-widest ml-2`
+    const langButton = `w-full text-left py-1 sm:text-sm text-xs tracking-wider ml-2`
     const disActiveLang = ` text-gray-600 `
     
     return (

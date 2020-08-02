@@ -18,6 +18,24 @@
 	        animation: kenburns-bottom 5s ease-out both;
 }
 
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('../../static/fonts/kufi/DroidArabicKufi-Bold.woff2') format('woff2'),
+        url('../../static/fonts/kufi/DroidArabicKufi-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Droid Arabic Kufi';
+    src: url('../../static/fonts/kufi/DroidArabicKufi.woff2') format('woff2'),
+        url('../../static/fonts/kufi/DroidArabicKufi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
  @-webkit-keyframes kenburns-bottom {
   0% {
     -webkit-transform: scale(1) translateY(0);
@@ -154,8 +172,12 @@
 .shadow-2xl-white {
   box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.25);
 }
+
+body {
+  @apply font-display leading-relaxed;
+}
 .markdown {
-    @apply text-gray-900 leading-normal break-words;
+    @apply text-gray-900 font-display leading-normal break-words;
   }
   
   .markdown > * + * {
@@ -211,7 +233,7 @@
   }
   
   .markdown code {
-    @apply font-mono text-sm inline bg-gray-200 rounded px-1;
+    @apply text-sm inline bg-gray-200 rounded px-1;
   }
   
   .markdown pre {
@@ -231,7 +253,7 @@
   }
   
   .markdown kbd {
-    @apply text-xs inline-block rounded border px-1 align-middle font-normal font-mono shadow;
+    @apply text-xs inline-block rounded border px-1 align-middle font-normal shadow;
   }
   
   .markdown table {

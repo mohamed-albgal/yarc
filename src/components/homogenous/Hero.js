@@ -15,13 +15,13 @@ export default ({mainText, caption, heroImage}) => {
           WebkitBackgroundSize: 'cover',
           MozBackgroundSize:"cover",
           }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-50 bg-blue-300"></span> 
+            <span id="blackOverlay" className="w-full h-full absolute opacity-50 bg-gray-500"></span> 
       </div>
       <div className="container relative mx-auto">
           <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-0">
-                      <h1 className=" text-black leading-none tracking-wide  font-extrabold text-5xl pt-20 sm:text-6xl">
+                      <h1 className="text-black leading-none tracking-wide  font-extrabold text-5xl pt-20 sm:text-6xl">
                           {mainText}
                           
                       </h1>
