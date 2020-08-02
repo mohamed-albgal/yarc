@@ -8,7 +8,11 @@ const Navlink = ({text, subMenu, linkTo, linkState, setNavUp }) => {
     sm:rounded-tl-none sm:rounded-lg rounded-none text-black
     jigsaw-bg
 `
+<<<<<<< HEAD
     const navItemStyle = `text-center sm:block uppercase  flex flex-col justify-center  relative  sm:py-1 sm:hover:text-yellow-600 rounded mx-4  py-2 sm:font-bold font-extrabold 
+=======
+    const navItemStyle = `text-center sm:block uppercase flex flex-col justify-center  relative  sm:py-1 sm:hover:text-yellow-500 rounded mx-4  py-2 sm:font-bold font-extrabold 
+>>>>>>> fix_form_and_font
     text-xl lg:text-2xl  sm:text-blue-700 text-white sm:h-auto h-16 bg-transparent transform duration-75`
     return (
         <div onMouseLeave={() => setDropped(false)}>

@@ -18,15 +18,15 @@ const IndepthTextTopIcon = ({textColorTW, sideHead, sideBody}) => {
     return (
         <>
             <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <h3 className="sm:text-6xl text-center text-5xl mb-2 font-semibold leading-tight">
+                <h3 className="sm:text-6xl text-5xl mb-2 text-center font-semibold leading-tight">
                     {sideHead}
                 </h3>
-                <div className="text-center pb-2 text-5xl">
+                <div className="text-center py-4 text-5xl">
                     <div className="text-pink-400 p-3 border border-gray-300 inline-flex text-center shadow-lg rounded-full bg-white">
                         <FaBrain />
                     </div>
                 </div>
-                <p className={`text-lg font-light leading-relaxed mt-0 mb-4 text-${textColorTW}`}>
+                <p className={`text-lg font-light text-center leading-relaxed mt-0 mb-4 text-${textColorTW}`}>
                 {sideBody}
                 </p>
             </div> 

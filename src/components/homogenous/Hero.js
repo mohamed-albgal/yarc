@@ -21,7 +21,7 @@ export default ({mainText, caption, heroImage}) => {
           <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-0">
-                      <h1 className=" text-black leading-none tracking-wide  font-extrabold text-5xl pt-20 sm:text-6xl">
+                      <h1 className="text-black leading-none tracking-wide  font-extrabold text-5xl pt-20 sm:text-6xl">
                           {mainText}
                           
                       </h1>

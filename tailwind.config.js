@@ -29,6 +29,10 @@ module.exports = {
         'monster': '10rem',
       },
     },
+    fontFamily: {
+      body: ['Droid Arabic Kufi', 'sans-serif'],
+      display: ['Droid Arabic Kufi', 'sans-serif']
+    }
   },
   variants: {},
   plugins: [],
