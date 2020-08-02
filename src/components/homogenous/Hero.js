@@ -21,14 +21,13 @@ export default ({mainText, caption, heroImage}) => {
           <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                   <div className="pr-0">
-                      <h1 className="text-black leading-none tracking-wide  font-extrabold text-5xl pt-20 sm:text-6xl">
-                          {mainText}
-                          
-                      </h1>
-                      <span className="title-gradient block h-1 -mt-2 self-stretch"></span>
-                  <p className="mt-4 text-lg sm:text-2xl font-bold text-gray-900">
-                      {caption}
-                  </p>
+                    <h1 className="text-black leading-none tracking-wide  font-extrabold text-5xl pt-20 pb-3 sm:text-6xl">
+                        {mainText}
+                    </h1>
+                    <span className="title-gradient block h-1 -mt-2 self-stretch"></span>
+                    <p className="mt-4 text-lg sm:text-2xl font-bold text-gray-900">
+                        {caption}
+                    </p>
                   </div>
               </div>
           </div>
