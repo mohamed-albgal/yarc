@@ -44,50 +44,30 @@ export const query = graphql`
 export default  ({data, location}) => {
     const intl = useIntl();
     const all = intl.formatMessage({id:"programsCategories.all"});
-    const  ed = intl.formatMessage({id:"programsCategories.education"});
+    const ed = intl.formatMessage({id:"programsCategories.education"});
     const eng = intl.formatMessage({id:"programsCategories.english"});
     const ar = intl.formatMessage({id:"programsCategories.arabic"});
     const comm = intl.formatMessage({id:"programsCategories.community"});
     const catsArray = {}
-    catsArray[all] = [];
-    catsArray[ed] = [];
-    catsArray[eng] = [];
-    catsArray[ar] = [];
-    catsArray[comm] = [];
-    const [nodeCategories, setNodeCategories] = useState(catsArray);
+    catsArray[all] = data.allMarkdownRemark.edges;
+    catsArray[ed] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'education');
+    catsArray[eng] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'english');
+    catsArray[ar] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'arabic');
+    catsArray[comm] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'community');
+    const [nodeCategories] = useState(catsArray);
     const [selection, setSelection ] = useState(0);
     
-    useEffect( () => {
-        splitData(data.allMarkdownRemark.edges)
-    }, [data.allMarkdownRemark.edges, selection])
     useEffect( () => {
         let sel = location.state && location.state.selection;
         setSelection(sel || 0)
     }, [location.state])
 
-    const splitData = (nodes) => {
-        nodes.forEach( ( { node }) => {
-            let cat = node.frontmatter.category.toLowerCase()
-            catsArray[all].push(node);
-            if (cat === 'education'){
-                catsArray[ed].push(node)
-            }else if (cat === 'arabic'){
-                catsArray[ar].push(node)
-            }else if (cat === 'english') {
-                catsArray[eng].push(node);
-            }else if (cat ==='community') {
-                catsArray[comm].push(node)
-            }
-        });
-        setNodeCategories(catsArray);
-    }
     const makePrograms = (sel) => {
         const key = Object.keys(nodeCategories)[sel];
-        
         const nodes = nodeCategories[key];
-        
         return (
-            nodes.map( ( { frontmatter, fields }, i ) => {
+            nodes.map( (elt, i ) => {
+            const { frontmatter, fields } = elt.node;
             const tagList = frontmatter.tags && frontmatter.tags.split(" ");
             const progImage = frontmatter.programImage;
             return (
