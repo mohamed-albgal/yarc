@@ -48,23 +48,26 @@ export default  ({data, location}) => {
     const eng = intl.formatMessage({id:"programsCategories.english"});
     const ar = intl.formatMessage({id:"programsCategories.arabic"});
     const comm = intl.formatMessage({id:"programsCategories.community"});
-    const catsArray = {}
-    catsArray[all] = data.allMarkdownRemark.edges;
-    catsArray[ed] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'education');
-    catsArray[eng] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'english');
-    catsArray[ar] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'arabic');
-    catsArray[comm] = data.allMarkdownRemark.edges.filter( x => x.node.frontmatter.category.toLowerCase() === 'community');
-    const [nodeCategories] = useState(catsArray);
+    const filterOn = (cat) => {
+        return data.allMarkdownRemark.edges.filter( item => item.node.frontmatter.category.toLowerCase() === cat)
+    }
+
+    const categories = {}
+    categories[all] = data.allMarkdownRemark.edges;
+    categories[ed] = filterOn("education");
+    categories[eng] = filterOn("english");
+    categories[ar] = filterOn("arabic");
+    categories[comm] = filterOn("community");
+
     const [selection, setSelection ] = useState(0);
-    
     useEffect( () => {
         let sel = location.state && location.state.selection;
         setSelection(sel || 0)
     }, [location.state])
 
     const makePrograms = (sel) => {
-        const key = Object.keys(nodeCategories)[sel];
-        const nodes = nodeCategories[key];
+        const key = Object.keys(categories)[sel];
+        const nodes = categories[key];
         return (
             nodes.map( (elt, i ) => {
             const { frontmatter, fields } = elt.node;
@@ -87,7 +90,7 @@ export default  ({data, location}) => {
         )
     )}
     const onBarSelect = (i) => setSelection(i)
-    const barProps = { ...barStyles, onBarSelect, barSelections:Object.keys(nodeCategories) }
+    const barProps = { ...barStyles, onBarSelect, barSelections:Object.keys(categories) }
         
     return(
         <Layout bgGradientColor="sand-bottom">
