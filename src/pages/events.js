@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout';
 import PageHeadText from '../components/homogenous/PageHeadText'
 import SlantCard from '../components/homogenous/SlantCard';
+import useDatePartion from '../hooks/useDatePartition'
 
 
     /**come back to this idea, random color for cards, but not random on each visit */
@@ -14,41 +15,24 @@ import SlantCard from '../components/homogenous/SlantCard';
     //get the array of nodes that contain the fields i need including the slug
 export default  ({ data }) => {
     const intl = useIntl();
-    const [upcoming, setUpcoming] = useState([]);
-    const [passed, setPassed] = useState([]);
     const [selection, setSelection] = useState(0);
-    useEffect(() => {
-        const [old, neu ] = splitData(data.allMarkdownRemark.edges);
-        setUpcoming(neu);
-        setPassed(old);
-    }, [data.allMarkdownRemark.edges]);
-    //divide events into 2 buckets, passed and current, update state with each
-    const splitData = (nodes) => {
-        const neu = [];
-        const old = [];
-        nodes.forEach( ( { node } )  => {
-            const currentDate = Date.now()
-            const endDate = new Date(node.frontmatter.startDate)
-            const isFutureEvent = endDate >= currentDate
-            
-            if (isFutureEvent) {
-                neu.push(node);
-            }    
-            else { 
-                old.push(node);
-            }
-        });
-        return ([old, neu])
-    }
-    //based on the index of which key was selected, make cards for that key's value array of nodes
-    // const barSelections = { : upcoming, "Past Events": passed};
+    const [upcoming, passed] = useDatePartion(data);
+    
     const barSelections = {}
     barSelections[intl.formatMessage({id:"eventsCategories.upcoming"})] = upcoming;
     barSelections[intl.formatMessage({id:"eventsCategories.past"})] = passed;
+    const noEventsMessage = 
+    (
+        <div className="container sm:ml-5 sm:max-w-screen-sm">
+            <div className="px-20 text-xl  bg-green-200 text-gray-600">{intl.formatMessage({id:"eventsNoUpcoming"})}</div>
+        </div>
+    )
     const onBarSelect = (i) => setSelection(i);
     const makeCards =(i) => {
             const key = Object.keys(barSelections)[i];
             const nodes = barSelections[key]
+            if (nodes.length === 0)
+                return noEventsMessage;
             
             return (
                 nodes.map( ( { frontmatter, fields }, i ) => {

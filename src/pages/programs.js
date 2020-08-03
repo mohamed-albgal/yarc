@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { Link, useIntl } from 'gatsby-plugin-intl';
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout';
+import useDatePartition from '../hooks/useDatePartition'
 import PageHeadText from '../components/homogenous/PageHeadText'
 import SlantCard from '../components/homogenous/SlantCard'
 import { PageBar } from './events';
@@ -42,6 +43,12 @@ export const query = graphql`
 
 
 export default  ({data, location}) => {
+    const [selection, setSelection ] = useState(0);
+    useEffect( () => {
+        let sel = location.state && location.state.selection;
+        setSelection(sel || 0)
+    }, [location.state])
+    
     const intl = useIntl();
     const all = intl.formatMessage({id:"programsCategories.all"});
     const ed = intl.formatMessage({id:"programsCategories.education"});
@@ -58,13 +65,6 @@ export default  ({data, location}) => {
     categories[eng] = filterOn("english");
     categories[ar] = filterOn("arabic");
     categories[comm] = filterOn("community");
-
-    const [selection, setSelection ] = useState(0);
-    useEffect( () => {
-        let sel = location.state && location.state.selection;
-        setSelection(sel || 0)
-    }, [location.state])
-
     const makePrograms = (sel) => {
         const key = Object.keys(categories)[sel];
         const nodes = categories[key];

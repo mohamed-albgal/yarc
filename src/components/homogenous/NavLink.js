@@ -8,7 +8,7 @@ const Navlink = ({text, subMenu, linkTo, linkState, setNavUp }) => {
     sm:rounded-tl-none sm:rounded-lg rounded-none text-black
     jigsaw-bg
 `
-    const navItemStyle = `text-center sm:block uppercase flex flex-col justify-center  relative  sm:py-1 sm:hover:text-yellow-500 rounded mx-4  py-2 sm:font-bold font-extrabold
+    const navItemStyle = `text-center sm:block uppercase flex flex-col justify-center  relative  sm:py-1 sm:hover:text-yellow-500 rounded lg:mx-4 mx-2  py-2 sm:font-bold font-extrabold
     text-xl lg:text-2xl  sm:text-blue-700 text-white sm:h-auto h-16 bg-transparent transform duration-75`
     return (
         <div onMouseLeave={() => setDropped(false)}>

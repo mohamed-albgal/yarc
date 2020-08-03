@@ -92,8 +92,8 @@ const Navbar =  ({withHero, animate}) => {
                     {/*left*/}
                     <div className="sm:pr-4 px-1 py-2  opacity-100">
                         <div className="flex sm:justify-start items-center">
-                            <Link to="/">
-                                <img className={`${animate && "tracking-in-expand-fwd-bottom"} sm:h-32 h-20`}  src={logo} alt="YARC LOGO"/>
+                            <Link className="flex-shrink-0" to="/">
+                                <img className={`${animate && "tracking-in-expand-fwd-bottom"}  lg:h-32 h-20`}  src={logo} alt="YARC LOGO"/>
                             </Link>
                             <div className=" border-l-2 border-gray-600 inline-block leading-4 mx-4">
                                 <button onClick={() => changeLocale('ar', null)} className={`${langButton} ${intl.locale === 'en' ? activeLang:disActiveLang} font-xl`}>
@@ -107,16 +107,16 @@ const Navbar =  ({withHero, animate}) => {
                     </div>
                     {/*right*/}
                     
-                    <div className="sm:flex-shrink items-center">
+                    <div className="items-center">
                          
                         <button onClick={e=> hamburgerClick(e)} type="button" className="sm:hidden block text-white">
                             <ArrowIcon h="18" w="35" colorTW={"black"}/>
                         </button>
                     </div>
                 </div>
-                <div className={`${!closed ? 'max-h-screen h-70 relative z-0 top-0 transition-height duration-300 ease-linear' : ' h-0 transition-height duration-300 ease-linear sm:h-auto sm:w-auto '} flex`}>
-                    <div  className={ `sm:divide-y-0 divide-y divide-gray-900 w-full pt-10 pb-8 -mt-2 
-                    sm:px-10  sm:flex sm:p-8 sm:items-center sm:justify-between  ${closed && "h-0 hidden sm:visible"}`}>
+                <div className={`${!closed ? 'max-h-screen h-70 relative z-0 top-0 transition-height duration-300 ease-linear' : ' h-0 transition-height duration-300 ease-linear sm:h-auto sm:w-auto '}  flex`}>
+                    <div  className={ `sm:divide-y-0 divide-y divide-gray-900 w-full pt-10 pb-8  
+                    lg:px-10 sm:flex lg:p-8 sm:items-center sm:justify-between  ${closed && "h-0 hidden sm:visible"}`}>
                         <NavLink  text={intl.formatMessage({id:"home"})} linkTo="/"/>
                         <NavLink  text={intl.formatMessage({id:"about"})} subMenu={aboutSubmenu} setNavUp={setClosed}/>
                         <NavLink  text={intl.formatMessage({id:"programs"})} linkTo="/programs" subMenu={programsSubmenu} setNavUp={setClosed} />
