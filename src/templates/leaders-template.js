@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout, { CMSLayout } from '../components/Layout'
 import { graphql } from 'gatsby'
 import dock from '../images/gold_sky.jpg'
 import defaultPhoto from '../images/default-profile.png'
@@ -23,16 +23,17 @@ export const LeadersTemplate = ({title, caption, content, contentComponent, prof
     mdStyle = mdStyle || markdownStyle
     const subText = caption || `Youth Leader Since ${startDate}`
     const PostContent = contentComponent || Content
+    const CorrectLayout = contentComponent ? Layout : CMSLayout
     return (
       <div>
-        <Layout navWithHero >
+        <CorrectLayout navWithHero >
           <Hero mainText={title} caption={subText} heroImage={heroBg} />
           <div style={pageBgStyle}>
             <div className="relative z-20 sm:-mt-40  -mt-12">
               <PreviewCompatibleImage image={profileImage} imageStyle={circleImageStyles} />
               <PostContent className={markdownStyle} content={content} /></div>
             </div>
-        </Layout>
+        </CorrectLayout>
       </div>
     )
 };
