@@ -9,11 +9,12 @@ import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleIm
 const bgCSSName = "yellowBlue-topBottom";
 export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 sm:px-6 min-h-full px-4 shadow-xl bg-white rounded-lg markdown";
 
-const PageContent = (props) => {
+export const EventTemplate = (props) => {
   const {heroBg, heroTitle, description, image, mdStyle, contentComponent, content} = props;
   const PostConent = contentComponent || Content
+  const CorrectLayout = contentComponent ? Layout: CMSLayout
   return (
-    <div>
+    <CorrectLayout navWithHero bgGradientColor={bgCSSName}>
       <Hero heroImage={heroBg} mainText={heroTitle} caption={description} />
       <div className="sm:flex sm:p-10 p-2 justify-between ">
         { image && <div className="sm:w-1/2 pt-10 sm:pt-0 whitespace-pre-wrap z-20 sm:pr-4">
@@ -22,22 +23,9 @@ const PageContent = (props) => {
             <PostConent content={content} className={mdStyle}/>
         </div>
       </div>
-    </div>
+    </CorrectLayout>
   )
 }
-export const EventTemplate = (props) => {
-  return (
-    <Layout navWithHero bgGradientColor={bgCSSName}>
-      <PageContent {...props} />
-    </Layout>
-  )
-}
-
-export const CMSEventTemplate = (props) => (
-    <CMSLayout navWithHero bgGradientColor={bgCSSName}>
-      <PageContent {...props} />
-    </CMSLayout>
-  )
 
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
