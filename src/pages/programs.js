@@ -93,10 +93,13 @@ export default  ({data, location}) => {
     const barProps = { ...barStyles, onBarSelect, barSelections:Object.keys(categories) }
         
     return(
-        <Layout bgGradientColor="sand-bottom">
+        <Layout navWithHero bgGradientColor="sand-bottom">
         <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
+            <div className={` inset-0 sm:mt-40`}>
                 <PageHeadText text={intl.formatMessage({id:"programsHeadText"})} />
-            </div>
+            </div>    
+        
+        </div>
         <div className="text-center">
             
             <PageBar {...barProps} externalSelection={selection} />

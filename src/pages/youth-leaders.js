@@ -40,9 +40,12 @@ export default ({data}) => {
     )
   })
     return (
-        <Layout bgGradientColor='youth'>
+        <Layout navWithHero bgGradientColor='youth'>
         <div className=" sm:mt-0 sm:pl-16 sm:pt-10 sm:mb-8 pt-32  " >
-                <PageHeadText text={intl.formatMessage({id:"youthHeadText"})} />
+          <div className={` inset-0 sm:mt-40`}>
+            <PageHeadText text={intl.formatMessage({id:"youthHeadText"})} />
+          </div>        
+        
             </div>
         <div className="flex flex-wrap w-screen justify-center sm:mx-auto" >
           {cards}

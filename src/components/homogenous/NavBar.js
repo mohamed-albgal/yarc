@@ -21,9 +21,9 @@ const Navbar =  ({withHero, animate}) => {
         };
     }, []);
     const handleScroll = () => {
-        if (!scrolled && window.scrollY > 100){
+        if (!scrolled && window.scrollY > 10){
             setScrolled(true)
-        }else if (window.scrollY < 70) {
+        }else if (window.scrollY < 10) {
             setScrolled(false);
             console.log(scrolled)
         }
