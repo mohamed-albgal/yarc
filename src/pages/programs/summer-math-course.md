@@ -1,12 +1,13 @@
 ---
 endDate: 2020-08-21T00:00:00.000Z
 leaders: Reshma Farooqui
+lang: en
 title: Summer Math Course
 startDate: 2020-06-24T00:00:00.000Z
+category: education
 programImage: ../../images/uploads/math.jpg
 description: Become the Next Isaac Newton?
 tags: youth collge-kids math teachers education
-category: education
 type: program
 ---
 ### Summer math course: Math Interactive Course

@@ -1,4 +1,5 @@
 ---
+lang: en
 title: Covid-19 Alert
 author: Yarc center
 blogImg: src/images/uploads/covid_19_thanks.jpg

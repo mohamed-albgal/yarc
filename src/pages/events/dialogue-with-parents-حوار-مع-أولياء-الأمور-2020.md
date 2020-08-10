@@ -1,4 +1,5 @@
 ---
+lang: en
 title: "Dialogue With Parents                  حوار مع أولياء الأمور "
 startDate: 2020-07-25T17:55:41.165Z
 eventImage: src/images/uploads/english-min.jpg

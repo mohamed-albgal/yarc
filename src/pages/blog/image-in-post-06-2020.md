@@ -1,4 +1,5 @@
 ---
+lang: en
 title: image in post
 author: M.a.q
 blogImg: src/images/uploads/cms_test.jpg

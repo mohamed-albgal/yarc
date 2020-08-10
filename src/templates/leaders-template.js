@@ -10,7 +10,7 @@ import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleIm
 
 
 export const markdownStyle = `text-left markdown whitespace-pre-wrap inline-block 
-                              px-2 sm:px-16 pt-20 sm:pt-32  mx-4 sm:-mt-20 -mt-12 sm:mb-10  
+                              px-2 sm:px-16 pt-20 pb-10 sm:pt-32  mx-4 sm:-mt-20 -mt-12 sm:mb-10  
                               sm:max-w-none h-full max-w-full sm:w-11/12 lg:w-9/12 
                               bg-white  shadow-xl rounded-lg`
 

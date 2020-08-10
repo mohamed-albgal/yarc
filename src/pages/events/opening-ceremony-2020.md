@@ -1,4 +1,5 @@
 ---
+lang: en
 title: "Opening Ceremony "
 startDate: 2020-02-24T03:20:51.909Z
 eventImage: src/images/uploads/large-event3.jpg

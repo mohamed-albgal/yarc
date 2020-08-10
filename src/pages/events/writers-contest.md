@@ -1,8 +1,9 @@
 ---
+eventImage: ../../images/uploads/flyer1.jpg
+endDate: 2020-07-22
+lang: en
 title: Young Writer's Contest
 startDate: 2020-05-10T07:00:00.000Z
-endDate: 2020-07-22
-eventImage: ../../images/uploads/flyer1.jpg
 description: Calling All Writers!
 tags: adults all-youth
 type: event

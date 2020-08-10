@@ -1,12 +1,13 @@
 ---
 endDate: 2020-08-20T00:00:00.000Z
 leaders: Mohamed Algarmi
+lang: en
 title: Summer English – College Freshman Year Composition
 startDate: 2020-06-22T00:00:00.000Z
+category: english
 programImage: src/images/uploads/graffiti_create.jpg
 description: Learn English Taught by Pros
 tags: youth collge-kids English education
-category: english
 type: program
 ---
 ## Summer English course: College Freshman Year Composition

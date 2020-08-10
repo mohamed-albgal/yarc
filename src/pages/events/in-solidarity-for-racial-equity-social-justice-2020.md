@@ -1,4 +1,5 @@
 ---
+lang: en
 title: In Solidarity for Racial Equity & Social Justice
 startDate: 2020-07-03T20:56:36.881Z
 eventImage: src/images/uploads/social_justice.jpg

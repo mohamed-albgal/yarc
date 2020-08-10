@@ -25,6 +25,7 @@ collections:
     preview_path: blog/{{slug}}
     preview_path_date_field: date
     fields:
+      - { label: 'Language', name: 'lang', widget: 'select', options: ["en","ar"]}
       - { label: 'Title', name: 'title', widget: 'string'}
       - { label: 'Author', name: 'author', widget: 'string' }
       - label: 'Image'
@@ -36,8 +37,8 @@ collections:
           This is optional. This image will not be displayed in the blog post, but on the preview card that links to this post.
           You can optionally insert an image, link, or video link in the blog post.
       - { label: 'Tags', name: 'tags', widget: 'string', required: false}
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Body', name: 'body', widget: 'markdown'}
+      - { label: 'Publish Date', name: 'date', widget: 'date'}
       - { label: 'Type', name: 'type', widget: 'hidden', default: 'blog'}
   - name: 'event'
     label: "Events"
@@ -46,7 +47,8 @@ collections:
     create: true
     preview_path: events/{{slug}}
     preview_path_date_field: startDate
-    fields: 
+    fields:
+      - { label: 'Language', name: 'lang', widget: 'select', options: ["en","ar"]}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date:', name: 'startDate', widget: 'date' }
       - label: 'Image'
@@ -67,6 +69,7 @@ collections:
     preview_path: programs/{{slug}}
     preview_path_date_field: startDate
     fields: 
+      - { label: 'Language', name: 'lang', widget: 'select', options: ["en","ar"]}
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Starts:', name: 'startDate', widget: 'date' }
       - { label: 'Ends:', name: 'endDate', widget: 'date' }
