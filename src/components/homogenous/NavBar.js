@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
 import { useIntl, Link, changeLocale } from "gatsby-plugin-intl"
@@ -12,8 +12,22 @@ import { useIntl, Link, changeLocale } from "gatsby-plugin-intl"
 
 const Navbar =  ({withHero, animate}) => {
     const intl = useIntl();
-    
+    const [scrolled, setScrolled] = useState(false);
     const [closed, setClosed] = useState(true);
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    const handleScroll = () => {
+        if (!scrolled && window.scrollY > 100){
+            setScrolled(true)
+        }else if (window.scrollY < 70) {
+            setScrolled(false);
+            console.log(scrolled)
+        }
+    }
     const hamburgerClick = (e) => {
         setClosed(!closed);
     }
@@ -77,9 +91,12 @@ const Navbar =  ({withHero, animate}) => {
         )
     }
     //styles for showing navbar with or without hero, as well as those needed in both cases
-    const wHero = "sm:bg-transparent sm:absolute"
-    const noHero = "sm:relative"
-    const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
+    //const wHero = `sm:bg-transparent sm:absolute`
+    //const noHero = "sm:relative"
+    //const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
+    const shared = `fixed sm:pt-4 z-20 top-0 bg-gray-900  w-screen sm:shadow-none shadow-xl `
+    const noHero = `${scrolled ? "sm:fixed" : "sm:relative"}`;
+    const wHero = `${scrolled ? "sm:fixed" : " sm:bg-transparent"}`
     
     const activeLang = `text-blue-700 hover:text-yellow-600 rounded-sm inner-shadow bg-opacity-50 sm:text-lg text-sm font-bold`
     const langButton = `w-full text-left py-1 sm:text-sm text-xs tracking-wider ml-2`
