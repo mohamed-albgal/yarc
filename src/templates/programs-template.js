@@ -12,7 +12,7 @@ const bgCSSName = "yellowBlue-topBottom";
 
 export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 min-w-full min-h-full px-4 shadow-xl bg-white rounded-lg markdown"
 
-const ProgramsTemplate = (props) => {
+export const ProgramsTemplate = (props) => {
   const {mainText, subText, pageBg, content, markdownStyle, image, contentComponent  } = props;
   const PostContent = contentComponent || Content
   const CorrectLayout = contentComponent ? Layout: CMSLayout;
