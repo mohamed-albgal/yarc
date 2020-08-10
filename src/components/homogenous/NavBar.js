@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import logo from "../../images/duo_logo.svg"
 import NavLink from './NavLink'
 import { useIntl, Link, changeLocale } from "gatsby-plugin-intl"
@@ -12,8 +12,22 @@ import { useIntl, Link, changeLocale } from "gatsby-plugin-intl"
 
 const Navbar =  ({withHero, animate}) => {
     const intl = useIntl();
-    
+    const [scrolled, setScrolled] = useState(false);
     const [closed, setClosed] = useState(true);
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    const handleScroll = () => {
+        if (!scrolled && window.scrollY > 10){
+            setScrolled(true)
+        }else if (window.scrollY < 10) {
+            setScrolled(false);
+            console.log(scrolled)
+        }
+    }
     const hamburgerClick = (e) => {
         setClosed(!closed);
     }
@@ -77,9 +91,12 @@ const Navbar =  ({withHero, animate}) => {
         )
     }
     //styles for showing navbar with or without hero, as well as those needed in both cases
-    const wHero = "sm:bg-transparent sm:absolute"
-    const noHero = "sm:relative"
-    const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
+    //const wHero = `sm:bg-transparent sm:absolute`
+    //const noHero = "sm:relative"
+    //const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
+    const shared = `fixed  z-30 top-0 bg-black bg-opacity-100 w-screen  ${scrolled && "shadow-2xl"}`
+    const noHero = `${scrolled ? "sm:fixed" : "sm:relative"}`;
+    const wHero = `${scrolled ? "sm:fixed " : " sm:bg-opacity-0"}`
     
     const activeLang = `text-blue-700 hover:text-yellow-600 rounded-sm inner-shadow bg-opacity-50 sm:text-lg text-sm font-bold`
     const langButton = `w-full text-left py-1 sm:text-sm text-xs tracking-wider ml-2`
@@ -87,13 +104,15 @@ const Navbar =  ({withHero, animate}) => {
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
-            <nav className={`sm:flex w-full sm:h-auto ${!closed && 'h-screen' } sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
-                <div className=" pl-2 pr-6 flex justify-between h-auto items-center">
+            <nav className={` sm:flex w-full ${scrolled ? "sm:h-24" : "sm:h-auto"} ${!closed && 'h-screen' } sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
+                <div className={`pl-2 pr-6 flex justify-between h-auto items-center`}>
                     {/*left*/}
-                    <div className="sm:pr-4 px-1 py-2  opacity-100">
-                        <div className="flex sm:justify-start items-center">
+                    <div className= {` sm:pr-4 px-1 py-2 `}>
+                        <div className={`flex sm:justify-start items-center `}>
                             <Link className="flex-shrink-0" to="/">
-                                <img className={`${animate && "tracking-in-expand-fwd-bottom"}  lg:h-32 h-20`}  src={logo} alt="YARC LOGO"/>
+                                <div className={`${scrolled ? "sm:h-20":"lg:h-32 h-20"} transition-height ease-out duration-500 overflow-hidden`}>
+                                    <img className={`${animate && "tracking-in-expand-fwd-bottom"}  ${scrolled ? "lg:h-h-29 h-20":"lg:h-32 h-20"} transition-height ease-out duration-500`}  src={logo} alt="YARC LOGO"/>
+                                </div>
                             </Link>
                             <div className=" border-l-2 border-gray-600 inline-block leading-4 mx-4">
                                 <button onClick={() => changeLocale('ar', null)} className={`${langButton} ${intl.locale === 'en' ? activeLang:disActiveLang} font-xl`}>

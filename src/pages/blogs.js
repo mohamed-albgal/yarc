@@ -58,9 +58,12 @@ export default ({data}) => {
     )
 
     return (
-        <Layout bgGradientColor={"purple-bottom"}>
+        <Layout navWithHero bgGradientColor={"purple-bottom"}>
             <div className=" sm:mt-0 sm:pl-16 sm:pt-10 mb-32 pt-32  " >
-                <PageHeadText text={intl.formatMessage({id:"blogHeadText"})} />
+                <div className={` inset-0 sm:mt-40`}>
+                    <PageHeadText text={intl.formatMessage({id:"blogHeadText"})} />
+                </div>    
+            
             </div>
             <div className="lg:mx-20 mx-auto pb-10">
                 <div className="sm:flex align-middle flex-wrap lg:justify-start justify-center mx-4">

@@ -56,9 +56,11 @@ export default  ({ data }) => {
             )   
     }
     return(
-        <Layout bgGradientColor="yellowBlue-topBottom">
+        <Layout navWithHero bgGradientColor="yellowBlue-topBottom">
         <div className=" sm:mt-0 sm:px-16 mx-4 sm:pt-10 mb-32 pt-32 " >
-                <PageHeadText text={intl.formatMessage({id:"eventsHeadText"})} />
+                <div className={` inset-0 sm:mt-40`}>
+                    <PageHeadText text={intl.formatMessage({id:"eventsHeadText"})} />
+                </div>
         </div>
         <div className="text-center">
         </div>
