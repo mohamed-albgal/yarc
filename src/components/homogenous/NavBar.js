@@ -107,8 +107,8 @@ const Navbar =  ({withHero, animate}) => {
             <nav className={` sm:flex w-full ${scrolled ? "sm:h-24" : "sm:h-auto"} ${!closed && 'h-screen' } sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
                 <div className={`pl-2 pr-6 flex justify-between h-auto items-center`}>
                     {/*left*/}
-                    <div className="sm:pr-4 px-1 py-2 ">
-                        <div className={`flex sm:justify-start items-center`}>
+                    <div className= {` sm:pr-4 px-1 py-2 `}>
+                        <div className={`flex sm:justify-start items-center `}>
                             <Link className="flex-shrink-0" to="/">
                                 <div className={`${scrolled ? "sm:h-20":"lg:h-32 h-20"} transition-height ease-out duration-500 overflow-hidden`}>
                                     <img className={`${animate && "tracking-in-expand-fwd-bottom"}  ${scrolled ? "lg:h-h-29 h-20":"lg:h-32 h-20"} transition-height ease-out duration-500`}  src={logo} alt="YARC LOGO"/>
