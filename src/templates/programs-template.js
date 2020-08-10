@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout, {CMSLayout } from '../components/Layout'
 import { graphql } from 'gatsby'
 import kids_learning from '../images/kids-learning.jpg'
 import Hero from '../components/homogenous/Hero'
@@ -7,6 +7,8 @@ import bg from '../images/Protruding-Squares.svg'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
+
+const bgCSSName = "yellowBlue-topBottom";
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -28,7 +30,7 @@ export const query = graphql`
 `
 
 export const programMdStyle = "text-left inline-block whitespace-pre-wrap sm:px-20 min-w-full min-h-full px-4 shadow-xl bg-white rounded-lg markdown"
-export const PageCore = (props) => {
+const PageCore = (props) => {
   const {mainText, subText, pageBg, content, markdownStyle, image, contentComponent  } = props;
   const PostContent = contentComponent || Content
   return (
@@ -49,17 +51,24 @@ export const PageCore = (props) => {
     </>
   )
 }
-export const ProgramsTemplate = (props) => {
+
+const ProgramsTemplate = (props) => {
   
   return (
       <>
-        <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
+        <Layout navWithHero bgGradientColor={bgCSSName}>
          <PageCore {...props}/>
         </Layout>
       </>
 
   )
 }
+
+export const CMSProgramsTemplate = (props) => (
+  <CMSLayout navWithHero bgGradientColor={bgCSSName}>
+    <PageCore { ...props} />
+  </CMSLayout>
+)
 
 
 export default ({ data }) => {

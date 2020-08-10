@@ -1,5 +1,5 @@
 import React from 'react'
-import { EventTemplate, eventMarkdownStyle } from  '../templates/events-template.js'
+import { CMSEventTemplate, eventMarkdownStyle } from  '../templates/events-template.js'
 import bayView from '../images/bay_view.jpg'
 
 
@@ -10,7 +10,7 @@ const EventPreviewTemplate = ({entry, widgetFor, getAsset}) => {
 
     
     return (
-        <EventTemplate 
+        <CMSEventTemplate 
             heroTitle={title}
             content={widgetFor('body')}
             image={imgPublicURL}

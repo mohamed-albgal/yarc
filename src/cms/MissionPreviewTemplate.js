@@ -1,16 +1,14 @@
 import React from 'react'
-import { PageContent } from '../templates/mission-template.js'
-import { CMSLayout } from '../components/Layout'
+import { CMSMissionTemplate } from '../templates/mission-template.js'
 
 const MissionPreviewTemplate = ({entry, getAsset}) => {
     const data = entry.get('data').toJS();
     const { bgImage, ...rest} = data;
+    console.log(bgImage, 'from raw');
     const publicImage = getAsset(bgImage).url;
     
     return (
-        <CMSLayout bgGradientColor="blue-top" >
-            <PageContent bgImage={publicImage} {...rest} />
-        </CMSLayout>
+        <CMSMissionTemplate bgImage={publicImage} {...rest} />
     )
 }
 

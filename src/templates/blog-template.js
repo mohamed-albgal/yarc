@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout, { CMSLayout } from '../components/Layout'
 import { graphql } from 'gatsby'
 import dock from '../images/oakland_dock.jpg'
 import Hero from '../components/homogenous/Hero'
@@ -12,12 +12,14 @@ whitespace-pre-wrap sm:max-w-none sm:px-6 px-4 sm:w-11/12 lg:w-9/12 shadow-xl bg
 
 export const BlogTemplate = ({title, author, content, contentComponent, heroBg, mdStyle={markdownStyle}}) => {
     const PostContent = contentComponent || Content
+    //know the caller is from the cms since it does not pass in a contentComponent
+    const CorrectLayout = contentComponent ? Layout : CMSLayout
     return (
       <div>
-        <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
+        <CorrectLayout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
           <Hero mainText={title} caption={author} heroImage={heroBg} />    
           <PostContent className={mdStyle} content={content} />
-        </Layout>
+        </CorrectLayout>
       </div>
     )
 };

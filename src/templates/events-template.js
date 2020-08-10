@@ -1,14 +1,15 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import Layout, { CMSLayout } from '../components/Layout'
 import { graphql } from 'gatsby'
 import bayView from '../images/bay_view.jpg'
 import Hero from '../components/homogenous/Hero'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
 
+const bgCSSName = "yellowBlue-topBottom";
 export const eventMarkdownStyle = " w-full text-left inline-block -mb-8 sm:px-6 min-h-full px-4 shadow-xl bg-white rounded-lg markdown";
 
-export const PageContent = (props) => {
+const PageContent = (props) => {
   const {heroBg, heroTitle, description, image, mdStyle, contentComponent, content} = props;
   const PostConent = contentComponent || Content
   return (
@@ -26,15 +27,20 @@ export const PageContent = (props) => {
 }
 export const EventTemplate = (props) => {
   return (
-    <Layout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
+    <Layout navWithHero bgGradientColor={bgCSSName}>
       <PageContent {...props} />
     </Layout>
   )
 }
 
+export const CMSEventTemplate = (props) => (
+    <CMSLayout navWithHero bgGradientColor={bgCSSName}>
+      <PageContent {...props} />
+    </CMSLayout>
+  )
+
 export default ({ data }) => {
     const {frontmatter, html } = data.markdownRemark;
-    
     return (
         <EventTemplate 
           content={html}

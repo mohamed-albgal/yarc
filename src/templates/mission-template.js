@@ -1,7 +1,9 @@
 import React from 'react'
-import Layout from '../components/Layout';
+import Layout, {CMSLayout } from '../components/Layout';
 import Hero from '../components/homogenous/Hero'
 import PageHeadText from '../components/homogenous/PageHeadText'
+
+const bgGradientCSSName = "blue-top";
 
 const PageSection = ({body, head}) => {
   return (
@@ -14,7 +16,7 @@ const PageSection = ({body, head}) => {
   )
 }
 
-export const PageContent = (props) => {
+const PageContent = (props) => {
   const { caption, head, bgImage, vision, visionHead, mission, missionHead, goals, goalsHead } = props;
   const sections = []
   
@@ -22,7 +24,7 @@ export const PageContent = (props) => {
   sections.push({head: missionHead, body: mission})
   sections.push({head: goalsHead, body: goals})
   const makeSections = sections.map((section , i) => <PageSection key={i} head={section.head} body={section.body} />)
-  
+  console.log(bgImage)
   return (
     <div>
       <Hero caption={caption} mainText={head} heroImage={bgImage && bgImage.publicURL || bgImage} />
@@ -33,10 +35,16 @@ export const PageContent = (props) => {
   )
 }
 
+export const CMSMissionTemplate = (props) => (
+  <CMSLayout navWithHero bgGradientColor={bgGradientCSSName}>
+    <PageContent {...props} />
+  </CMSLayout>
+)
+
 const MissionTemplate = (props) => {
   return (
         <div> 
-            <Layout navWithHero bgGradientColor={"blue-top"}> 
+            <Layout navWithHero bgGradientColor={bgGradientCSSName}> 
               <PageContent {...props}  />
            </Layout>
         </div>
