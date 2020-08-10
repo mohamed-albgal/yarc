@@ -94,7 +94,7 @@ const Navbar =  ({withHero, animate}) => {
     //const wHero = `sm:bg-transparent sm:absolute`
     //const noHero = "sm:relative"
     //const shared = `fixed sm:pt-4 z-20 top-0 bg-black opacity-100 w-screen sm:shadow-none shadow-xl ${closed && "opacity-75"} sm:opacity-100`
-    const shared = `fixed sm:pt-4 z-20 top-0 bg-gray-900  w-screen sm:shadow-none shadow-xl `
+    const shared = `fixed  z-20 top-0 bg-gray-900  w-screen sm:shadow-none shadow-xl `
     const noHero = `${scrolled ? "sm:fixed" : "sm:relative"}`;
     const wHero = `${scrolled ? "sm:fixed" : " sm:bg-transparent"}`
     
@@ -104,13 +104,15 @@ const Navbar =  ({withHero, animate}) => {
     
     return (
         <div className={`${withHero ? wHero:noHero} ${shared}`}>
-            <nav className={`sm:flex w-full sm:h-auto ${!closed && 'h-screen' } sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
+            <nav className={`sm:flex w-full ${scrolled ? "sm:h-24" : "sm:h-auto"} ${!closed && 'h-screen' } sm:px-10 sm:pb-1 sm:items-center sm:justify-between`}>
                 <div className=" pl-2 pr-6 flex justify-between h-auto items-center">
                     {/*left*/}
                     <div className="sm:pr-4 px-1 py-2  opacity-100">
                         <div className="flex sm:justify-start items-center">
                             <Link className="flex-shrink-0" to="/">
-                                <img className={`${animate && "tracking-in-expand-fwd-bottom"}  lg:h-32 h-20`}  src={logo} alt="YARC LOGO"/>
+                                <div className={`${scrolled ? "h-20":"lg:h-32 h-20"} overflow-hidden`}>
+                                    <img className={`${animate && "tracking-in-expand-fwd-bottom"}  ${scrolled ? "h-24":"lg:h-29 h-20"}`}  src={logo} alt="YARC LOGO"/>
+                                </div>
                             </Link>
                             <div className=" border-l-2 border-gray-600 inline-block leading-4 mx-4">
                                 <button onClick={() => changeLocale('ar', null)} className={`${langButton} ${intl.locale === 'en' ? activeLang:disActiveLang} font-xl`}>
