@@ -90,5 +90,11 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: '@debiki/gatsby-plugin-talkyard',
+      options: {
+        talkyardServerUrl: 'https://discussions.yarcenter.talkyard.net'
+      }
+    },
   ],
 }

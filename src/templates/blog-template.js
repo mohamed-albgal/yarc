@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import dock from '../images/oakland_dock.jpg'
 import Hero from '../components/homogenous/Hero'
 import MarkdownHTML, { Content } from '../components/homogenous/Content';
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
 
 
 export const markdownStyle = `text-left markdown inline-block -mb-8 -mt-20 h-full max-w-full 
@@ -19,7 +20,14 @@ export const BlogTemplate = ({title, author, content, contentComponent, heroBg, 
         <CorrectLayout navWithHero bgGradientColor={"yellowBlue-topBottom"}>
           <Hero mainText={title} caption={author} heroImage={heroBg} />    
           <PostContent className={mdStyle} content={content} />
+          {contentComponent && 
+            <div className=" mt-10 lg:pl-10 sm:flex sm:justify-around text-white shadow-xl rounded-lg bg-white">
+              <div className="sm:w-3/4">
+                <TalkyardCommentsIframe />
+              </div>
+            </div>}
         </CorrectLayout>
+        
       </div>
     )
 };
