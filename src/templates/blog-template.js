@@ -21,7 +21,7 @@ export const BlogTemplate = ({title, author, content, contentComponent, heroBg, 
           <Hero mainText={title} caption={author} heroImage={heroBg} />    
           <PostContent className={mdStyle} content={content} />
           {contentComponent && 
-            <div className=" mt-10 lg:pl-10 sm:flex sm:justify-around text-white shadow-xl rounded-lg bg-white">
+            <div className=" mt-10 pt-8 lg:pl-10 sm:flex sm:justify-around text-white shadow-xl rounded-lg bg-white">
               <div className="sm:w-3/4">
                 <TalkyardCommentsIframe />
               </div>

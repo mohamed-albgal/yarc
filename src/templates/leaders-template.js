@@ -7,6 +7,7 @@ import Hero from '../components/homogenous/Hero'
 import pageBg from '../images/Hollowed-Boxes.svg'
 import MarkdownHTML, { Content } from '../components/homogenous/Content';
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
 
 
 export const markdownStyle = `text-left markdown whitespace-pre-wrap inline-block 
@@ -33,6 +34,13 @@ export const LeadersTemplate = ({title, caption, content, contentComponent, prof
               <PreviewCompatibleImage image={profileImage} imageStyle={circleImageStyles} />
               <PostContent className={markdownStyle} content={content} /></div>
             </div>
+            {contentComponent && 
+              <div className="pt-8 lg:pl-10 sm:flex sm:justify-around text-white shadow-xl rounded-lg bg-white">
+                <div className="sm:w-3/4">
+                  <TalkyardCommentsIframe />
+                </div>
+              </div>
+            }
         </CorrectLayout>
       </div>
     )

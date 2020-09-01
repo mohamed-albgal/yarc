@@ -24,7 +24,7 @@ const PageContent = (props) => {
   sections.push({head: missionHead, body: mission})
   sections.push({head: goalsHead, body: goals})
   const makeSections = sections.map((section , i) => <PageSection key={i} head={section.head} body={section.body} />)
-  console.log(bgImage)
+  
   return (
     <div>
       <Hero caption={caption} mainText={head} heroImage={bgImage && bgImage.publicURL || bgImage} />

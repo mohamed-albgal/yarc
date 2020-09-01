@@ -93,7 +93,7 @@ module.exports = {
     {
       resolve: '@debiki/gatsby-plugin-talkyard',
       options: {
-        talkyardServerUrl: 'https://discussions.yarcenter.talkyard.net'
+        talkyardServerUrl: 'https://yarcenter.talkyard.net'
       }
     },
   ],

@@ -6,6 +6,7 @@ import Hero from '../components/homogenous/Hero'
 import bg from '../images/Protruding-Squares.svg'
 import MarkdownHTML, { Content } from '../components/homogenous/Content'
 import PreviewCompatibleImage from '../components/homogenous/PreviewCompatibleImage'
+import TalkyardCommentsIframe from '@debiki/gatsby-plugin-talkyard';
 
 
 const bgCSSName = "yellowBlue-topBottom";
@@ -30,6 +31,13 @@ export const ProgramsTemplate = (props) => {
               <PostContent className={markdownStyle} content={content} />
           </div>
       </div>
+      {contentComponent && 
+        <div  className="pt-8 lg:pl-10 sm:flex sm:justify-around text-white shadow-xl rounded-lg bg-white">
+          <div className=" sm:w-3/4">
+            <TalkyardCommentsIframe />
+          </div>
+        </div>
+      }
     </CorrectLayout>
 
   )
