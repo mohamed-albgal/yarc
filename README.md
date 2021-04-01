@@ -1,5 +1,5 @@
 ## Yemeni American Resource Center
-### [View site](https://yarcetner.netlify.app)
+### [View site](https://yarcenter.netlify.app)
 ### site created by Mohamed Albgal
 ### Reach out to me with any issues/questions/requests : malbgal@gmail.com
 
